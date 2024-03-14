@@ -40,7 +40,7 @@ cta_button:
 #-------------------------------
 # Author Settings
 author:
-  author_name: "Daryl Mercer"
+  author_name: "Welcome to Jishnu Lab"
   author_avatar: "/images/01-1.jpg"
 
 
@@ -48,7 +48,7 @@ author:
 # Hero Settings
 hero:
   enable: true
-  hero_title: I'm an expert user experience strategist and mobile developer.
+  hero_title: Machine Learning, Networks, Immunology, Coffee and Music
   hero_description: Leveraging my expertise, I'm here to collaborate with you on crafting design solutions that transcend expectations. Let's embark on a journey of innovation together!
 
 # Hero Logos
