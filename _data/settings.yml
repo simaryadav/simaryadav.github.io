@@ -99,7 +99,7 @@ testimonials:
   enable: true
   testimonials_intro: Some famous quotes of our lab
   testimonials_title: See what our lab members say...
-  testimonials_info: Join over <b>10K+</b> Prefessionals
+  testimonials_info: Join for over <b>10K+</b> famous lab quotes
 
 testimonial_items:
   - name: "Swapnil Keshri"
@@ -118,7 +118,7 @@ testimonial_items:
     image: "/images/simar.webp"
     designation: "Research Scholar"
     title: "Manchester United is the best premier league Team!!"
-    content : "All of us consider this a fact."
+    content : "Manchester United has a rich history and a strong tradition in English football. The club has a storied past, filled with numerous titles, legendary players, and iconic moments.All of us consider this a fact"
 
   - name: "Jishnu Das"
     image: "/images/Jishnu-Das-2.jpg"
