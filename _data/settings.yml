@@ -149,14 +149,6 @@ faq:
 
 
 #-------------------------------
-# Blog Section Settings
-blog:
-  enable: true
-  blog_intro: What’s new?
-  blog_title: Latest from blog
-
-
-#-------------------------------
 # Author Section Settings
 author_section:
   enable: true
