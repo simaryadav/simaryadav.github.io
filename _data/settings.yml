@@ -57,25 +57,25 @@ hero_logos:
 
 hero_logo_image:
   - alt: "Apple Logo"
-    image: "/images/apple.svg"
+    image: "/images/T_cell.jpg"
 
   - alt: "Adobe Logo"
-    image: "/images/adobe.svg"
+    image: "/images/DL.jpg"
 
   - alt: "HP Logo"
-    image: "/images/hp.svg"
+    image: "/images/b cell.jpg"
 
   - alt: "Netlify Logo"
-    image: "/images/netlify.svg"
+    image: "/images/grn.png"
 
   - alt: "Dropbox Logo"
-    image: "/images/dropbox.svg"
+    image: "/images/stats.jpg"
 
   - alt: "EA Logo"
-    image: "/images/ea.svg"
+    image: "/images/ML.jpg"
 
   - alt: "Chrome Logo"
-    image: "/images/chrome.svg"
+    image: "/images/AI.webp"
 
 
 #-------------------------------
