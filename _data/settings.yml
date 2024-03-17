@@ -57,25 +57,25 @@ hero_logos:
 
 hero_logo_image:
   - alt: "Apple Logo"
-    image: "/images/T_cell.jpg"
+    image: "/images/ai-svgrepo-com.svg"
 
   - alt: "Adobe Logo"
-    image: "/images/DL.jpg"
+    image: "/images/imm-svgrepo-com.svg"
 
   - alt: "HP Logo"
-    image: "/images/b cell.jpg"
+    image: "/images/deep-learning-svgrepo-com.svg"
 
   - alt: "Netlify Logo"
-    image: "/images/grn.png"
+    image: "/images/coffee-cup-tea-svgrepo-com.svg"
 
   - alt: "Dropbox Logo"
-    image: "/images/stats.jpg"
+    image: "/images/robot-ai-svgrepo-com.svg"
 
   - alt: "EA Logo"
-    image: "/images/ML.jpg"
+    image: "/images/imm-svgrepo-com.svg"
 
   - alt: "Chrome Logo"
-    image: "/images/AI.webp"
+    image: "/images/immune-system-immunity-defense-svgrepo-com"
 
 
 #-------------------------------
