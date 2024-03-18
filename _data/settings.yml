@@ -154,7 +154,7 @@ faq:
 blog:
   enable: true
   blog_intro: What’s new?
-  blog_title: Latest from blog
+  blog_title: Latest publications
 
 
 
