@@ -1,7 +1,7 @@
 #-------------------------------
 # Site Settings
 title: Jishnu's Systems Immunology Lab
-description: Our lab
+description: The lab
 logo: "/images/network-internet-web-svgrepo-com.svg" # You can add own logo. For example "/images/logo.svg".
 logo_dark: "/images/network-internet-web-svgrepo-com.svg"
 color_scheme: auto # You can choose three modes auto, light, and dark. By default, the auto mode is set, which means the user can choose the light or dark mode themself.
