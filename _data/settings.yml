@@ -148,6 +148,16 @@ faq:
       description: Our laboratory, situated in Shadyside, is an integral part of the Department of Immunology at the University of Pittsburgh. You can find us at 4011 The Assembly; 5051 Centre Avenue, Pittsburgh, PA 15213.
 
 
+
+#-------------------------------
+# Blog Section Settings
+blog:
+  enable: true
+  blog_intro: What’s new?
+  blog_title: Latest from blog
+
+
+
 #-------------------------------
 # Author Section Settings
 author_section:
