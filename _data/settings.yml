@@ -56,25 +56,25 @@ hero_logos:
   enable: true
 
 hero_logo_image:
-  - alt: "Apple Logo"
+  - alt: "AI Logo"
     image: "/images/ai-svgrepo-com.svg"
 
-  - alt: "Adobe Logo"
+  - alt: "immune Logo"
     image: "/images/imm-svgrepo-com.svg"
 
-  - alt: "HP Logo"
+  - alt: "DL Logo"
     image: "/images/deep-learning-svgrepo-com.svg"
 
-  - alt: "Netlify Logo"
+  - alt: "coffee Logo"
     image: "/images/coffee-cup-tea-svgrepo-com.svg"
 
-  - alt: "Dropbox Logo"
+  - alt: "robot Logo"
     image: "/images/robot-ai-svgrepo-com.svg"
 
-  - alt: "EA Logo"
-    image: "/images/imm-svgrepo-com.svg"
+  - alt: "DNA Logo"
+    image: "/images/dna-svgrepo-com.svg"
 
-  - alt: "Chrome Logo"
+  - alt: "immune defense Logo"
     image: "/images/immune-system-immunity-defense-svgrepo-com.svg"
 
 
@@ -106,7 +106,7 @@ testimonial_items:
     image: "/images/swapnil.webp"
     designation: "CPCB Phd Student"
     title: "Major update coming soon"
-    content : "As a dynamic and ever-growing laboratory, we actively engage with a diverse array of research challenges presented to us. We are committed to maximizing our efforts to derive optimal outcomes from each endeavor."
+    content : "As a dynamic and ever-growing laboratory, we actively engage with a diverse array of research challenges presented to us. We are committed to maximizing our efforts to derive optimal outcomes from each endeavor and provide major updates on the projects we are working on."
 
   - name: "Javad Rahimikollu"
     image: "/images/javad.webp"
@@ -118,13 +118,13 @@ testimonial_items:
     image: "/images/simar.webp"
     designation: "Research Scholar"
     title: "Manchester United is the best premier league Team!!"
-    content : "Manchester United has a rich history and a strong tradition in English football. The club has a storied past, filled with numerous titles, legendary players, and iconic moments.All of us consider this a fact"
+    content : "Manchester United has a rich history and a strong tradition in English football. The club has a storied past, filled with numerous titles, legendary players, and iconic moments.All of us consider this a fact(also young Cristiano Ronaldo was the best footballer)"
 
   - name: "Jishnu Das"
     image: "/images/Jishnu-Das-2.jpg"
     designation: "Principal Investigator, Assistant Professor"
     title: "Do you want an espresso??"
-    content : "Before engaging in a robust discussion with Jishnu, it's become a customary ritual for us to graciously accept the coffee he generously offers."
+    content : "Before delving into a substantial discussion with Jishnu, it has become a customary ritual for us to graciously accept the coffee he generously offers, setting the tone for our exchange and fostering an environment of conviviality and collaboration."
 
 
 #-------------------------------
@@ -134,18 +134,18 @@ faq:
   faq_title: Frequently asked questions
   faq_intro: Need some answers?
   faq_items:
-    - title: What distinguishes you as a mobile developer?
-      description: I bring a wealth of experience in crafting seamless user experiences and developing mobile solutions that prioritize functionality and innovation.
-    - title: How do you approach designing user-friendly mobile applications?
-      description: My approach involves a user-centric design philosophy, focusing on intuitive interfaces and fluid interactions to enhance the overall mobile experience.
-    - title: Can you walk us through your mobile app development process?
-      description: Certainly! From concept to deployment, I follow a structured development process, incorporating user feedback and iterative testing to ensure a polished and functional mobile application.
-    - title: How do you stay updated on the latest trends mobile development?
-      description: Continuous learning is key. I stay updated through industry publications, attending conferences, and actively participating in professional communities to stay at the forefront of industry trends.
-    - title: How do you ensure the security of mobile applications you develop?
-      description: Security is a top priority. I follow industry best practices, conduct thorough testing, and implement robust security measures to safeguard mobile applications and user data.
-    - title: What role does user feedback play in your development process?
-      description: User feedback is integral. I actively seek and incorporate user insights to refine designs and optimize mobile applications, ensuring they align with user expectations and preferences.
+    - title: What's the research focus of our lab ?
+      description: Our research aims to understand complex immune-related issues by analyzing large datasets using innovative methods. We're exploring how different biological networks interact in immunological disorders. We also use advanced statistical and machine-learning techniques to uncover patterns in various types of biological data and better understand how the immune system works.
+    - title: What types of collaborations does your lab engage in with other research institutions or industry partners??
+      description: Our lab engages in extensive collaboration with various research-focused institutions, spanning from medical professionals to dedicated researchers.
+    - title: What are some recent publications or achievements from your lab?
+      description: We are excited to announce the recent publication of SLIDE (Significant Latent Factor Interaction Discovery and Exploration) in Nature Methods. The paper, co-authored by Javad Rahimikollu, Hanxi Xiao, Anna E. Rosengart, Tracy Tabib, and led by principal investigator Jishnu, marks a significant milestone in our research endeavors.
+    - title: Are there opportunities for undergraduate or graduate students to participate in research projects?
+      description: We're actively seeking driven individuals who share our passion for research and are eager to make meaningful contributions. If you're interested in joining our team, feel free to reach out to Jishnu to explore potential opportunities to collaborate.
+    - title: How does your lab foster a supportive and inclusive research environment?
+      description: Our lab is composed of a diverse team representing a variety of racial backgrounds and sexual orientations, fostering a culture of mutual support and collaboration.
+    - title: Where's the lab located?
+      description: Our laboratory, situated in Shadyside, is an integral part of the Department of Immunology at the University of Pittsburgh. You can find us at 4011 The Assembly; 5051 Centre Avenue, Pittsburgh, PA 15213.
 
 
 #-------------------------------
