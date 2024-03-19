@@ -84,15 +84,6 @@ featured:
   enable: true
   featured_title: Selected Work
 
-
-#-------------------------------
-# Projects Section Settings
-projects:
-  enable: true
-  projects_title: Recent Work
-  projects_description:
-
-
 #-------------------------------
 # Testimonials Section Settings
 testimonials:
