@@ -15,7 +15,7 @@ menu_settings:
       url: "/"
     - title: "Publications"
       url: "/posts/"
-    - title: "Posts"
+    - title: "Projects"
       url: "/projects/"
     - title: "Team"
       url: "/team/"
