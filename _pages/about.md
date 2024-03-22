@@ -9,6 +9,14 @@ permalink: /about/
 
 ## Address and contact info
 
+<div class="gallery-box">
+  <div class="gallery">
+    <img src="/images/Pitt.webp" loading="lazy" alt="Author">
+    <img src="/images/pitt.jpg" loading="lazy" alt="Author">
+  </div>
+</div>
+
+
 4011 The Assembly 
 5051 Centre Avenue, Pittsburgh PA 15213
 
