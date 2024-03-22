@@ -4,47 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Members</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* CSS styles */
+        .team-member {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .team-member img {
+            max-width: 100px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Team Members</h1>
-    </header>
-    <main>
-        <% teamMembers.forEach(member => { %>
-            <div class="member">
-                <h2><%= member.name %></h2>
-                <p><strong>Position:</strong> <%= member.position %></p>
-                <% if (member.is_pi) { %>
-                    <p><em>Principal Investigator</em></p>
-                <% } %>
-                <% if (member.is_current) { %>
-                    <p><strong>Status:</strong> Current</p>
-                <% } else { %>
-                    <p><strong>Status:</strong> Former</p>
-                <% } %>
-                <% if (member.orcid) { %>
-                    <p><strong>ORCID:</strong> <a href="<%= member.orcid %>"><%= member.orcid %></a></p>
-                <% } %>
-                <% if (member.scholar) { %>
-                    <p><strong>Google Scholar:</strong> <a href="<%= member.scholar %>"><%= member.scholar %></a></p>
-                <% } %>
-                <% if (member.researchgate) { %>
-                    <p><strong>ResearchGate:</strong> <a href="<%= member.researchgate %>"><%= member.researchgate %></a></p>
-                <% } %>
-                <% if (member.github) { %>
-                    <p><strong>GitHub:</strong> <a href="<%= member.github %>"><%= member.github %></a></p>
-                <% } %>
-                <% if (member.twitter) { %>
-                    <p><strong>Twitter:</strong> <a href="<%= member.twitter %>"><%= member.twitter %></a></p>
-                <% } %>
-                <p><strong>Bio:</strong> <%= member.bio %></p>
-                <img src="<%= member.photo %>" alt="<%= member.name %>">
-            </div>
-        <% }); %>
-    </main>
-    <footer>
-        <p>&copy; 2024 Team Members</p>
-    </footer>
+    <h1>Team Members</h1>
+
+    <!-- Loop through each team member -->
+    <!-- Dr. Jishnu Das -->
+    <div class="team-member">
+        <img src="team/Morin_headshot_2019.gif" alt="Dr. Jishnu Das">
+        <h2>Dr. Jishnu Das</h2>
+        <p><strong>Position:</strong> Professor</p>
+        <p><strong>Bio:</strong> Jishnu completed an undergrad degree in Bioengineering at the Indian Institute of Technology Kanpur followed by graduate studies in Computational Biology at Cornell University. After a short postdoc at the Ragon Institute of MGH, MIT & Harvard/MIT, Jishnu started his Systems Immunology lab. His most important role is that of a “translator" of jargon across disciplines (comp bio, basic and translational clinical immunology); this helps bridge the interdisciplinary expertise in the lab. He is also a cheerleader for all projects in the lab.</p>
+    </div>
+
+    <!-- Zarifeh Heidari Rarani -->
+    <div class="team-member">
+        <img src="team/lhilton.jpg" alt="Zarifeh Heidari Rarani">
+        <h2>Zarifeh Heidari Rarani</h2>
+        <p><strong>Position:</strong> Postdoctoral Associate</p>
+        <p><strong>Bio:</strong> With a background in control systems engineering, I am deeply passionate about venturing into the captivating realm of computational biology, employing innovative methodologies to unravel its mysteries.</p>
+    </div>
+
+    <!-- Hanxi Xiao -->
+    <div class="team-member">
+        <img src="team/kcoyle.jpg" alt="Hanxi Xiao">
+        <h2>Hanxi Xiao</h2>
+        <p><strong>Position:</strong> PhD Student | CMU-Pitt Program in Computational Biology (CPCB)</p>
+        <p><strong>Bio:</strong> Hanxi is currently a PhD student focusing on developing methods for sequencing data analyses. She is mainly interested in applied statistics and machine learning approaches. She has 2 cats who take up most of her free time and is trying to grow a patio garden.</p>
+    </div>
+
+    <!-- Swapnil Keshari -->
+    <div class="team-member">
+        <img src="team/ppararajalingam.jpg" alt="Swapnil Keshari">
+        <h2>Swapnil Keshari</h2>
+        <p><strong>Position:</strong> PhD Student | CMU-Pitt Program in Computational Biology (CPCB)</p>
+        <p><strong>Bio:</strong> Swapnil is a Computational biologist enthusiast with a keen interest in the field of genomics. Before joining the CPCB program, he completed his B.Tech. in chemical engineering from IIT Bombay, India. He likes to travel a lot and is always up for outdoor sports :). In addition to that, he loves to read crime fiction novels, paint and swim.</p>
+    </div>
+
+    <!-- Prabal Chhibbar -->
+    <div class="team-member">
+        <img src="team/haya.jpg" alt="Prabal Chhibbar">
+        <h2>Prabal Chhibbar</h2>
+        <p><strong>Position:</strong> PhD Student | Integrative Systems Biology (ISB)</p>
+        <p><strong>Bio:</strong> Prabal completed his B.Tech in computer science and engineering from SRM Institute of Science and Technology in 2019. His interests are in Protein-Protein Interactions, Host-Viral interactions, complex networks, machine learning and deep learning. Prabal is always eager to discuss science and brainstorm ideas. Out of work, you can find him passionately discussing politics, hanging out with his friends or reading voraciously and consuming a whole lot of content.</p>
+    </div>
+
 </body>
 </html>
