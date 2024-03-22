@@ -111,28 +111,6 @@ testimonial_items:
 
 
 #-------------------------------
-# Faq (Frequently asked questions) Settings
-faq:
-  enable: true
-  faq_title: Frequently asked questions
-  faq_intro: Need some answers?
-  faq_items:
-    - title: What's the research focus of our lab ?
-      description: Our research aims to understand complex immune-related issues by analyzing large datasets using innovative methods. We're exploring how different biological networks interact in immunological disorders. We also use advanced statistical and machine-learning techniques to uncover patterns in various types of biological data and better understand how the immune system works.
-    - title: What types of collaborations does your lab engage in with other research institutions or industry partners??
-      description: Our lab engages in extensive collaboration with various research-focused institutions, spanning from medical professionals to dedicated researchers.
-    - title: What are some recent publications or achievements from your lab?
-      description: We are excited to announce the recent publication of SLIDE (Significant Latent Factor Interaction Discovery and Exploration) in Nature Methods. The paper, co-authored by Javad Rahimikollu, Hanxi Xiao, Anna E. Rosengart, Tracy Tabib, and led by principal investigator Jishnu, marks a significant milestone in our research endeavors.
-    - title: Are there opportunities for undergraduate or graduate students to participate in research projects?
-      description: We're actively seeking driven individuals who share our passion for research and are eager to make meaningful contributions. If you're interested in joining our team, feel free to reach out to Jishnu to explore potential opportunities to collaborate.
-    - title: How does your lab foster a supportive and inclusive research environment?
-      description: Our lab is composed of a diverse team representing a variety of racial backgrounds and sexual orientations, fostering a culture of mutual support and collaboration.
-    - title: Where's the lab located?
-      description: Our laboratory, situated in Shadyside, is an integral part of the Department of Immunology at the University of Pittsburgh. You can find us at 4011 The Assembly; 5051 Centre Avenue, Pittsburgh, PA 15213.
-
-
-
-#-------------------------------
 # Blog Section Settings
 blog:
   enable: true
