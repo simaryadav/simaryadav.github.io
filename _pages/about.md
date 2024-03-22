@@ -12,7 +12,6 @@ permalink: /about/
 <div class="gallery-box">
   <div class="gallery">
     <img src="/images/Pitt.webp" loading="lazy" alt="Author">
-    <img src="/images/pitt.jpeg" loading="lazy" alt="Author">
   </div>
 </div>
 
