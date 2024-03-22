@@ -5,4 +5,4 @@ label: Design
 image: '/images/project-9.jpg'
 featured:
 ---
-Here's a small collection of us just hanging out
+Here's a small collection of us just hanging out 
