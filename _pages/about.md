@@ -15,6 +15,4 @@ permalink: /about/
 jishnu@pitt.edu
 412-624-5530
 
-ark on a journey to transform ideas into exceptional digital experiences.
 
-Feel free to reach out, and let's turn your vision into a digital reality!
