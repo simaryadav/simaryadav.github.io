@@ -1,7 +1,9 @@
 ---
-layout: default
-title: Works
-description: Embark on a journey through a handpicked selection of projects that embody the essence of passion, simplicity, and creativity.
+layout: page
+title: News
+permalink: /News/
+toggle: on
+rank: 4
 ---
 
 \*A lot has been happening in life<br>
