@@ -76,6 +76,16 @@ featured:
   enable: true
   featured_title: Selected Work
 
+
+#-------------------------------
+# Blog Section Settings
+blog:
+  enable: true
+  blog_intro: What’s new?
+  blog_title: Latest publications
+
+
+
 #-------------------------------
 # Testimonials Section Settings
 testimonials:
@@ -108,14 +118,6 @@ testimonial_items:
     designation: "Principal Investigator, Assistant Professor"
     title: "Do you want an espresso??"
     content : "Before delving into a substantial discussion with Jishnu, it has become a customary ritual for us to graciously accept the coffee he generously offers, setting the tone for our exchange and fostering an environment of conviviality and collaboration."
-
-
-#-------------------------------
-# Blog Section Settings
-blog:
-  enable: true
-  blog_intro: What’s new?
-  blog_title: Latest publications
 
 
 
