@@ -30,7 +30,7 @@ description: The heroes of our gang
     {% assign alumni_size = site.team | size %}
     {% if alumni_size > 0 %}
         <h1 class="post-title">Alumni</h1>
-        {% for member in site.data.team %}
+        {% for member in site.team %}
             {% if member.is_current == false %}
                 {% if member.name and member.bio %}
                     {% include member.html %}
