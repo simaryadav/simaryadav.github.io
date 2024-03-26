@@ -28,6 +28,10 @@ collections:
   projects:
     output: true
     permalink: /project/:slug
+  team:
+    output: true
+    permalink: /team/:slug
+
 
 # Pages Path
 defaults:
@@ -50,7 +54,11 @@ defaults:
       type: "projects"
     values:
       layout: "project"
-
+  - scope:
+      path: ""
+      type: "team"
+    values:
+      layout: "team"
 
 sass:
   sass_dir: _sass
