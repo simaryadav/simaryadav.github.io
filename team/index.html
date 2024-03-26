@@ -5,16 +5,10 @@ description: The heroes of our gang
 ---
 YAML File Test
 
+## Team Members
 
-</html>
-
-<div class="lab-wrapper">
-    <ul class="lab-list">
-    <!-- Current PIs -->
-    {% for member in site.team.%}
-       <h1>US</h1>
-    {% endfor %}
-    </ul>
-</div>
-
-
+{% for member in site.team %}
+- **Name:** {{ member.name }}
+- **Role:** {{ member.role }}
+- **Bio:** {{ member.bio | strip_newlines }}
+{% endfor %}
