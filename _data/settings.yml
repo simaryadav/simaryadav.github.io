@@ -86,40 +86,6 @@ blog:
 
 
 
-#-------------------------------
-# Testimonials Section Settings
-testimonials:
-  enable: true
-  testimonials_intro: Some famous quotes of our lab
-  testimonials_title: See what our lab members say...
-  testimonials_info: Join for over <b>10K+</b> famous lab quotes
-
-testimonial_items:
-  - name: "Swapnil Keshri"
-    image: "/images/swapnil.webp"
-    designation: "CPCB Phd Student"
-    title: "Major update coming soon"
-    content : "As a dynamic and ever-growing laboratory, we actively engage with a diverse array of research challenges presented to us. We are committed to maximizing our efforts to derive optimal outcomes from each endeavor and provide major updates on the projects we are working on."
-
-  - name: "Javad Rahimikollu"
-    image: "/images/javad.webp"
-    designation: "CPCB Phd Student"
-    title: "Try running SLIDE on your data...."
-    content : "The members of our lab developed a first-in-class interpretable machine learning technique for identifying significant interacting latent factors underlying outcomes of interest from high-dimensional omic datasets which we apply on most of our datasets."
-
-  - name: "Simar Yadav"
-    image: "/images/simar.webp"
-    designation: "Research Scholar"
-    title: "Manchester United is the best premier league Team!!"
-    content : "Manchester United has a rich history and a strong tradition in English football. The club has a storied past, filled with numerous titles, legendary players, and iconic moments.All of us consider this a fact(also young Cristiano Ronaldo was the best footballer)"
-
-  - name: "Jishnu Das"
-    image: "/images/Jishnu-Das-2.jpg"
-    designation: "Principal Investigator, Assistant Professor"
-    title: "Do you want an espresso??"
-    content : "Before delving into a substantial discussion with Jishnu, it has become a customary ritual for us to graciously accept the coffee he generously offers, setting the tone for our exchange and fostering an environment of conviviality and collaboration."
-
-
 
 #-------------------------------
 # Author Section Settings
