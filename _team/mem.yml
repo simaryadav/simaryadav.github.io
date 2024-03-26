@@ -1,0 +1,12 @@
+- name: John Doe
+  role: Developer
+  bio: >
+    John is a passionate developer with experience
+    in web development and programming languages
+    like JavaScript and Python.
+- name: Jane Smith
+  role: Designer
+  bio: >
+    Jane is a talented designer with expertise in
+    UI/UX design and graphic design. She enjoys
+    creating visually appealing designs.
