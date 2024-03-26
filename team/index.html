@@ -9,6 +9,7 @@ description: The heroes of our gang
     {% for member in site.team %}
         {% if member.is_current and member.is_pi %}
             {% if member.name and member.bio %}
+                <h1>This is a Heading</h1>
                 {% include member.html %}
             {% endif %}
         {% endif %}
