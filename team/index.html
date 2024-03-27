@@ -181,7 +181,7 @@ YAML File Test
 <div class="lab-wrapper">
     <ul class="lab-list">
     <!-- Current PIs -->
-    {% for member in site.team %}
+    {% for member in site %}
         {% if member.is_current and member.is_pi %}
             {% if member.name and member.bio %}
                 {% include member.html %}
