@@ -177,7 +177,7 @@ YAML File Test
 ]
 </script>
 
-
+<!-- 
 <div class="lab-wrapper">
     <ul class="lab-list">
     <!-- Current PIs -->
@@ -208,6 +208,32 @@ YAML File Test
             {% endif %}
         {% endfor %}
     {% endif %}
+    </ul>
+</div> -->
+<div class="lab-wrapper">
+    <ul class="lab-list">
+        <!-- Current PIs -->
+        {% assign current_pis = site.team | filter: "is_current", true | filter: "is_pi", true %}
+        {% assign current_non_pis = site.team | filter: "is_current", true | filter: "is_pi", false %}
+        {% assign alumni = site.team | filter: "is_current", false %}
+        
+        {% assign member_html = current_pis | map: 'include_html' %}
+        {% for member in member_html %}
+            {{ member }}
+        {% endfor %}
+        
+        {% assign member_html = current_non_pis | map: 'include_html' %}
+        {% for member in member_html %}
+            {{ member }}
+        {% endfor %}
+
+        {% if alumni.size > 0 %}
+            <h1 class="post-title">Alumni</h1>
+            {% assign member_html = alumni | map: 'include_html' %}
+            {% for member in member_html %}
+                {{ member }}
+            {% endfor %}
+        {% endif %}
     </ul>
 </div>
 
