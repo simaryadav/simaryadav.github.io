@@ -176,46 +176,12 @@ YAML File Test
   }
 ]
 </script>
-
-<!-- 
-<div class="lab-wrapper">
-    <ul class="lab-list">
-    <!-- Current PIs -->
-    {% for member in site %}
-        {% if member.is_current and member.is_pi %}
-            {% if member.name and member.bio %}
-                {% include member.html %}
-            {% endif %}
-        {% endif %}
-    {% endfor %}
-    <!-- Current non-PIs -->
-    {% for member in site.team %}
-        {% if member.is_current and member.is_pi == false %}
-            {% if member.name and member.bio %}
-                {% include member.html %}
-            {% endif %}
-        {% endif %}
-    {% endfor %}
-    <!-- Non-current (alumni) -->
-    {% assign alumni_size = site.team | size %}
-    {% if alumni_size > 0 %}
-        <h1 class="post-title">Alumni</h1>
-        {% for member in site.team %}
-            {% if member.is_current == false %}
-                {% if member.name and member.bio %}
-                    {% include member.html %}
-                {% endif %}
-            {% endif %}
-        {% endfor %}
-    {% endif %}
-    </ul>
-</div> -->
 <div class="lab-wrapper">
     <ul class="lab-list">
         <!-- Current PIs -->
-        {% assign current_pis = site.team | filter: "is_current", true | filter: "is_pi", true %}
-        {% assign current_non_pis = site.team | filter: "is_current", true | filter: "is_pi", false %}
-        {% assign alumni = site.team | filter: "is_current", false %}
+        {% assign current_pis = site | filter: "is_current", true | filter: "is_pi", true %}
+        {% assign current_non_pis = site | filter: "is_current", true | filter: "is_pi", false %}
+        {% assign alumni = site | filter: "is_current", false %}
         
         {% assign member_html = current_pis | map: 'include_html' %}
         {% for member in member_html %}
@@ -236,4 +202,5 @@ YAML File Test
         {% endif %}
     </ul>
 </div>
+
 
