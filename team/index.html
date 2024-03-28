@@ -175,24 +175,43 @@ Why does it not work🥲🥲
     "photo": "team/cruz.jpg"
   }
 ];
-const teamContainer = document.getElementById("team-container");
-
-  // Loop through the site JSON object
-  site.forEach(member => {
-    // Create HTML elements dynamically for each team member
-    const memberDiv = document.createElement("div");
-    memberDiv.classList.add("team-member");
-
-    // Populate the member details
-    memberDiv.innerHTML = `
-      <div class="member-name">${member.name}</div>
-      <div class="member-position">${member.position}</div>
-      <div class="member-bio">${member.bio}</div>
-    `;
-
-    // Append the member div to the team container
-    teamContainer.appendChild(memberDiv);
-  });
 </script>
 
+
+<div style="margin-bottom: 2em;">
+    <img src="{{ 'team/morinlab_pool_2022_crop.png' | prepend: site.images_dir | prepend: site.baseurl }}" />
+</div>
+
+<div class="lab-wrapper">
+    <ul class="lab-list">
+    <!-- Current PIs -->
+    {% for member in site.team.team %}
+        {% if member.is_current and member.is_pi %}
+            {% if member.name and member.bio %}
+                {% include member.html %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    <!-- Current non-PIs -->
+    {% for member in site.team.team %}
+        {% if member.is_current and member.is_pi == false %}
+            {% if member.name and member.bio %}
+                {% include member.html %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    <!-- Non-current (alumni) -->
+    {% assign alumni_size = site.team.team | size %}
+    {% if alumni_size > 0 %}
+        <h1 class="post-title">Alumni</h1>
+        {% for member in site.team.team %}
+            {% if member.is_current == false %}
+                {% if member.name and member.bio %}
+                    {% include member.html %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    </ul>
+</div>
 
