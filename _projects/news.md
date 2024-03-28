@@ -10,7 +10,7 @@ A lot has been happening in life
 
 ## 2024
 
-> February 2024- We published “SLIDE: Significant Latent factor Interaction Discovery and Exploration across biological domains” in Nature Methods.
+> February 2024-We published “SLIDE: Significant Latent factor Interaction Discovery and Exploration across biological domains” in Nature Methods.
 
 ## 2023
 
