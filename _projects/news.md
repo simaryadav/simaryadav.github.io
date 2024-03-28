@@ -10,13 +10,13 @@ A lot has been happening in life
 
 ## 2024
 
-February 2024-We published “SLIDE: Significant Latent factor Interaction Discovery and Exploration across biological domains” in Nature Methods-
+> February 2024-We published “SLIDE: Significant Latent factor Interaction Discovery and Exploration across biological domains” in Nature Methods
 
 ## 2023
 
-December 2023-We published “From bench to bedside via bytes: multi-omic immunoprofiling and integration using machine learning and network approaches” in Human Vaccines and Immunotherapeutics
+> December 2023-We published “From bench to bedside via bytes: multi-omic immunoprofiling and integration using machine learning and network approaches” in Human Vaccines and Immunotherapeutics
 
-December 2023-We contributed to “PRMT blockade induces defective DNA replication stress response and synergizes with PARP inhibition”, which was published in Cell Reports Medicine
+> December 2023-We contributed to “PRMT blockade induces defective DNA replication stress response and synergizes with PARP inhibition”, which was published in Cell Reports Medicine
 
 November 2023-We contributed to “SARS-CoV-2 mRNA vaccines induce greater complement activation and decreased viremia and Nef antibodies in men with HIV-1”, which was published in The Journal of Infectious Diseases
 
