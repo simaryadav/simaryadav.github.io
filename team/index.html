@@ -174,33 +174,25 @@ YAML File Test
     "bio": "IKiran is an undergraduate student majoring in Computer Science at the Georgia Institute of Technology. She has been working as a student researcher in Dr Das's lab since 2020. Her research involves mining and analyzing data using machine learning algorithms and differential expression analysis. As a researcher in the field of data science, she utilizes programming languages including R, Python, and Java. Her goal is to use critical thinking skills to solve computing problems and acquire skills to conquer the problems of tomorrow.\n",
     "photo": "team/cruz.jpg"
   }
-]
-</script>
-<div class="lab-wrapper">
-    <ul class="lab-list">
-        <!-- Current PIs -->
-        {% assign current_pis = site | filter: "is_current", true | filter: "is_pi", true %}
-        {% assign current_non_pis = site | filter: "is_current", true | filter: "is_pi", false %}
-        {% assign alumni = site | filter: "is_current", false %}
-        
-        {% assign member_html = current_pis | map: 'include_html' %}
-        {% for member in member_html %}
-            {{ member }}
-        {% endfor %}
-        
-        {% assign member_html = current_non_pis | map: 'include_html' %}
-        {% for member in member_html %}
-            {{ member }}
-        {% endfor %}
+];
+const teamContainer = document.getElementById("team-container");
 
-        {% if alumni.size > 0 %}
-            <h1 class="post-title">Alumni</h1>
-            {% assign member_html = alumni | map: 'include_html' %}
-            {% for member in member_html %}
-                {{ member }}
-            {% endfor %}
-        {% endif %}
-    </ul>
-</div>
+  // Loop through the site JSON object
+  site.forEach(member => {
+    // Create HTML elements dynamically for each team member
+    const memberDiv = document.createElement("div");
+    memberDiv.classList.add("team-member");
+
+    // Populate the member details
+    memberDiv.innerHTML = `
+      <div class="member-name">${member.name}</div>
+      <div class="member-position">${member.position}</div>
+      <div class="member-bio">${member.bio}</div>
+    `;
+
+    // Append the member div to the team container
+    teamContainer.appendChild(memberDiv);
+  });
+</script>
 
 
