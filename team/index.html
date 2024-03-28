@@ -6,185 +6,37 @@ description: The heroes of our gang
 Why does it not work🥲🥲
 Work god damn it
 plssssss
-
-<script>
-  const site = [
-  {
-    "name": "Dr. Jishnu Das",
-    "is_pi": true,
-    "is_current": true,
-    "position": "Professor",
-    "orcid": "https://orcid.org/0000-0003-2932-7800",
-    "scholar": "https://scholar.google.com/citations?user=61wI3HMAAAAJ&hl=en",
-    "researchgate": "https://www.researchgate.net/profile/Jishnu-Das-2",
-    "github": "https://github.com/jishnu-lab",
-    "twitter": "https://twitter.com/jishnu1729",
-    "bio": "Jishnu completed an undergrad degree in Bioengineering at the Indian Institute of Technology Kanpur followed by graduate studies in Computational Biology at Cornell University. After a short postdoc at the Ragon Institute of MGH, MIT & Harvard/MIT, Jishnu started his Systems Immunology lab. His most important role is that of a “translator\" of jargon across disciplines (comp bio, basic and translational clinical immunology); this helps bridge the interdisciplinary expertise in the lab. He is also a cheerleader for all projects in the lab.\n",
-    "photo": "team/Morin_headshot_2019.gif"
-  },
-  {
-    "name": "Zarifeh Heidari Rarani",
-    "is_pi": false,
-    "is_current": true,
-    "position": "Postdoctoral Associate",
-    "bio": "With a background in control systems engineering, I am deeply passionate about venturing into the captivating realm of computational biology, employing innovative methodologies to unravel its mysteries.\n",
-    "photo": "team/lhilton.jpg"
-  },
-  {
-    "name": "Hanxi Xiao",
-    "is_pi": false,
-    "is_current": true,
-    "position": "PhD Student | CMU-Pitt Program in Computational Biology (CPCB)",
-    "bio": "Hanxi is currently a PhD student focusing on developing methods for sequencing data analyses. She is mainly interested in applied statistics and machine learning approaches. She has 2 cats who take up most of her free time and is trying to grow a patio garden\n",
-    "photo": "team/kcoyle.jpg"
-  },
-  {
-    "name": "Swapnil Keshari",
-    "is_pi": false,
-    "is_current": false,
-    "position": "PhD Student | CMU-Pitt Program in Computational Biology (CPCB)",
-    "bio": "Swapnil is a Computational biologist enthusiast with a keen interest in the field of genomics. Before joining the CPCB program, he completed his B.Tech. in chemical engineering from IIT Bombay, India. He likes to travel a lot and is always up for outdoor sports :). In addition to that, he loves to read crime fiction novels, paint and swim.\n",
-    "photo": "team/ppararajalingam.jpg"
-  },
-  {
-    "name": "Prabal Chhibbar",
-    "is_pi": false,
-    "is_current": true,
-    "position": "PhD Student | Integrative Systems Biology (ISB)",
-    "bio": "Prabal completed his B.Tech in computer science and engineering from SRM Institute of Science and Technology in 2019. His interests are in Protein-Protein Interactions, Host-Viral interactions, complex networks, machine learning and deep learning. Prabal is always eager to discuss science and brainstorm ideas. Out of work, you can find him passionately discussing politics, hanging out with his friends or reading voraciously and consuming a whole lot of content.\n",
-    "photo": "team/haya.jpg"
-  },
-  {
-    "name": "Trirupa Chakraborty",
-    "is_pi": false,
-    "is_current": false,
-    "position": "PhD Student | Integrative Systems Biology (ISB)",
-    "bio": "Trirupa has done her BS-MS dual degree from IISER Mohali, India. Her research is primarily focused on understanding the network of non-coding DNA regions in the B cell and how they may affect B cell fate dynamics. When she is not squinting at large blocks of code, you'd find her exploring new places to eat, grooving to random Tamil songs and learning Indian classical dance or just chillin' with her friends B)\n",
-    "photo": "team/nthomas.jpg"
-  },
-  {
-    "name": "Javad Rahimikollu",
-    "is_pi": false,
-    "is_current": true,
-    "position": "PhD Student | CMU-Pitt Program in Computational Biology (CPCB)",
-    "bio": "Javad enjoys doing research and developing methods for solving real-world problems.\n",
-    "photo": "team/kdreval.jpg"
-  },
-  {
-    "name": "Priyamvada Guha Roy",
-    "is_pi": false,
-    "is_current": false,
-    "position": "PhD Student | Human Genetics",
-    "bio": "Priyamvada is a second year master's student in the Department of Human Genetics. She is interested in studying the genetic architecture underlying complex traits of public health importance. In her free time, she enjoys baking and petting dogs.\n",
-    "photo": "team/kristena.jpg"
-  },
-  {
-    "name": "Aaron Rosen",
-    "is_pi": false,
-    "is_current": false,
-    "position": "PhD Student | CMU-Pitt Program in Computational Biology (CPCB)",
-    "bio": "Aaron is using computational methods to study host-pathogen interactions and autoimmunity. Before joining CPCB, Aaron graduated from the University of Washington with a B.S. in biochemistry/applied math.\n",
-    "photo": "team/IMG_1330.jpg"
-  },
-  {
-    "name": "Marisa Abundis",
-    "is_pi": false,
-    "is_current": false,
-    "position": "PhD Student | CMU-Pitt Program in Computational Biology (CPCB)",
-    "bio": "Marisa Abundis is a first year PhD student in the Department of Computational & Systems Biology. She is interested in using computational methods to improve our understanding of human health and disease. In her free time she enjoys thrifting, finding new places to eat, and looking at cute animals.\n",
-    "photo": "team/Elie_crop.jpeg"
-  },
-  {
-    "name": "Alisa Omelchenko",
-    "is_pi": false,
-    "is_current": false,
-    "position": "PhD Student | CMU-Pitt Program in Computational Biology (CPCB)",
-    "bio": "Alisa completed a B.S./M.S. in Biotechnology at NYU Tandon School of Engineering. Her scientific goal is to bridge the gap between the computational and biology fields through designing easily adaptable computational methods. Outside of work, she is an avid baker and loves learning to cook new cuisines. She also enjoys dancing, hiking, and yoga.\n",
-    "photo": "team/adam.jpg"
-  },
-  {
-    "name": "Zakaria Larbi Dahmani",
-    "is_pi": false,
-    "is_current": true,
-    "position": "PhD Student | Integrative Systems Biology (ISB)",
-    "bio": "Interested in the intersection of physics, chemistry and biology, AI enthusiast, love to learn about peoples culture and stories, big on hiking, traveling and sports\n",
-    "photo": "team/jasper.JPG"
-  },
-  {
-    "name": "Kaveh Moghbeli",
-    "is_pi": false,
-    "is_current": true,
-    "position": "PhD Student | Integrative Systems Biology (ISB)",
-    "bio": "I’m interested in systems immunology, machine learning, and lung transplantation.\n",
-    "photo": "team/sierra.jpg"
-  },
-  {
-    "name": "Jane Siwek",
-    "is_pi": false,
-    "is_current": true,
-    "position": "PhD Student | CMU-Pitt Program in Computational Biology (CPCB)",
-    "github": "https://github.com/vladimirsouza",
-    "bio": "Jane is a student researcher pursuing a degree in Computational & Applied Mathematics & Statistics, Mathematical Biology Track from William & Mary. She is interested in the intersection between data science and biology, specifically using machine and deep learning methods to explore biological problems such as protein-protein interactions. She is also interested in using deep learning and neural networks to explore global education data and satellite imagery.\n",
-    "photo": "team/vlad.jpg"
-  },
-  {
-    "name": "Tracy Tabib",
-    "is_pi": false,
-    "is_current": true,
-    "position": "PhD Student | CMU-Pitt Program in Computational Biology (CPCB)",
-    "github": "https://github.com/kyaki",
-    "bio": "Tracy is a PhD student in the CMU-Pitt Program in Computational Biology (CPCB). She is interested in applying and developing computational methods to single cell data, particularly for questions and issues relating to human health and disease.\n",
-    "photo": "team/kurt.JPG"
-  },
-  {
-    "name": "Alyson Wang",
-    "is_pi": false,
-    "is_current": true,
-    "position": "PhD Student | CMU-Pitt Program in Computational Biology (CPCB)",
-    "bio": "Ally received her degrees in Chemistry and Computer Science from Wellesley College and is co-advised by Nate Lord. Outside the lab, she enjoys figure skating, playing video games, and baking.\n",
-    "photo": "team/malki.jpeg"
-  },
-  {
-    "name": "Simar Yadav",
-    "is_pi": false,
-    "is_current": true,
-    "position": "Undergraduate Student | IIT Roorkee",
-    "bio": "Simar is an Undergraduate Student Researcher in Das Lab at the University of Pittsburgh and a Senior at IIT Roorkee in the department of Biosciences and Bioengineering. His hobbies are playing soccer and swimming and he is a huge Man United fan. His research interest lies in the field of Computational and Structural Biology and he loves to learn more about it.\n",
-    "photo": "team/rachel.jpg"
-  },
-  {
-    "name": "Shloka Shukla",
-    "is_pi": false,
-    "is_current": true,
-    "position": "Masters Student | Comutational Biology",
-    "bio": "Shloka is a second-year Master's student at Carnegie Mellon University, passionately exploring the convergence of computer science and biology in the realm of computational biology. Eager to leverage her skills in analyzing biological data to enhance healthcare outcomes, she immerses herself in research and learning. Outside academia, she finds solace in reading, stays active with kickboxing, and indulges in her love for singing and dancing to Bollywood songs\n",
-    "photo": "team/houman.jpg"
-  },
-  {
-    "name": "Akash Kishore",
-    "is_pi": false,
-    "is_current": true,
-    "position": "Masters Student | Comutational Biology",
-    "bio": "Akash is currently a masters student in Automated Science at CMU. He's interested in utilizing computational approaches for problems in biology no matter how big or small. Purveyor of random stories as a trivia buff, and always up for a game of tennis :)\n",
-    "photo": "team/callum.png"
-  },
-  {
-    "name": "Kiran Nazarali",
-    "is_pi": false,
-    "is_current": true,
-    "position": "Undergraduate Student",
-    "bio": "IKiran is an undergraduate student majoring in Computer Science at the Georgia Institute of Technology. She has been working as a student researcher in Dr Das's lab since 2020. Her research involves mining and analyzing data using machine learning algorithms and differential expression analysis. As a researcher in the field of data science, she utilizes programming languages including R, Python, and Java. Her goal is to use critical thinking skills to solve computing problems and acquire skills to conquer the problems of tomorrow.\n",
-    "photo": "team/cruz.jpg"
-  }
-];
-</script>
+workkkkkkkkkkkk I beg you
 
 <div class="lab-wrapper">
     <ul class="lab-list">
     <!-- Current PIs -->
-    {% for product in site.data.team %}
-      <li>{{ product.name }}</li>
-    {% endfor %}   
-    </ul>  
+    {% for member in site.data.team %}
+        {% if member.is_current and member.is_pi %}
+            {% if member.name and member.bio %}
+                {% include member.html %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    <!-- Current non-PIs -->
+    {% for member in site.data.team %}
+        {% if member.is_current and member.is_pi == false %}
+            {% if member.name and member.bio %}
+                {% include member.html %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    <!-- Non-current (alumni) -->
+    {% assign alumni_size = site.data.team | size %}
+    {% if alumni_size > 0 %}
+        <h1 class="post-title">Alumni</h1>
+        {% for member in site.data.team %}
+            {% if member.is_current == false %}
+                {% if member.name and member.bio %}
+                    {% include member.html %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    </ul>
 </div>
-
