@@ -73,9 +73,9 @@ description: Meet the Heroes of Our Gang
     }
 
     .member-photo {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        border-radius: 8px;
         margin-bottom: 20px;
         object-fit: cover;
     }
@@ -115,6 +115,18 @@ description: Meet the Heroes of Our Gang
 
     .member-links a:hover {
         opacity: 0.7;
+    }
+
+    @media (max-width: 768px) {
+        .team-member {
+            width: calc(50% - 20px);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .team-member {
+            width: 100%;
+        }
     }
 </style>
 
