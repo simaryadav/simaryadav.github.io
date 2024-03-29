@@ -4,6 +4,100 @@ title: Team
 description: Meet the Heroes of Our Gang
 ---
 
+<style>
+    /* Global styles */
+    .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .team-section {
+        margin-top: 40px;
+    }
+
+    .team-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .team-member {
+        margin-bottom: 40px;
+    }
+
+    .member-name {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .member-position {
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 16px;
+    }
+
+    .member-bio {
+        font-size: 16px;
+        color: #333;
+    }
+
+    .member-photo {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin-right: 20px;
+    }
+
+    .member-links {
+        margin-top: 20px;
+    }
+
+    .member-links a {
+        margin-right: 10px;
+    }
+
+    /* Media queries */
+    @media (max-width: 768px) {
+        .member-photo {
+            width: 120px;
+            height: 120px;
+        }
+
+        .member-name {
+            font-size: 20px;
+        }
+
+        .member-position {
+            font-size: 16px;
+        }
+
+        .member-bio {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .member-photo {
+            width: 100px;
+            height: 100px;
+        }
+
+        .member-name {
+            font-size: 18px;
+        }
+
+        .member-position {
+            font-size: 14px;
+        }
+
+        .member-bio {
+            font-size: 12px;
+        }
+    }
+</style>
+
 <section class="header-section">
     <div class="container">
         <h1 class="page-title">{{ page.title }}</h1>
@@ -36,3 +130,4 @@ description: Meet the Heroes of Our Gang
     {% include section-author.html %}
     {% include section-subscribe.html %}
 </section>
+</html>
