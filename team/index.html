@@ -47,6 +47,11 @@ description: Meet the Heroes of Our Gang
         background-color: #f9f9f9;
         padding: 20px;
         border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+
+    .team-member:hover {
+        transform: translateY(-5px);
     }
 
     .member-name {
@@ -68,6 +73,11 @@ description: Meet the Heroes of Our Gang
         width: 100%;
         border-radius: 50%;
         margin-bottom: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .member-photo:hover {
+        transform: scale(1.05);
     }
 
     .member-links {
@@ -76,6 +86,11 @@ description: Meet the Heroes of Our Gang
 
     .member-links a {
         margin-right: 10px;
+        transition: opacity 0.3s ease;
+    }
+
+    .member-links a:hover {
+        opacity: 0.7;
     }
 
     /* Media queries */
@@ -83,49 +98,7 @@ description: Meet the Heroes of Our Gang
         .team-list {
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         }
-
-        .member-photo {
-            width: 80%;
-        }
     }
 
     @media (max-width: 576px) {
-        .member-photo {
-            width: 100%;
-        }
-    }
-</style>
-
-<section class="header-section">
-    <div class="container">
-        <h1 class="page-title">{{ page.title }}</h1>
-        <p class="page-description">{{ page.description }}</p>
-    </div>
-</section>
-
-<section class="team-section">
-    <div class="container">
-        <ul class="team-list">
-            <!-- Current PIs -->
-            {% for member in site.data.team %}
-                {% if member.is_current and member.is_pi %}
-                    {% include member.html %}
-                {% endif %}
-            {% endfor %}
-
-            <!-- Current non-PIs -->
-            {% for member in site.data.team %}
-                {% if member.is_current and member.is_pi == false %}
-                    {% include member.html %}
-                {% endif %}
-            {% endfor %}
-        </ul>
-    </div>
-</section>
-
-<section class="footer-section">
-    {% include section-faq.html %}
-    {% include section-author.html %}
-    {% include section-subscribe.html %}
-</section>
-</html>
+        .membe
