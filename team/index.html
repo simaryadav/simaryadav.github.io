@@ -1,53 +1,38 @@
 ---
 layout: default
 title: Team
-description: The heroes of our gang
+description: Meet the Heroes of Our Gang
 ---
-- Why does it not work🥲🥲
-- Work god damn it
-- plssssss
-- workkkkkkkkkkkk I beg you
-- give me my photos plssss
-- pretty plssss
 
-<img src="/images/Genome-scale.webp" alt="Genome Scale Image">
+<section class="header-section">
+    <div class="container">
+        <h1 class="page-title">{{ page.title }}</h1>
+        <p class="page-description">{{ page.description }}</p>
+    </div>
+</section>
 
-<div class="lab-wrapper">
-    <ul class="lab-list">
-    <!-- Current PIs -->
-    {% for member in site.data.team %}
-        {% if member.is_current and member.is_pi %}
-            {% if member.name and member.bio %}
-                {% include member.html %}
-            {% endif %}
-        {% endif %}
-    {% endfor %}
-    <!-- Current non-PIs -->
-    {% for member in site.data.team %}
-        {% if member.is_current and member.is_pi == false %}
-            {% if member.name and member.bio %}
-                {% include member.html %}
-            {% endif %}
-        {% endif %}
-    {% endfor %}
-    <!-- Non-current (alumni) -->
-    {% assign alumni_size = site.data.team | size %}
-    {% if alumni_size > 0 %}
-        <h1 class="post-title">Alumni</h1>
-        {% for member in site.data.team %}
-            {% if member.is_current == false %}
-                {% if member.name and member.bio %}
+<section class="team-section">
+    <div class="container">
+        <ul class="team-list">
+            <!-- Current PIs -->
+            {% for member in site.data.team %}
+                {% if member.is_current and member.is_pi %}
                     {% include member.html %}
                 {% endif %}
-            {% endif %}
-        {% endfor %}
-    {% endif %}
-    </ul>
-</div>
+            {% endfor %}
 
+            <!-- Current non-PIs -->
+            {% for member in site.data.team %}
+                {% if member.is_current and member.is_pi == false %}
+                    {% include member.html %}
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</section>
 
-{% include section-faq.html %}
-
-{% include section-author.html %}
-
-{% include section-subscribe.html %}
+<section class="footer-section">
+    {% include section-faq.html %}
+    {% include section-author.html %}
+    {% include section-subscribe.html %}
+</section>
