@@ -32,7 +32,7 @@
 
 - name: Swapnil Keshari
   is_pi: False
-  is_current: False
+  is_current: True
   position: PhD Student | CMU-Pitt Program in Computational Biology (CPCB)
   bio: >
     Swapnil is a Computational biologist enthusiast with a keen interest in the field of genomics. Before joining the CPCB program, he completed his B.Tech. in chemical engineering from IIT Bombay, India. He likes to travel a lot and is always up for outdoor sports :). In addition to that, he loves to read crime fiction novels, paint, and swim.
@@ -50,7 +50,7 @@
 
 - name: Trirupa Chakraborty
   is_pi: False
-  is_current: False
+  is_current: True
   position: PhD Student | Integrative Systems Biology (ISB)
   bio: >
     Trirupa has done her BS-MS dual degree from IISER Mohali, India. Her research is primarily focused on understanding the network of non-coding DNA regions in the B cell and how they may affect B cell fate dynamics. When she is not squinting at large blocks of code, you'd find her exploring new places to eat, grooving to random Tamil songs and learning Indian classical dance, or just chillin' with her friends B)
@@ -66,7 +66,7 @@
 
 - name: Priyamvada Guha Roy
   is_pi: False
-  is_current: False
+  is_current: True
   position: PhD Student | Human Genetics
   bio: >
     Priyamvada is a second-year master's student in the Department of Human Genetics. She is interested in studying the genetic architecture underlying complex traits of public health importance. In her free time, she enjoys baking and petting dogs.
@@ -74,7 +74,7 @@
 
 - name: Aaron Rosen
   is_pi: False
-  is_current: False
+  is_current: True
   position: PhD Student | CMU-Pitt Program in Computational Biology (CPCB)
   bio: >
    Aaron is using computational methods to study host-pathogen interactions and autoimmunity. Before joining CPCB, Aaron graduated from the University of Washington with a B.S. in biochemistry/applied math.
@@ -82,7 +82,7 @@
 
 - name: Marisa Abundis
   is_pi: False
-  is_current: False
+  is_current: True
   position: PhD Student | CMU-Pitt Program in Computational Biology (CPCB)
   bio: >  
     Marisa Abundis is a first-year PhD student in the Department of Computational & Systems Biology. She is interested in using computational methods to improve our understanding of human health and disease. In her free time she enjoys thrifting, finding new places to eat, and looking at cute animals.
@@ -90,7 +90,7 @@
 
 - name: Alisa Omelchenko
   is_pi: False
-  is_current: False
+  is_current: True
   position: PhD Student | CMU-Pitt Program in Computational Biology (CPCB)
   bio: >
     Alisa completed a B.S./M.S. in Biotechnology at NYU Tandon School of Engineering. Her scientific goal is to bridge the gap between the computational and biology fields by designing easily adaptable computational methods. Outside of work, she is an avid baker and loves learning to cook new cuisines. She also enjoys dancing, hiking, and yoga.
