@@ -38,9 +38,9 @@ description: Meet the Heroes of Our Gang
     .team-list {
         list-style: none;
         padding: 0;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .team-member {
@@ -48,7 +48,9 @@ description: Meet the Heroes of Our Gang
         padding: 20px;
         border-radius: 8px;
         transition: transform 0.3s ease;
-        height: 100%;
+        margin-bottom: 20px;
+        width: calc(33.33% - 20px);
+        box-sizing: border-box;
     }
 
     .team-member:hover {
