@@ -5,155 +5,179 @@ description: Meet the Heroes of Our Gang
 ---
 
 <style>
-    /* Global styles */
-    body {
-        font-family: 'Roboto', sans-serif;
-        color: #333;
-        margin: 0;
-        padding: 0;
+/* Project */
+.project-head {
+  max-width: 960px;
+  margin: 64px auto 40px;
+
+  @media (max-width: $tablet) {
+    margin: 48px auto 32px;
+  }
+
+  @media (max-width: $tablet) {
+    margin: 32px 0;
+  }
+}
+
+.project-info {
+
+  .project-label {
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-alt-color);
+  }
+
+  .project-title {
+    font-size: 52px;
+  }
+
+  @media (max-width: $tablet) {
+    .project-label {
+      font-size: inherit;
     }
 
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
+    .project-title {
+      font-size: 42px;
     }
+  }
 
-    h1, h2, h3 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: bold;
-        margin: 0;
-        color: #222;
+  @media (max-width: $mobile) {
+    .project-title {
+      font-size: 32px;
     }
+  }
+}
 
-    h1 {
-        font-size: 32px;
-    }
+.project-image {
+  position: relative;
+  transform: translate(0);
+  padding-top: 80%;
+  min-height: 280px;
+  border-radius: 22px;
+  overflow: hidden;
+  background: var(--background-alt-color);
 
-    h2 {
-        font-size: 24px;
-    }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+  }
 
-    p {
-        line-height: 1.6;
-    }
+  @media (max-width: $tablet) {
+    border-radius: 16px;
+  }
 
-    /* Team section */
-    .team-section {
-        margin-top: 40px;
-    }
+  @media (max-width: $mobile) {
+    padding-top: 100%;
+  }
+}
 
-    .team-list {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+.project-video {
+  border-radius: 22px;
+  overflow: hidden;
+  transform: translate(0);
+  background-color: var(--background-alt-color);
 
-    .team-member {
-        background-color: #f9f9f9;
-        padding: 20px;
-        border-radius: 8px;
-        transition: transform 0.3s ease;
-        margin-bottom: 20px;
-        width: calc(33.33% - 20px);
-        box-sizing: border-box;
-    }
+  .project-video__wrap {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 80%;
 
-    .team-member:hover {
-        transform: translateY(-5px);
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
+  }
 
-    .member-info {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-    }
+  @media (max-width: $tablet) {
+    border-radius: 16px;
+  }
 
-    .member-photo {
-        width: 250px;
-        height: 250px;
-        border-radius: 8px;
-        margin-bottom: 20px;
-        object-fit: cover;
+  @media (max-width: $mobile) {
+    .project-video__wrap {
+      padding-bottom: 100%;
     }
+  }
+}
 
-    .member-details {
-        text-align: center;
-        margin-bottom: 10px;
-    }
+.project-content {
+  max-width: 780px;
+  margin: 0 auto 96px;
 
-    .member-name {
-        font-size: 24px;
-        margin-bottom: 5px;
-    }
+  img,
+  .js-reframe {
+    border-radius: 22px;
+    overflow: hidden;
 
-    .member-position {
-        font-size: 16px;
-        color: #666;
-        margin-bottom: 5px;
+    &.lightense-open {
+      border-radius: 0;
     }
+  }
 
-    .member-bio {
-        font-size: 14px;
-        text-align: justify;
-    }
+  @media (max-width: $tablet) {
+    margin: 0 auto 80px;
 
-    .member-links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 10px;
+    img,
+    .js-reframe {
+      border-radius: 16px;
     }
+  }
+}
 
-    .member-links a {
-        margin-right: 10px;
-        transition: opacity 0.3s ease;
-    }
-
-    .member-links a:hover {
-        opacity: 0.7;
-    }
-
-    @media (max-width: 768px) {
-        .team-member {
-            width: calc(50% - 20px);
-        }
-    }
-
-    @media (max-width: 480px) {
-        .team-member {
-            width: 100%;
-        }
-    }
+@media (max-width: $desktop) {
+  .row .col:last-child.project {
+    flex-grow: 1;
+  }
+}
 </style>
 
 <section class="header-section">
     <div class="container">
-        <h2 class="page-title">{{ page.title }}</h2>
+        <h1 class="page-title">{{ page.title }}</h1>
         <p class="page-description">{{ page.description }}</p>
     </div>
 </section>
 
 <section class="team-section">
     <div class="container">
-        <ul class="team-list">
-            <!-- Current PIs -->
-            {% for member in site.data.team %}
-                {% if member.is_current and member.is_pi %}
-                    {% include member.html %}
-                {% endif %}
-            {% endfor %}
-
-            <!-- Current non-PIs -->
-            {% for member in site.data.team %}
-                {% if member.is_current and member.is_pi == false %}
-                    {% include member.html %}
-                {% endif %}
-            {% endfor %}
-        </ul>
+        {% for member in site.data.team %}
+            <div class="team-member">
+                <div class="member-photo">
+                    <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}">
+                </div>
+                <div class="member-details">
+                    <h2 class="member-name">{{ member.name }}</h2>
+                    <p class="member-position">{{ member.position }}</p>
+                    <p class="member-bio">{{ member.bio | newline_to_br }}</p>
+                    <div class="member-links">
+                        {% if member.orcid %}
+                            <a href="{{ member.orcid }}"><img src="/images/team/orcid.png" width="50" height="50" alt="Orcid"></a>
+                        {% endif %}
+                        {% if member.scholar %}
+                            <a href="{{ member.scholar }}"><img src="/images/team/scholar.png" width="60" height="60" alt="Scholar"></a>
+                        {% endif %}
+                        {% if member.researchgate %}
+                            <a href="{{ member.researchgate }}"><img src="/images/team/researchgate.png" width="60" height="60" alt="ResearchGate"></a>
+                        {% endif %}
+                        {% if member.github %}
+                            <a href="{{ member.github }}"><img src="/images/team/github.jpg" width="52" height="52" alt="GitHub"></a>
+                        {% endif %}
+                        {% if member.twitter %}
+                            <a href="{{ member.twitter }}"><img src="/images/team/twitter.png" width="55" height="55" alt="Twitter"></a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
     </div>
 </section>
 
@@ -162,4 +186,3 @@ description: Meet the Heroes of Our Gang
     {% include section-author.html %}
     {% include section-subscribe.html %}
 </section>
-</html>
