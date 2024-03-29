@@ -10,7 +10,7 @@
   bio: >
     Jishnu completed an undergrad degree in Bioengineering at the Indian Institute of Technology Kanpur followed by graduate studies in Computational Biology at Cornell University. After a short postdoc at the Ragon Institute of MGH, MIT & Harvard/MIT, Jishnu started his Systems Immunology lab. His most important role is that of a “translator" of jargon across disciplines (comp bio, basic and translational clinical immunology); this helps bridge the interdisciplinary expertise in the lab. He is also a cheerleader for all projects in the lab.
 
-  photo: images/jishnu.webp
+  photo: /images/jishnu.webp
 
 
 - name: Zarifeh Heidari Rarani
@@ -19,7 +19,7 @@
   position: Postdoctoral Associate
   bio: >
    With a background in control systems engineering, I am deeply passionate about venturing into the captivating realm of computational biology, employing innovative methodologies to unravel its mysteries.
-  photo: images/zarifeh.webp
+  photo: /images/zarifeh.webp
 
 - name: Hanxi Xiao
   is_pi: False
@@ -27,7 +27,7 @@
   position: PhD Student | CMU-Pitt Program in Computational Biology (CPCB)
   bio: >
     Hanxi is currently a PhD student focusing on developing methods for sequencing data analyses. She is mainly interested in applied statistics and machine learning approaches. She has 2 cats who take up most of her free time and is trying to grow a patio garden
-  photo: images/hanxi.webp
+  photo: /images/hanxi.webp
 
 
 - name: Swapnil Keshari
@@ -36,7 +36,7 @@
   position: PhD Student | CMU-Pitt Program in Computational Biology (CPCB)
   bio: >
     Swapnil is a Computational biologist enthusiast with a keen interest in the field of genomics. Before joining the CPCB program, he completed his B.Tech. in chemical engineering from IIT Bombay, India. He likes to travel a lot and is always up for outdoor sports :). In addition to that, he loves to read crime fiction novels, paint, and swim.
-  photo: images/swapnil.webp
+  photo: /images/swapnil.webp
 
 
 - name: Prabal Chhibbar 
@@ -45,7 +45,7 @@
   position: PhD Student | Integrative Systems Biology (ISB)
   bio: >
     Prabal completed his B.Tech in computer science and engineering from SRM Institute of Science and Technology in 2019. His interests are in Protein-Protein Interactions, Host-Viral interactions, complex networks, machine learning, and deep learning. Prabal is always eager to discuss science and brainstorm ideas. Out of work, you can find him passionately discussing politics, hanging out with his friends, or reading voraciously and consuming a whole lot of content.
-  photo: images/prabal.webp
+  photo: /images/prabal.webp
 
 
 - name: Trirupa Chakraborty
@@ -54,7 +54,7 @@
   position: PhD Student | Integrative Systems Biology (ISB)
   bio: >
     Trirupa has done her BS-MS dual degree from IISER Mohali, India. Her research is primarily focused on understanding the network of non-coding DNA regions in the B cell and how they may affect B cell fate dynamics. When she is not squinting at large blocks of code, you'd find her exploring new places to eat, grooving to random Tamil songs and learning Indian classical dance, or just chillin' with her friends B)
-  photo: images/trirupa.webp
+  photo: /images/trirupa.webp
 
 - name: Javad Rahimikollu
   is_pi: False
@@ -62,7 +62,7 @@
   position: PhD Student | CMU-Pitt Program in Computational Biology (CPCB)
   bio: >
     Javad enjoys doing research and developing methods for solving real-world problems.
-  photo: images/javad.webp
+  photo: /images/javad.webp
 
 - name: Priyamvada Guha Roy
   is_pi: False
@@ -70,7 +70,7 @@
   position: PhD Student | Human Genetics
   bio: >
     Priyamvada is a second-year master's student in the Department of Human Genetics. She is interested in studying the genetic architecture underlying complex traits of public health importance. In her free time, she enjoys baking and petting dogs.
-  photo: images/priyamvada.webp
+  photo: /images/priyamvada.webp
 
 - name: Aaron Rosen
   is_pi: False
@@ -78,7 +78,7 @@
   position: PhD Student | CMU-Pitt Program in Computational Biology (CPCB)
   bio: >
    Aaron is using computational methods to study host-pathogen interactions and autoimmunity. Before joining CPCB, Aaron graduated from the University of Washington with a B.S. in biochemistry/applied math.
-  photo: images/aaron.webp
+  photo: /images/aaron.webp
 
 - name: Marisa Abundis
   is_pi: False
@@ -86,7 +86,7 @@
   position: PhD Student | CMU-Pitt Program in Computational Biology (CPCB)
   bio: >  
     Marisa Abundis is a first-year PhD student in the Department of Computational & Systems Biology. She is interested in using computational methods to improve our understanding of human health and disease. In her free time she enjoys thrifting, finding new places to eat, and looking at cute animals.
-  photo: images/marisa.webp
+  photo: /images/marisa.webp
 
 - name: Alisa Omelchenko
   is_pi: False
@@ -94,7 +94,7 @@
   position: PhD Student | CMU-Pitt Program in Computational Biology (CPCB)
   bio: >
     Alisa completed a B.S./M.S. in Biotechnology at NYU Tandon School of Engineering. Her scientific goal is to bridge the gap between the computational and biology fields by designing easily adaptable computational methods. Outside of work, she is an avid baker and loves learning to cook new cuisines. She also enjoys dancing, hiking, and yoga.
-  photo: images/alisa.webp
+  photo: /images/alisa.webp
 
 - name: Zakaria Larbi Dahmani
   is_pi: False
@@ -102,7 +102,7 @@
   position: PhD Student | Integrative Systems Biology (ISB)
   bio: >
     Interested in the intersection of physics, chemistry, and biology, AI enthusiast, love to learn about people's culture and stories, big on hiking, traveling, and sports.
-  photo: images/zakaria.webp
+  photo: /images/zakaria.webp
 
 - name: Kaveh Moghbeli
   is_pi: False
@@ -110,7 +110,7 @@
   position: PhD Student | Integrative Systems Biology (ISB)
   bio: >
     I’m interested in systems immunology, machine learning, and lung transplantation.
-  photo: images/kaveh.webp
+  photo: /images/kaveh.webp
 
 - name: Jane Siwek
   is_pi: False
@@ -119,7 +119,7 @@
   github: https://github.com/vladimirsouza
   bio: >
     Jane is a student researcher pursuing a degree in Computational & Applied Mathematics & Statistics, Mathematical Biology Track from William & Mary. She is interested in the intersection between data science and biology, specifically using machine and deep learning methods to explore biological problems such as protein-protein interactions. She is also interested in using deep learning and neural networks to explore global education data and satellite imagery.
-  photo: images/jane.webp
+  photo: /images/jane.webp
 
 - name: Tracy Tabib
   is_pi: False
@@ -128,7 +128,7 @@
   github: https://github.com/kyaki
   bio: >
     Tracy is a PhD student in the CMU-Pitt Program in Computational Biology (CPCB). She is interested in applying and developing computational methods to single-cell data, particularly for questions and issues relating to human health and disease.
-  photo: images/tracy.webp
+  photo: /images/tracy.webp
 
 - name: Alyson Wang
   is_pi: False
@@ -136,7 +136,7 @@
   position: PhD Student | CMU-Pitt Program in Computational Biology (CPCB)
   bio: >
     Ally received her degrees in Chemistry and Computer Science from Wellesley College and is co-advised by Nate Lord. Outside the lab, she enjoys figure skating, playing video games, and baking.
-  photo: images/alyson.webp
+  photo: /images/alyson.webp
 
 - name: Simar Yadav
   is_pi: False
@@ -144,7 +144,7 @@
   position: Undergraduate Student | IIT Roorkee
   bio: >
     Simar is an Undergraduate Student Researcher in Das Lab at the University of Pittsburgh and a Senior at IIT Roorkee in the Department of Biosciences and Bioengineering. His hobbies are playing soccer and swimming and he is a huge Man United fan. His research interest lies in the field of Computational and Structural Biology and he loves to learn more about it.
-  photo: images/simar.webp
+  photo: /images/simar.webp
 
 - name: Shloka Shukla
   is_pi: False
@@ -152,7 +152,7 @@
   position: Masters Student | Computational Biology
   bio: >
     Shloka is a second-year Master's student at Carnegie Mellon University, passionately exploring the convergence of computer science and biology in the realm of computational biology. Eager to leverage her skills in analyzing biological data to enhance healthcare outcomes, she immerses herself in research and learning. Outside academia, she finds solace in reading, stays active with kickboxing, and indulges in her love for singing and dancing to Bollywood songs
-  photo: images/shloka.webp
+  photo: /images/shloka.webp
 
 - name: Akash Kishore
   is_pi: False
@@ -160,7 +160,7 @@
   position: Masters Student | Computational Biology
   bio: >
     Akash is currently a master's student in Automated Science at CMU. He's interested in utilizing computational approaches for problems in biology no matter how big or small. Purveyor of random stories as a trivia buff, and always up for a game of tennis :)
-  photo: images/akash.webp
+  photo: /images/akash.webp
 
 - name: Kiran Nazarali
   is_pi: False
@@ -168,4 +168,4 @@
   position: Undergraduate Student
   bio: >
     Kiran is an undergraduate student majoring in Computer Science at the Georgia Institute of Technology. She has been working as a student researcher in Dr Das's lab since 2020. Her research involves mining and analyzing data using machine learning algorithms and differential expression analysis. As a researcher in the field of data science, she utilizes programming languages including R, Python, and Java. Her goal is to use critical thinking skills to solve computing problems and acquire skills to conquer the problems of tomorrow.
-  photo: images/kiran.webp
+  photo: /images/kiran.webp
