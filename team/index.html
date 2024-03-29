@@ -39,7 +39,7 @@ description: Meet the Heroes of Our Gang
         list-style: none;
         padding: 0;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 20px;
     }
 
@@ -47,6 +47,20 @@ description: Meet the Heroes of Our Gang
         background-color: #f9f9f9;
         padding: 20px;
         border-radius: 8px;
+        transition: transform 0.3s ease;
+        height: 100%;
+    }
+
+    .team-member:hover {
+        transform: translateY(-5px);
+    }
+
+    .member-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
     }
 
     .member-name {
@@ -62,37 +76,34 @@ description: Meet the Heroes of Our Gang
 
     .member-bio {
         font-size: 16px;
+        margin-bottom: 16px;
     }
 
     .member-photo {
-        width: 100%;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
         margin-bottom: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .member-photo:hover {
+        transform: scale(1.05);
     }
 
     .member-links {
-        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .member-links a {
         margin-right: 10px;
+        transition: opacity 0.3s ease;
     }
 
-    /* Media queries */
-    @media (max-width: 768px) {
-        .team-list {
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        }
-
-        .member-photo {
-            width: 80%;
-        }
-    }
-
-    @media (max-width: 576px) {
-        .member-photo {
-            width: 100%;
-        }
+    .member-links a:hover {
+        opacity: 0.7;
     }
 </style>
 
