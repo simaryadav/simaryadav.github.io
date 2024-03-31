@@ -4,14 +4,6 @@ title: Team
 description: Meet the Heroes of Our Gang
 ---
 
-<section class="header-section">
-    <div class="container">
-        <h1 class="page-title">{{ page.title }}</h1>
-        <p class="page-description">Meet the Brilliant Minds Behind Our Team</p>
-    </div>
-</section>
-
-
 <style>
 /* Project */
 .project-head {
@@ -152,6 +144,63 @@ description: Meet the Heroes of Our Gang
     flex-grow: 1;
   }
 }
+
+/* Custom Team Layout */
+.team-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.team-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.team-member {
+    border-bottom: 1px solid #ccc;
+}
+
+.photo-column {
+    width: 200px;
+    padding-right: 20px;
+    vertical-align: top;
+}
+
+.photo-column img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.details-column {
+    vertical-align: top;
+}
+
+.member-name {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.member-position {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.member-bio {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.member-links {
+    margin-top: 10px;
+}
+
+.member-links a {
+    display: inline-block;
+    margin-right: 10px;
+}
 </style>
 
 <section class="header-section">
@@ -163,35 +212,37 @@ description: Meet the Heroes of Our Gang
 
 <section class="team-section">
     <div class="container">
-        {% for member in site.data.team %}
-            <div class="team-member">
-                <div class="member-photo">
-                    <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}">
-                </div>
-                <div class="member-details">
-                    <h2 class="member-name">{{ member.name }}</h2>
-                    <p class="member-position">{{ member.position }}</p>
-                    <p class="member-bio">{{ member.bio | newline_to_br }}</p>
-                    <div class="member-links">
-                        {% if member.orcid %}
-                            <a href="{{ member.orcid }}"><img src="/images/team/orcid.png" width="50" height="50" alt="Orcid"></a>
-                        {% endif %}
-                        {% if member.scholar %}
-                            <a href="{{ member.scholar }}"><img src="/images/team/scholar.png" width="60" height="60" alt="Scholar"></a>
-                        {% endif %}
-                        {% if member.researchgate %}
-                            <a href="{{ member.researchgate }}"><img src="/images/team/researchgate.png" width="60" height="60" alt="ResearchGate"></a>
-                        {% endif %}
-                        {% if member.github %}
-                            <a href="{{ member.github }}"><img src="/images/team/github.jpg" width="52" height="52" alt="GitHub"></a>
-                        {% endif %}
-                        {% if member.twitter %}
-                            <a href="{{ member.twitter }}"><img src="/images/team/twitter.png" width="55" height="55" alt="Twitter"></a>
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
+        <table class="team-table">
+            {% for member in site.data.team %}
+                <tr class="team-member">
+                    <td class="photo-column">
+                        <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}">
+                    </td>
+                    <td class="details-column">
+                        <h2 class="member-name">{{ member.name }}</h2>
+                        <p class="member-position">{{ member.position }}</p>
+                        <p class="member-bio">{{ member.bio | newline_to_br }}</p>
+                        <div class="member-links">
+                            {% if member.orcid %}
+                                <a href="{{ member.orcid }}"><img src="/images/team/orcid.png" width="50" height="50" alt="Orcid"></a>
+                            {% endif %}
+                            {% if member.scholar %}
+                                <a href="{{ member.scholar }}"><img src="/images/team/scholar.png" width="60" height="60" alt="Scholar"></a>
+                            {% endif %}
+                            {% if member.researchgate %}
+                                <a href="{{ member.researchgate }}"><img src="/images/team/researchgate.png" width="60" height="60" alt="ResearchGate"></a>
+                            {% endif %}
+                            {% if member.github %}
+                                <a href="{{ member.github }}"><img src="/images/team/github.jpg" width="52" height="52" alt="GitHub"></a>
+                            {% endif %}
+                            {% if member.twitter %}
+                                <a href="{{ member.twitter }}"><img src="/images/team/twitter.png" width="55" height="55" alt="Twitter"></a>
+                            {% endif %}
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
     </div>
 </section>
 
