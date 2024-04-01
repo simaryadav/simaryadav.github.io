@@ -12,8 +12,10 @@
 }
 
 .post__image,
-.page__image {
+.page__image img {
   display: block; /* Ensure the image is displayed */
+  max-width: 100%; /* Ensure images don't overflow their container */
+  height: auto; /* Maintain aspect ratio */
 }
 
 /* Table */
