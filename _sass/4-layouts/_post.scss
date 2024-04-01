@@ -1,103 +1,49 @@
 /* Post + Page */
 .post__head,
 .page__head {
-  max-width: 600px; /* Decreased max-width */
-  margin: 40px auto 24px; /* Decreased margin */
-}
-
-.page-section-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-top: 32px; /* Decreased margin-top */
-  margin-bottom: 40px; /* Decreased margin-bottom */
-  padding-bottom: 40px;
-  border-bottom: 1px solid var(--border-color);
-
-  .page-title {
-    font-size: 60px; /* Decreased font-size */
-    line-height: 1;
-    margin-right: 40px; /* Decreased margin-right */
-    margin-bottom: 0;
-  }
-
-  .page-description {
-    max-width: 600px; /* Decreased max-width */
-    margin-bottom: 0;
-    color: var(--text-alt-color);
-  }
-
-  @media (max-width: $desktop) {
-    flex-wrap: wrap;
-    margin-bottom: 32px;
-    padding-bottom: 32px;
-
-    .page-title {
-      font-size: 50px; /* Decreased font-size */
-      margin-right: 0;
-      margin-bottom: 16px; /* Decreased margin-bottom */
-    }
-  }
-
-  @media (max-width: $tablet) {
-    margin-bottom: 24px; /* Decreased margin-bottom */
-    padding-bottom: 24px; /* Decreased padding-bottom */
-
-    .page-title {
-      font-size: 36px; /* Decreased font-size */
-    }
-  }
-
-  @media (max-width: $mobile) {
-    .page-title {
-      font-size: 28px; /* Decreased font-size */
-    }
-  }
+  max-width: 960px; /* Increased max-width */
+  margin: 40px auto 24px;
 }
 
 .post,
 .page {
-  max-width: 600px; /* Decreased max-width */
-  margin: 0 auto 64px; /* Increased margin-bottom */
+  max-width: 960px;
+  margin: 0 auto 64px;
 }
 
-.post-image,
-.page-image,
-.post-video,
-.page-video {
-  margin: 48px 0; /* Increased margin */
+.post__image,
+.page__image {
+  order: -1; /* Position the image on the left */
+}
+
+.post__info,
+.page__info {
+  flex: 1; /* Make the info section flexible */
+  margin-left: 40px; /* Add margin between image and info */
 }
 
 .post__title,
 .page__title {
-  margin-bottom: 16px; /* Decreased margin-bottom */
-  font-size: 42px; /* Decreased font-size */
-
-  @media (max-width: $tablet) {
-    font-size: 36px; /* Decreased font-size */
-  }
-
-  @media (max-width: $mobile) {
-    font-size: 28px; /* Decreased font-size */
-  }
+  margin-bottom: 16px;
+  font-size: 42px;
 }
 
 .post__description,
 .page__description {
-  margin-bottom: 16px; /* Decreased margin-bottom */
+  margin-bottom: 16px;
 }
 
 .post__info {
-  margin-bottom: 16px; /* Decreased margin-bottom */
+  margin-bottom: 16px;
 }
 
 .post__meta {
-  margin-bottom: 12px; /* Decreased margin-bottom */
+  margin-bottom: 12px;
 }
 
 .post__tags {
   .post__tag {
-    padding: 4px 12px; /* Decreased padding */
+    padding: 4px 12px;
     margin: 3px 6px 3px 0;
     font-size: 12px;
   }
@@ -105,30 +51,30 @@
 
 /* Navigation */
 .post__navigation {
-  padding: 0 0 40px; /* Decreased padding-bottom */
+  padding: 0 0 40px;
 }
 
 /* Disqus */
 .show-comments {
-  padding: 40px 0; /* Decreased padding */
+  padding: 40px 0;
 }
 
 /* 404 */
 .error {
-  margin: 40px 0 0; /* Decreased margin-top */
+  margin: 40px 0 0;
 }
 
 @media (max-width: $mobile) {
   .post__navigation {
-    padding-top: 32px; /* Decreased padding-top */
-    padding-bottom: 32px; /* Decreased padding-bottom */
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   .show-comments {
-    padding: 32px 0; /* Decreased padding */
+    padding: 32px 0;
   }
 
   .error {
-    margin-top: 24px; /* Decreased margin-top */
+    margin-top: 24px;
   }
 }
