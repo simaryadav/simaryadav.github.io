@@ -3,5 +3,7 @@ title: Multi-Omic Admission-Based Prognostic Biomarkers Identified by Machine Le
 description: Abdelhamid SS, Scioscia J, Vodovotz Y, Wu J, Rosengart A*, Sung E, Rahman S, Voinchet R, Bonaroti J, Li S, Darby JL, Kar UK, Neal MD, Sperry J, Das J*, Billiar TR
 date: 2022-08-23 15:01:35 +0300
 image: '/images/Multi-Omic.webp'
-tags: [protein_networks]
+tags: [Machine_Learning]
+href : 'https://www.mdpi.com/2218-1989/12/9/774'
+published: Metabolites 2022
 ---
