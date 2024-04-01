@@ -13,40 +13,30 @@
 
 .post__image,
 .page__image {
-  order: -1; /* Position the image on the left */
+  display: block; /* Ensure the image is displayed */
 }
 
-.post__info,
-.page__info {
-  flex: 1; /* Make the info section flexible */
-  margin-left: 40px; /* Add margin between image and info */
+/* Table */
+.container table {
+  width: 100%;
+  border-collapse: collapse; /* Collapse borders */
 }
 
-.post__title,
-.page__title {
-  margin-bottom: 16px;
-  font-size: 42px;
+.container table td {
+  padding: 8px; /* Adjust cell padding */
+  vertical-align: top; /* Align content to top */
 }
 
-.post__description,
-.page__description {
-  margin-bottom: 16px;
+.project-info {
+  padding-left: 20px; /* Add padding to the info section */
 }
 
-.post__info {
-  margin-bottom: 16px;
+.project-title {
+  font-size: 24px; /* Adjust title font size */
 }
 
-.post__meta {
-  margin-bottom: 12px;
-}
-
-.post__tags {
-  .post__tag {
-    padding: 4px 12px;
-    margin: 3px 6px 3px 0;
-    font-size: 12px;
-  }
+.project-description {
+  font-size: 16px; /* Adjust description font size */
 }
 
 /* Navigation */
