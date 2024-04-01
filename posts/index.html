@@ -9,7 +9,7 @@ description: Total: 56 published papers; 1 currently under review/in revision
     <h1 class="page-title"> Writing </h1>
     <p class="page-description"> Total: 56 published papers; 1 currently under review/in revision </p>
   </div>
- 
+
   <div class="explore-tags">
     <h2>Explore:</h2>
     <div class="tag-cloud">
@@ -26,27 +26,23 @@ description: Total: 56 published papers; 1 currently under review/in revision
 
 <section class="section">
   <div class="container">
-    <table>
-      <tbody>
-        {% if site.posts.size > 0 %}
-          {% for post in site.posts %}
-            <tr>
-              <td>
-                <div class="project-image">
-                  <img src="{{ post.image }}" alt="{{ post.title }}">
-                </div>
-              </td>
-              <td>
-                <div class="project-info">
-                  <h2 class="project-title">{{ post.title }}</h2>
-                  <p class="project-description">{{ post.description }}</p>
-                </div>
-              </td>
-            </tr>
-          {% endfor %}
-        {% endif %}
-      </tbody>
-    </table>
+    <div class="row">
+      {% if site.posts.size > 0 %}
+        {% for post in site.posts %}
+          <div class="col">
+            <div class="project">
+              <div class="project-image">
+                <img src="{{ post.image }}" alt="{{ post.title }}">
+              </div>
+              <div class="project-info">
+                <h2 class="project-title">{{ post.title }}</h2>
+                <p class="project-description">{{ post.description }}</p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
   </div>
 </section>
 
