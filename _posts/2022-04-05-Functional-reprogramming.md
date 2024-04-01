@@ -4,4 +4,7 @@ description: Brauns E, Azouz A, Grimaldi D, Xiao H*, Thomas S, Nguyen M, Olislag
 date: 2022-04-05 15:01:35 +0300
 image: '/images/Functional-reprogramming.webp'
 tags: 
+href : 'https://insight.jci.org/articles/view/154183#SEC4'
+published: JCI Insight 2022
+
 ---
