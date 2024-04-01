@@ -34,16 +34,10 @@
   overflow: hidden;
 }
 
-.post-image {
-  width: 100%;
-  height: 200px; /* Set a fixed height for all image boxes */
-  overflow: hidden; /* Hide overflowing content */
-}
-
 .post-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Prevent image distortion */
 }
 
 .post-info {
@@ -53,8 +47,10 @@
 .post-title {
   font-size: 24px;
   margin-bottom: 8px;
-  width: 100%;
+  width: 100%; /* Increase the heading width */
 }
 
 .post-description {
-  font-si
+  font-size: 16px;
+  margin-bottom: 0;
+}
