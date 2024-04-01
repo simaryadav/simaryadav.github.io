@@ -28,7 +28,7 @@ description: Total: 56 published papers; 1 currently under review/in revision
   <div class="container">
     <div class="row">
       {% if site.posts.size > 0 %}
-        {% for post in paginator.posts offset:0 %}
+        {% for post in site.posts %}
           <div class="col">
             <div class="project">
               <div class="project-image">
