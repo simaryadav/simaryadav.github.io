@@ -3,5 +3,7 @@ title: High dimensional proteomics identifies organ injury patterns associated w
 description: Li SR, Moheimani H, Herzig B, Kail M, Krishnamoorthi N, Wu J, Abdelhamid S, Scioscia J, Sung E*, Rosengart A*, Bonaroti J, Johansson, P, Stensballe J, Neal M, Das J*, Kar U, Sperry J, Billiar TR
 date: 2023-06-04 15:01:35 +0300
 image: '/images/High-dimensional.webp'
-tags: [protein_networks]
+tags: [Protein_Networks]
+href : 'https://journals.lww.com/jtrauma/fulltext/2023/06000/high_dimensional_proteomics_identifies_organ.9.aspx'
+published: Journal of Trauma and Acute Care Surgery 2023
 ---
