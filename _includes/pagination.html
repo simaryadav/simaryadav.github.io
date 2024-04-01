@@ -1,14 +1,6 @@
 {% assign postCount = site.posts | size %}
 {% assign postsCovered = site.paginate | plus:offset %}
-{% if postsCovered < postCount %}
-<!-- begin pagination -->
-<div class="container animate">
-  <div class="pagination">
-    <button class="load-more-posts button">Load more posts</button>
-  </div>
-</div>
-<!-- end pagination -->
-{% endif %}
+
 
 <script>
   var base_url = "",
