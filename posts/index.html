@@ -26,12 +26,14 @@ description: Total: 56 published papers; 1 currently under review/in revision
 
 <section class="section">
   <div class="container">
-    <div class="row grid">
-    {% if site.posts.size > 0 %}
-      {% for post in paginator.posts offset:0 %}
-        {% include article.html %}
-      {% endfor %}
-    {% endif %}
+    <div class="row">
+      {% if site.posts.size > 0 %}
+        {% for post in paginator.posts offset:0 %}
+          <div class="col">
+            {% include article.html %}
+          </div>
+        {% endfor %}
+      {% endif %}
     </div>
   </div>
   {% include pagination.html %}
