@@ -9,35 +9,20 @@ description: Total: 56 published papers; 1 currently under review/in revision
     <h1 class="page-title"> Writing </h1>
     <p class="page-description"> Total: 56 published papers; 1 currently under review/in revision </p>
   </div>
-
-  <div class="explore-tags">
-    <h2>Explore:</h2>
-    <div class="tag-cloud">
-      {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-      {% assign tag_words = site_tags | split:',' | sort %}
-      {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-      {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
-      <a href="{{ site.baseurl }}/tags/?tag={{ this_word | cgi_escape }}">{{ this_word }} <span>({{ site.tags[this_word].size }})</span></a>
-      {% endunless %}
-      {% endfor %}
-    </div>
-  </div>
 </div>
 
 <section class="section">
   <div class="container">
-    <div class="row">
+    <div class="post-table">
       {% if site.posts.size > 0 %}
         {% for post in site.posts %}
-          <div class="col">
-            <div class="project">
-              <div class="project-image">
-                <img src="{{ post.image }}" alt="{{ post.title }}">
-              </div>
-              <div class="project-info">
-                <h2 class="project-title">{{ post.title }}</h2>
-                <p class="project-description">{{ post.description }}</p>
-              </div>
+          <div class="post">
+            <div class="post-image">
+              <img src="{{ post.image }}" alt="{{ post.title }}">
+            </div>
+            <div class="post-info">
+              <h2 class="post-title">{{ post.title }}</h2>
+              <p class="post-description">{{ post.description }}</p>
             </div>
           </div>
         {% endfor %}
