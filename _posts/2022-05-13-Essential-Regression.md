@@ -3,5 +3,7 @@ title: Essential Regression- A generalizable framework for inferring causal late
 description:  Bing X, Lovelace T, Bunea F, Wegkamp M, Kasturi S.P, Singh H, Benos P.V, Das J*
 date: 2022-05-13 15:01:35 +0300
 image: '/images/Essential-Regression.webp'
-tags: [IML_method_development]
+tags: [Machine_Learning]
+href : '[https://www.sciencedirect.com/science/article/pii/S2666379123005438?via%3Dihub](https://www.sciencedirect.com/science/article/pii/S2666389922000538)'
+published: Patterns 2022
 ---
