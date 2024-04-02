@@ -3,5 +3,7 @@ title: Latency reversal agents modulate HIV antigen processing and presentation 
 description: Boucau J, Das J*, Joshi N, Le Gall S
 date: 2020-03-20 15:01:35 +0300
 image: '/images/Latency-reversal.webp'
-tags: 
+tags: [Antibodyomics]
+href : 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7112239/'
+published: PLoS Pathogens 2020
 ---
