@@ -2,7 +2,7 @@
 title: News
 date: 2024-01-05 08:01:35 +0300
 label: Development
-image: '/images/project-11.jpg'
+image: '/images/63009541-smartphone-mobile-phone-and-newspaper-icon-communication-and-technology-device-vector-illustration.jpg'
 featured:
 ---
 
