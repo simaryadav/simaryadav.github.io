@@ -16,33 +16,26 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   .team-section {
     margin-top: 40px;
     margin-bottom: 40px;
-  }
-
-  .team-table {
-    width: 100%;
-    border-collapse: collapse;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
   }
 
   .team-member {
-    border-bottom: 1px solid #ccc;
-  }
-
-  .photo-column {
-    width: 200px;
-    padding-right: 20px;
-    vertical-align: top;
+    position: relative;
+    overflow: hidden;
   }
 
   .member-photo {
-    position: relative;
-    width: 100%;
-  }
-
-  .member-photo img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .member-photo:hover {
+    transform: scale(1.1);
   }
 
   .member-bio {
@@ -50,17 +43,20 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 8px 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
     text-align: center;
     color: #fff;
     font-size: 16px;
     font-weight: bold;
-    display: none; /* Initially hidden */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    overflow-y: auto;
+    max-height: 100%;
   }
 
-  .details-column {
-    vertical-align: top;
+  .team-member:hover .member-bio {
+    opacity: 1;
   }
 
   .member-name {
@@ -85,50 +81,46 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   }
 </style>
 
-<script>
-  function toggleBio(memberId) {
-    var bio = document.getElementById(memberId + "-bio");
-    bio.style.display = bio.style.display === "none" ? "block" : "none";
-  }
-</script>
-
 <section class="team-section">
   <div class="container">
-    <table class="team-table">
-      {% for member in site.data.team %}
-      <tr class="team-member">
-        <td class="photo-column">
-          <div class="member-photo" onclick="toggleBio('{{ member.name | slugify }}')">
-            <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}">
-            <div id="{{ member.name | slugify }}-bio" class="member-bio">Bio: {{ member.bio }}</div>
-          </div>
-        </td>
-        <td class="details-column">
-          <h2 class="member-name">{{ member.name }}</h2>
-          <p class="member-position">{{ member.position }}</p>
-          <div class="member-links">
-            {% if member.orcid %}
-            <a href="{{ member.orcid }}"><img src="/images/team/orcid.png" width="50" height="50" alt="Orcid"></a>
-            {% endif %}
-            {% if member.scholar %}
-            <a href="{{ member.scholar }}"><img src="/images/team/scholar.png" width="60" height="60" alt="Scholar"></a>
-            {% endif %}
-            {% if member.researchgate %}
-            <a href="{{ member.researchgate }}"><img src="/images/team/researchgate.png" width="60" height="60" alt="ResearchGate"></a>
-            {% endif %}
-            {% if member.github %}
-            <a href="{{ member.github }}"><img src="/images/team/github.jpg" width="52" height="52" alt="GitHub"></a>
-            {% endif %}
-            {% if member.twitter %}
-            <a href="{{ member.twitter }}"><img src="/images/team/twitter.png" width="55" height="55" alt="Twitter"></a>
-            {% endif %}
-          </div>
-        </td>
-      </tr>
-      {% endfor %}
-    </table>
+    {% for member in site.data.team %}
+    <div class="team-member">
+      <div class="member-photo" onclick="toggleBio('{{ member.name | slugify }}')">
+        <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}">
+        <div class="member-bio" id="{{ member.name | slugify }}-bio">{{ member.bio }}</div>
+      </div>
+      <div class="member-details">
+        <h2 class="member-name">{{ member.name }}</h2>
+        <p class="member-position">{{ member.position }}</p>
+        <div class="member-links">
+          {% if member.orcid %}
+          <a href="{{ member.orcid }}"><img src="/images/team/orcid.png" width="50" height="50" alt="Orcid"></a>
+          {% endif %}
+          {% if member.scholar %}
+          <a href="{{ member.scholar }}"><img src="/images/team/scholar.png" width="60" height="60" alt="Scholar"></a>
+          {% endif %}
+          {% if member.researchgate %}
+          <a href="{{ member.researchgate }}"><img src="/images/team/researchgate.png" width="60" height="60" alt="ResearchGate"></a>
+          {% endif %}
+          {% if member.github %}
+          <a href="{{ member.github }}"><img src="/images/team/github.jpg" width="52" height="52" alt="GitHub"></a>
+          {% endif %}
+          {% if member.twitter %}
+          <a href="{{ member.twitter }}"><img src="/images/team/twitter.png" width="55" height="55" alt="Twitter"></a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
   </div>
 </section>
 
 {% include section-faq.html %}
 {% include section-subscribe.html %}
+
+<script>
+  function toggleBio(memberId) {
+    var bio = document.getElementById(memberId + "-bio");
+    bio.style.opacity = bio.style.opacity === "0" ? "1" : "0";
+  }
+</script>
