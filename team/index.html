@@ -19,8 +19,8 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   }
 
   .team-member {
-    width: calc(50% - 10px); /* Adjusted width to fit two members in a row with spacing */
-    margin-bottom: 20px;
+    width: calc(50% - 20px); /* Adjusted width to fit two members in a row with spacing */
+    margin-bottom: 40px;
     float: left;
     position: relative;
     cursor: pointer;
@@ -39,15 +39,15 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     left: 0;
     width: 100%;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.9); /* Adjusted background color with transparency */
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 0 0 10px 10px;
-    height: 0; /* Hidden by default */
+    height: auto;
     overflow: hidden;
-    transition: height 0.3s ease; /* Added transition effect for smooth animation */
+    transition: height 0.3s ease;
   }
 
   .team-member:hover .member-details {
-    height: auto; /* Show details box on hover */
+    height: auto;
   }
 
   .member-name {
