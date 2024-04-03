@@ -17,63 +17,27 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     margin-top: 40px;
     margin-bottom: 40px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 20px;
   }
 
   .team-member {
-    position: relative;
     overflow: hidden;
     border-radius: 10px;
     background-color: #f5f5f5;
-  }
-
-  .member-photo {
-    width: 100%;
-    height: auto;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+    position: relative;
+    transition: background-color 0.3s ease;
   }
 
   .member-photo img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
-  }
-
-  .member-photo:hover {
-    transform: scale(1.1);
-  }
-
-  .member-bio {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    text-align: center;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    overflow-y: auto;
-    max-height: calc(100% - 40px);
-    grid-column: span 2;
-    z-index: 1;
-  }
-
-  .team-member:hover .member-bio {
-    opacity: 1;
+    border-radius: 10px 10px 0 0;
   }
 
   .member-details {
     padding: 20px;
-    position: relative;
-    z-index: 2;
   }
 
   .member-name {
@@ -86,6 +50,26 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     font-size: 18px;
     margin-top: 0;
     margin-bottom: 10px;
+  }
+
+  .member-bio {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .team-member:hover .member-bio {
+    max-height: 100%;
+    opacity: 1;
   }
 
   .member-links {
@@ -102,9 +86,9 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   <div class="container">
     {% for member in site.data.team %}
     <div class="team-member">
-      <div class="member-photo" onclick="toggleBio('{{ member.name | slugify }}')">
+      <div class="member-photo">
         <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}">
-        <div class="member-bio" id="{{ member.name | slugify }}-bio">{{ member.bio }}</div>
+        <div class="member-bio">{{ member.bio }}</div>
       </div>
       <div class="member-details">
         <h2 class="member-name">{{ member.name }}</h2>
@@ -134,10 +118,4 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
 
 {% include section-faq.html %}
 {% include section-subscribe.html %}
-
-<script>
-  function toggleBio(memberId) {
-    var bio = document.getElementById(memberId + "-bio");
-    bio.style.opacity = bio.style.opacity === "0" ? "1" : "0";
-  }
 </script>
