@@ -42,9 +42,10 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     width: 100%;
     height: auto;
     border-radius: 5px;
+    cursor: pointer;
   }
 
-  .member-bio-overlay {
+  .member-bio {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -52,12 +53,10 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     background-color: rgba(0, 0, 0, 0.5);
     padding: 8px 0;
     text-align: center;
-  }
-
-  .member-bio-text {
     color: #fff;
     font-size: 16px;
     font-weight: bold;
+    display: none; /* Initially hidden */
   }
 
   .details-column {
@@ -76,11 +75,6 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     margin-bottom: 10px;
   }
 
-  .member-bio {
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-
   .member-links {
     margin-top: 10px;
   }
@@ -91,23 +85,27 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   }
 </style>
 
+<script>
+  function toggleBio(memberId) {
+    var bio = document.getElementById(memberId + "-bio");
+    bio.style.display = bio.style.display === "none" ? "block" : "none";
+  }
+</script>
+
 <section class="team-section">
   <div class="container">
     <table class="team-table">
       {% for member in site.data.team %}
       <tr class="team-member">
         <td class="photo-column">
-          <div class="member-photo">
+          <div class="member-photo" onclick="toggleBio('{{ member.name | slugify }}')">
             <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}">
-            <div class="member-bio-overlay">
-              <p class="member-bio-text">Bio</p>
-            </div>
+            <div id="{{ member.name | slugify }}-bio" class="member-bio">Bio: {{ member.bio }}</div>
           </div>
         </td>
         <td class="details-column">
           <h2 class="member-name">{{ member.name }}</h2>
           <p class="member-position">{{ member.position }}</p>
-          <p class="member-bio">{{ member.bio | newline_to_br }}</p>
           <div class="member-links">
             {% if member.orcid %}
             <a href="{{ member.orcid }}"><img src="/images/team/orcid.png" width="50" height="50" alt="Orcid"></a>
