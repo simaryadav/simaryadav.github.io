@@ -1,127 +1,136 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Team Page</title>
-    <style>
-        /* Set body font and background color */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-        }
+---
+layout: default
+title: Team
+description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboration!
+---
 
-        /* Style the team container */
-        .team-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 2rem;
-        }
+<div class="container">
+  <div class="page-section-head">
+    <h1 class="page-title">Team</h1>
+    <p class="page-description">Welcome to our Lab's Team Page: Where Innovation Meets Collaboration!</p>
+  </div>
+</div>
 
-        /* Style the team member card */
-        .team-card {
-            width: 300px;
-            height: 420px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin: 1rem;
-            overflow: hidden;
-            position: relative;
-        }
+<style>
+  /* Custom Team Layout */
+  .team-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 
-        /* Style the team member image */
-        .team-image {
-            width: 100%;
-            height: 70%;
-            object-fit: cover;
-            display: block;
-        }
+  .team-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
 
-        /* Style the team member bio */
-        .team-bio {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 1rem;
-            height: 30%;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            text-align: center;
-            transition: transform 0.3s ease-in-out;
-            transform: translateY(100%);
-        }
+  .team-member {
+    border-bottom: 1px solid #ccc;
+  }
 
-        .team-card:hover .team-bio {
-            transform: translateY(0);
-        }
+  .photo-column {
+    width: 200px;
+    padding-right: 20px;
+    vertical-align: top;
+  }
 
-        /* Style the team member name and position */
-        .team-name,
-        .team-position {
-            margin: 0;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-align: center;
-        }
+  .member-photo {
+    position: relative;
+    width: 100%;
+  }
 
-        .team-position {
-            font-size: 0.9rem;
-            color: #666;
-        }
+  .member-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
 
-        /* Style the team member links */
-        .team-links {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            margin: 0;
-        }
+  .member-bio-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 0;
+    text-align: center;
+  }
 
-        .team-link {
-            margin: 0.2rem;
-            font-size: 1.2rem;
-            color: #333;
-            text-decoration: none;
-        }
+  .member-bio-text {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+  }
 
-        .team-link:hover {
-            color: #4466cc;
-        }
-    </style>
-</head>
-<body>
-    <div class="team-container">
-        {% for member in site.data.team %}
-        <div class="team-card">
-            <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}" class="team-image">
-            <div class="team-bio">
-                <p class="team-name">{{ member.name }}</p>
-                <p class="team-position">{{ member.position }}</p>
-                <p class="team-bio-text">{{ member.bio | newline_to_br }}</p>
-                <div class="team-links">
-                    {% if member.orcid %}
-                    <a href="{{ member.orcid }}" class="team-link">ORCID</a>
-                    {% endif %}
-                    {% if member.scholar %}
-                    <a href="{{ member.scholar }}" class="team-link">Google Scholar</a>
-                    {% endif %}
-                    {% if member.researchgate %}
-                    <a href="{{ member.researchgate }}" class="team-link">ResearchGate</a>{% endif %}
-                    {% if member.github %}
-                    <a href="{{ member.github }}" class="team-link">GitHub</a>
-                    {% endif %}
-                    {% if member.twitter %}
-                    <a href="{{ member.twitter }}" class="team-link">Twitter</a>
-                    {% endif %}
-                </div>
+  .details-column {
+    vertical-align: top;
+  }
+
+  .member-name {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .member-position {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .member-bio {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .member-links {
+    margin-top: 10px;
+  }
+
+  .member-links a {
+    display: inline-block;
+    margin-right: 10px;
+  }
+</style>
+
+<section class="team-section">
+  <div class="container">
+    <table class="team-table">
+      {% for member in site.data.team %}
+      <tr class="team-member">
+        <td class="photo-column">
+          <div class="member-photo">
+            <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}">
+            <div class="member-bio-overlay">
+              <p class="member-bio-text">Bio</p>
             </div>
-        </div>
-        {% endfor %}
-    </div>
-</body>
-</html>
+          </div>
+        </td>
+        <td class="details-column">
+          <h2 class="member-name">{{ member.name }}</h2>
+          <p class="member-position">{{ member.position }}</p>
+          <p class="member-bio">{{ member.bio | newline_to_br }}</p>
+          <div class="member-links">
+            {% if member.orcid %}
+            <a href="{{ member.orcid }}"><img src="/images/team/orcid.png" width="50" height="50" alt="Orcid"></a>
+            {% endif %}
+            {% if member.scholar %}
+            <a href="{{ member.scholar }}"><img src="/images/team/scholar.png" width="60" height="60" alt="Scholar"></a>
+            {% endif %}
+            {% if member.researchgate %}
+            <a href="{{ member.researchgate }}"><img src="/images/team/researchgate.png" width="60" height="60" alt="ResearchGate"></a>
+            {% endif %}
+            {% if member.github %}
+            <a href="{{ member.github }}"><img src="/images/team/github.jpg" width="52" height="52" alt="GitHub"></a>
+            {% endif %}
+            {% if member.twitter %}
+            <a href="{{ member.twitter }}"><img src="/images/team/twitter.png" width="55" height="55" alt="Twitter"></a>
+            {% endif %}
+          </div>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</section>
+
+{% include section-faq.html %}
+{% include section-subscribe.html %}
