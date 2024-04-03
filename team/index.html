@@ -36,28 +36,42 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   .member-photo {
     position: relative;
     width: 100%;
+    cursor: pointer;
   }
 
   .member-photo img {
     width: 100%;
     height: auto;
     border-radius: 5px;
+    transition: opacity 0.3s ease-in-out;
   }
 
   .member-bio-overlay {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 8px 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    box-sizing: border-box;
     text-align: center;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
   }
 
   .member-bio-text {
     color: #fff;
     font-size: 16px;
     font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .member-details {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
   }
 
   .details-column {
@@ -66,8 +80,8 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
 
   .member-name {
     font-size: 24px;
-    margin-top: 0;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
   }
 
   .member-position {
@@ -92,32 +106,32 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
       {% for member in site.data.team %}
       <tr class="team-member">
         <td class="photo-column">
-          <div class="member-photo">
+          <div class="member-photo" onclick="toggleBio(this)">
             <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}">
             <div class="member-bio-overlay">
               <p class="member-bio-text">Bio</p>
             </div>
           </div>
-        </td>
-        <td class="details-column">
-          <h2 class="member-name">{{ member.name }}</h2>
-          <p class="member-position">{{ member.position }}</p>
-          <div class="member-links">
-            {% if member.orcid %}
-            <a href="{{ member.orcid }}"><img src="/images/team/orcid.png" width="50" height="50" alt="Orcid"></a>
-            {% endif %}
-            {% if member.scholar %}
-            <a href="{{ member.scholar }}"><img src="/images/team/scholar.png" width="60" height="60" alt="Scholar"></a>
-            {% endif %}
-            {% if member.researchgate %}
-            <a href="{{ member.researchgate }}"><img src="/images/team/researchgate.png" width="60" height="60" alt="ResearchGate"></a>
-            {% endif %}
-            {% if member.github %}
-            <a href="{{ member.github }}"><img src="/images/team/github.jpg" width="52" height="52" alt="GitHub"></a>
-            {% endif %}
-            {% if member.twitter %}
-            <a href="{{ member.twitter }}"><img src="/images/team/twitter.png" width="55" height="55" alt="Twitter"></a>
-            {% endif %}
+          <div class="member-details">
+            <h2 class="member-name">{{ member.name }}</h2>
+            <p class="member-position">{{ member.position }}</p>
+            <div class="member-links">
+              {% if member.orcid %}
+              <a href="{{ member.orcid }}"><img src="/images/team/orcid.png" width="50" height="50" alt="Orcid"></a>
+              {% endif %}
+              {% if member.scholar %}
+              <a href="{{ member.scholar }}"><img src="/images/team/scholar.png" width="60" height="60" alt="Scholar"></a>
+              {% endif %}
+              {% if member.researchgate %}
+              <a href="{{ member.researchgate }}"><img src="/images/team/researchgate.png" width="60" height="60" alt="ResearchGate"></a>
+              {% endif %}
+              {% if member.github %}
+              <a href="{{ member.github }}"><img src="/images/team/github.jpg" width="52" height="52" alt="GitHub"></a>
+              {% endif %}
+              {% if member.twitter %}
+              <a href="{{ member.twitter }}"><img src="/images/team/twitter.png" width="55" height="55" alt="Twitter"></a>
+              {% endif %}
+            </div>
           </div>
         </td>
       </tr>
@@ -128,3 +142,9 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
 
 {% include section-faq.html %}
 {% include section-subscribe.html %}
+
+<script>
+  function toggleBio(element) {
+    var bioOverlay = element.querySelector('.member-bio-overlay');
+    var details = element.querySelector('.member-details');
+    bioOverlay.style.display = (bioOverlay.style.display === 'none') ? 'block' : 'none';
