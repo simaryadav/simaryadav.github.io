@@ -10,77 +10,93 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     <p class="page-description">Welcome to our Lab's Team Page: Where Innovation Meets Collaboration!</p>
   </div>
 </div>
+ <style>
+      /* Custom Team Layout */
+      .team-section {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 20px;
+      }
 
-<style>
-  /* Custom Team Layout */
-  .team-section {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 20px;
-  }
+      .team-member {
+        overflow: hidden;
+        border-radius: 10px;
+        background-color: #f5f5f5;position: relative;
+        transition: background-color 0.3s ease;
+      }
 
-  .team-member {
-    overflow: hidden;
-    border-radius: 10px;
-    background-color: #f5f5f5;
-    position: relative;
-    transition: background-color 0.3s ease;
-  }
+      .member-photo img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+      }
 
-  .member-photo img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
-  }
+      .member-details {
+        padding: 20px;
+      }
 
-  .member-details {
-    padding: 20px;
-  }
+      .member-name {
+        font-size: 24px;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
 
-  .member-name {
-    font-size: 24px;
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
+      .member-position {
+        font-size: 18px;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
 
-  .member-position {
-    font-size: 18px;
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
+      .member-bio {
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        padding: 20px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        max-height: 0;
+        overflow: hidden;
+        border-radius: 0 0 10px 10px;
+      }
 
-  .member-bio {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 20px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    max-height: 0;
-    overflow: hidden;
-    border-radius: 0 0 10px 10px;
-  }
+      .team-member:hover .member-bio {
+        max-height: 100%;
+        opacity: 1;
+      }
 
-  .team-member:hover .member-bio {
-    max-height: 100%;
-    opacity: 1;
-  }
+      .member-links {
+        margin-top: 10px;
+      }
 
-  .member-links {
-    margin-top: 10px;
-  }
+      .member-links a {
+        display: inline-block;
+        margin-right: 10px;
+      }
 
-  .member-links a {
-    display: inline-block;
-    margin-right: 10px;
-  }
-</style>
+      .social-icon {
+        width: 40px;
+        height: 40px;
+        background-color: #333;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .social-icon:hover {
+        background-color: #444;
+      }
+    </style>
 
 <section class="team-section">
   <div class="container">
