@@ -17,21 +17,30 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     margin-top: 40px;
     margin-bottom: 40px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
   }
 
   .team-member {
     position: relative;
     overflow: hidden;
+    border-radius: 10px;
+    background-color: #f5f5f5;
   }
 
   .member-photo {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s ease;
+  }
+
+  .member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .member-photo:hover {
@@ -44,7 +53,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     left: 0;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px;
+    padding: 20px;
     text-align: center;
     color: #fff;
     font-size: 16px;
@@ -52,11 +61,15 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     opacity: 0;
     transition: opacity 0.3s ease;
     overflow-y: auto;
-    max-height: 100%;
+    max-height: calc(100% - 40px);
   }
 
   .team-member:hover .member-bio {
     opacity: 1;
+  }
+
+  .member-details {
+    padding: 20px;
   }
 
   .member-name {
