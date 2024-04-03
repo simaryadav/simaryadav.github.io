@@ -76,11 +76,6 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     margin-bottom: 10px;
   }
 
-  .member-bio {
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-
   .member-links {
     margin-top: 10px;
   }
@@ -107,7 +102,6 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
         <td class="details-column">
           <h2 class="member-name">{{ member.name }}</h2>
           <p class="member-position">{{ member.position }}</p>
-          <p class="member-bio">{{ member.bio | newline_to_br }}</p>
           <div class="member-links">
             {% if member.orcid %}
             <a href="{{ member.orcid }}"><img src="/images/team/orcid.png" width="50" height="50" alt="Orcid"></a>
