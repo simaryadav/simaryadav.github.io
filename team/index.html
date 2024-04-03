@@ -1,259 +1,127 @@
----
-layout: default
-title: Team
-description: 
----
-<div class="container">
-  <div class="page-section-head">
-    <h1 class="page-title"> Team </h1>
-    <p class="page-description"> Welcome to our Lab's Team Page: Where Innovation Meets Collaboration! </p>
-  </div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Team Page</title>
+    <style>
+        /* Set body font and background color */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
 
-<style>
-/* Project */
-.project-head {
-  max-width: 960px;
-  margin: 64px auto 40px;
+        /* Style the team container */
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 2rem;
+        }
 
-  @media (max-width: $tablet) {
-    margin: 48px auto 32px;
-  }
+        /* Style the team member card */
+        .team-card {
+            width: 300px;
+            height: 420px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: 1rem;
+            overflow: hidden;
+            position: relative;
+        }
 
-  @media (max-width: $tablet) {
-    margin: 32px 0;
-  }
-}
+        /* Style the team member image */
+        .team-image {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+            display: block;
+        }
 
-.project-info {
+        /* Style the team member bio */
+        .team-bio {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 1rem;
+            height: 30%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            transform: translateY(100%);
+        }
 
-  .project-label {
-    margin-bottom: 8px;
-    font-size: 18px;
-    font-weight: 500;
-    color: var(--text-alt-color);
-  }
+        .team-card:hover .team-bio {
+            transform: translateY(0);
+        }
 
-.page-description {
-    font-size: 28px; /* Increased font size */
-    color: var(--text-alt-color); /* Adjusted text color */
-}
+        /* Style the team member name and position */
+        .team-name,
+        .team-position {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+        }
 
-  
-  .project-title {
-    font-size: 62px; /* Increased font size */
-  }
+        .team-position {
+            font-size: 0.9rem;
+            color: #666;
+        }
 
-  @media (max-width: $tablet) {
-    .project-label {
-      font-size: inherit;
-    }
+        /* Style the team member links */
+        .team-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 0;
+        }
 
-    .project-title {
-      font-size: 52px; /* Increased font size */
-    }
-  }
+        .team-link {
+            margin: 0.2rem;
+            font-size: 1.2rem;
+            color: #333;
+            text-decoration: none;
+        }
 
-  @media (max-width: $mobile) {
-    .project-title {
-      font-size: 42px; /* Increased font size */
-    }
-  }
-}
-
-.project-image {
-  position: relative;
-  transform: translate(0);
-  padding-top: 80%;
-  min-height: 280px;
-  border-radius: 22px;
-  overflow: hidden;
-  background: var(--background-alt-color);
-
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    user-select: none;
-  }
-
-  @media (max-width: $tablet) {
-    border-radius: 16px;
-  }
-
-  @media (max-width: $mobile) {
-    padding-top: 100%;
-  }
-}
-
-.project-video {
-  border-radius: 22px;
-  overflow: hidden;
-  transform: translate(0);
-  background-color: var(--background-alt-color);
-
-  .project-video__wrap {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 80%;
-
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  @media (max-width: $tablet) {
-    border-radius: 16px;
-  }
-
-  @media (max-width: $mobile) {
-    .project-video__wrap {
-      padding-bottom: 100%;
-    }
-  }
-}
-
-.project-content {
-  max-width: 780px;
-  margin: 0 auto 96px;
-
-  img,
-  .js-reframe {
-    border-radius: 22px;
-    overflow: hidden;
-
-    &.lightense-open {
-      border-radius: 0;
-    }
-  }
-
-  @media (max-width: $tablet) {
-    margin: 0 auto 80px;
-
-    img,
-    .js-reframe {
-      border-radius: 16px;
-    }
-  }
-}
-
-@media (max-width: $desktop) {
-  .row .col:last-child.project {
-    flex-grow: 1;
-  }
-}
-
-/* Custom Team Layout */
-.team-section {
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-.team-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.team-member {
-    border-bottom: 1px solid #ccc;
-}
-
-.photo-column {
-    width: 200px;
-    padding-right: 20px;
-    vertical-align: top;
-}
-
-.photo-column img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.details-column {
-    vertical-align: top;
-}
-
-.member-name {
-    font-size: 28px; /* Increased font size */
-    margin-top: 0;
-    margin-bottom: 10px; /* Increased margin */
-}
-
-.member-position {
-    font-size: 22px; /* Increased font size */
-    margin-top: 0;
-    margin-bottom: 10px; /* Increased margin */
-}
-
-.member-bio {
-    font-size: 22px; /* Increased font size */
-    margin-top: 0;
-    margin-bottom: 10px; /* Increased margin */
-}
-
-.member-links {
-    margin-top: 10px;
-}
-
-.member-links a {
-    display: inline-block;
-    margin-right: 10px;
-}
-</style>
-
-<section class="header-section">
-    <div class="container">
-        <h1 class="page-title">{{ page.title }}</h1>
-        <p class="page-description">{{ page.description }}</p>
+        .team-link:hover {
+            color: #4466cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="team-container">
+        {% for member in site.data.team %}
+        <div class="team-card">
+            <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}" class="team-image">
+            <div class="team-bio">
+                <p class="team-name">{{ member.name }}</p>
+                <p class="team-position">{{ member.position }}</p>
+                <p class="team-bio-text">{{ member.bio | newline_to_br }}</p>
+                <div class="team-links">
+                    {% if member.orcid %}
+                    <a href="{{ member.orcid }}" class="team-link">ORCID</a>
+                    {% endif %}
+                    {% if member.scholar %}
+                    <a href="{{ member.scholar }}" class="team-link">Google Scholar</a>
+                    {% endif %}
+                    {% if member.researchgate %}
+                    <a href="{{ member.researchgate }}" class="team-link">ResearchGate</a>{% endif %}
+                    {% if member.github %}
+                    <a href="{{ member.github }}" class="team-link">GitHub</a>
+                    {% endif %}
+                    {% if member.twitter %}
+                    <a href="{{ member.twitter }}" class="team-link">Twitter</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
     </div>
-</section>
-
-<section class="team-section">
-    <div class="container">
-        <table class="team-table">
-            {% for member in site.data.team %}
-                <tr class="team-member">
-                    <td class="photo-column">
-                        <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}">
-                    </td>
-                    <td class="details-column">
-                        <h2 class="member-name">{{ member.name }}</h2>
-                        <p class="member-position">{{ member.position }}</p>
-                        <p class="member-bio">{{ member.bio | newline_to_br }}</p>
-                        <div class="member-links">
-                            {% if member.orcid %}
-                                <a href="{{ member.orcid }}"><img src="/images/team/orcid.png" width="50" height="50" alt="Orcid"></a>
-                            {% endif %}
-                            {% if member.scholar %}
-                                <a href="{{ member.scholar }}"><img src="/images/team/scholar.png" width="60" height="60" alt="Scholar"></a>
-                            {% endif %}
-                            {% if member.researchgate %}
-                                <a href="{{ member.researchgate }}"><img src="/images/team/researchgate.png" width="60" height="60" alt="ResearchGate"></a>
-                            {% endif %}
-                            {% if member.github %}
-                                <a href="{{ member.github }}"><img src="/images/team/github.jpg" width="52" height="52" alt="GitHub"></a>
-                            {% endif %}
-                            {% if member.twitter %}
-                                <a href="{{ member.twitter }}"><img src="/images/team/twitter.png" width="55" height="55" alt="Twitter"></a>
-                            {% endif %}
-                        </div>
-                    </td>
-                </tr>
-            {% endfor %}
-        </table>
-    </div>
-</section>
-
-<section class="footer-section">
-    {% include section-faq.html %}
-    {% include section-author.html %}
-    {% include section-subscribe.html %}
-</section>
+</body>
+</html>
