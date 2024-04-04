@@ -37,6 +37,12 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     width: 100%;
     height: auto;
     object-fit: cover;
+    border-radius: 10px; /* Added border radius to images */
+    transition: transform 0.3s ease; /* Added transition for smooth effect */
+  }
+
+  .member-photo:hover img {
+    transform: scale(1.05); /* Added scale effect on hover */
   }
 
   .member-details {
@@ -53,7 +59,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     transition: opacity 0.3s ease; /* Added transition for smooth effect */
   }
 
-  .team-member:hover .member-details {
+  .member-photo:hover .member-details {
     display: block; /* Show the details on hover */
   }
 
