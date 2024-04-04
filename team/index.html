@@ -24,11 +24,10 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     float: left;
     position: relative;
     cursor: pointer;
-    transition: transform 0.3s ease; /* Added transition for smooth effect */
   }
 
-  .team-member:hover {
-    transform: translateY(-5px); /* Added slight lift on hover */
+  .team-member:hover .member-details {
+    display: block; /* Show the details on hover */
   }
 
   .member-photo img {
@@ -39,20 +38,16 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   }
 
   .member-details {
+    display: none; /* Hide the details by default */
     position: absolute;
-    bottom: -100%; /* Initially hide the details */
+    bottom: 100%; /* Initially position above the image */
     left: 0;
     width: 100%;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 0 0 10px 10px;
-    height: auto;
     overflow: hidden;
-    transition: bottom 0.3s ease; /* Added transition for smooth effect */
-  }
-
-  .team-member:hover .member-details {
-    bottom: 0; /* Show the details on hover */
+    transition: display 0.3s ease; /* Added transition for smooth effect */
   }
 
   .member-name {
