@@ -22,7 +22,7 @@
 
 .post-table {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* Three columns per row */
   gap: 40px;
 }
 
@@ -51,7 +51,6 @@
 .post-title {
   font-size: 24px;
   margin-bottom: 8px;
-  width: 100%;
 }
 
 .post-description {
