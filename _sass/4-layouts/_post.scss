@@ -1,55 +1,50 @@
-/* Add this CSS to your stylesheet */
-
-.post-grid {
+/* Post */
+.post {
+  margin-bottom: 40px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  align-items: center;
 }
 
-.post {
-  width: calc(33.33% - 20px); /* Adjusted width to fit three posts in a row with spacing */
-  margin-bottom: 20px;
+.post-image {
+  width: 200px; /* Adjust image width */
+  margin-right: 20px; /* Add margin between image and info */
+  flex-shrink: 0; /* Prevent image from shrinking */
 }
 
 .post-image img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
+  width: 100%; /* Ensure image fills its container */
+  border-radius: 10px; /* Add border radius for rounded corners */
 }
 
 .post-info {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
+  flex-grow: 1; /* Allow info section to grow */
 }
 
 .post-title {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 24px; /* Increase title font size */
+  margin-bottom: 8px; /* Add margin below title */
 }
 
 .post-description {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 14px;
-  line-height: 1.5;
+  margin-bottom: 16px; /* Add margin below description */
 }
 
 .post-tags {
-  margin-top: 10px;
+  margin-top: 16px; /* Add margin above tags */
 }
 
 .tag-button {
   display: inline-block;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  padding: 5px 10px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 6px 12px;
+  border-radius: 20px;
   background-color: #f0f0f0;
-  border-radius: 5px;
-  font-size: 12px;
-  text-decoration: none;
   color: #333;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.published {
+  font-size: 14px; /* Adjust published date font size */
 }
