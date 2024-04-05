@@ -4,5 +4,6 @@ description: Weichselbaum L, Azouz A, Smolen K, Das J*, Splittgerber M, Lepida A
 date: 2020-03-04 15:01:35 +0300
 image: '/images/Epigenetic-basis.webp'
 tags: 
+href : 'https://pubmed.ncbi.nlm.nih.gov/32145259/'
+published: Journal of Hepatology 2020
 ---
-
