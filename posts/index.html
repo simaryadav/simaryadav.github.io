@@ -27,7 +27,7 @@ description: Total: 56 published papers; 1 currently under review/in revision
 
 <section class="section">
   <div class="container">
-    <div class="post-grid">
+    <div class="post-table">
       {% if site.posts.size > 0 %}
         {% for post in site.posts %}
           <div class="post">
@@ -55,9 +55,6 @@ description: Total: 56 published papers; 1 currently under review/in revision
               {% endif %}
             </div>
           </div>
-          {% if forloop.index0 % 3 == 2 %}
-            </div><div class="post-grid">
-          {% endif %}
         {% endfor %}
       {% endif %}
     </div>
