@@ -89,37 +89,34 @@ blog:
 # Testimonials Section Settings
 testimonials:
   enable: true
-  testimonials_intro: Don't take my word for it
-  testimonials_title: See what our happy clients say...
-  testimonials_info: Join over <b>10K+</b> Prefessionals
+  testimonials_intro: Some famous quotes of our lab
+  testimonials_title: See what our lab members say...
+  testimonials_info: Join for over <b>10K+</b> famous lab quotes
 
 testimonial_items:
-  - name: "Martin Vetrovs"
-    image: "/images/client-1.jpg"
-    designation: "Data Scientist"
-    title: "Incredible attention to detail"
-    content : "The incredible attention to detail displayed by this team is commendable. Every aspect of our project, no matter how small, was handled with precision and care. The result is a product that reflects their commitment to excellence."
+  - name: "Swapnil Keshri"
+    image: "/images/swapnil.webp"
+    designation: "CPCB Phd Student"
+    title: "Major update coming soon"
+    content : "As a dynamic and ever-growing laboratory, we actively engage with a diverse array of research challenges presented to us. We are committed to maximizing our efforts to derive optimal outcomes from each endeavor and provide major updates on the projects we are working on."
 
-  - name: "Hanna Herwitz"
-    image: "/images/client-2.jpg"
-    designation: "Designer"
-    title: "Collaborative partnership"
-    content : "Our partnership with this team was characterized by open communication and collaborative efforts. They took the time to understand our goals and delivered a solution that perfectly aligns with our business objectives. Looking forward to future collaborations."
+  - name: "Javad Rahimikollu"
+    image: "/images/javad.webp"
+    designation: "CPCB Phd Student"
+    title: "Try running SLIDE on your data...."
+    content : "The members of our lab developed a first-in-class interpretable machine learning technique for identifying significant interacting latent factors underlying outcomes of interest from high-dimensional omic datasets which we apply on most of our datasets."
 
-  - name: "Carter Curtis"
-    image: "/images/client-3.jpg"
-    designation: "DevOps Engineer"
-    title: "Creative brilliance unleashed"
-    content : "Working with this creative powerhouse was an enlightening experience. Their brilliance in design thinking and creative solutions brought our project to life in ways we hadn't imagined. The team's passion for innovation is truly infectious."
+  - name: "Simar Yadav"
+    image: "/images/simar.webp"
+    designation: "Research Scholar"
+    title: "Manchester United is the best premier league Team!!"
+    content : "Manchester United has a rich history and a strong tradition in English football. The club has a storied past, filled with numerous titles, legendary players, and iconic moments.All of us consider this a fact(also young Cristiano Ronaldo was the best footballer)"
 
-  - name: "Marcus Vaccaro"
-    image: "/images/client-4.jpg"
-    designation: "Systems Analyst"
-    title: "Efficient problem solvers"
-    content : "This team proved to be efficient problem solvers throughout our project. When faced with challenges, they tackled them with creativity and resourcefulness. Their ability to overcome obstacles ensured a smooth and successful project delivery."
-
-
-
+  - name: "Jishnu Das"
+    image: "/images/Jishnu-Das-2.jpg"
+    designation: "Principal Investigator, Assistant Professor"
+    title: "Do you want an espresso??"
+    content : "Before delving into a substantial discussion with Jishnu, it has become a customary ritual for us to graciously accept the coffee he generously offers, setting the tone for our exchange and fostering an environment of conviviality and collaboration."
 
 #-------------------------------
 # Author Section Settings
