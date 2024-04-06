@@ -3,5 +3,7 @@ title: Dissecting disease inheritance modes in a 3D protein network challenges t
 description: Meyer M, Das J*, Wang X, Yu H
 date: 2013-07-11 15:01:35 +0300
 image: '/images/Dissecting-disease.webp'
-tags: [protein_networks]
+tags: [Protein_Networks]
+href : 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3710751/'
+published: American Journal of Human Genetics 2013
 ---
