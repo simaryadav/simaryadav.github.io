@@ -1,52 +1,127 @@
----
-layout: default
-title: Works
-description: Embark on a journey through a handpicked selection of projects that embody the essence of passion, simplicity, and creativity.
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News</title>
+  <style>
+    /* General Page Styling */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
 
-<div class="container">
-  <div class="page-section-head">
-    <h1 class="page-title">{{ page.title | default: site.data.settings.projects.projects_title }}</h1>
-    <p class="page-description">{{ page.description | default: site.data.settings.projects.projects_description }}</p>
-  </div>
-</div>
+    .page-section-head {
+      margin-top: 40px;
+      margin-bottom: 60px;
+      text-align: center;
+    }
 
+    .page-title {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
 
-<section class="section projects animate">
+    .page-description {
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+
+    /* Year Button Styling */
+    .year-button {
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-align: center;
+      width: 100%;
+      max-width: 200px;
+    }
+
+    .year-button:hover {
+      background-color: #e0e0e0;
+    }
+
+    /* Year Content Styling */
+    .year-content {
+      display: none;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-top: 10px;
+      background-color: #fff;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .year-content.active {
+      display: block;
+    }
+
+    .year-content h4 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .year-content ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .year-content ul li {
+      margin-bottom: 8px;
+    }
+
+    .year-content ul li p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
   <div class="container">
-    <div class="projects-wrapper">
-      {% assign years = site.projects | group_by_exp:"project", "project.date | date: '%Y'" %}
-      {% for year in years %}
-      <div class="year-container">
-        <h2 class="year">{{ year.name }}</h2>
-        <div class="projects-year">
-          {% for project in year.items %}
-          <article class="project">
-            <div class="project__content">
-              <a href="#" class="project__image" data-toggle="collapse" data-target="#project-{{ project.title | slugify }}">
-                {% if project.image %}
-                <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
-                {% endif %}
-              </a>
-              <div id="project-{{ project.title | slugify }}" class="project__info collapse">
-                {% if project.label %}
-                <div class="project__label">{{ project.label }}</div>
-                {% endif %}
-                <h3 class="project__title"><a class="project__link" href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
-                <div class="project__details">
-                  {{ project.content }}
-                </div>
-              </div>
-            </div>
-          </article>
-          {% endfor %}
-        </div>
-      </div>
-      {% endfor %}
+    <div class="page-section-head">
+      <h1 class="page-title">News</h1>
+      <p class="page-description">A lot has been happening in life</p>
     </div>
-  </div>
-</section>
 
-{% include section-faq.html %}
-{% include section-author.html %}
-{% include section-subscribe.html %}
+    <!-- Year Buttons and Content -->
+    <div class="year-button" onclick="toggleYear('2024')">2024</div>
+    <div class="year-content" id="content-2024">
+      <h4>2024</h4>
+      <ul>
+        <li>
+          <p>February 2024 - We published “SLIDE: Significant Latent factor Interaction Discovery and Exploration across biological domains” in Nature Methods.</p>
+        </li>
+        <!-- Add more entries for 2024 if needed -->
+      </ul>
+    </div>
+
+    <div class="year-button" onclick="toggleYear('2023')">2023</div>
+    <div class="year-content" id="content-2023">
+      <h4>2023</h4>
+      <ul>
+        <li>
+          <p>December 2023 - We published “From bench to bedside via bytes: multi-omic immunoprofiling and integration using machine learning and network approaches” in Human Vaccines and Immunotherapeutics.</p>
+        </li>
+        <!-- Add more entries for 2023 if needed -->
+      </ul>
+    </div>
+
+    <!-- Add more year buttons and content sections as needed -->
+
+  </div>
+
+  <script>
+    function toggleYear(year) {
+      var content = document.getElementById('content-' + year);
+      if (content.classList.contains('active')) {
+        content.classList.remove('active');
+      } else {
+        content.classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
