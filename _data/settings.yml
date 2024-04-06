@@ -159,7 +159,7 @@ social:
 #-------------------------------
 # Newsletter Settings
 mailchimp:
-  enable: true
+  enable: false
   mailchimp_title: Stay inspired weekly 📬 Your friendly dose of tips & insights!
   mailchimp_description: Every Sunday, I deliver actionable tips for enhancing productivity, practical life advice, and top-notch insights gathered from various sources, right to your email inbox.
   mailchimp_identifier: gmail.us21.list-manage.com/subscribe/post?u=8aeb9c31a5c97a3a5f9ff2740&amp;id=0e31fd7793&amp # Add your MailChimp form identifier. For example - gmail.us21.list-manage.com/subscribe/post?u=8aeb9c31a5c97a3a5f9ff2740&amp;id=0e31fd7793&amp
