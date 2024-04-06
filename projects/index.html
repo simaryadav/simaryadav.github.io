@@ -4,37 +4,105 @@ title: Works
 description: Embark on a journey through a handpicked selection of projects that embody the essence of passion, simplicity, and creativity.
 ---
 
-<div class="container">
-  <div class="page-section-head">
-    <h1 class="page-title">{{ page.title | default: site.data.settings.projects.projects_title }}</h1>
-    <p class="page-description">{{ page.description | default: site.data.settings.projects.projects_description }}</p>
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <style>
+    /* CSS Styles */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
 
-<section class="section projects animate">
+    .page-section-head {
+      margin-top: 40px;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+
+    .page-title {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    .page-description {
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+
+    .project {
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .project__content {
+      position: relative;
+    }
+
+    .project__image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .project__label {
+      margin-bottom: 8px;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--text-alt-color);
+    }
+
+    .project__title {
+      font-size: 24px;
+      margin-bottom: 0;
+    }
+
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+      .project {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
   <div class="container">
-    <div class="row">
-      {% for project in site.projects reversed %}
-      <article class="project col-4">
-        <div class="project__content">
-          <a href="{{ project.url }}" class="project__image">
-            {% if project.image %}
-            <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
-            {% endif %}
-          </a>
-          <div class="project__info">
-            {% if project.label %}
-            <div class="project__label">{{ project.label }}</div>
-            {% endif %}
-            <h3 class="project__title"><a class="project__link" href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
-          </div>
-        </div>
-      </article>
-      {% endfor %}
+    <div class="page-section-head">
+      <h1 class="page-title">{{ page.title | default: site.data.settings.projects.projects_title }}</h1>
+      <p class="page-description">{{ page.description | default: site.data.settings.projects.projects_description }}</p>
     </div>
   </div>
-</section>
 
-{% include section-faq.html %}
-{% include section-author.html %}
-{% include section-subscribe.html %}
+  <section class="section projects animate">
+    <div class="container">
+      <div class="row">
+        {% for project in site.projects reversed %}
+        <article class="project col-4">
+          <div class="project__content">
+            <a href="{{ project.url }}" class="project__image">
+              {% if project.image %}
+              <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+              {% endif %}
+            </a>
+            <div class="project__info">
+              {% if project.label %}
+              <div class="project__label">{{ project.label }}</div>
+              {% endif %}
+              <h3 class="project__title"><a class="project__link" href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+            </div>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  {% include section-faq.html %}
+  {% include section-author.html %}
+  {% include section-subscribe.html %}
+</body>
+</html>
