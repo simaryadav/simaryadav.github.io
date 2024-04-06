@@ -3,5 +3,7 @@ title: Genetic polymorphisms in the open reading frame of the CCR5 gene from HIV
 description: Ronsard L, Sood V, Yousif A.S, Ramesh J, Shankar V, Das J*, Sumi N, Rai T, Mohankumar K, Sridharan S, Dorschel A, Ramachandran V.G, Banerjea A.C
 date: 2019-05-20 15:01:35 +0300
 image: '/images/Genetic-polymorphisms.webp'
-tags: [gene_regulatory_networks]
+tags: [Gene_Regulatory_Networks]
+href : 'https://www.nature.com/articles/s41467-022-34420-4'
+published: Scientific Reports 2019
 ---
