@@ -3,5 +3,8 @@ title: Analysis of Complement mediated lysis of SIV and SIV-infected cells revea
 description: Miller-Novak L, Das J*, Musich T.A, Demberg T, Weiner J.A, Venzon D.J, Mohanram V, Vargas-Inchaustegui D.A, Tuero I, Ackerman M.E, Alter G, Robert-Guroff M
 date: 2018-09-12 15:01:35 +0300
 image: '/images/Analysis-of.webp'
-tags: 
+tags: [Antibodyomics]
+href : 'https://journals.asm.org/doi/10.1128/jvi.00721-18'
+published: Journal of Virology 2018
+
 ---
