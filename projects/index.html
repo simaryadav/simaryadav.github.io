@@ -1,140 +1,33 @@
 ---
 layout: default
-title: News
-date: 2024-01-05 08:01:35 +0300
-label: Development
-image: '/images/63009541-smartphone-mobile-phone-and-newspaper-icon-communication-and-technology-device-vector-illustration.jpg'
-featured:
+title: Works
+description: Embark on a journey through a handpicked selection of projects that embody the essence of passion, simplicity, and creativity.
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
-  <style>
-    /* General Page Styling */
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-    }
 
-    .page-section-head {
-      margin-top: 40px;
-      margin-bottom: 60px;
-      text-align: center;
-    }
-
-    .page-title {
-      font-size: 32px;
-      margin-bottom: 16px;
-    }
-
-    .page-description {
-      font-size: 18px;
-      margin-bottom: 0;
-    }
-
-    /* Year Button Styling */
-    .year-button {
-      background-color: #f0f0f0;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      padding: 10px 20px;
-      margin-bottom: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      text-align: center;
-      width: 100%;
-      max-width: 200px;
-    }
-
-    .year-button:hover {
-      background-color: #e0e0e0;
-    }
-
-    /* Year Content Styling */
-    .year-content {
-      display: none;
-      padding: 10px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      margin-top: 10px;
-      background-color: #fff;
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .year-content.active {
-      display: block;
-    }
-
-    .year-content h4 {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    .year-content ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .year-content ul li {
-      margin-bottom: 8px;
-    }
-
-    .year-content ul li p {
-      margin: 0;
-    }
-  </style>
-</head>
-<body>
+<section class="section projects animate">
   <div class="container">
-    <div class="page-section-head">
-      <h1 class="page-title">{{ page.title }}</h1>
-      <p class="page-description">{{ page.description }}</p>
+    <div class="row">
+      {% for project in site.projects reversed %}
+      <article class="project col-4">
+        <div class="project__content">
+          <a href="{{ project.url }}" class="project__image">
+            {% if project.image %}
+            <img src="{{ project.image | relative_url }}" alt="{{ project.title }}">
+            {% endif %}
+          </a>
+          <div class="project__info">
+            {% if project.label %}
+            <div class="project__label">{{ project.label }}</div>
+            {% endif %}
+            <h3 class="project__title"><a class="project__link" href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
     </div>
-
-    <!-- Year Buttons and Content -->
-    <div class="year-button" onclick="toggleYear('2024')">2024</div>
-    <div class="year-content" id="content-2024">
-      <h4>2024</h4>
-      <ul>
-        <li>
-          <p>February 2024 - We published “SLIDE: Significant Latent factor Interaction Discovery and Exploration across biological domains” in Nature Methods.</p>
-        </li>
-        <!-- Add more entries for 2024 if needed -->
-      </ul>
-    </div>
-
-    <div class="year-button" onclick="toggleYear('2023')">2023</div>
-    <div class="year-content" id="content-2023">
-      <h4>2023</h4>
-      <ul>
-        <li>
-          <p>December 2023 - We published “From bench to bedside via bytes: multi-omic immunoprofiling and integration using machine learning and network approaches” in Human Vaccines and Immunotherapeutics.</p>
-        </li>
-        <!-- Add more entries for 2023 if needed -->
-      </ul>
-    </div>
-
-    <!-- Add more year buttons and content sections as needed -->
-
   </div>
-
-  <script>
-    function toggleYear(year) {
-      var content = document.getElementById('content-' + year);
-      if (content.classList.contains('active')) {
-        content.classList.remove('active');
-      } else {
-        content.classList.add('active');
-      }
-    }
-  </script>
-</body>
-</html>
-
+</section>
 
 {% include section-faq.html %}
 {% include section-author.html %}
