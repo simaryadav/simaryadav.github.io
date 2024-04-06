@@ -53,9 +53,30 @@
   margin-bottom: 0;
 }
 
-/* Responsive Styling */
-@media (max-width: 768px) {
-  .project {
-    width: 100%;
-  }
+/* Year Button Styling */
+.year-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.year-button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Year Content Styling */
+.year-content {
+  display: none;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.year-content.active {
+  display: block;
 }
