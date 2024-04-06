@@ -3,5 +3,7 @@ title: 'ENCAPP-elastic-net-based prognosis prediction and biomarker discovery fo
 description: Das J*, Gayvert K.M, Bunea F, Wegkamp M.H, Yu H
 date: 2015-03-16 15:01:35 +0300
 image: '/images/ENCAPP-elastic.webp'
-tags: [protein_networks]
+tags: [Gene_Regulatory_Networks,Machine_Learning]
+href : 'https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-015-1465-9'
+published: BMC Genomics 2015
 ---
