@@ -1,9 +1,18 @@
+---
+layout: default
+title: News
+date: 2024-01-05 08:01:35 +0300
+label: Development
+image: '/images/63009541-smartphone-mobile-phone-and-newspaper-icon-communication-and-technology-device-vector-illustration.jpg'
+featured:
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>News</title>
+  <title>{{ page.title }}</title>
   <style>
     /* General Page Styling */
     .container {
@@ -82,8 +91,8 @@
 <body>
   <div class="container">
     <div class="page-section-head">
-      <h1 class="page-title">News</h1>
-      <p class="page-description">A lot has been happening in life</p>
+      <h1 class="page-title">{{ page.title }}</h1>
+      <p class="page-description">{{ page.description }}</p>
     </div>
 
     <!-- Year Buttons and Content -->
@@ -125,3 +134,8 @@
   </script>
 </body>
 </html>
+
+
+{% include section-faq.html %}
+{% include section-author.html %}
+{% include section-subscribe.html %}
