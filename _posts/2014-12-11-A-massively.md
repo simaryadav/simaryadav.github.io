@@ -3,5 +3,7 @@ title: A massively parallel pipeline to clone DNA variants and examine molecular
 description: Wei X , Das J* , Fragoza R*, Liang J, Bastos de Oliveira F.M, Lee H.R, Wang X, Mort M, Stenson P.D, Cooper D.N, Lipkin S.M, Smolka M.B, Yu H
 date: 2014-12-11 15:01:35 +0300
 image: '/images/A-massively.webp'
-tags: [gene_regulatory_networks]
+tags: [Protein_Networks]
+href : 'https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004819'
+published: PLoS Genetics 2014
 ---
