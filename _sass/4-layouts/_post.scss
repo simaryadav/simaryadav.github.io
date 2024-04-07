@@ -1,6 +1,6 @@
 .container {
   max-width: 1200px; /* Increased width */
-  width: 500%;
+  width: 200%;
   margin: 0 auto;
 }
 
@@ -23,7 +23,7 @@
 
 .post-table {
   display: grid;
-  grid-template-columns: repeat(4, minmax(400px, 1fr)); /* Four columns per row with minimum width of 200px */
+  grid-template-columns: repeat(4, minmax(300px, 1fr)); /* Four columns per row with minimum width of 200px */
   gap: 50px;
 }
 
