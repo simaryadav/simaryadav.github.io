@@ -21,10 +21,7 @@ $mq: ( $mobile:$columns, $tablet:$columns, $desktop:$columns );
   margin: 0 auto;
   padding-left: calc(16px * 2);
   padding-right: calc(16px * 2);
-  position: fixed; /* Set the positioning to fixed */
-  top: 20px; /* Adjust the top position as needed */
-  left: 20px; /* Adjust the left position as needed */
-  z-index: 1000; /* Set a higher z-index to ensure the element appears on top */
+  
 
 
 
