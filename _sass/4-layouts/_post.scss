@@ -23,7 +23,7 @@
 
 .post-table {
   display: grid;
-  grid-template-columns: repeat(4, minmax(250px, 1fr)); /* Four columns per row with minimum width of 200px */
+  grid-template-columns: repeat(4, minmax(300px, 1fr)); /* Four columns per row with minimum width of 200px */
   gap: 50px;
 }
 
