@@ -5,6 +5,51 @@ description: Thank you for your interest in our research. Get in touch with us f
 permalink: /about/
 ---
 
+<style>
+.container {
+  max-width: fit-content;
+  margin: 0 auto;
+  width: -webkit-fill-available;
+}
+
+.page-section-head {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.page-title {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.page-description {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.col-md-6 {
+  width: 50%;
+}
+
+.gallery-box {
+  width: 50%;
+  margin-top: 40px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery img {
+  max-width: 100%;
+  height: auto;
+}
+
+</style>
+
 <div class="container__contact__head">
   <div class="contact-head">
     {% if site.data.settings.about.description %}
