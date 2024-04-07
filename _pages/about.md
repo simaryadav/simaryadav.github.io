@@ -5,6 +5,14 @@ description: Thank you for your interest in our research. Get in touch with us f
 permalink: /about/
 ---
 
+<div class="container__contact__head">
+  <div class="contact-head">
+    {% if site.data.settings.about.description %}
+    <p class="contact-description">{{ site.data.settings.about.description }}</p>
+    {% endif %}
+  </div>
+</div>
+
 <div class="container">
   <div class="row">
     <div class="col-md-6">
