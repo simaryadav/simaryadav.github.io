@@ -81,6 +81,15 @@
   transition: all 0.3s ease;
 }
 
+.explore-tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 56px;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+}
+
 .tag-button:hover {
   background-color: var(--primary-color);
   color: #fff;
