@@ -56,6 +56,11 @@ description: Embark on a journey through a handpicked selection of projects that
       font-size: 24px;
       margin-bottom: 0;
     }
+    
+    .container__projects__head{
+       width: 500px;
+       height: 500px;
+    }
 
     /* Responsive Styling */
     @media (max-width: 768px) {
@@ -66,7 +71,7 @@ description: Embark on a journey through a handpicked selection of projects that
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container__projects__head">
     <div class="page-section-head">
       <h1 class="page-title">{{ page.title | default: site.data.settings.projects.projects_title }}</h1>
       <p class="page-description">{{ page.description | default: site.data.settings.projects.projects_description }}</p>
@@ -74,7 +79,7 @@ description: Embark on a journey through a handpicked selection of projects that
   </div>
 
   <section class="section projects animate">
-    <div class="container">
+    <div class="container__projects">
       <div class="row">
         {% for project in site.projects reversed %}
         <article class="project col-4">
