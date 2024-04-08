@@ -17,6 +17,21 @@
    }
 }
 
+.container__footer{
+  max-width: 1000px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.row__footer{
+  display: flex;
+  flex-wrap: wrap;
+    /* flex: 0 1 auto; */
+  flex-direction: row;
+  box-sizing: border-box;
+  margin-left: -16px;
+  margin-right: -16px;
+}
 
 /* Footer Info */
 .footer__info {
@@ -61,10 +76,10 @@
 
 .footer__navigation__list {
     display: flex;
-    align-items: flex-start;
-    flex-direction: column-reverse;
-    align-content: stretch;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
   .footer__navigation__item {
     display: inline-block;
