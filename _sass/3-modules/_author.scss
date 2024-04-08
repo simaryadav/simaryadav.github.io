@@ -1,7 +1,8 @@
 /* Author */
-.author__inner {
+  .author__inner {
   display: flex;
   align-items: center;
+  justify-content: center; /* Align items horizontally at the center */
 
   .author__image {
     position: relative;
@@ -22,6 +23,7 @@
       object-fit: cover;
     }
   }
+
 
   .author__content {
     max-width: 600px;
