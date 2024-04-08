@@ -1,35 +1,35 @@
+/* Main Page */
 .container {
- max-width: fit-content;
- margin: 0 auto;
- width: -webkit-fill-available;
-
+  max-width: fit-content; /* Adjust max-width to match tag page CSS */
+  margin: 0 auto; /* Center the container */
 }
 
 .page-section-head {
-  margin-top: 40px;
+  margin-top: 60px; /* Adjust margin-top to match tag page CSS */
   margin-bottom: 60px;
   padding-bottom: 60px;
   border-bottom: 1px solid var(--border-color);
 }
 
 .page-title {
-  font-size: 32px;
-  margin-bottom: 16px;
+  font-size: 32px; /* Adjust font size to match tag page CSS */
+  margin-bottom: 0;
 }
 
 .page-description {
-  font-size: 18px;
+  font-size: 18px; /* Adjust font size to match tag page CSS */
   margin-bottom: 0;
 }
 
 .post-table {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(300px, 1fr)); /* Four columns per row with minimum width of 200px */
-  margin: auto;
-  gap: 30px;
+  display: flex; /* Change display to flex to match tag page CSS */
+  flex-wrap: wrap; /* Wrap items */
+  justify-content: space-between; /* Align items evenly */
+  gap: 30px; /* Adjust gap between items */
 }
 
 .post {
+  width: calc(25% - 30px); /* Adjust width of each item to match tag page CSS */
   border: 1px solid var(--border-color);
   border-radius: 8px;
   overflow: hidden;
@@ -82,12 +82,12 @@
 }
 
 .explore-tags {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 56px;
-    flex-direction: column;
-    align-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+  flex-direction: column;
+  align-content: space-around;
+  align-items: center;
 }
 
 .tag-button:hover {
