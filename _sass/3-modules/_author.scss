@@ -24,7 +24,30 @@
     }
   }
 
+  .container__author{
+     max-width: 1000px;
+     padding-left: 16px;
+     padding-right: 16px;
+    }
 
+  .row__author{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+
+.col-12 {
+    width: calc(12 / 12* 100%);
+}
+
+.col {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+    
   .author__content {
     max-width: 600px;
     width: 50%;
