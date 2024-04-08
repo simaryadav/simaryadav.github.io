@@ -42,9 +42,16 @@
 }
 
 .post-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+  position: relative;
+   transform: translate(0);
+   display: block;
+   margin-bottom: 20px;
+   aspect-ratio: 4 / 3;
+   border-radius: 22px;
+   outline: none;
+   overflow: hidden;
+   background: var(--background-alt-color);
+   transition: transform .3s ease;
 }
 
 .post-info {
