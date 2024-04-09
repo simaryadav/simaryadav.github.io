@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About Us
-description: Learn more about our research and how to get in touch with us.
+title: 
+description: 
 permalink: /about/
 ---
 
@@ -19,7 +19,7 @@ permalink: /about/
 }
 
 .page-title {
-  font-size: 32px;
+  font-size: 80px;
   margin-bottom: 16px;
 }
 
@@ -28,12 +28,16 @@ permalink: /about/
 }
 
 .contact-info {
-  display: flex;
-  flex-wrap: wrap;
+ display: flex;
+ flex-wrap: wrap;
+ flex-direction: column;
 }
 
 .contact-info-item {
-  width: 50%;
+  width: 100%;
+  align-content: center;
+  text-align: center;
+  
 }
 
 .contact-info-item h2 {
