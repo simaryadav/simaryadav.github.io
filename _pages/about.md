@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Contact Us
-description: Thank you for your interest in our research. Get in touch with us for any questions or comments regarding our work and publications. Currently, we have open positions at all levels (e.g., post-docs, graduate students, and undergrads).
+title: About Us
+description: Learn more about our research and how to get in touch with us.
 permalink: /about/
 ---
 
@@ -9,7 +9,6 @@ permalink: /about/
 .container {
   max-width: fit-content;
   margin: 0 auto;
-  width: -webkit-fill-available;
 }
 
 .page-section-head {
@@ -26,19 +25,23 @@ permalink: /about/
 
 .page-description {
   font-size: 18px;
-  margin-bottom: 0;
 }
 
-.col-md-6 {
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-info-item {
   width: 50%;
 }
 
-.gallery-box {
-  width: 50%;
-  margin-top: 40px;
+.contact-info-item h2 {
+  margin-bottom: 10px;
 }
 
 .gallery {
+  margin-top: 40px;
   display: flex;
   justify-content: center;
 }
@@ -47,20 +50,16 @@ permalink: /about/
   max-width: 100%;
   height: auto;
 }
-
 </style>
 
-<div class="container__contact__head">
-  <div class="contact-head">
-    {% if site.data.settings.about.description %}
-    <p class="contact-description">{{ site.data.settings.about.description }}</p>
-    {% endif %}
-  </div>
-</div>
-
 <div class="container">
-  <div class="row">
-    <div class="col-md-6">
+  <div class="page-section-head">
+    <h1 class="page-title">Contact Us</h1>
+    <p class="page-description">Thank you for your interest in our research. Get in touch with us for any questions or comments regarding our work and publications. Currently, we have open positions at all levels (e.g., post-docs, graduate students, and undergrads).</p>
+  </div>
+
+  <div class="contact-info">
+    <div class="contact-info-item">
       <h2>Address and Contact Info</h2>
       <p>4011 The Assembly<br>
       5051 Centre Avenue,<br>
@@ -68,9 +67,10 @@ permalink: /about/
       <p>Email: jishnu@pitt.edu<br>
       Phone: 412-624-5530</p>
     </div>
-    <div class="gallery-box">
-        <div class="gallery">
-          <img src="/images/Pitt.webp" loading="lazy" alt="Author">
+
+    <div class="contact-info-item">
+      <div class="gallery">
+        <img src="/images/Pitt.webp" loading="lazy" alt="University of Pittsburgh">
       </div>
     </div>
   </div>
