@@ -33,17 +33,8 @@ layout: default
     </div>
 
     {{ content }}
-
-    {% include share-buttons.html %}
   </div>
 
-  <section class="section section-related">
-    <div class="section__info section__info__center">
-      <div class="section__head">
-        <span class="section__intro">Unleash creativity...</span>
-        <h2 class="section__title">Explore more works</h2>
-      </div>
-    </div>
 
     <div class="row">
     {% assign project-collection = site[page.collection] | sample:4 %}
