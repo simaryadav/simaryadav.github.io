@@ -1,9 +1,9 @@
-<div class="article article__grid animate col col-4 col-d-6 col-t-12">
+ <div class="article article__grid animate col col-4 col-d-6 col-t-12">
   <div class="article__inner">
 
     <div class="article__head">
       {% if post.image %}
-      <a href="{{ post.url | prepend: site.baseurl }}" class="article__image">
+      <a href="{{ post.href }}" class="article__image">
         {% if post.image and post.video_embed %}
         <div class="video-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
@@ -30,7 +30,7 @@
       </div>
 
       <h2 class="article__title">
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <a href="{{ post.href }}">{{ post.title }}</a>
       </h2>
 
       <p class="article__excerpt">{% if post.description %}{{ post.description }}{% else %}{{ post.content | strip_html | truncate: 250 }}{% endif %}</p>
