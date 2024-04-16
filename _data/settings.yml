@@ -14,13 +14,13 @@ menu_settings:
     - title: "Home"
       url: "/"
     - title: "Posts"
-      url: "/projects/"
+      url: "/Posts/"
     - title: "Publications"
-      url: "/posts/"
+      url: "/Publications/"
     - title: "Team"
-      url: "/team/"
+      url: "/Team/"
     - title: "Contact us"
-      url: "/Contact us/"
+      url: "/Contact-us/"
 
 # Call to action button
 cta_button:
