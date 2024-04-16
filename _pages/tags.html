@@ -19,7 +19,7 @@ permalink: /tags/
       </div>
     </div>
     <div class="container">
-      <div class="row">
+      <div class="post-table">
       {% for post in site.tags[this_word] %}
         {% if post.title != null %}
           {% include article.html %}
