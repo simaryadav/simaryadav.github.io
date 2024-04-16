@@ -20,7 +20,7 @@ menu_settings:
     - title: "Team"
       url: "/team/"
     - title: "Contact us"
-      url: "/about/"
+      url: "/Contact us/"
 
 # Call to action button
 cta_button:
