@@ -2,7 +2,7 @@
 layout: page
 title: 
 description: 
-permalink: /Contact us/
+permalink: /Contact-us/
 ---
 
 <style>
