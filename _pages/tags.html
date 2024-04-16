@@ -21,7 +21,7 @@ permalink: /tags/
      <div class="container">
     <div class="post-table">
       {% if site.posts.size > 0 %}
-        {% for post in site.posts %}
+        {% for post in site.tags[this_word] %}
           <div class="post">
             {% if post.href %}
               <a href="{{ post.href }}">
