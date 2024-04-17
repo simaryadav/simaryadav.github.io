@@ -8,19 +8,16 @@ permalink: /tags/
 
 <!-- begin tags -->
 <section class="section tags">
-
   {% for item in (0..site.tags.size) %}{% unless forloop.last %}
   {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
   <div class="tags__inner is-hidden" id="{{ this_word | cgi_escape }}">
-
     <div class="container">
       <div class="tag__info">
         <h1 class="tag__title">{{ this_word }} <span class="tag__counter">{{ site.tags[this_word].size }}</span></h1>
       </div>
     </div>
-     <div class="container">
-    <div class="post-table">
-      {% if site.posts.size > 0 %}
+    <div class="container">
+      <div class="post-table">
         {% for post in site.tags[this_word] %}
           <div class="post">
             {% if post.href %}
@@ -44,20 +41,16 @@ permalink: /tags/
                   </div>
                 {% endif %}
                 {% if post.date %}
-                  <span class="article__date">•<time datetime="{{ post.date | date_to_xmlschema }}">{% assign date_format = site.minima.date_format | default: "%d %-b, %Y" %}{{ post.date | date: date_format }}</time></span>
+                  <span class="article__date">•<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b, %Y" }}</time></span>
                 {% endif %}
               </div>
             </div>
           </div>
         {% endfor %}
-      {% endif %}
+      </div>
     </div>
   </div>
-
-  </div>
-  {% endunless %}
-  {% endfor %}
-
+  {% endunless %}{% endfor %}
 </section>
 <!-- end tags -->
 
