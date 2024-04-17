@@ -15,9 +15,11 @@ description: Total: 56 published papers; 1 currently under review/in revision
   <h2>Explore:</h2>
   <div class="tag-cloud">
     <a href="{{ site.baseurl }}/tags/?tag=All" class="tag-button">All Years</a>
-    {% for year in site.years %}
-      <a href="{{ site.baseurl }}/tags/?tag={{ year | cgi_escape }}" class="tag-button">{{ year }}</a>
+    {% for post in site.posts %}
+      {% assign year = post.date | date: "%Y" %}
+      <a href="{{ site.baseurl }}/tags/?tag={{ year }}" class="tag-button">{{ year }}</a>
     {% endfor %}
+
     <!-- Keep the old tags -->
     {% for tag in site.tags %}
       <a href="{{ site.baseurl }}/tags/?tag={{ tag[0] | cgi_escape }}" class="tag-button">{{ tag[0] }}</a>
