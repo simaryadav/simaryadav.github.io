@@ -12,16 +12,12 @@ description: Total: 56 published papers; 1 currently under review/in revision
 </div>
 
 <div class="explore-tags">
-    <h2>Explore:</h2>
-    <div class="tag-cloud">
-      {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-      {% assign tag_words = site_tags | split:',' | sort %}
-      {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-      {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
-      <a href="{{ site.baseurl }}/tags/?tag={{ this_word | cgi_escape }}">{{ this_word }} <span>({{ site.tags[this_word].size }})</span></a>
-      {% endunless %}
-      {% endfor %}
-    </div>
+  <h2>Explore:</h2>
+  <div class="tag-cloud">
+    <a href="{{ site.baseurl }}/tags/?tag=All" class="tag-button">All Years</a>
+    {% for year in site.years %}
+      <a href="{{ site.baseurl }}/tags/?tag={{ year | cgi_escape }}" class="tag-button">{{ year }}</a>
+    {% endfor %}
   </div>
 </div>
 
