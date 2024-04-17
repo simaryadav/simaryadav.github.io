@@ -14,9 +14,9 @@ description: Total: 56 published papers; 1 currently under review/in revision
 <div class="explore-tags">
   <h2>Explore:</h2>
   <div class="tag-cloud">
-    {% for date in site.date %}
-      {% assign year = date | date: "%Y" %}
-      <a href="{{ site.baseurl }}/tags/?tag={{ year }}" class="tag-button">{{ year }}</a>
+    <a href="{{ site.baseurl }}/tags/?tag=All" class="tag-button">All Years</a>
+    {% for year in site.years %}
+      <a href="{{ site.baseurl }}/tags/?tag={{ year | cgi_escape }}" class="tag-button">{{ year }}</a>
     {% endfor %}
     <!-- Keep the old tags -->
     {% for tag in site.tags %}
@@ -52,7 +52,7 @@ description: Total: 56 published papers; 1 currently under review/in revision
                   </div>
                 {% endif %}
                 {% if post.date %}
-                  <span class="article__date">•<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b, %Y" }}</time></span>
+                  <span class="article__date">•<time datetime="{{ post.date | date_to_xmlschema }}">{% assign date_format = site.minima.date_format | default: "%d %-b, %Y" %}{{ post.date | date: date_format }}</time></span>
                 {% endif %}
               </div>
             </div>
