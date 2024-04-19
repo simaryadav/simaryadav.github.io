@@ -68,6 +68,7 @@ permalink: /tags/
 <section class="section tags">
   <div class="container">
     <h2 class="tag__title">Tags by Year</h2>
+    <h2 style="text-align: center;">{{ years }}</h2>
 
     <!-- begin tags -->
     <section class="section tags">
@@ -77,6 +78,9 @@ permalink: /tags/
           <div class="container">
             <div class="tag__info">
               <h1 class="tag__title">{{ this_year }} <span class="tag__counter">{{ site.year[this_year].size }}</span></h1>
+                  <h2 style="text-align: center;">{{ years }}</h2>
+                  <h2 style="text-align: center;">{{ year }}</h2>
+
             </div>
           </div>
           <div class="container">
