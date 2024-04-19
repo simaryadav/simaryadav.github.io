@@ -55,7 +55,7 @@ permalink: /tags/
 </section>
 <!-- end tags -->
 
-{% capture site_years %}{% for post in site.posts %}{{ post.year }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% capture site_years %}{% for year in site.year %}{{ post.year }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign years_array = site_years | split:',' | uniq | sort %}
 
 <!-- Tags by Year -->
