@@ -75,6 +75,10 @@ description: Total: 56 published papers; 1 currently under review/in revision
   </div>
 </section>
 
+{% for post in site.posts %}
+  {{ post.year }}
+{% endfor %}
+
 {% include section-faq.html %}
 
 {% include section-subscribe.html %}
