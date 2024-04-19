@@ -27,9 +27,9 @@ description: Total: 56 published papers; 1 currently under review/in revision
     <div class="tag-cloud">
       {% assign years = "" | split: "" %}
       {% for post in site.posts %}
-        {% assign year = post.year }
-        {% unless year contains year %}
-          {% assign year = year | push: year %}
+        {% assign years = post.year }
+        {% unless years contains year %}
+          {% assign years = years | push: year %}
           <a href="{{ site.baseurl }}/tags/?tag={{ year }}" class="tag-button">{{ year }}</a>
         {% endunless %}
       {% endfor %}
