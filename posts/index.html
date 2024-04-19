@@ -30,7 +30,7 @@ description: Total: 56 published papers; 1 currently under review/in revision
         {% assign year = post.date | date: "%Y" %}
         {% unless years contains year %}
           {% assign years = years | push: year %}
-          <a href="{{ site.baseurl }}/tags/?tag={{ year }}" class="tag-button">{{ year }}</a>
+          <a href="{{ site.baseurl }}/tags/?tag={{ year[0] }}" class="tag-button">{{ year[0] }}</a>
         {% endunless %}
       {% endfor %}
     </div>
