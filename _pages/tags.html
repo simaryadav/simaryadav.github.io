@@ -54,17 +54,19 @@ permalink: /tags/
 </section>
 <!-- end tags -->
 
+
+{% capture site_years %}{% for post in site.posts %}{{ post.date | date: "%Y" }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign years_array = site_years | split:',' | uniq | sort %}
+
 <!-- Tags by Year -->
 <section class="section tags">
   <div class="container">
     <h2 class="tag__title">Tags by Year</h2>
-    {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-{% assign tag_words = site_tags | split:',' | sort %}
 
 <!-- begin tags -->
 <section class="section tags">
   {% for item in (0..site.year.size) %}{% unless forloop.last %}
-  {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
+  {% capture this_word %}{{ years_array[item] | strip_newlines }}{% endcapture %}
   <div class="tags__inner is-hidden" id="{{ this_word | cgi_escape }}">
     <div class="container">
       <div class="tag__info">
