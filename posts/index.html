@@ -75,9 +75,18 @@ description: Total: 56 published papers; 1 currently under review/in revision
   </div>
 </section>
 
-{% capture site_year %}{% for post in site.posts %}{% for year in site.year %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-{% assign tag_years = site_year | split:',' | sort %}
-{{ site_year }}
+{% assign unique_years = "" | split: "" %}
+{% for post in site.posts %}
+  {% assign year = post.year }
+  {% unless unique_years contains year %}
+    {% assign unique_years = unique_years | push: year %}
+  {% endunless %}
+{% endfor %}
+
+{% for year in unique_years %}
+  Year: {{ year }} Index: {{ unique_years | index_of: year }} <br>
+{% endfor %}
+
 
 {% for post in site.posts %}
   {{ post.year }}
