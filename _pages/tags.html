@@ -6,8 +6,6 @@ permalink: /tags/
 {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign tag_words = site_tags | split:',' | sort %}
 
-{% capture site_years %}{% for tag in site.year %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-{% assign tag_words = site_years | split:',' | sort %}
 <!-- begin tags -->
 <section class="section tags">
   {% for item in (0..site.tags.size) %}{% unless forloop.last %}
@@ -56,23 +54,22 @@ permalink: /tags/
 </section>
 <!-- end tags -->
 
-<!-- Tags by year -->
-<section class="section tags-by-year">
+<!-- Tags by Year -->
+<section class="section tags">
   <div class="container">
-    <h2>Tags by Year</h2>
+    <h2 class="tag__title">Tags by Year</h2>
     <div class="tag-cloud">
-      {% assign years = "" | split: "" %}
+      {% assign years = "" | split: ',' %}
       {% for post in site.posts %}
         {% assign year = post.date | date: "%Y" %}
         {% unless years contains year %}
+          <a href="{{ site.baseurl }}/tags/?tag={{ year | cgi_escape }}" class="tag-button">{{ year }}</a>
           {% assign years = years | push: year %}
-          <a href="{{ site.baseurl }}/tags/?tag={{ year }}" class="tag-button">{{ year }}</a>
         {% endunless %}
       {% endfor %}
     </div>
   </div>
 </section>
-<!-- end tags by year -->
 
 {% include section-subscribe.html %}
 
