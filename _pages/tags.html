@@ -14,7 +14,7 @@ permalink: /tags/
     <div class="container">
       <div class="tag__info">
         <h1 class="tag__title">{{ this_word }} <span class="tag__counter">{{ site.tags[this_word].size }}</span></h1>
-        <h2>site.tags[this_word]</h2>
+        <h2>{{ site.tags[this_word] }}</h2>
       </div>
     </div>
     <div class="container">
@@ -55,7 +55,6 @@ permalink: /tags/
 </section>
 <!-- end tags -->
 
----
 {% capture site_years %}{% for post in site.posts %}{{ post.year }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign years_array = site_years | split:',' | uniq | sort %}
 
@@ -63,7 +62,7 @@ permalink: /tags/
 <section class="section tags">
   <div class="container">
     <h2 class="tag__title">Tags by Year</h2>
-    <h2>site_years</h2>
+    
 
     <!-- begin tags -->
     <section class="section tags">
@@ -72,7 +71,8 @@ permalink: /tags/
       <div class="tags__inner is-hidden" id="{{ this_year | cgi_escape }}">
         <div class="container">
           <div class="tag__info">
-            <h1 class="tag__title">{{ this_year }} <span class="tag__counter">{{ site.years[this_year].size }}</span></h1>
+            <h1 class="tag__title">{{ this_year }} <span class="tag__counter">{{ site.year[this_year].size }}</span></h1>
+            <h2>{{ site.year[this_year] }}</h2>
           </div>
         </div>
         <div class="container">
