@@ -58,17 +58,54 @@ permalink: /tags/
 <section class="section tags">
   <div class="container">
     <h2 class="tag__title">Tags by Year</h2>
-    <div class="tag-cloud">
-      {% assign years = "" | split: ',' %}
-      {% for post in site.posts %}
-        {% assign year = post.date | date: "%Y" %}
-        {% unless years contains year %}
-          <a href="{{ site.baseurl }}/tags/?tag={{ year | cgi_escape }}" class="tag-button">{{ year }}</a>
-          {% assign years = years | push: year %}
-        {% endunless %}
-      {% endfor %}
+    {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tag_words = site_tags | split:',' | sort %}
+
+<!-- begin tags -->
+<section class="section tags">
+  {% for item in (0..site.year.size) %}{% unless forloop.last %}
+  {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
+  <div class="tags__inner is-hidden" id="{{ this_word | cgi_escape }}">
+    <div class="container">
+      <div class="tag__info">
+        <h1 class="tag__title">{{ this_word }} <span class="tag__counter">{{ site.year[this_word].size }}</span></h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="post-table">
+        {% for post in site.year[this_word] %}
+          <div class="post">
+            {% if post.href %}
+              <a href="{{ post.href }}">
+            {% endif %}
+            <div class="post-image">
+              <img src="{{ post.image }}" alt="{{ post.title }}">
+            </div>
+            {% if post.href %}
+              </a>
+            {% endif %}
+            <div class="post-info">
+              <h2 class="post-title">{{ post.title }}</h2>
+              <p class="post-description">{{ post.description }}</p>
+              <div class="post-meta">
+                {% if post.year %}
+                  <div class="post-tags">
+                    {% for tag in post.year %}
+                      <a href="{{ site.baseurl }}/tags/?tag={{ year | cgi_escape }}" class="tag-button">{{ year }}</a>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+                {% if post.date %}
+                  <span class="article__date">•<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b, %Y" }}</time></span>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
+  {% endunless %}{% endfor %}
 </section>
 
 {% include section-subscribe.html %}
