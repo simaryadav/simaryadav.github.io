@@ -88,10 +88,18 @@ description: Total: 56 published papers; 1 currently under review/in revision
 {% endfor %}
 
 
+{% assign target_year = "2023" %} <!-- Specify the target year -->
 
 {% for post in site.posts %}
-  {{ post.year }}
+  {% assign post_year = post.date | date: "%Y" %}
+  {% if post_year == target_year %}
+    <!-- Output post information here -->
+    Title: {{ post.title }} <br>
+    Date: {{ post.date }} <br>
+    <!-- Add more post details as needed -->
+  {% endif %}
 {% endfor %}
+
 
 {% include section-faq.html %}
 
