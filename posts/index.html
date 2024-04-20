@@ -81,10 +81,10 @@ description: Total: 56 published papers; 1 currently under review/in revision
   {% unless unique_years contains year %}
     {% assign unique_years = unique_years | push: year %}
   {% endunless %}
-  {% for year in unique_year %}
+  {% for year in unique_years %}
    {% for post in site.posts %}
     {% assign year = post.year %}
-    {% if unique_year contains year %}
+    {% if unique_years contains year %}
       {{ year }}
       <!-- Output post information here -->
     Title: {{ post.title }} <br>
@@ -95,7 +95,7 @@ description: Total: 56 published papers; 1 currently under review/in revision
  {% endfor %}
 {% endfor %}
 
-
+{{ unique_years }}
 
 
 
