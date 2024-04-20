@@ -81,6 +81,7 @@ description: Total: 56 published papers; 1 currently under review/in revision
    {% unless unique_years contains year %}
     {% assign unique_years = unique_years | push: year %}
    {% endunless %}
+ {% endfor %}
 {% for year in unique_years %}
    {% for post in site.posts %}
     {% assign year = post.year %}
@@ -92,7 +93,6 @@ description: Total: 56 published papers; 1 currently under review/in revision
     <!-- Add more post details as needed -->
     {% endif %}
   {% endfor %}
- {% endfor %}
 {% endfor %}
 
 {{ unique_years }}
