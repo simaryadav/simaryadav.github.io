@@ -78,10 +78,10 @@ description: Total: 56 published papers; 1 currently under review/in revision
 {% assign unique_years = "" | split: "" %}
 {% for post in site.posts %}
   {% assign year = post.year %}
-  {% unless unique_years contains year %}
+   {% unless unique_years contains year %}
     {% assign unique_years = unique_years | push: year %}
-  {% endunless %}
-  {% for year in unique_years %}
+   {% endunless %}
+{% for year in unique_years %}
    {% for post in site.posts %}
     {% assign year = post.year %}
     {% if unique_years contains year %}
@@ -97,9 +97,5 @@ description: Total: 56 published papers; 1 currently under review/in revision
 
 {{ unique_years }}
 
-
-
-
 {% include section-faq.html %}
-
 {% include section-subscribe.html %}
