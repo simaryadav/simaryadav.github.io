@@ -70,8 +70,10 @@ permalink: /tags/
 
     <!-- begin tags -->
     <section class="section tags">
-      {% for year in unique_years %}
-      {% capture this_year %}{{ unique_years[year] | strip_newlines }}{% endcapture %}
+       {% for year in unique_years %}
+          {% capture this_year %}{{ year | strip_newlines }}{% endcapture %}
+          {# Debugging output to check if Liquid code is working #}
+          <p>{{ this_year }}</p>
         <div class="tags__inner is-hidden" id="{{ this_year | cgi_escape }}">
           <div class="container">
             <div class="tag__info">
