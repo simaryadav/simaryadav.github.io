@@ -85,7 +85,7 @@ description: Total: 56 published papers; 1 currently under review/in revision
 {{ unique_years }}
 {% for year in unique_years %}
    {% for post in site.posts %}
-    {% assign year = post.year %}
+    {% assign year = 2023 %}
     {% if unique_years contains year %}
       {{ year }}
       <!-- Output post information here -->
