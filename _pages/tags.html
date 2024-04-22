@@ -66,17 +66,17 @@ permalink: /tags/
 <!-- Tags by Year -->
 <section class="section tags">
   <div class="container">
-  {% for years in unique_years %}{% unless forloop.last %}
-    <h1 style="text-align: center;">{{ years }}</h1>
-    {% for post in site.posts %}
-      {% assign post_year = post.date | date: "%Y" %}
-      {% if post_year == years %}
-        Title: {{ post.title }} <br>
-        Date: {{ post_year }} <br>
-       
-      {% endif %}
-    {% endunless %}{% endfor %}
-    
+   {% for years in unique_years %}{% unless forloop.last %}
+      <h1 style="text-align: center;">{{ years }}</h1>
+      {% for post in site.posts %}
+        {% assign post_year = post.date | date: "%Y" %}
+        {% if post_year == years %}
+          Title: {{ post.title }} <br>
+          Date: {{ post_year }} <br>
+        {% endif %}
+      {% endfor %}
+  {% endunless %}{% endfor %}
+
    
           {% capture this_year %}{{ unique_years[years] | strip_newlines }}{% endcapture %}
     
@@ -123,7 +123,6 @@ permalink: /tags/
             </div>
           </div>
         </div>
-      {% endfor %}
     </section>
   </div>
 </section>
