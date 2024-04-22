@@ -66,12 +66,12 @@ permalink: /tags/
 <!-- Tags by Year -->
 <section class="section tags">
   <div class="container">
-  <h2 style="text-align: center;">{{ year }}</h2>
+  <h1 style="text-align: center;">{{ year }}</h1>
   {% for year in unique_years %}
           {% capture this_year %}{{ year | strip_newlines }}{% endcapture %}
           {# Debugging output to check if Liquid code is working #}
           <p>{{ this_year }}</p>
-          <p>{{ site.year[this_year].size }}</p>
+          <p>{{ site.year[year].size }}</p>
  
     
     <!-- begin tags -->
@@ -79,7 +79,7 @@ permalink: /tags/
         <div class="tags__inner is-hidden" id="{{ this_year | cgi_escape }}">
           <div class="container">
             <div class="tag__info">
-              <h1 class="tag__title">{{ this_year }} <span class="tag__counter">{{ site.year[this_year].size }}</span></h1>
+              <h1 class="tag__title">{{ this_year }} <span class="tag__counter">{{ site.year[year].size }}</span></h1>
                   <h2 style="text-align: center;">{{ years }}</h2>
                   <h2 style="text-align: center;">{{ year }}</h2>
 
@@ -87,7 +87,7 @@ permalink: /tags/
           </div>
           <div class="container">
             <div class="post-table">
-              {% for post in site.year[this_year] %}
+              {% for post in site.year[year] %}
                 <div class="post">
                   {% if post.href %}
                     <a href="{{ post.href }}">
