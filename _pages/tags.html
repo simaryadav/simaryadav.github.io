@@ -67,27 +67,23 @@ permalink: /tags/
 <section class="section tags">
   <div class="container">
   {% for years in unique_years %}
+    <h1 style="text-align: center;">{{ years }}</h1>
     {% for post in site.posts %}
-      {{ years }}
       {% assign post_year = post.date | date: "%Y" %}
       {% if post_year == years %}
         Title: {{ post.title }} <br>
         Date: {{ post_year }} <br>
       {% endif %}
     {% endfor %}
-    <h1 style="text-align: center;">{{ years }}</h1>
+   
           {% capture this_year %}{{ unique_years[years] | strip_newlines }}{% endcapture %}
-          {# Debugging output to check if Liquid code is working #}
-
     
     <!-- begin tags -->
     <section class="section tags">
         <div class="tags__inner is-hidden" id="{{ this_year | cgi_escape }}">
           <div class="container">
             <div class="tag__info">
-              <h1 class="tag__title">{{ this_year }} <span class="tag__counter">{{ site.year[year].size }}</span></h1>
-                  <h2 style="text-align: center;">{{ years }}</h2>
-                  <h2 style="text-align: center;">{{ year }}</h2>
+              <h1 class="tag__title">{{ years }} <span class="tag__counter">{{ site.year[year].size }}</span></h1>
 
             </div>
           </div>
