@@ -66,16 +66,17 @@ permalink: /tags/
 <!-- Tags by Year -->
 <section class="section tags">
   <div class="container">
-
-    <!-- begin tags -->
-    <section class="section tags">
-       {% for year in unique_years %}
+  <h2 class="tag__title">Tags by Year</h2>
+  <h2 style="text-align: center;">{{ years }}</h2>
+  {% for year in unique_years %}
           {% capture this_year %}{{ year | strip_newlines }}{% endcapture %}
           {# Debugging output to check if Liquid code is working #}
           <p>{{ this_year }}</p>
           <p>{{ site.year[this_year].size }}</p>
-          <h2 class="tag__title">Tags by Year</h2>
-          <h2 style="text-align: center;">{{ years }}</h2>
+ 
+    
+    <!-- begin tags -->
+    <section class="section tags">
         <div class="tags__inner is-hidden" id="{{ this_year | cgi_escape }}">
           <div class="container">
             <div class="tag__info">
