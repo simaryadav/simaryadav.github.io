@@ -86,38 +86,13 @@ description: Total: 56 published papers; 1 currently under review/in revision
 
 {% for post in site.posts %}
     {% assign post_year = post.date | date: "%Y" %}
-    {% if post_year == "2023" %}
+    {% if post_year == "2022" %}
         Title: {{ post.title }} <br>
         Date: {{ post_year }} <br>
     {% endif %}
 {% endfor %}
 
-{% comment %}
-Indexing posts by year
-{% endcomment %}
-{% assign posts_by_year = {} %}
-{% for post in site.posts %}
-    {% capture post_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-    {% if posts_by_year[post_year] == nil %}
-        {% assign posts_by_year[post_year] = "" | split: "," %}
-    {% endif %}
-    {% assign posts_by_year[post_year] = posts_by_year[post_year] | push: post %}
-{% endfor %}
 
-{% comment %}
-Searching for posts by year
-{% endcomment %}
-{% assign search_year = "2022" %}
-{% if posts_by_year[search_year] %}
-    <h2>Posts for the year {{ search_year }}</h2>
-    <ul>
-        {% for post in posts_by_year[search_year] %}
-            <li>Title: {{ post.title }} | Date: {{ post.date | date: "%Y-%m-%d" }}</li>
-        {% endfor %}
-    </ul>
-{% else %}
-    <p>No posts found for the year {{ search_year }}</p>
-{% endif %}
 
 
 
