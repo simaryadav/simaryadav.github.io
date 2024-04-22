@@ -75,8 +75,7 @@ permalink: /tags/
         Date: {{ post_year }} <br>
        
       {% endif %}
-    {% endunless %}
-    {% endfor %}
+    {% endunless %}{% endfor %}
     
    
           {% capture this_year %}{{ unique_years[years] | strip_newlines }}{% endcapture %}
