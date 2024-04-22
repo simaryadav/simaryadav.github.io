@@ -66,14 +66,23 @@ permalink: /tags/
 <!-- Tags by Year -->
 <section class="section tags">
   <div class="container">
-  {% for years in unique_years %}
+  {% for years in unique_years %}{% unless forloop.last %}
     <h1 style="text-align: center;">{{ years }}</h1>
     {% for post in site.posts %}
       {% assign post_year = post.date | date: "%Y" %}
       {% if post_year == years %}
         Title: {{ post.title }} <br>
         Date: {{ post_year }} <br>
-        <section class="section tags">
+       
+      {% endif %}
+    {% endunless %}
+    {% endfor %}
+    
+   
+          {% capture this_year %}{{ unique_years[years] | strip_newlines }}{% endcapture %}
+    
+    <!-- begin tags -->
+     <section class="section tags">
         <div class="tags__inner is-hidden" id="{{ this_year | cgi_escape }}">
           <div class="container">
             <div class="tag__info">
@@ -119,13 +128,6 @@ permalink: /tags/
     </section>
   </div>
 </section>
-      {% endif %}
-    {% endfor %}
-   
-          {% capture this_year %}{{ unique_years[years] | strip_newlines }}{% endcapture %}
-    
-    <!-- begin tags -->
-
 {% include section-subscribe.html %}
 
 <script>
