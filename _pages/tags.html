@@ -14,7 +14,7 @@ permalink: /tags/
     <div class="container">
       <div class="tag__info">
         <h1 class="tag__title">{{ this_word }} <span class="tag__counter">{{ site.tags[this_word].size }}</span></h1>
-        <p>{{ unique_years[this_word].size }}</p>
+        <p>{{ tag_words[this_word].size }}</p>
       </div>
     </div>
     <div class="container">
@@ -71,8 +71,9 @@ permalink: /tags/
           {% capture this_year %}{{ year | strip_newlines }}{% endcapture %}
           {# Debugging output to check if Liquid code is working #}
           <p>{{ this_year }}</p>
-          <p>{{ site.year[year].size }}</p>
- 
+          <p>{{ site.year[this_year].size }}</p>
+          <p>{{ site.year[2023].size }}</p>
+
     
     <!-- begin tags -->
     <section class="section tags">
