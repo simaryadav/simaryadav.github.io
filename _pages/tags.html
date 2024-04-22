@@ -75,7 +75,7 @@ permalink: /tags/
           {% capture this_year %}{{ year | strip_newlines }}{% endcapture %}
           {# Debugging output to check if Liquid code is working #}
           <p>{{ this_year }}</p>
-          <p>{{ site.year[this_year].size }}</p>
+          <p>{{ unique_years.size }}</p>
         <div class="tags__inner is-hidden" id="{{ this_year | cgi_escape }}">
           <div class="container">
             <div class="tag__info">
