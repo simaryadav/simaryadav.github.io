@@ -58,7 +58,7 @@ permalink: /tags/
 
 {% capture site_years %}{% for post in site.posts %}{{ post.date | date: "%Y" }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign years_array = site_years | split:',' | uniq | sort %}
-
+{{ years_array }}
 <!-- begin tags -->
 <section class="section tags">
   {% for item in (0..years_array.size) %}{% unless forloop.last %}
