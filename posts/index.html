@@ -80,6 +80,7 @@ description: Total: 56 published papers; 1 currently under review/in revision
   {% assign year = post.year %}
    {% unless unique_years contains year %}
     {% assign unique_years = unique_years | push: year %}
+    {{ year }}
    {% endunless %}
  {% endfor %}
 {{ unique_years }}
