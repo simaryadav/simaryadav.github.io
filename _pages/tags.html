@@ -67,7 +67,7 @@ permalink: /tags/
 <section class="section tags">
   <div class="container">
   <h1 style="text-align: center;">{{ year }}</h1>
-  {% for year in unique_years %}
+  {% for year in unique_years %}{% unless forloop.last %}
           {% capture this_year %}{{ year | strip_newlines }}{% endcapture %}
           {# Debugging output to check if Liquid code is working #}
           <p>{{ this_year }}</p>
