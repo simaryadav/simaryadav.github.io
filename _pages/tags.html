@@ -61,26 +61,26 @@ permalink: /tags/
   {% assign year = post.year %}
    {% unless unique_years contains year %}
     {% assign unique_years = unique_years | push: year %}
+    
    {% endunless %}
 {% endfor %}
+
+
+
 <!-- Tags by Year -->
 <section class="section tags">
   <div class="container">
-   {% for years in unique_years %}{% unless forloop.last %}
-      <h1 style="text-align: center;">{{ years }}</h1>
-      {% for post in site.posts %}
-        {% assign post_year = post.date | date: "%Y" %}
-        {% if post_year == years %}
-          Title: {{ post.title }} <br>
-          Date: {{ post_year }} <br>
-        {% endif %}
-      {% endfor %}
-  {% endunless %}{% endfor %}
+    <h1 style="text-align: center;">{{ years }}</h1>
 
-   
-          {% capture this_year %}{{ unique_years[years] | strip_newlines }}{% endcapture %}
-    
+    {{ site.tags }}
     <!-- begin tags -->
+    {% for post in site.posts %}
+    {% assign post_year = post.date | date: "%Y" %}
+    {% if post_year == "2022" %}
+        Title: {{ post.title }} <br>
+        Date: {{ post_year }} <br>
+    {% endif %}
+    {% endfor %}
      <section class="section tags">
         <div class="tags__inner is-hidden" id="{{ this_year | cgi_escape }}">
           <div class="container">
@@ -89,6 +89,13 @@ permalink: /tags/
 
             </div>
           </div>
+          {% for post in site.posts %}
+    {% assign post_year = post.date | date: "%Y" %}
+    {% if post_year == "2022" %}
+        Title: {{ post.title }} <br>
+        Date: {{ post_year }} <br>
+    {% endif %}
+{% endfor %}
           <div class="container">
             <div class="post-table">
               {% for post in site.year[year] %}
