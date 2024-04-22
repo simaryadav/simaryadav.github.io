@@ -14,7 +14,6 @@ permalink: /tags/
     <div class="container">
       <div class="tag__info">
         <h1 class="tag__title">{{ this_word }} <span class="tag__counter">{{ site.tags[this_word].size }}</span></h1>
-        <h2>{{ tag_words }}</h2>
       </div>
     </div>
     <div class="container">
@@ -56,14 +55,14 @@ permalink: /tags/
 <!-- end tags -->
 
 
-{% assign years = "" | split: "" %}
+{% assign unique_years = "" | split: ',' %}
 {% for post in site.posts %}
-  {% assign year = post.date | date: "%Y" %}
-  {% unless years contains year %}
-    {% assign years = years | push: year %}
-  {% endunless %}
+  {% assign year = post.year %}
+   {% unless unique_years contains year %}
+    {% assign unique_years = unique_years | push: year %}
+   {% endunless %}
+ {% endfor %}
 {% endfor %}
-
 <!-- Tags by Year -->
 <section class="section tags">
   <div class="container">
@@ -72,8 +71,8 @@ permalink: /tags/
 
     <!-- begin tags -->
     <section class="section tags">
-      {% for year in years %}
-        {% capture this_year %}{{ year | strip_newlines }}{% endcapture %}
+      {% for year in unique_years %}
+      {% capture this_year %}{{ year | strip_newlines }}{% endcapture %}
         <div class="tags__inner is-hidden" id="{{ this_year | cgi_escape }}">
           <div class="container">
             <div class="tag__info">
