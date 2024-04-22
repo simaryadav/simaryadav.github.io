@@ -61,7 +61,6 @@ permalink: /tags/
    {% unless unique_years contains year %}
     {% assign unique_years = unique_years | push: year %}
    {% endunless %}
- {% endfor %}
 {% endfor %}
 <!-- Tags by Year -->
 <section class="section tags">
@@ -72,7 +71,7 @@ permalink: /tags/
     <!-- begin tags -->
     <section class="section tags">
       {% for year in unique_years %}
-      {% capture this_year %}{{ year | strip_newlines }}{% endcapture %}
+      {% capture this_year %}{{ unique_years[year] | strip_newlines }}{% endcapture %}
         <div class="tags__inner is-hidden" id="{{ this_year | cgi_escape }}">
           <div class="container">
             <div class="tag__info">
