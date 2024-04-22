@@ -72,7 +72,6 @@ permalink: /tags/
   <div class="container">
     <h1 style="text-align: center;">{{ years }}</h1>
 
-    {{ site.tags }}
     <!-- begin tags -->
     {% for post in site.posts %}
     {% assign post_year = post.date | date: "%Y" %}
