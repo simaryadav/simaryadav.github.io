@@ -53,6 +53,15 @@ permalink: /tags/
 </section>
 <!-- end tags -->
 
+{% assign start_year = 2012 %}
+{% assign end_year = 2024 %}
+{% assign years = "" | split: ',' %}
+
+{% for year in (start_year..end_year) %}
+  {% assign years = years | push: year %}
+{{ years }}
+{% endfor %}
+
 
 
 {% include section-subscribe.html %}
