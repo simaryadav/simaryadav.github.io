@@ -62,6 +62,13 @@ permalink: /tags/
 {{ years }}
 {% endfor %}
 
+{% for year in years %}
+  <!-- Tags by Year -->
+  {% assign year_info = year | append:"" %}
+  {{ year }} 
+  {{ year_info }}
+{% endfor %}
+
 
 
 {% include section-subscribe.html %}
