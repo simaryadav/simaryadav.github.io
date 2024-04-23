@@ -66,19 +66,13 @@ permalink: /tags/
   <!-- Tags by Year -->
   {% assign year_info = year | append : "_" %}
   <section class="section tags">
-    <div class="container">
-      <h2 class="tag__title">{{ year }}</h2>
-      <h2 style="text-align: center;">{{ year }}</h2>
-
       <section class="section tags">
         <div class="tags__inner is-hidden" id= "{{ year_info | cgi_escape }}" >
           <div class="container">
             <div class="tag__info">
-              <h1 class="tag__title">{{ year }} <span class="tag__counter">{{ years.size }}</span></h1>
+              <h1 class="tag__title">{{ year }}
             </div>
           </div>
-
-        </div>
     </div>
   </section>
 
