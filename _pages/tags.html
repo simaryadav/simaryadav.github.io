@@ -63,7 +63,7 @@ permalink: /tags/
 
 {% for year in years %}
   <!-- Tags by Year -->
-  {% assign year_info = year | append : "_" %}
+  {% assign year_info = "{{ year }}" %}
   <section class="section tags">
       <section class="section tags">
         {{ year_info }}
