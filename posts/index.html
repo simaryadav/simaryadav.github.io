@@ -88,7 +88,8 @@ description: Total: 56 published papers; 1 currently under review/in revision
 {{ now }}<br>
 {% for post in site.posts %}
   {% assign post_year = post.date | date: "%Y" %}
-    {% if post_year == now %}
+    {{ post_year }}
+    {% if post_year == "2021" %}
         Title: {{ post.title }} <br>
         Date: {{ post_year }} <br>
     {% endif %}
