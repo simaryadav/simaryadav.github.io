@@ -62,7 +62,7 @@ permalink: /tags/
 {% endfor %}
 
 {% for p in years %}
-  {% assign year_info = p | append : "" %}
+  {% assign year_info = p | string %}
   <!-- Tags by Year -->
   <section class="section tags">
     <div class="container">
