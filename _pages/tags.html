@@ -61,24 +61,6 @@ permalink: /tags/
   {% assign years = years | push: year %}
 {% endfor %}
 
-{% for year in years %}
-  <!-- Tags by Year -->
-  {% assign year_info = year | string %}
-  <section class="section tags">
-      <section class="section tags">
-        {{ year_info }}
-        <div class="tags__inner is-hidden" id= "{{ year_info | cgi_escape }}" >
-          <div class="container">
-            <div class="tag__info">
-              <h1 class="tag__title">{{ year }}
-            </div>
-          </div>
-    </div>
-  </section>
-
-{% endfor %}
-
-
 
 {% include section-subscribe.html %}
 
