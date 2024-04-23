@@ -91,7 +91,7 @@ description: Total: 56 published papers; 1 currently under review/in revision
     {{ post_year }}
     {% if post_year == "2021" %}
         Title: {{ post.title }} <br>
-        Date: {{ post_year }} <br>
+        Date: {{ post_year }} 
     {% endif %}
 {% endfor %}
 
@@ -105,7 +105,7 @@ description: Total: 56 published papers; 1 currently under review/in revision
 {% endfor %}
 
 {% for year in years %}
-  {{ year }}{% unless forloop.last %},{% endunless %}
+  {{ year }}{% unless forloop.last %},{% endunless %}<br>
 {% endfor %}
 
 
