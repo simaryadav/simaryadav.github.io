@@ -65,8 +65,8 @@ permalink: /tags/
 {% for year in years %}
   <!-- Tags by Year -->
   {% assign year_info = year | append:"" %}
-  {{ year | at_least : 2016 }} 
-  {{ year_info | append : "12"}}
+  {{ year_info | at_least : 2016 }} 
+  {{ year | append : "12"}}
 {% endfor %}
 
 
