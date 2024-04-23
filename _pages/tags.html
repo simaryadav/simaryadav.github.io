@@ -65,14 +65,14 @@ permalink: /tags/
   <!-- Tags by Year -->
   <section class="section tags">
     <div class="container">
-      <h2 class="tag__title">{{ year | stringify }}</h2>
-      <h2 style="text-align: center;">{{ year | stringify }}</h2>
+      <h2 class="tag__title">{{ year }}</h2>
+      <h2 style="text-align: center;">{{ year }}</h2>
 
       <section class="section tags">
-        <div class="tags__inner is-hidden" id="{{ year | cgi_escape | stringify }}">
+        <div class="tags__inner is-hidden" id="{{ year | cgi_escape }}">
           <div class="container">
             <div class="tag__info">
-              <h1 class="tag__title">{{ year | stringify }} <span class="tag__counter">{{ site.year[year | stringify].size }}</span></h1>
+              <h1 class="tag__title">{{ year }} <span class="tag__counter">{{ site.year[year].size }}</span></h1>
             </div>
           </div>
           <div class="container">
@@ -117,7 +117,6 @@ permalink: /tags/
   </section>
 {% endfor %}
 
-        
 
 {% include section-subscribe.html %}
 
