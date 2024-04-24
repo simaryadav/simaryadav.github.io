@@ -53,9 +53,8 @@ permalink: /tags/
 </section>
 <!-- end tags -->
 
-
 <section class="section tags">
-  <div class="tags__inner is-hidden" id="{{ 2024 | cgi_escape }}">
+  <div class="tags__inner is-hidden" id="{{ '2024' | cgi_escape }}">
     <div class="container">
       <div class="tag__info">
         <h1 class="tag__title">{{ "2024" }} </h1>
@@ -65,8 +64,7 @@ permalink: /tags/
       <div class="post-table">
         {% for post in site.posts %}
           {% assign post_year = post.date | date: "%Y" %}
-          {% if post_year == 2024 %}
-
+          {% if post_year == '2024' %}
           <div class="post">
             {% if post.href %}
               <a href="{{ post.href }}">
@@ -94,7 +92,8 @@ permalink: /tags/
               </div>
             </div>
           </div>
-        {% endif %}{% endfor %}
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
   </div>
