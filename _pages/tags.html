@@ -62,9 +62,11 @@ permalink: /tags/
     </div> 
     <div class="container">
       <div class="post-table">
+        {{ 2024 }}
         {% for post in site.posts %}
           {% assign post_year = post.date | date: "%Y" %}
           {% if post_year == '2024' %}
+          {{ post_year }}
           <div class="post">
             {% if post.href %}
               <a href="{{ post.href }}">
