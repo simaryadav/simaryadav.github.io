@@ -99,6 +99,16 @@ permalink: /tags/
       </div>
     </div>
   </div>
+  <script>
+  var tag_name = window.location.search.replace("?tag=", "");
+  if (tag_name) {
+    var el = document.getElementById(tag_name);
+    if (el) {
+      el.classList.remove("is-hidden");
+    }
+  }
+</script>
+
 </section>
 
 
