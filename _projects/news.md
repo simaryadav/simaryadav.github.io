@@ -6,6 +6,34 @@ image: '/images/newspage.png'
 featured:
 ---
 
+<style>
+  /* Define styles for summary and list */
+.summary {
+    font-size: 28px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.li {
+    font-size: 20px;
+    margin-left: 20px;
+    line-height: 1.5;
+}
+
+.details {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+</style>
+
+
 <details>
   <summary style="font-size: 28px; margin-bottom: 10px;">2024</summary>
   
