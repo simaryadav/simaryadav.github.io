@@ -18,6 +18,9 @@ permalink: /Contact-us/
   border-bottom: 1px solid var(--border-color);
 }
 
+
+
+  
 .page-title {
   font-size: 80px;
   margin-bottom: 16px;
@@ -50,6 +53,11 @@ permalink: /Contact-us/
   justify-content: center;
 }
 
+.page__info {
+  display : none;
+}
+
+  
 .gallery img {
   max-width: 100%;
   height: auto;
