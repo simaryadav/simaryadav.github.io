@@ -1,6 +1,6 @@
 ---
 title: Genome-scale analysis of interaction dynamics reveals organization of biological networks
-description: <strong>Das J*</strong>, Mohammed J, Yu H
+description: <strong>Das J*</strong>, Mohammed J*, Yu H
 date: 2012-07-14 15:01:35 +0300
 image: '/images/Genome-scale.webp' 
 tags: [Protein_Networks]
