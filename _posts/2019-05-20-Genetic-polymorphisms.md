@@ -4,7 +4,7 @@ description: Ronsard L, Sood V, Yousif A.S, Ramesh J, Shankar V, <strong>Das J</
 date: 2019-05-20 15:01:35 +0300
 image: '/images/Genetic-polymorphisms.webp'
 tags: [Gene_Regulatory_Networks]
-href : 'https://www.nature.com/articles/s41467-022-34420-4'
+href : 'https://www.nature.com/articles/s41598-019-44136-z'
 published: Scientific Reports 2019
 year : 2019
 ---

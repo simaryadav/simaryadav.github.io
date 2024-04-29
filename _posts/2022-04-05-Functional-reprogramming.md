@@ -6,5 +6,5 @@ image: '/images/Functional-reprogramming.webp'
 tags: 
 href : 'https://insight.jci.org/articles/view/154183#SEC4'
 published: JCI Insight 2022
-
+year : 2022
 ---
