@@ -28,6 +28,51 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   </div>
 </div>
 
+<div class="alumni-section">
+  <div class="container">
+    <h2 class="section-heading">Alumni</h2>
+
+    <!-- Rotation Students Section -->
+    <div class="alumni-subsection">
+      <h3 class="subsection-heading">Rotation Students</h3>
+      <div class="subsection-content">
+        {% for member in site.data.team %}
+          {% if member.is_current == false and member.is_rotation == true %}
+            <p>{{ member.name }} - {{ member.position }}</p>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Interns Section -->
+    <div class="alumni-subsection">
+      <h3 class="subsection-heading">Interns</h3>
+      <div class="subsection-content">
+        {% for member in site.data.team %}
+          {% if member.is_current == false and member.is_intern == true %}
+            <p>{{ member.name }} - {{ member.position }}</p>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Past Lab Members Section -->
+    <div class="alumni-subsection">
+      <h3 class="subsection-heading">Past Lab Members</h3>
+      <div class="subsection-content">
+        {% for member in site.data.team %}
+          {% if member.is_current == false and member.is_rotation != true and member.is_intern != true %}
+            <p>{{ member.name }} - {{ member.position }}</p>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include section-faq.html %}
+{% include section-subscribe.html %}
+
 <style>
  .team-container {
     margin-top: 40px;
@@ -72,6 +117,37 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   .team-member:hover .member-details {
     display: block;
   }
+  .alumni-section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.alumni-section .container {
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.section-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.alumni-subsection {
+  margin-bottom: 30px;
+}
+
+.subsection-heading {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subsection-content p {
+  margin: 0;
+  font-size: 16px;
+}
+
 
   .member-name,
   .member-title,
