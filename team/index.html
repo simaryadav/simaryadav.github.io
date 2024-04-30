@@ -38,7 +38,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
       <div class="subsection-content">
         {% for member in site.data.team %}
           {% if member.is_current == false and member.is_rotation == true %}
-            <p>{{ member.name }} - {{ member.position }}</p>
+            <p>{{ member.name }} </p>
           {% endif %}
         {% endfor %}
       </div>
@@ -50,7 +50,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
       <div class="subsection-content">
         {% for member in site.data.team %}
           {% if member.is_current == false and member.is_intern == true %}
-            <p>{{ member.name }} - {{ member.position }}</p>
+            <p>{{ member.name }}</p>
           {% endif %}
         {% endfor %}
       </div>
@@ -62,7 +62,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
       <div class="subsection-content">
         {% for member in site.data.team %}
           {% if member.is_current == false and member.is_rotation != true and member.is_intern != true %}
-            <p>{{ member.name }} - {{ member.position }}</p>
+            <p>{{ member.name }} </p>
           {% endif %}
         {% endfor %}
       </div>
