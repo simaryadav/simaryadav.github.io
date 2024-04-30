@@ -33,37 +33,34 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
 <div class="alumni-section">
   <div class="container">
     <h2 class="section-heading">Alumni</h2>
-
     <!-- Rotation Students Section -->
     <div class="alumni-subsection">
       <h3 class="subsection-heading">Rotation Students</h3>
       <div class="subsection-content">
         {% for member in site.data.team %}
-          {% if member.is_current == False and member.is_rotation == True %}
-            <p  class="member-name">{{ member.name }}</p>
+          {% if member.is_current == false and member.is_rotation == true %}
+            <p>{{ member.name }} </p>
           {% endif %}
         {% endfor %}
       </div>
     </div>
-
     <!-- Interns Section -->
     <div class="alumni-subsection">
       <h3 class="subsection-heading">Interns</h3>
       <div class="subsection-content">
         {% for member in site.data.team %}
-          {% if member.is_current != true and member.is_intern == True %}
+          {% if member.is_current == false and member.is_intern == true %}
             <p>{{ member.name }}</p>
           {% endif %}
         {% endfor %}
       </div>
     </div>
-
     <!-- Past Lab Members Section -->
     <div class="alumni-subsection">
       <h3 class="subsection-heading">Past Lab Members</h3>
       <div class="subsection-content">
         {% for member in site.data.team %}
-          {% if member.is_current == False and member.is_rotation != true and member.is_intern != true %}
+          {% if member.is_current == false and member.is_rotation != true and member.is_intern != true %}
             <p>{{ member.name }} </p>
           {% endif %}
         {% endfor %}
