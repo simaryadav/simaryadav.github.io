@@ -11,8 +11,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   </div>
 
   <div class="team-grid">
-    {% for member in site.data.team %}
-      {% if member.is_current == true %}
+    {% for member in site.data.team %} 
     <div class="team-member">
       <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}">
       <div class="member-details">
@@ -25,7 +24,6 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
         <p class="member-title">{{ member.position }}</p>
       </div>
     </div>
-      {% endif %}
     {% endfor %}
   </div>
 </div>
