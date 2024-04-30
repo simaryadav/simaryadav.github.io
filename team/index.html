@@ -3,15 +3,13 @@ layout: default
 title: Team
 description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboration!
 ---
-
 <div class="team-container">
   <div class="page-section-head">
     <h1 class="page-title">Team</h1>
     <p class="page-description">Welcome to our Lab's Team Page: Where Innovation Meets Collaboration!</p>
   </div>
-
   <div class="team-grid">
-    {% for member in site.data.team %} 
+    {% for member in site.data.team %}
     <div class="team-member">
       <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}">
       <div class="member-details">
@@ -27,23 +25,56 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     {% endfor %}
   </div>
 </div>
-
-
+<div class="alumni-section">
+  <div class="container">
+    <h2 class="section-heading">Alumni</h2>
+    <!-- Rotation Students Section -->
+    <div class="alumni-subsection">
+      <h3 class="subsection-heading">Rotation Students</h3>
+      <div class="subsection-content">
+        {% for member in site.data.team %}
+          {% if member.is_current == false and member.is_rotation == true %}
+            <p>{{ member.name }} </p>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <!-- Interns Section -->
+    <div class="alumni-subsection">
+      <h3 class="subsection-heading">Interns</h3>
+      <div class="subsection-content">
+        {% for member in site.data.team %}
+          {% if member.is_current == false and member.is_intern == true %}
+            <p>{{ member.name }}</p>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <!-- Past Lab Members Section -->
+    <div class="alumni-subsection">
+      <h3 class="subsection-heading">Past Lab Members</h3>
+      <div class="subsection-content">
+        {% for member in site.data.team %}
+          {% if member.is_current == false and member.is_rotation != true and member.is_intern != true %}
+            <p>{{ member.name }} </p>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
 {% include section-faq.html %}
 {% include section-subscribe.html %}
-
 <style>
  .team-container {
     margin-top: 40px;
     margin-bottom: 40px;
   }
-
   .team-grid {
     display: grid;
     grid-template-columns: auto auto auto; 
     gap: 20px; /* Adjusted gap between grid items */
   }
-
   .team-member {
     position: relative;
     cursor: pointer;
@@ -51,16 +82,13 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for a subtle effect */
   }
-
   .team-member img {
     width: 200%;
     height: auto;
     object-fit: cover;
     /* Removed transform property */
   }
-
   /* Removed hover effect for image */
-
   .member-details {
     position: absolute;
     bottom: 0;
@@ -72,7 +100,6 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     transition: opacity 0.3s ease; /* Added transition for smooth effect */
     display: none;
   }
-
   .team-member:hover .member-details {
     display: block;
   }
@@ -80,34 +107,27 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   margin-top: 40px;
   margin-bottom: 40px;
 }
-
 .alumni-section .container {
   max-width: fit-content;
   margin: 0 auto;
 }
-
 .section-heading {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
 }
-
 .alumni-subsection {
   margin-bottom: 30px;
 }
-
 .subsection-heading {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
 }
-
 .subsection-content p {
   margin: 0;
   font-size: 16px;
 }
-
-
   .member-name,
   .member-title,
   .member-bio {
@@ -116,7 +136,6 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     font-weight: bold;
     color: #333; /* Adjusted text color */
   }
-
   .member-title {
     margin-top: 5px;
     font-size: 14px;
