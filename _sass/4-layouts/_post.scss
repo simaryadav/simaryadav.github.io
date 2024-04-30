@@ -107,6 +107,30 @@
     align-content: space-around;
     align-items: center;
 }
+.clamp-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3; /* Number of lines before truncation */
+  position: relative;
+}
+
+.expand-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  color: blue; /* Customize the button color */
+  display: none;
+}
+
+.expand-btn:hover {
+  text-decoration: underline;
+}
+
 
 .tag-button:hover {
   background-color: var(--primary-color);

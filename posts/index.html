@@ -54,7 +54,10 @@ description: Total: 56 published papers; 1 currently under review/in revision
             {% endif %}
             <div class="post-info">
               <h2 class="post-title">{{ post.title }}</h2>
-              <p class="post-description">{{ post.description }}</p>
+              <div class="post-description clamp-text">
+                <p class="post-description">{{ post.description }}</p>
+                <button class="expand-btn">Show More</button>
+            </div>
               <p class = "post-published">{{ post.published }}</p>
               <div class="post-meta">
                 {% if post.tags %}
