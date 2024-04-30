@@ -37,7 +37,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
       <h3 class="subsection-heading">Rotation Students</h3>
       <div class="subsection-content">
         {% for member in site.data.team %}
-          {% if member.is_current == false and member.is_rotation == true %}
+          {% if member.is_current == False and member.is_rotation == True %}
             <p>{{ member.name }} </p>
           {% endif %}
         {% endfor %}
@@ -49,7 +49,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
       <h3 class="subsection-heading">Interns</h3>
       <div class="subsection-content">
         {% for member in site.data.team %}
-          {% if member.is_current == false and member.is_intern == true %}
+          {% if member.is_current == False and member.is_intern == True %}
             <p>{{ member.name }}</p>
           {% endif %}
         {% endfor %}
@@ -61,7 +61,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
       <h3 class="subsection-heading">Past Lab Members</h3>
       <div class="subsection-content">
         {% for member in site.data.team %}
-          {% if member.is_current == false and member.is_rotation != true and member.is_intern != true %}
+          {% if member.is_current == False and member.is_rotation != True and member.is_intern != True %}
             <p>{{ member.name }} </p>
           {% endif %}
         {% endfor %}
