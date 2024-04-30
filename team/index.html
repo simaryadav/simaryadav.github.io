@@ -12,6 +12,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
 
   <div class="team-grid">
     {% for member in site.data.team %}
+      {% if member.is_current == True %}
     <div class="team-member">
       <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}">
       <div class="member-details">
@@ -24,6 +25,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
         <p class="member-title">{{ member.position }}</p>
       </div>
     </div>
+      {% endif %}
     {% endfor %}
   </div>
 </div>
@@ -38,7 +40,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
       <div class="subsection-content">
         {% for member in site.data.team %}
           {% if member.is_current == False and member.is_rotation == True %}
-            <p>{{ member.name }} </p>
+            <p  class="member-name">{{ member.name }}</p>
           {% endif %}
         {% endfor %}
       </div>
@@ -49,7 +51,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
       <h3 class="subsection-heading">Interns</h3>
       <div class="subsection-content">
         {% for member in site.data.team %}
-          {% if member.is_current == False and member.is_intern == True %}
+          {% if member.is_current != true and member.is_intern == True %}
             <p>{{ member.name }}</p>
           {% endif %}
         {% endfor %}
@@ -61,7 +63,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
       <h3 class="subsection-heading">Past Lab Members</h3>
       <div class="subsection-content">
         {% for member in site.data.team %}
-          {% if member.is_current == False and member.is_rotation != True and member.is_intern != True %}
+          {% if member.is_current == False and member.is_rotation != true and member.is_intern != true %}
             <p>{{ member.name }} </p>
           {% endif %}
         {% endfor %}
