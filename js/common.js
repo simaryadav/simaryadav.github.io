@@ -116,34 +116,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }).mount(window.splide.Extensions);
   }
 
-/* ================================================================
-  // post buttons
-  ================================================================ */
-  var expandBtns = document.querySelectorAll('.expand-btn');
-
-    expandBtns.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            var parent = btn.parentElement;
-            var clampText = parent.querySelector('.clamp-text');
-            if (clampText.classList.contains('expanded')) {
-                clampText.classList.remove('expanded');
-                btn.textContent = 'Show More';
-            } else {
-                clampText.classList.add('expanded');
-                btn.textContent = 'Show Less';
-            }
-        });
-    });
-
-    var clampTexts = document.querySelectorAll('.clamp-text');
-
-    clampTexts.forEach(function(clampText) {
-        if (clampText.offsetHeight < clampText.scrollHeight) {
-            var expandBtn = clampText.querySelector('.expand-btn');
-            expandBtn.style.display = 'inline-block';
-        }
-    });
-
   /* ================================================================
   // Stop Animations During Window Resizing and Switching Theme Modes
   ================================================================ */
