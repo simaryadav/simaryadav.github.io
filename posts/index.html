@@ -54,11 +54,10 @@ description: Total: 56 published papers; 1 currently under review/in revision
             {% endif %}
             <div class="post-info">
               <h2 class="post-title">{{ post.title }}</h2>
-              {{ assign expanded == post.description}}
-              <div class="post-description clamp-text">
-                <p id = "text" class="post-description">{{ post.description }}</p>
-                <button id="toggleBtn">...</button>
-              </div>
+                <div class="post-description clamp-text" id="description{{ forloop.index }}">
+                  <p class="post-description">{{ post.description }}</p>
+                  <button class="toggleBtn" id="toggleBtn{{ forloop.index }}">...</button>
+                </div>
               <p class = "post-published">{{ post.published }}</p>
               <div class="post-meta">
                 {% if post.tags %}
@@ -80,11 +79,16 @@ description: Total: 56 published papers; 1 currently under review/in revision
   </div>
 </section>
 <script>
-const toggleBtn = document.getElementById('toggleBtn');
-const text = document.getElementById('text');
-
-toggleBtn.addEventListener('click', function() {
-  text.classList.toggle('wrap');
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleBtns = document.querySelectorAll('.toggleBtn');
+    
+    toggleBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const postId = btn.id.replace('toggleBtn', ''); // Extract post ID
+            const description = document.getElementById('description' + postId);
+            description.classList.toggle('wrap'); // Toggle wrap class for word wrap
+        });
+    });
 });
 
 </script>
