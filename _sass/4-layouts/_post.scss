@@ -39,6 +39,18 @@
   gap: 30px;
 }
 
+
+.text {
+  white-space: nowrap; /* Initially set to nowrap */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text.wrap {
+  white-space: normal; /* Apply word wrap */
+}
+
+
 .post {
   border: 1px solid var(--border-color);
   border-radius: 8px;

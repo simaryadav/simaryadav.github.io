@@ -56,7 +56,8 @@ description: Total: 56 published papers; 1 currently under review/in revision
               <h2 class="post-title">{{ post.title }}</h2>
               {{ assign expanded == post.description}}
               <div class="post-description clamp-text">
-                <p class="post-description">{{ post.description }}</p>
+                <p id = "text" class="post-description">{{ post.description }}</p>
+                <button id="toggleBtn">...</button>
               </div>
               <p class = "post-published">{{ post.published }}</p>
               <div class="post-meta">
@@ -78,7 +79,15 @@ description: Total: 56 published papers; 1 currently under review/in revision
     </div>
   </div>
 </section>
+<script>
+const toggleBtn = document.getElementById('toggleBtn');
+const text = document.getElementById('text');
 
+toggleBtn.addEventListener('click', function() {
+  text.classList.toggle('wrap');
+});
+
+</script>
 
 
 {% include section-faq.html %}
