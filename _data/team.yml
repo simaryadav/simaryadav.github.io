@@ -255,3 +255,10 @@
   is_intern : False
   is_rotation : False
   position: CIG core member(2022-23)
+
+- name: Akanksha Sachan
+  is_pi: False
+  is_current: False
+  is_intern : False
+  position: Rotation student
+  is_rotation : True
