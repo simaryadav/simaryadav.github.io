@@ -112,26 +112,14 @@
 }
 
 .clamp {
-  display: block;
+  display: -webkit-box;
   -webkit-box-orient: vertical; 
   overflow: hidden;
-  line-height: 1.2em;
- }
+  }
  
- .clamp p {
-   padding: 0;
-   margin: 0;
- }
- 
- .clamp.unclamp { max-height: initial; }
- .clamp-3 { max-height: 3.6em; }
- 
- .clamp + .clamp-toggle::before {
-   content: "Show All...";
-   float: right;
- }
- .clamp.unclamp + .clamp-toggle::before { content: "Show Less..."; }
- 
+.unclamp { -webkit-line-clamp: initial !important; }
+.clamp-3 { -webkit-line-clamp: 3; }
+
 .explore-tags {
     display: flex;
     flex-wrap: wrap;

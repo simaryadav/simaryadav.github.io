@@ -54,7 +54,6 @@ description: Total: 56 published papers; 1 currently under review/in revision
             {% endif %}
             <div class="post-info">
               <h2 class="post-title">{{ post.title }}</h2>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
                 <div id="id_1" class="clamp clamp-3">
                   <p class="post-description">{{ post.description }}</p>
                 </div>
@@ -81,16 +80,18 @@ description: Total: 56 published papers; 1 currently under review/in revision
 <script>
 (function(){
 
+define(["jquery", "domReady!"], function($){
+
 $('.clamp').each(function() {
-   var showAll = $('<a href="#" class="clamp-toggle"></a>');
+   var showAll = $('<a href="#" >Show All</a>');
    $(this).after(showAll);
 
    showAll.on("click", function (){
-       $(this).prev().toggleClass("unclamp");
+       $(this).prev().addClass("unclamp");
 
    });
 });
-})();
+});
 
 </script>
 
