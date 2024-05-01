@@ -119,13 +119,6 @@
     align-content: space-around;
     align-items: center;
 }
-.clamp-text {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  -webkit-line-clamp: 3; /* Number of lines before truncation */
-  position: relative;
-}
 
 
 .tag-button:hover {
