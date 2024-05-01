@@ -214,6 +214,7 @@
   is_pi: False
   is_current: False
   is_intern : False
+  is_rotation : False
   position: Cat
   bio: >
     Sir lancelot is a cat
@@ -223,6 +224,7 @@
   is_pi: False
   is_current: False
   is_intern : False
+  is_rotation : False
   position: Cat
 
 
