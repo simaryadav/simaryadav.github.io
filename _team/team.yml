@@ -162,10 +162,4 @@
     Akash is currently a masters student in Automated Science at CMU. He's interested in utilizing computational approaches for problems in biology no matter how big or small. Purveyor of random stories as a trivia buff, and always up for a game of tennis :)
   photo: team/callum.png
 
-- name: Kiran Nazarali
-  is_pi: False
-  is_current: True
-  position: Undergraduate Student
-  bio: >
-    IKiran is an undergraduate student majoring in Computer Science at the Georgia Institute of Technology. She has been working as a student researcher in Dr Das's lab since 2020. Her research involves mining and analyzing data using machine learning algorithms and differential expression analysis. As a researcher in the field of data science, she utilizes programming languages including R, Python, and Java. Her goal is to use critical thinking skills to solve computing problems and acquire skills to conquer the problems of tomorrow.
-  photo: team/cruz.jpg
+
