@@ -31,7 +31,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
 </div>
 
 <div class="alumni-section">
-    <h2 class="section-heading">Alumni</h2>
+    <h2 style="text-align: center;" class="section-heading">Alumni</h2>
     <div class="container">
       
   
@@ -107,9 +107,14 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   margin-bottom: 40px;
 }
 
-.alumni-section .container {
-  max-width: fit-content;
-  margin: 0 auto;
+alumni-section .container {
+    max-width: 100%;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .section-heading {

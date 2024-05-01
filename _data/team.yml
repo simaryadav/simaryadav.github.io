@@ -210,23 +210,6 @@
     Kiran is an undergraduate student majoring in Computer Science at the Georgia Institute of Technology. She has been working as a student researcher in Dr Das's lab since 2020. Her research involves mining and analyzing data using machine learning algorithms and differential expression analysis. As a researcher in the field of data science, she utilizes programming languages including R, Python, and Java. Her goal is to use critical thinking skills to solve computing problems and acquire skills to conquer the problems of tomorrow.
   photo: /images/kiran.webp
 
-- name: sir Lancelot
-  is_pi: False
-  is_current: False
-  is_intern : False
-  is_rotation : False
-  position: Cat
-  bio: >
-    Sir lancelot is a cat
-  photo: /images/kiran.webp
-
-- name: Charlie
-  is_pi: False
-  is_current: False
-  is_intern : False
-  is_rotation : False
-  position: Cat
-
 
 - name: Syed A. Rahman
   is_pi: False
