@@ -1,0 +1,80 @@
+---
+layout: default
+title: Team
+description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboration!
+---
+<div class="team-container">
+ <div class="page-section-head">
+   <h1 class="page-title">Team</h1>
+   <p class="page-description">Welcome to our Lab's Team Page: Where Innovation Meets Collaboration!</p>
+ </div>
+ <div class="team-grid">
+   {% for member in site.data.team %}
+   <div class="team-member">
+     <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}">
+     <div class="member-details">
+       <p class="member-name">{{ member.name }}</p>
+       <p class="member-title">{{ member.position }}</p>
+       <p class="member-bio">{{ member.bio }}</p>
+     </div>
+     <div class="member-overlay">
+       <p class="member-name">{{ member.name }}</p>
+       <p class="member-title">{{ member.position }}</p>
+     </div>
+   </div>
+   {% endfor %}
+ </div>
+</div>
+
+
+<style>
+ .team-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .team-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px; /* Adjusted gap between grid items */
+  }
+  .team-member {
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for a subtle effect */
+  }
+  .team-member img {
+    width: 200%;
+    height: auto;
+    object-fit: cover;
+    /* Removed transform property */
+  }
+  /* Removed hover effect for image */
+  .member-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-sizing: border-box;
+    transition: opacity 0.3s ease; /* Added transition for smooth effect */
+    display: none;
+  }
+  .team-member:hover .member-details {
+    display: block;
+  }
+  .member-name,
+  .member-title,
+  .member-bio {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Adjusted text color */
+  }
+  .member-title {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+</style>
