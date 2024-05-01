@@ -12,7 +12,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
 
   <div class="team-grid">
     {% for member in site.data.team %}
-     {% if member.is_current == false %}
+     {% if member.is_current == true %}
       <div class="team-member">
        <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}">
        <div class="member-details">
