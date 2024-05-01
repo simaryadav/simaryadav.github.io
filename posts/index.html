@@ -54,9 +54,9 @@ description: Total: 56 published papers; 1 currently under review/in revision
             {% endif %}
             <div class="post-info">
               <h2 class="post-title">{{ post.title }}</h2>
-                <div class="post-description clamp-text" id="description{{ forloop.index }}">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                <div id="id_1" class="clamp clamp-3">
                   <p class="post-description">{{ post.description }}</p>
-                  <button class="toggleBtn" id="toggleBtn{{ forloop.index }}">...</button>
                 </div>
               <p class = "post-published">{{ post.published }}</p>
               <div class="post-meta">
@@ -79,17 +79,18 @@ description: Total: 56 published papers; 1 currently under review/in revision
   </div>
 </section>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const toggleBtns = document.querySelectorAll('.toggleBtn');
-    
-    toggleBtns.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            const postId = btn.id.replace('toggleBtn', ''); // Extract post ID
-            const description = document.getElementById('description' + postId);
-            description.classList.toggle('wrap'); // Toggle wrap class for word wrap
-        });
-    });
+(function(){
+
+$('.clamp').each(function() {
+   var showAll = $('<a href="#" class="clamp-toggle"></a>');
+   $(this).after(showAll);
+
+   showAll.on("click", function (){
+       $(this).prev().toggleClass("unclamp");
+
+   });
 });
+})();
 
 </script>
 

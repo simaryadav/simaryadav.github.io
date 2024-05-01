@@ -111,6 +111,27 @@
   transition: all 0.3s ease;
 }
 
+.clamp {
+  display: block;
+  -webkit-box-orient: vertical; 
+  overflow: hidden;
+  line-height: 1.2em;
+ }
+ 
+ .clamp p {
+   padding: 0;
+   margin: 0;
+ }
+ 
+ .clamp.unclamp { max-height: initial; }
+ .clamp-3 { max-height: 3.6em; }
+ 
+ .clamp + .clamp-toggle::before {
+   content: "Show All...";
+   float: right;
+ }
+ .clamp.unclamp + .clamp-toggle::before { content: "Show Less..."; }
+ 
 .explore-tags {
     display: flex;
     flex-wrap: wrap;
