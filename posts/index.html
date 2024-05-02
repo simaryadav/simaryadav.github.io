@@ -66,9 +66,6 @@ description: Total: 56 published papers; 1 currently under review/in revision
                     {% endfor %}
                   </div>
                 {% endif %}
-                {% if post.date %}
-                  <span class="article__date">•<time datetime="{{ post.date | date_to_xmlschema }}">{% assign date_format = site.minima.date_format | default: "%d %-b, %Y" %}{{ post.date | date: date_format }}</time></span>
-                {% endif %}
               </div>
             </div>
           </div>
