@@ -13,15 +13,18 @@
 }
 
 .post-image img {
-  position: absolute;
-  width: 150%; /* Adjust the zoom level as needed */
-  height: 150%; /* Adjust the zoom level as needed */
+  position: inherit;
+  width: 100%;
+  height: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  object-fit: cover;
+  object-fit: fill;
+  box-sizing: border-box;
+  object-position: 50% 50%;
   user-select: none;
   transition: transform .3s ease, opacity .3s ease;
+}
 }
 
 
@@ -72,8 +75,7 @@
   transform: translate(0);
   display: block;
   margin-bottom: 20px;
-  aspect-ratio: 4 / 3;
-  border-radius: 22px;
+  aspect-ratio: 4 / 3;   
   outline: none;
   overflow: hidden;
   background: var(--background-alt-color);
