@@ -1,6 +1,6 @@
 ---
 title: Studying autism in context
-description: <strong>Das J*</strong>, Meyer M.J*, Yu H
+description: <strong>Das J*</strong>, Meyer M*, Yu H
 date: 2015-11-25 15:01:35 +0300
 image: '/images/Studying-autism.webp'
 tags: [Protein_Networks]

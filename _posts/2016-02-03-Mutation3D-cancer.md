@@ -1,6 +1,6 @@
 ---
 title: 'Mutation3D-cancer gene prediction through atomic clustering of coding variants in the structural proteome'
-description: Meyer M, Lapcevic R, Romero A, Yoon M, <strong>Das J</strong>, Beltrán J.F, Mort M, Stenson P.D, Cooper D.N, Paccanaro A, Yu H
+description: Meyer M, Lapcevic R, Romero A, Yoon M, <strong>Das J</strong>, Beltrán J, Mort M, Stenson P, Cooper D, Paccanaro A, Yu H
 date: 2016-02-03 15:01:35 +0300
 image: '/images/Mutation3Dcancer.jpeg'
 tags: [Protein_Networks,Machine_Learning]
