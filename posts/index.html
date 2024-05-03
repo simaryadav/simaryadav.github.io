@@ -74,23 +74,15 @@ description: Total: 56 published papers; 1 currently under review/in revision
     </div>
   </div>
 </section>
-<script>
-(function(){
 
-define(["jquery", "domReady!"], function($){
+<section>
+  <div class="legends">
+    <p>* = CO-FIRST AUTHORS </p><br>
+    <p>✝ = CO-CORRESPONDANCE AUTHOR</p>
+    <p><strong>BOLD</strong> = LAB MEMBERS</p>
+  </div>
 
-$('.clamp').each(function() {
-   var showAll = $('<a href="#" >Show All</a>');
-   $(this).after(showAll);
-
-   showAll.on("click", function (){
-       $(this).prev().addClass("unclamp");
-
-   });
-});
-});
-
-</script>
+</section>
 
 
 {% include section-faq.html %}
