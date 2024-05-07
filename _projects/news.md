@@ -18,15 +18,7 @@ featured:
     height: calc(10vw + 20px);
     transition: all 0.2s ease-in;
 }
-.ul {
-    list-style-type: none;
-    padding: 0;
-}
-.li {
-    font-size: 20px;
-    margin-left: 20px;
-    line-height: 1.5;
-}
+
 .details {
     margin-bottom: 20px;
     border-bottom: 1px solid #ccc;
@@ -57,7 +49,7 @@ featured:
 <details>
   <summary style="font-size: 28px; margin-bottom: 10px;">2024</summary>
   
-  <ul style="font-size: 20px; margin-left: 20px;">
+  <ul class = "gradient-list" style="font-size: 20px; margin-left: 20px;">
     <li style="font-size: 20px;">February 2024-We published “SLIDE: Significant Latent factor Interaction Discovery and Exploration across biological domains” in Nature Methods.</li>
   </ul>
 </details>
@@ -65,7 +57,7 @@ featured:
 <details>
   <summary style="font-size: 28px; margin-bottom: 10px;">2023</summary>
   
-  <ul style="font-size: 20px; margin-left: 20px;">
+  <ul class = "gradient-list" style="font-size: 20px; margin-left: 20px;">
     <li style="font-size: 20px;">December 2023-We published “From bench to bedside via bytes: multi-omic immunoprofiling and integration using machine learning and network approaches” in Human Vaccines and Immunotherapeutics.</li>
     <li style="font-size: 20px;">December 2023-We contributed to “PRMT blockade induces defective DNA replication stress response and synergizes with PARP inhibition”, which was published in Cell Reports Medicine.</li>
     <li style="font-size: 20px;">November 2023-We contributed to “SARS-CoV2 mRNA vaccines induce greater complement activation and decreased viremia and Nef antibodies in men with HIV-1”,which was published in The Journal of Infectious Diseases.</li>
@@ -86,7 +78,7 @@ featured:
 <details>
   <summary style="font-size: 28px; margin-bottom: 10px;">2022</summary>
   
-  <ul style="font-size: 20px; margin-left: 20px;">
+  <ul class = "gradient-list" style="font-size: 20px; margin-left: 20px;">
     <li style="font-size: 20px;">October 2022-Jishnu is a Co-I at Systemic Sclerosis Center for Research and Translation which provides machine learning and network systems expertise to investigators working on SSc, SSc-ILD and SSc-PAH.</li>
     <li style="font-size: 20px;">October 2022-Jishnu is a Co-I on the U01 Grant funded to characterize cell-intrinsic and cell-extrinsic signaling circuits in ocular disorders.</li>
     <li style="font-size: 20px;">September 2022-Jishnu gave an invited talk at the Banff-CST Joint Transplant and Pathology Summit titled “Machine learning in clinical decision making in transplant biology”.</li>
@@ -113,7 +105,7 @@ featured:
 <details>
   <summary style="font-size: 28px; margin-bottom: 10px;">2021</summary>
   
-  <ul style="font-size: 20px; margin-left: 20px;">
+  <ul class = "gradient-list" style="font-size: 20px; margin-left: 20px;">
     <li style="font-size: 20px;">September 2021-A NIAID R01 we participated in (Role: co-I, PIs: Rinaldo and Mailliard) looking at COVID-19 vaccine responses in HIV individuals was funded.</li>
     <li style="font-size: 20px;">September 2021-We received a 5-year NHGRI U01 1U01HG012041-01 (Role: MPI, Other PIs: Singh, Sahni)- Link on NIH Reporter.</li>
     <li style="font-size: 20px;">August 2021-We received a 5-year NIAID New Innovator DP2 Award 1DP2AI164325-01 (Role: PI)- Link on NIH Reporter.</li>
@@ -128,7 +120,7 @@ featured:
 <details>
   <summary style="font-size: 28px; margin-bottom: 10px;">2020</summary>
   
-  <ul style="font-size: 20px; margin-left: 20px;">
+  <ul class = "gradient-list" style="font-size: 20px; margin-left: 20px;">
     <li style="font-size: 20px;">October 2020-We published Mining for humoral correlates of HIV control and latent reservoir size in PLoS pathogens.</li>
     <li style="font-size: 20px;">September 2020-We contributed to Extracellular Matrix Injury of Kidney Allografts in Antibody-Mediated Rejection: A Proteomics Study, which was published in the Journal of the American Society of Nephrology.</li>
     <li style="font-size: 20px;">August 2020-We are now supported by a Collaborative Research Agreement with the University of Brussels Center for Research In Immunology (Role: PI)!</li>
@@ -150,7 +142,7 @@ featured:
   <summary style="font-size: 35px; margin-bottom: 15px;">Happenings by events</summary>
 <details>
   <summary style="font-size: 28px; margin-bottom: 10px;">Publications</summary>
-  <ul style="font-size: 20px; margin-left: 20px;">
+  <ul class = "gradient-list" style="font-size: 20px; margin-left: 20px;">
     <li style="font-size: 20px;">December 2023-We published “From bench to bedside via bytes: multi-omic immunoprofiling and integration using machine learning and network approaches” in Human Vaccines and Immunotherapeutics.</li>
     <li style="font-size: 20px;">December 2023-We contributed to “PRMT blockade induces defective DNA replication stress response and synergizes with PARP inhibition”, which was published in Cell Reports Medicine.</li>
     <li style="font-size: 20px;">November 2023-We contributed to “SARS-CoV2 mRNA vaccines induce greater complement activation and decreased viremia and Nef antibodies in men with HIV-1”,which was published in The Journal of Infectious Diseases.</li>
@@ -181,7 +173,7 @@ featured:
 
 <details>
   <summary style="font-size: 28px; margin-bottom: 10px;">Grants</summary>
-  <ul style="font-size: 20px; margin-left: 20px;">
+  <ul class = "gradient-list" style="font-size: 20px; margin-left: 20px;">
     <li style="font-size: 20px;">October 2022-Jishnu is a Co-I at Systemic Sclerosis Center for Research and Translation which provides machine learning and network systems expertise to investigators working on SSc, SSc-ILD and SSc-PAH.</li>
     <li style="font-size: 20px;">October 2022-Jishnu is a Co-I on the U01 Grant funded to characterize cell-intrinsic and cell-extrinsic signaling circuits in ocular disorders.</li>
     <li style="font-size: 20px;">September 2022-Jishnu gave an invited talk at the Banff-CST Joint Transplant and Pathology Summit titled “Machine learning in clinical decision making in transplant biology”.</li>
@@ -206,7 +198,7 @@ featured:
 
 <details>
   <summary style="font-size: 28px; margin-bottom: 10px;">Talks</summary>
-  <ul style="font-size: 20px; margin-left: 20px;">
+  <ul class = "gradient-list" style="font-size: 20px; margin-left: 20px;">
     <li style="font-size: 20px;">October 2023-Jishnu gave an invited talk at BMES 2023 on, "Elucidating humoral profiles associated with Schistosomiasis pathogenesis using interpretable machine learning".</li>
     <li style="font-size: 20px;">October 2023-Jishnu gave an invited talk at BMES 2023 on, "Significant latent factor interaction discovery and exploration across biological domains".</li>
     <li style="font-size: 20px;">August 2022-Jishnu gave a talk at International Workshop on Scleroderma 2022 in Boston.</li>
