@@ -9,74 +9,63 @@ featured:
 <style>
 <style>
   /* Define styles for summary and list */
-.summary {
+<style>
+  /* Define styles for summary and list */
+  .summary {
     font-size: 28px;
     margin-bottom: 10px;
     cursor: pointer;
-}
-.ul {
-    list-style-type: none;
-    padding: 0;
-}
-.li {
-    font-size: 20px;
-    margin-left: 20px;
-    line-height: 1.5;
-}
-.details {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-}
-.list {
-  position: relative;
-}
-.list h2 {
-  color: #fff;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-}
-.list ul {
-  position: relative;
-}
-.list ul li {
-  position: relative;
-  left: 0;
-  color: #fce4ec;
-  list-style: none;
-  margin: 4px 0;
-  border-left: 2px solid #f50057;
-  transition: 0.5s;
-  cursor: pointer;
-}
-.list ul li:hover {
-  left: 10px;
-}
-.list ul li span {
-  position: relative;
-  padding: 8px;
-  padding-left: 12px;
-  display: inline-block;
-  z-index: 1;
-  transition: 0.5s;
-}
-.list ul li:hover span {
-  color: #111;
-}
-.list ul li:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #f50057;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: 0.5s;
-}
-.list ul li:hover:before {
-  transform: scaleX(1);
-}
+  }
+  .list {
+    position: relative;
+  }
+  .list ul {
+    position: relative;
+    list-style: none; /* Added */
+    padding: 0; /* Added */
+    margin-left: 20px; /* Moved from individual li styles */
+  }
+  .list ul li {
+    position: relative;
+    left: 0;
+    color: #fce4ec;
+    list-style: none;
+    margin: 4px 0;
+    border-left: 2px solid #f50057;
+    transition: 0.5s;
+    cursor: pointer;
+    font-size: 20px; /* Added */
+    line-height: 1.5; /* Added */
+  }
+  .list ul li:hover {
+    left: 10px;
+  }
+   .list ul li span {
+    position: relative;
+    padding: 8px;
+    padding-left: 12px;
+    display: inline-block;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  .list ul li:hover span {
+    color: #111;
+  }
+  .list ul li:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f50057;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.5s;
+  }
+  .list ul li:hover:before {
+    transform: scaleX(1);
+  }
+</style>
+
 
 </style>
 
