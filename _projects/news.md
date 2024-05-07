@@ -7,67 +7,42 @@ featured:
 ---
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap">
 <style>
-<style>
   /* Define styles for summary and list */
-<style>
-  /* Define styles for summary and list */
-  .summary {
+.summary {
     font-size: 28px;
     margin-bottom: 10px;
     cursor: pointer;
-  }
-  .list {
-    position: relative;
-  }
-  .list ul {
-    position: relative;
-    list-style: none; /* Added */
-    padding: 0; /* Added */
-    margin-left: 20px; /* Moved from individual li styles */
-  }
-  .list ul li {
-    position: relative;
-    left: 0;
-    color: #fce4ec;
-    list-style: none;
-    margin: 4px 0;
-    border-left: 2px solid #f50057;
-    transition: 0.5s;
-    cursor: pointer;
-    font-size: 20px; /* Added */
-    line-height: 1.5; /* Added */
-  }
-  .list ul li:hover {
-    left: 10px;
-  }
-   .list ul li span {
-    position: relative;
-    padding: 8px;
-    padding-left: 12px;
-    display: inline-block;
-    z-index: 1;
-    transition: 0.5s;
-  }
-  .list ul li:hover span {
-    color: #111;
-  }
-  .list ul li:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #f50057;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: 0.5s;
-  }
-  .list ul li:hover:before {
-    transform: scaleX(1);
-  }
-</style>
+}
+.ul {
+    list-style-type: none;
+    padding: 0;
+}
+.li {
+    font-size: 20px;
+    margin-left: 20px;
+    line-height: 1.5;
+}
+.details {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+* {
+	box-sizing: border-box;
+}
+.ul{
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.1);
+  box-shadow: 0 0 15px;
+}
+.ul li:hover{
+  transform: scale(1.06);
+  background : #ff3722;
+}
+}
 
 
 </style>
+
 
 <div class = "wrapper">
 <div class = "list">
