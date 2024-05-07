@@ -5,13 +5,18 @@ label:
 image: '/images/newspage.png'
 featured:
 ---
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap">
+
 <style>
   /* Define styles for summary and list */
 .summary {
     font-size: 28px;
-    margin-bottom: 10px;
-    cursor: pointer;
+    font-weight: 600;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    text-align: center;
+    height: calc(10vw + 20px);
+    transition: all 0.2s ease-in;
 }
 .ul {
     list-style-type: none;
