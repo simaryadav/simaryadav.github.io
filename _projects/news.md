@@ -33,7 +33,15 @@ featured:
   * {
 	box-sizing: border-box;
 }
+.ul{
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.1);
+}
 
+.ul li:hover{
+  transform: scale(1.06);
+  background : #ff3722;
+}
 
 }
 
