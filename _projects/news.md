@@ -35,6 +35,9 @@ featured:
 
 
 <details>
+  <summary style="font-size: 35px; margin-bottom: 15px;">Happenings by Year</summary>
+  
+<details>
   <summary style="font-size: 28px; margin-bottom: 10px;">2024</summary>
   
   <ul style="font-size: 20px; margin-left: 20px;">
@@ -123,8 +126,11 @@ featured:
     <li style="font-size: 20px;">January 2020-The lab is now open! We look forward to exciting science in the future!</li>
   </ul>
 </details>
+</details>
 
 
+<details>
+  <summary style="font-size: 35px; margin-bottom: 15px;">Happenings by events</summary>
 <details>
   <summary style="font-size: 28px; margin-bottom: 10px;">Publications</summary>
   <ul style="font-size: 20px; margin-left: 20px;">
@@ -196,4 +202,5 @@ featured:
     <li style="font-size: 20px;">January 2020-The Das Systems Immunology Lab is now supported by Center for Systems Immunology Startup Funds!</li>
     <li style="font-size: 20px;">January 2020-The lab is now open! We look forward to exciting science in the future!</li>
   </ul>
+</details>
 </details>
