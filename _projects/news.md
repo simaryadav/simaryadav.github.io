@@ -34,66 +34,7 @@ featured:
 	box-sizing: border-box;
 }
 
-.wrapper {
-	max-width: 80rem;
-	margin: 0 auto;
-}
 
-ol {
-	list-style: none;
-	padding: 1.5rem;
-	border: 0.1rem solid lightgrey;
-	columns: 20rem;
-	column-gap: 4rem;
-	column-rule: 0.2rem dotted turquoise;
-	border-radius: 0.5rem;
-}
-
-li {
-	--y: calc(100% - 2rem);
-	display: grid;
-	grid-template-columns: minmax(3.75em, auto) 1fr;
-	gap: 0 0.5em;
-	break-inside: avoid;
-  page-break-inside: avoid;
-	background: radial-gradient(circle at 30% var(--y), rgb(50 50 50), rgb(0 0 0));
-	color: white;
-	border-radius: 0.75rem;
-	overflow: hidden;
-	box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 0.17)
-}
-
-li + li {
-	margin-top: 1rem;
-}
-
-li::before {
-	counter-increment: list-item -1;
-	content: counter(list-item);
-	font-weight: 700;
-	font-size: 4.5em;
-	letter-spacing: -0.125em;
-	line-height: 1;
-	color: turquoise;
-	grid-column: 1;
-	grid-row: span 2;
-	align-self: end;
-	margin: 0 0 -0.15em -0.15em;
-}
-
-li span {
-	grid-column: 2;
-}
-
-li span:first-of-type {
-	font-size: 1.5em;
-	padding-top: 1rem;
-}
-
- span:last-of-type {
-	font-style: italic;
-	padding-bottom: 1rem;
-}
 }
 
 </style>
@@ -113,7 +54,7 @@ li span:first-of-type {
 <details>
   <summary style="font-size: 28px; margin-bottom: 10px;">2023</summary>
   
-  <ul style="font-size: 20px; margin-left: 20px;list-style-type:square;">
+  <ul style="font-size: 20px; margin-left: 20px;">
     <li style="font-size: 20px;">December 2023-We published “From bench to bedside via bytes: multi-omic immunoprofiling and integration using machine learning and network approaches” in Human Vaccines and Immunotherapeutics.</li>
     <li style="font-size: 20px;">December 2023-We contributed to “PRMT blockade induces defective DNA replication stress response and synergizes with PARP inhibition”, which was published in Cell Reports Medicine.</li>
     <li style="font-size: 20px;">November 2023-We contributed to “SARS-CoV2 mRNA vaccines induce greater complement activation and decreased viremia and Nef antibodies in men with HIV-1”,which was published in The Journal of Infectious Diseases.</li>
@@ -195,7 +136,7 @@ li span:first-of-type {
 
 
 <details>
-  <summary style="font-size: 35px; margin-bottom: 15px;list-style-type:square;">Happenings by events</summary>
+  <summary style="font-size: 35px; margin-bottom: 15px;">Happenings by events</summary>
 <details>
   <summary style="font-size: 28px; margin-bottom: 10px;">Publications</summary>
   <ul style="font-size: 20px; margin-left: 20px;">
