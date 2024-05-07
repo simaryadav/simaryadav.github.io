@@ -7,18 +7,26 @@ featured:
 ---
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap">
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+<style>
+  /* Define styles for summary and list */
+.summary {
+    font-size: 28px;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #000;
-  min-height: 100vh;
+.ul {
+    list-style-type: none;
+    padding: 0;
+}
+.li {
+    font-size: 20px;
+    margin-left: 20px;
+    line-height: 1.5;
+}
+.details {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
 }
 .list {
   position: relative;
