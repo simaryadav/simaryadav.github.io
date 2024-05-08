@@ -7,99 +7,87 @@ featured:
 ---
 
 <style>
-  /* Define styles for summary and list */
-.summary {
-    font-size: 28px;
-    font-weight: 600;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    text-align: center;
-    height: calc(10vw + 20px);
-    transition: all 0.2s ease-in;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.details {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-* {
-	box-sizing: border-box;
+.center { text-align: center; }
+
+.content {
+  width: 95%;
+  max-width: 1220px;
+  margin: 0 auto;
 }
-ul.gradient-list {
-  counter-reset: gradient-counter;
-  list-style: none;
-  margin: 1.75rem 0;
-  padding-left: 1rem;
-  > li {
-    background: white;
-    border-radius: 0 0.5rem 0.5rem 0.5rem;
-    @extend %boxshadow;
-    counter-increment: gradient-counter;
-    margin-top: 1rem;
-    min-height: 3rem;
-    padding: 1rem 1rem 1rem 3rem;
-    position: relative;
-    &::before,
-    &::after {
-      background: linear-gradient(135deg, $blue 0%,$green 100%);
-      border-radius: 1rem 1rem 0 1rem;
-      content: '';
-      height: 3rem;
-      left: -1rem;
-      overflow: hidden;
-      position: absolute;
-      top: -1rem;
-      width: 3rem;
-    }
-    &::before {
-      align-items: flex-end;
-      @extend %boxshadow;
-      content: counter(gradient-counter);
-      color: $black;
-      display: flex;
-      font: 900 1.5em/1 'Montserrat';
-      justify-content: flex-end;
-      padding: 0.125em 0.25em;
-      z-index: 1;
-    }
-    @for $i from 1 through 5 {
-      &:nth-child(10n+#{$i}):before {
-        background: linear-gradient(135deg, rgba($green, $i * 0.2) 0%,rgba($yellow, $i * 0.2) 100%);
-      }
-    }
-    @for $i from 6 through 10 {
-      &:nth-child(10n+#{$i}):before {
-        background: linear-gradient(135deg, rgba($green, 1 - (($i - 5) * 0.2)) 0%,rgba($yellow, 1 - (($i - 5) * 0.2)) 100%);
-      }
-    }
-    + li {
-      margin-top: 2rem;
-    }
+
+.year {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  position: relative;
+}
+
+.year__number {
+  font-size: 10vw;
+  font-weight: 600;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  height: calc(10vw + 20px);
+  transition: all 0.2s ease-in;
+}
+
+.year__content {
+  border-top: 2px solid #fff;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 10px;
+  padding: 15px 0;
+}
+
+
+.year__content .story {
+  line-height: 26px;
+}
+
+@media (max-width: 600px) {
+  .episode__content {
+    grid-template-columns: 1fr;
   }
 }
-}
-}
 
+@media (max-width: 576px) {
+  .episode__content .story {
+    font-size: 15px;
+  }
+}
 
 </style>
 
 
-<div class = "wrapper">
-<div class = "list">
+
 <details>
-  <summary style="font-size: 35px; margin-bottom: 15px;">Happenings by Year</summary>
+  <summary style="font-size: 35px; margin-bottom: 15px;">Happenings by Year</summary>  
+<div class="content">
+  <h1 class="center">Happenings by Year</h1>
   
-<details>
-  <summary style="font-size: 28px; margin-bottom: 10px;">2024</summary>
+  <article class="year">
+    <div class="year__number">2024</div>
+    <div class="year__content">
+      <div class="story">
   
   <ul class = "gradient-list" style="font-size: 20px; margin-left: 20px;">
     <li style="font-size: 20px;">February 2024-We published “SLIDE: Significant Latent factor Interaction Discovery and Exploration across biological domains” in Nature Methods.</li>
   </ul>
-</details>
+  </div>
+  </div>
+  </article>
 
-<details>
-  <summary style="font-size: 28px; margin-bottom: 10px;">2023</summary>
+  <article class="year">
+    <div class="year__number">2023</div>
+    <div class="year__content">
+      <div class="story">
   
   <ul class = "gradient-list" style="font-size: 20px; margin-left: 20px;">
     <li style="font-size: 20px;">December 2023-We published “From bench to bedside via bytes: multi-omic immunoprofiling and integration using machine learning and network approaches” in Human Vaccines and Immunotherapeutics.</li>
@@ -117,10 +105,14 @@ ul.gradient-list {
     <li style="font-size: 20px;">April 2023-We contributed to “Antibodies against the Ebola virus soluble glycoprotein are associated with long-term vaccine-mediated protection of non-human primates”, which got published in the Cell Reports.</li>
     <li style="font-size: 20px;">February 2023-We contributed to “High-dimensional proteomics identifies organ injury patterns associated with outcomes in human trauma”, which got published in the The Journal of Trauma and Acute Care Surgery.</li>
   </ul>
-</details>
+  </div>
+  </div>
+  </article>
 
-<details>
-  <summary style="font-size: 28px; margin-bottom: 10px;">2022</summary>
+  <article class="year">
+    <div class="year__number">2022</div>
+    <div class="year__content">
+      <div class="story">
   
   <ul class = "gradient-list" style="font-size: 20px; margin-left: 20px;">
     <li style="font-size: 20px;">October 2022-Jishnu is a Co-I at Systemic Sclerosis Center for Research and Translation which provides machine learning and network systems expertise to investigators working on SSc, SSc-ILD and SSc-PAH.</li>
@@ -144,11 +136,14 @@ ul.gradient-list {
     <li style="font-size: 20px;">March 2022-Our DoD grant (Role: co-I, PIs: Lafyatis and Singh) looking at multi-omic signatures of scleroderma disease severity was funded.</li>
     <li style="font-size: 20px;">March 2022- Our Essential Regression manuscript was published in Patterns.</li>
   </ul>
-</details>
+  </div>
+  </div>
+  </article>
 
-<details>
-  <summary style="font-size: 28px; margin-bottom: 10px;">2021</summary>
-  
+  <article class="year">
+    <div class="year__number">2021</div>
+    <div class="year__content">
+      <div class="story"> 
   <ul class = "gradient-list" style="font-size: 20px; margin-left: 20px;">
     <li style="font-size: 20px;">September 2021-A NIAID R01 we participated in (Role: co-I, PIs: Rinaldo and Mailliard) looking at COVID-19 vaccine responses in HIV individuals was funded.</li>
     <li style="font-size: 20px;">September 2021-We received a 5-year NHGRI U01 1U01HG012041-01 (Role: MPI, Other PIs: Singh, Sahni)- Link on NIH Reporter.</li>
@@ -159,11 +154,15 @@ ul.gradient-list {
     <li style="font-size: 20px;">April 2021-A Department of Defense Idea Development Award grant that we participated in has been funded (Role: co-I, PI: Lafyatis).</li>
     <li style="font-size: 20px;">March 2021-Jishnu gave a talk at the 2021 Cold Spring Harbor Networks Meeting.</li>
   </ul>
-</details>
+  </ul>
+  </div>
+  </div>
+  </article>
 
-<details>
-  <summary style="font-size: 28px; margin-bottom: 10px;">2020</summary>
-  
+  <article class="year">
+    <div class="year__number">2020</div>
+    <div class="year__content">
+      <div class="story">
   <ul class = "gradient-list" style="font-size: 20px; margin-left: 20px;">
     <li style="font-size: 20px;">October 2020-We published Mining for humoral correlates of HIV control and latent reservoir size in PLoS pathogens.</li>
     <li style="font-size: 20px;">September 2020-We contributed to Extracellular Matrix Injury of Kidney Allografts in Antibody-Mediated Rejection: A Proteomics Study, which was published in the Journal of the American Society of Nephrology.</li>
@@ -178,7 +177,10 @@ ul.gradient-list {
     <li style="font-size: 20px;">January 2020-The Das Systems Immunology Lab is now supported by Center for Systems Immunology Startup Funds!</li>
     <li style="font-size: 20px;">January 2020-The lab is now open! We look forward to exciting science in the future!</li>
   </ul>
-</details>
+  </div>
+  </div>
+  </article>
+</div>
 </details>
 
 
