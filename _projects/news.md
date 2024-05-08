@@ -183,9 +183,15 @@ featured:
 </body>
 
 <details>
-  <summary style="font-size: 35px; margin-bottom: 15px;">Happenings by events</summary>
-<details>
-  <summary style="font-size: 28px; margin-bottom: 10px;">Publications</summary>
+ <summary style="font-size: 35px; margin-bottom: 15px;">Happenings by Events</summary>  
+<div class="content">
+  <h1 class="center">Happenings by Events</h1>
+  
+  <article class="year">
+    <div class="year__number">Publications</div>
+    <div class="year__content">
+      <div class="story">
+  
   <ul class = "gradient-list" style="font-size: 20px; margin-left: 20px;">
     <li style="font-size: 20px;">December 2023-We published “From bench to bedside via bytes: multi-omic immunoprofiling and integration using machine learning and network approaches” in Human Vaccines and Immunotherapeutics.</li>
     <li style="font-size: 20px;">December 2023-We contributed to “PRMT blockade induces defective DNA replication stress response and synergizes with PARP inhibition”, which was published in Cell Reports Medicine.</li>
@@ -213,11 +219,15 @@ featured:
     <li style="font-size: 20px;">March 2020-We contributed to Epigenetic basis for monocyte dysfunction in patients with severe alcoholic hepatitis, which was published in the Journal of Hepatology.</li>
     <li style="font-size: 20px;">February 2020-We published Antibody Fc Glycosylation Discriminates Between Latent and Active Tuberculosis in The Journal of Infectious Diseases.</li>
   </ul>
-</details>
+  </div>
+  </div>
+  </article>
 
-<details>
-  <summary style="font-size: 28px; margin-bottom: 10px;">Grants</summary>
-  <ul class = "gradient-list" style="font-size: 20px; margin-left: 20px;">
+  <article class="year">
+    <div class="year__number">Grants</div>
+    <div class="year__content">
+      <div class="story">
+    <ul class = "gradient-list" style="font-size: 20px; margin-left: 20px;">
     <li style="font-size: 20px;">October 2022-Jishnu is a Co-I at Systemic Sclerosis Center for Research and Translation which provides machine learning and network systems expertise to investigators working on SSc, SSc-ILD and SSc-PAH.</li>
     <li style="font-size: 20px;">October 2022-Jishnu is a Co-I on the U01 Grant funded to characterize cell-intrinsic and cell-extrinsic signaling circuits in ocular disorders.</li>
     <li style="font-size: 20px;">September 2022-Jishnu gave an invited talk at the Banff-CST Joint Transplant and Pathology Summit titled “Machine learning in clinical decision making in transplant biology”.</li>
@@ -238,10 +248,16 @@ featured:
     <li style="font-size: 20px;">March 2022-Our DoD grant (Role: co-I, PIs: Lafyatis and Singh) looking at multi-omic signatures of scleroderma disease severity was funded.</li>
     <li style="font-size: 20px;">March 2022- Our Essential Regression manuscript was published in Patterns.</li>
   </ul>
-</details>
+  </div>
+  </div>
+  </article>
 
-<details>
-  <summary style="font-size: 28px; margin-bottom: 10px;">Talks</summary>
+
+<article class="year">
+    <div class="year__number">Talks</div>
+    <div class="year__content">
+      <div class="story">
+  
   <ul class = "gradient-list" style="font-size: 20px; margin-left: 20px;">
     <li style="font-size: 20px;">October 2023-Jishnu gave an invited talk at BMES 2023 on, "Elucidating humoral profiles associated with Schistosomiasis pathogenesis using interpretable machine learning".</li>
     <li style="font-size: 20px;">October 2023-Jishnu gave an invited talk at BMES 2023 on, "Significant latent factor interaction discovery and exploration across biological domains".</li>
@@ -255,5 +271,8 @@ featured:
     <li style="font-size: 20px;">January 2020-The Das Systems Immunology Lab is now supported by Center for Systems Immunology Startup Funds!</li>
     <li style="font-size: 20px;">January 2020-The lab is now open! We look forward to exciting science in the future!</li>
   </ul>
-</details>
+  </div>
+  </div>
+  </article>
+
 </details>
