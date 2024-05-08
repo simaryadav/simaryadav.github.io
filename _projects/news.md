@@ -275,4 +275,4 @@ featured:
   </div>
   </article>
 
-</details>
+
