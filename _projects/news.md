@@ -28,7 +28,7 @@ featured:
 }
 
 .year__number {
-  font-size: 10vw;
+  font-size: 8vw;
   font-weight: 600;
   padding: 10px 0;
   position: sticky;
@@ -40,7 +40,6 @@ featured:
 
 .year__content {
   border-top: 2px solid #fff;
-  display: grid;
   grid-template-columns: 1fr 4fr;
   grid-gap: 10px;
   padding: 15px 0;
@@ -66,7 +65,7 @@ featured:
 </style>
 
 
-
+<body>
 <details>
   <summary style="font-size: 35px; margin-bottom: 15px;">Happenings by Year</summary>  
 <div class="content">
@@ -154,7 +153,6 @@ featured:
     <li style="font-size: 20px;">April 2021-A Department of Defense Idea Development Award grant that we participated in has been funded (Role: co-I, PI: Lafyatis).</li>
     <li style="font-size: 20px;">March 2021-Jishnu gave a talk at the 2021 Cold Spring Harbor Networks Meeting.</li>
   </ul>
-  </ul>
   </div>
   </div>
   </article>
@@ -182,7 +180,7 @@ featured:
   </article>
 </div>
 </details>
-
+</body>
 
 <details>
   <summary style="font-size: 35px; margin-bottom: 15px;">Happenings by events</summary>
@@ -259,5 +257,3 @@ featured:
   </ul>
 </details>
 </details>
-</div>
-</div>
