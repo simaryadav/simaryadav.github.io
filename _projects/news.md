@@ -39,7 +39,7 @@ featured:
 }
 
 .year__content {
-  border-top: 2px ;
+  border-top: 2px solid;
   grid-template-columns: 1fr 4fr;
   grid-gap: 10px;
   padding: 15px 0;
