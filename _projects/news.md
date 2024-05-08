@@ -28,7 +28,7 @@ featured:
 }
 
 .year__number {
-  font-size: 8vw;
+  font-size: 6vw;
   font-weight: 600;
   padding: 10px 0;
   position: sticky;
@@ -188,7 +188,7 @@ featured:
   <h1 class="center">Happenings by Events</h1>
   
   <article class="year">
-    <div class="year__number">Publications</div>
+    <div class="year__number">Paper</div>
     <div class="year__content">
       <div class="story">
   
