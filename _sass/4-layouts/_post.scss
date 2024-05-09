@@ -41,6 +41,8 @@
   font-size: 18px;
   margin-bottom: 0;
   font-weight : 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .post-table {
@@ -53,8 +55,6 @@
 
 .text {
   white-space: nowrap; /* Initially set to nowrap */
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .text.wrap {
