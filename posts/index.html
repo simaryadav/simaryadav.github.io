@@ -84,6 +84,24 @@ description: Total: 56 published papers
 
 </section>
 
+<script>
+const article = document.querySelector("#id_1");
+const button = document.querySelector("button");
+
+function showMore() {
+    if (article.className == "open") {
+       // read less
+       article.className = "";
+       button.innerHTML = "Show more";
+     } else {
+       //read more
+       article.className = "open";
+       button.innerHTML = "Show less";
+     }
+}
+</script>
+
+
 
 {% include section-faq.html %}
 {% include section-subscribe.html %}
