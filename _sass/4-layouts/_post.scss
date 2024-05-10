@@ -124,7 +124,7 @@
   -webkit-line-clamp: 3; 
   }
  
-.clamp.open { -webkit-line-clamp: initial !important; }
+.clamp.open { -webkit-line-clamp: initial; }
 
 .explore-tags {
     display: flex;
