@@ -28,7 +28,7 @@ featured:
     justify-content: center;
   }
 
-  button {
+  .button {
     padding: 6px 8px;
     margin-right: 8px;
     margin-bottom: 8px;
@@ -42,12 +42,23 @@ featured:
     transition: all 0.3s ease;
   }
 
-  button:hover {
+  .button:hover {
     background-color: #0056b3;
     display: inline-flex;
     align-items: center;
     flex-wrap: wrap;
   }
+  
+  .text-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      }
+
+  .textarea{
+    width : 80%;
+  }
+
 </style>
 
 <body>
@@ -60,16 +71,6 @@ featured:
   <button onclick="showGrants()">Grants</button>
   <!-- Button for Talks -->
   <button onclick="showTalks()">Talks</button><br>
-    <!-- Button for 2024 -->
-  <button onclick="show2024()">2024</button>
-  <!-- Button for 2023 -->
-  <button onclick="show2023()">2023</button>
-  <!-- Button for 2022 -->
-  <button onclick="show2022()">2022</button>
-  <!-- Button for 2021 -->
-  <button onclick="show2021()">2021</button>
-  <!-- Button for 2020 -->
-  <button onclick="show2020()">2020</button>
 </div>
 
 <!-- Button container -->
@@ -248,8 +249,9 @@ January 2020-The lab is now open! We look forward to exciting science in the fut
 
 
 </script>
-
+<div class = "text-box">
 <!-- Text box -->
 <textarea id="output" placeholder="Text will appear here"></textarea>
 
+</div>
 </body>
