@@ -41,13 +41,13 @@ featured:
 
   button:hover {
     background-color: #0056b3;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
   }
 </style>
-</head>
-<body>
 
-<!-- Text box -->
-<textarea id="output" placeholder="Text will appear here"></textarea>
+<body>
 
 <!-- Button container -->
 <div class="button-container">
@@ -232,8 +232,7 @@ January 2020-The lab is now open! We look forward to exciting science in the fut
 
 </script>
 
-
-
+<!-- Text box -->
+<textarea id="output" placeholder="Text will appear here"></textarea>
 
 </body>
-</html>
