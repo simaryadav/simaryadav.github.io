@@ -13,6 +13,23 @@ featured:
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 10px;
+    font-size: 16px; /* Adjust the font size */
+    font-family: Arial, sans-serif; /* Change the font family */
+    line-height: 1.5; /* Adjust line height */
+    resize: none; /* Disable resizing */
+    outline: none; /* Remove outline */
+  }
+  .button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .button:hover {
+    background-color: #0056b3;
   }
 </style>
 </head>
