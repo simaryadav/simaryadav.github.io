@@ -121,9 +121,10 @@
   display: -webkit-box;
   -webkit-box-orient: vertical; 
   overflow: hidden;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 3; 
   }
  
+.clamp.open { -webkit-line-clamp: initial !important; }
 
 .explore-tags {
     display: flex;
@@ -139,3 +140,12 @@
   background-color: var(--primary-color);
   color: #fff;
 }
+
+.button {
+  background: #0e0b22;
+  color: #fff;
+  padding: 0.2rem;
+  margin-top: 1px;
+  border: none;
+  border-radius: 1px;
+  }

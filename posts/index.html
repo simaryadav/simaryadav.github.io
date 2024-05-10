@@ -54,9 +54,10 @@ description: Total: 56 published papers
             {% endif %}
             <div class="post-info">
               <h2 class="post-title">{{ post.title }}</h2>
-                <div id="id_1" class="clamp clamp-3">
+                <div id="id_1" class="clamp">
                   <p class="post-description">{{ post.description }}</p>
                 </div>
+                <button onclick="showMore()">Show more</button>
                 <p><strong>{{ post.published }}</strong></p>
               <div class="post-meta">
                 {% if post.tags %}
