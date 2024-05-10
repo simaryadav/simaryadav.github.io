@@ -23,13 +23,16 @@ featured:
   /* Styling for the buttons */
   .button-container {
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   button {
     padding: 6px 8px;
     margin-right: 8px;
     margin-bottom: 8px;
-    font-size: 8px;
+    font-size: 20px;
     font-weight: 800;
     text-transform: uppercase;
     border: 1px solid var(--primary-color);
@@ -69,6 +72,20 @@ featured:
   <button onclick="show2020()">2020</button>
 </div>
 
+<!-- Button container -->
+<div class="button-container">
+  
+  <button onclick="show2024()">2024</button>
+  <!-- Button for 2023 -->
+  <button onclick="show2023()">2023</button>
+  <!-- Button for 2022 -->
+  <button onclick="show2022()">2022</button>
+  <!-- Button for 2021 -->
+  <button onclick="show2021()">2021</button>
+  <!-- Button for 2020 -->
+  <button onclick="show2020()">2020</button>
+
+</div>
 <!-- JavaScript functions to display category information -->
 <script>
 // Function to show Papers information
