@@ -26,14 +26,17 @@ featured:
   }
 
   button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 10px;
+    padding: 6px 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-size: 8px;
+    font-weight: 800;
+    text-transform: uppercase;
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    color: var(--primary-color);
+    background-color: transparent;
+    transition: all 0.3s ease;
   }
 
   button:hover {
@@ -53,7 +56,17 @@ featured:
   <!-- Button for Grants -->
   <button onclick="showGrants()">Grants</button>
   <!-- Button for Talks -->
-  <button onclick="showTalks()">Talks</button>
+  <button onclick="showTalks()">Talks</button><br>
+    <!-- Button for 2024 -->
+  <button onclick="show2024()">2024</button>
+  <!-- Button for 2023 -->
+  <button onclick="show2023()">2023</button>
+  <!-- Button for 2022 -->
+  <button onclick="show2022()">2022</button>
+  <!-- Button for 2021 -->
+  <button onclick="show2021()">2021</button>
+  <!-- Button for 2020 -->
+  <button onclick="show2020()">2020</button>
 </div>
 
 <!-- JavaScript functions to display category information -->
@@ -130,27 +143,7 @@ January 2020-The Das Systems Immunology Lab is now supported by Center for Syste
 January 2020-The lab is now open! We look forward to exciting science in the future!`;
     textBox.value = talksData;
 }
-</script>
 
-!-- Text box -->
-<textarea id="output" placeholder="Text will appear here"></textarea>
-
-<!-- Button container -->
-<div class="button-container">
-  <!-- Button for 2024 -->
-  <button onclick="show2024()">2024</button>
-  <!-- Button for 2023 -->
-  <button onclick="show2023()">2023</button>
-  <!-- Button for 2022 -->
-  <button onclick="show2022()">2022</button>
-  <!-- Button for 2021 -->
-  <button onclick="show2021()">2021</button>
-  <!-- Button for 2020 -->
-  <button onclick="show2020()">2020</button>
-</div>
-
-<!-- JavaScript functions to display year information -->
-<script>
 // Function to show 2024 information
 function show2024() {
     var textBox = document.getElementById("output");
@@ -235,7 +228,12 @@ January 2020-The Das Systems Immunology Lab is now supported by Center for Syste
 January 2020-The lab is now open! We look forward to exciting science in the future!`;
     textBox.value = data2020;
 }
+
+
 </script>
+
+
+
 
 </body>
 </html>
