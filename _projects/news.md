@@ -29,17 +29,17 @@ featured:
   }
 
   .button {
-    padding: 6px 8px;
-    margin-right: 8px;
-    margin-bottom: 8px;
-    font-size: 20px;
-    font-weight: 800;
-    text-transform: uppercase;
-    border: 1px solid var(--primary-color);
-    border-radius: 20px;
-    color: var(--primary-color);
-    background-color: transparent;
-    transition: all 0.3s ease;
+   padding: 6px 8px;
+   margin-right: 8px;
+   margin-bottom: 8px;
+   font-size: 10px;
+   font-weight: 800;
+   text-transform: uppercase;
+   border: 1px solid var(--primary-color);
+   border-radius: 20px;
+   color: var(--primary-color);
+   background-color: transparent;
+   transition: all 0.3s ease;
   }
 
   .button:hover {
