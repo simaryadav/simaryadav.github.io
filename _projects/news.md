@@ -49,15 +49,6 @@ featured:
     flex-wrap: wrap;
   }
   
-  .text-box{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-      }
-
-  .textarea{
-    width : 80%;
-  }
 
 </style>
 
