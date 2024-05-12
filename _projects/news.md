@@ -315,7 +315,6 @@ March 2020-We contributed to Epigenetic basis for monocyte dysfunction in patien
 February 2020-We published Antibody Fc Glycosylation Discriminates Between Latent and Active Tuberculosis in The Journal of Infectious Diseases.
 January 2020-The Das Systems Immunology Lab is now supported by Center for Systems Immunology Startup Funds!
 January 2020-The lab is now open! We look forward to exciting science in the future!`;
-
     textBox.value = data2020;
 }
 
