@@ -43,25 +43,25 @@ featured:
 <!-- Button container -->
 <div class="button-container">
   <!-- Button for Papers -->
-  <button class = "but" onclick="showPapers()">Papers</button>
+  <button class = "tag-button" onclick="showPapers()">Papers</button>
   <!-- Button for Grants -->
-  <button class = "but" onclick="showGrants()">Grants</button>
+  <button class = "tag-button" onclick="showGrants()">Grants</button>
   <!-- Button for Talks -->
-  <button class = "but" onclick="showTalks()">Talks</button><br>
+  <button class = "tag-button" onclick="showTalks()">Talks</button><br>
 </div>
 
 <!-- Button container -->
 <div class="button-container">
   
-  <button class = "but" onclick="show2024()">2024</button>
+  <button class = "tag-button" onclick="show2024()">2024</button>
   <!-- Button for 2023 -->
-  <button class = "but" onclick="show2023()">2023</button>
+  <button class = "tag-button" onclick="show2023()">2023</button>
   <!-- Button for 2022 -->
-  <button class = "but" onclick="show2022()">2022</button>
+  <button class = "tag-button" onclick="show2022()">2022</button>
   <!-- Button for 2021 -->
-  <button class = "but" onclick="show2021()">2021</button>
+  <button class = "tag-button" onclick="show2021()">2021</button>
   <!-- Button for 2020 -->
-  <button class = "but" onclick="show2020()">2020</button>
+  <button class = "tag-button" onclick="show2020()">2020</button>
 
 </div>
 <!-- JavaScript functions to display category information -->
