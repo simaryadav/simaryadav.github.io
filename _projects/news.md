@@ -7,18 +7,6 @@ featured:
 ---
 <style>
   /* Styling for the text box */
-  #output {
-    width: 400px;
-    height: 200px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 20px;
-    font-size: 16px;
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
-    resize: none;
-    outline: none;
-  }
 
   /* Styling for the buttons */
   .button-container {
