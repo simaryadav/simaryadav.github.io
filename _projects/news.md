@@ -40,10 +40,8 @@ featured:
     width: 100%;
     height: 300px;
     font-size: medium;
-    overflow: auto;
-    padding: 10px;
-    line-height:1.5;
-    border-radius: 5px;
+    padding: 0.8rem 1rem;
+    border-radius: 30px;
   }
 
 </style>
@@ -208,31 +206,18 @@ function show2024() {
 function show2023() {
     var textBox = document.getElementById("output");
     var data2023 = `December 2023-We published “From bench to bedside via bytes: multi-omic immunoprofiling and integration using machine learning and network approaches” in Human Vaccines and Immunotherapeutics.
-
 December 2023-We contributed to “PRMT blockade induces defective DNA replication stress response and synergizes with PARP inhibition”, which was published in Cell Reports Medicine.
-
 November 2023-We contributed to “SARS-CoV2 mRNA vaccines induce greater complement activation and decreased viremia and Nef antibodies in men with HIV-1”,which was published in The Journal of Infectious Diseases.
-
 October 2023-Jishnu gave an invited talk at BMES 2023 on, "Elucidating humoral profiles associated with Schistosomiasis pathogenesis using interpretable machine learning".
-
 October 2023-Jishnu gave an invited talk at BMES 2023 on, "Significant latent factor interaction discovery and exploration across biological domains".
-
 August 2023-We published “Cell Type-Specific Biomarkers of Systemic Sclerosis Disease Severity Capture Cell-Intrinsic and Cell-Extrinsic Circuits” in Arthritis & Rheumatology.
-
 August 2023-We contributed to “Stability and heterogeneity in the antimicrobiota reactivity of human milk-derived immunoglobulin A”, which got published in the Journal of Experimental Medicine.
-
 July 2023-We contributed to “The gut protist Tritrichomonas arnold restrains virus-mediated loss of oral tolerance by modulating dietary antigen-presenting dendritic cells”, which got published in Immunity.
-
 June 2023-We published“Antibodies targeting conserved non-canonical antigens and endemic coronaviruses associate with favorable outcomes in severe COVID-19" in Cell Reports.
-
 May 2023-Jishnu gave an invited talk at FASEB Autoimmunity 2023 on , "Multi-dimensional integration of protein interactomes with genomic and molecular data discover distinct RA endotypes".
-
 March 2023-Jishnu gave an invited talk at Cold Spring Harbor Laboratory Network Biology Meeting 2023 on "Uncovering immunomodulatory molecular phenotypes in infectious disease using networks".
-
 April 2023-Jishnu gave an invited talk at Cold Spring Harbor Laboratory Systems Immunology Meeting 2023 on "Multi-dimensional integration of protein interactomes with genomic and molecular data discovers distinct RA endotypes".
-
 April 2023-We contributed to “Antibodies against the Ebola virus soluble glycoprotein are associated with long-term vaccine-mediated protection of non-human primates”, which got published in the Cell Reports.
-
 February 2023-We contributed to “High-dimensional proteomics identifies organ injury patterns associated with outcomes in human trauma”, which got published in the The Journal of Trauma and Acute Care Surgery.`;
     textBox.value = data2023;
 }
@@ -240,27 +225,16 @@ February 2023-We contributed to “High-dimensional proteomics identifies organ 
 function show2022() {
     var textBox = document.getElementById("output");
     var data2022 = `October 2022-Jishnu is a Co-I at Systemic Sclerosis Center for Research and Translation which provides machine learning and network systems expertise to investigators working on SSc, SSc-ILD and SSc-PAH.
-
 October 2022-Jishnu is a Co-I on the U01 Grant funded to characterize cell-intrinsic and cell-extrinsic signaling circuits in ocular disorders.
-
 September 2022-Jishnu gave an invited talk at the Banff-CST Joint Transplant and Pathology Summit titled “Machine learning in clinical decision making in transplant biology”.
-
 August 2022-We published A supervised take on dimensionality reduction via hybrid subset selection in Patterns.
-
 August 2022-Jishnu gave a talk at International Workshop on Scleroderma 2022 in Boston.
-
 July 2022-Jishnu was invited to give a talk at ISMB 2022 on the topic “A network-based approach to identify expression modules underlying rejection in pediatric liver transplantation”.
-
 July 2022-Scleroderma CDMRO Award was given to Jishnu (role: Co-I).
-
 July 2022-The Philadelphia Enquirer covered our very recent publication on COVID-19.
-
 July 2022-Our work got covered in Pittsburgh's Action 4 News "4 Your Health: Studying COVID-19 antibody patterns".
-
 July 2022-Jishnu becomes a co-Director for the Systems Immunology Core (funded by NIAMS P50) which will perform machine learning and network systems analyses on multi-modal datasets in the context of SSc.
-
 June 2022-Our paper Multi-Omic Admission-Based Prognostic Biomarkers Identified by Machine Learning Algorithms Predict Patient Recovery and 30>Day Survival in Trauma Patients got accepted in Metabolites
-
 June 2022-Our paper High Dimensional Multi-omics Reveals Unique Characteristics of Early Plasma Administration in Polytrauma Patients with TBI got accepted in Annals of Surgery
 
 June 2022-We published Antibodies targeting conserved non-canonical antigens and endemic coronaviruses associated with favorable outcomes in severe COVID-19 in Cell Press.
@@ -325,6 +299,7 @@ February 2020-We published Antibody Fc Glycosylation Discriminates Between Laten
 
 January 2020-The Das Systems Immunology Lab is now supported by Center for Systems Immunology Startup Funds!
 
+January 2020-The lab is now open! We look forward to exciting science in the future!`;
 
     textBox.value = data2020;
 }
@@ -333,7 +308,7 @@ January 2020-The Das Systems Immunology Lab is now supported by Center for Syste
 </script>
 <div class = "text-box">
 <!-- Text box -->
-<textarea   readonly id="output" placeholder="Text will appear here"></textarea>
+<textarea readonly class = "textbox" id="output" placeholder="Text will appear here"></textarea>
 
 </div>
 </body>
