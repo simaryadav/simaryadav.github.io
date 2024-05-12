@@ -34,7 +34,9 @@ featured:
     align-items: center;
     flex-wrap: wrap;
   }
-  
+  .news .tag-button{
+    font-size: 14px;
+  }
 
 </style>
 
