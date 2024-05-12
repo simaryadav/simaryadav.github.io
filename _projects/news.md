@@ -333,7 +333,7 @@ January 2020-The Das Systems Immunology Lab is now supported by Center for Syste
 </script>
 <div class = "text-box">
 <!-- Text box -->
-<textarea  class ="textbox" readonly id="output" placeholder="Text will appear here"></textarea>
+<textarea   readonly id="output" placeholder="Text will appear here"></textarea>
 
 </div>
 </body>
