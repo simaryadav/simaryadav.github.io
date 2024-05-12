@@ -304,16 +304,27 @@ March 2021-Jishnu gave a talk at the 2021 Cold Spring Harbor Networks Meeting.`;
 function show2020() {
     var textBox = document.getElementById("output");
     var data2020 = `October 2020-We published Mining for humoral correlates of HIV control and latent reservoir size in PLoS pathogens.
+
 September 2020-We contributed to Extracellular Matrix Injury of Kidney Allografts in Antibody-Mediated Rejection: A Proteomics Study, which was published in the Journal of the American Society of Nephrology.
+
 August 2020-We are now supported by a Collaborative Research Agreement with the University of Brussels Center for Research In Immunology (Role: PI)!
+
 July 2020-We contributed to Glucosylation by the Legionella effector SetA promotes the nuclear localization of the transcription factor TFEB, which was published in Science.
+
 July 2020-We published Mapping functional humoral correlates of protection against malaria challenge following RTS, S/AS01 vaccination in Science Translational Medicine.
+
 June 2020-We received a pilot Covid-19 grant from the UPMC-ITTC (Role: PI)!
+
 May 2020-We contributed to Co-immunization of DNA and Protein in the Same Anatomical Sites Induces Superior Protective Immune Responses against SHIV Challenge, which was published in Cell Reports.
+
 March 2020-We contributed to Latency reversal agents modulate HIV antigen processing and presentation to CD8 T cells, which was published in PLoS pathogens.
+
 March 2020-We contributed to Epigenetic basis for monocyte dysfunction in patients with severe alcoholic hepatitis, which was published in the Journal of Hepatology.
+
 February 2020-We published Antibody Fc Glycosylation Discriminates Between Latent and Active Tuberculosis in The Journal of Infectious Diseases.
+
 January 2020-The Das Systems Immunology Lab is now supported by Center for Systems Immunology Startup Funds!
+
 January 2020-The lab is now open! We look forward to exciting science in the future!`;
     textBox.value = data2020;
 }
