@@ -334,7 +334,7 @@ January 2020-The lab is now open! We look forward to exciting science in the fut
 </script>
 <div class = "text-box">
 <!-- Text box -->
-<textarea readonly class = "textbox" id="output" placeholder="Text will appear here"></textarea>
+<textarea readonly class = "textbox" id="output" placeholder="Check all the news here"></textarea>
 
 </div>
 </body>
