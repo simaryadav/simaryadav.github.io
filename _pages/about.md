@@ -84,7 +84,6 @@ permalink: /Contact-us/
 
   <div class="contact-info">
     <div class="contact-info-item">
-         <p class="page-description">Thank you for your interest in our research. Get in touch with us for any questions or comments regarding our work and publications. Currently, we have open positions at all levels (e.g., post-docs, graduate students, and undergrads).</p>
       <h2>Address and Contact Info</h2>
       <p>4011 The Assembly<br>
       5051 Centre Avenue,<br>
