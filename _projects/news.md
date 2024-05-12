@@ -26,6 +26,15 @@ featured:
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 6px 16px;
+    margin: 4px 8px 4px 0;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border-radius: 60px;
+    color: var(--heading-font-color);
+    transition: all 0.2s;
+    background-color: var(--background-alt-color);
   }
 
   .button {
