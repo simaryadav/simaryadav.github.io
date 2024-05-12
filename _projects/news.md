@@ -35,12 +35,15 @@ featured:
     flex-wrap: wrap;
   }
 
-  .textarea {
+  .textbox {
     overflow: auto;
     width: 100%;
     height: 300px;
     font-size: medium;
     overflow: auto;
+    padding: 10px;
+    line-height:1.5;
+    border-radius: 5px;
   }
 
 </style>
@@ -330,7 +333,7 @@ January 2020-The Das Systems Immunology Lab is now supported by Center for Syste
 </script>
 <div class = "text-box">
 <!-- Text box -->
-<textarea readonly id="output" placeholder="Text will appear here"></textarea>
+<textarea  class ="textbox" readonly id="output" placeholder="Text will appear here"></textarea>
 
 </div>
 </body>
