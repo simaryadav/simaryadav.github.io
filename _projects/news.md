@@ -26,18 +26,9 @@ featured:
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 6px 16px;
-    margin: 4px 8px 4px 0;
-    font-size: 12px;
-    font-weight: 500;
-    text-transform: capitalize;
-    border-radius: 60px;
-    color: var(--heading-font-color);
-    transition: all 0.2s;
-    background-color: var(--background-alt-color);
   }
 
-  .button {
+  .but {
     padding: 6px 16px;
     margin: 4px 8px 4px 0;
     font-size: 12px;
@@ -64,25 +55,25 @@ featured:
 <!-- Button container -->
 <div class="button-container">
   <!-- Button for Papers -->
-  <button onclick="showPapers()">Papers</button>
+  <button class = "but" onclick="showPapers()">Papers</button>
   <!-- Button for Grants -->
-  <button onclick="showGrants()">Grants</button>
+  <button class = "but" onclick="showGrants()">Grants</button>
   <!-- Button for Talks -->
-  <button onclick="showTalks()">Talks</button><br>
+  <button class = "but" onclick="showTalks()">Talks</button><br>
 </div>
 
 <!-- Button container -->
 <div class="button-container">
   
-  <button onclick="show2024()">2024</button>
+  <button class = "but" onclick="show2024()">2024</button>
   <!-- Button for 2023 -->
-  <button onclick="show2023()">2023</button>
+  <button class = "but" onclick="show2023()">2023</button>
   <!-- Button for 2022 -->
-  <button onclick="show2022()">2022</button>
+  <button class = "but" onclick="show2022()">2022</button>
   <!-- Button for 2021 -->
-  <button onclick="show2021()">2021</button>
+  <button class = "but" onclick="show2021()">2021</button>
   <!-- Button for 2020 -->
-  <button onclick="show2020()">2020</button>
+  <button class = "but" onclick="show2020()">2020</button>
 
 </div>
 <!-- JavaScript functions to display category information -->
