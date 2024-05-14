@@ -66,8 +66,10 @@ description: Total: 56 published papers
                 <div id="id_{{ forloop.index }}" class="clamp"> <!-- Update ID to be unique -->
                   <p class="post-description">{{ post.description }}</p>
                 </div>
-                <button onclick="showMore('id_{{ forloop.index }}', this)">Show more</button> <!-- Pass unique ID and button -->
-                <p><strong>{{ post.published }}</strong></p>
+                {% if post.description | size > 200 %}
+                  <button class="show-more-btn" onclick="showMore('id_{{ forloop.index }}', this)">Show more</button> <!-- Pass unique ID and button -->
+                {% endif %}     
+              <p><strong>{{ post.published }}</strong></p>
               <div class="post-meta">
                 {% if post.tags %}
                   <div class="post-tags">
