@@ -95,13 +95,13 @@ const button = document.querySelector("button");
 
 function showMore(articleId, button) {
   const article = document.querySelector("#" + articleId);
-  if (article.className == "open") {
+  if (article.classList.contains("open")) {
     // read less
-    article.className = "";
+    article.classList.remove("open");
     button.innerHTML = "Show more";
   } else {
     // read more
-    article.className = "open";
+    article.classList.add("open");
     button.innerHTML = "Show less";
   }
 }
