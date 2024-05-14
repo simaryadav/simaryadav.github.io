@@ -63,10 +63,10 @@ description: Total: 56 published papers
             {% endif %}
             <div class="post-info">
               <h2 class="post-title">{{ post.title }}</h2>
-                <div id="id_1" class="clamp">
+                <div id="id_{{ forloop.index }}" class="clamp"> <!-- Update ID to be unique -->
                   <p class="post-description">{{ post.description }}</p>
                 </div>
-                <button onclick="showMore()">Show more</button>
+                <button onclick="showMore('id_{{ forloop.index }}', this)">Show more</button> <!-- Pass unique ID and button -->
                 <p><strong>{{ post.published }}</strong></p>
               <div class="post-meta">
                 {% if post.tags %}
@@ -91,16 +91,17 @@ description: Total: 56 published papers
 const article = document.querySelector("#id_1");
 const button = document.querySelector("button");
 
-function showMore() {
-    if (article.className == "open") {
-       // read less
-       article.className = "";
-       button.innerHTML = "Show more";
-     } else {
-       //read more
-       article.className = "open";
-       button.innerHTML = "Show less";
-     }
+function showMore(articleId, button) {
+  const article = document.querySelector("#" + articleId);
+  if (article.className == "open") {
+    // read less
+    article.className = "";
+    button.innerHTML = "Show more";
+  } else {
+    // read more
+    article.className = "open";
+    button.innerHTML = "Show less";
+  }
 }
 </script>
 
