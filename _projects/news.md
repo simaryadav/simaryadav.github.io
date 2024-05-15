@@ -77,7 +77,9 @@ featured:
 // Function to show Papers information
 function showPapers() {
     var textBox = document.getElementById("output");
-    var papersData = `December 2023-We published “From bench to bedside via bytes: multi-omic immunoprofiling and integration using machine learning and network approaches” in Human Vaccines and Immunotherapeutics.
+    var papersData = `February 2024-We published “SLIDE: Significant Latent factor Interaction Discovery and Exploration across biological domains” in Nature Methods.
+    
+December 2023-We published “From bench to bedside via bytes: multi-omic immunoprofiling and integration using machine learning and network approaches” in Human Vaccines and Immunotherapeutics.
 
 December 2023-We contributed to “PRMT blockade induces defective DNA replication stress response and synergizes with PARP inhibition”, which was published in Cell Reports Medicine.
 
@@ -97,19 +99,27 @@ April 2023-We contributed to “Antibodies against the Ebola virus soluble glyco
 
 April 2023-We published a manuscript in Cell Reports Medicine demonstrating how integrating bulk RNA-seq data with protein networks can uncover signatures underlying rejection in pediatric liver transplantation.
 
-May 2022-We found out that our NIAID Flu Systems Vaccinology R01 (Role: MPI, other PIs: Alcorn, Singh, Zimmerman) will be funded.
+August 2022-We published A supervised take on dimensionality reduction via hybrid subset selection in Patterns.
 
-May 2022-We participated in a Pitt-Case Western CFAR application that was funded by NIAID Rustbelt (Role: c-I).
+July 2022-The Philadelphia Enquirer covered our very recent publication on COVID-19.
+
+July 2022-Our work got covered in Pittsburgh's Action 4 News "4 Your Health: Studying COVID-19 antibody patterns".
+
+July 2022-Jishnu becomes a co-Director for the Systems Immunology Core (funded by NIAMS P50) which will perform machine learning and network systems analyses on multi-modal datasets in the context of SSc.
+
+June 2022-Our paper Multi-Omic Admission-Based Prognostic Biomarkers Identified by Machine Learning Algorithms Predict Patient Recovery and 30>Day Survival in Trauma Patients got accepted in Metabolites
+
+June 2022-Our paper High Dimensional Multi-omics Reveals Unique Characteristics of Early Plasma Administration in Polytrauma Patients with TBI got accepted in Annals of Surgery
+
+June 2022-We published Antibodies targeting conserved non-canonical antigens and endemic coronaviruses associated with favorable outcomes in severe COVID-19 in Cell Press.
 
 May 2022-We contributed to Autoreactive CD8+ T cells are restrained by an exhaustion-like program that is maintained by LAG3  which got published in the Nature Immunology.
 
-April 2022-Our CIHR grant (Role: co-I, PI: Konvalinka) was funded).
-
 April 2022-We published a manuscript in Cell Reports Medicine demonstrating how integrating bulk RNA-seq data with protein networks can uncover signatures underlying rejection in pediatric liver transplantation.
 
-March 2022-Our DoD grant (Role: co-I, PIs: Lafyatis and Singh) looking at multi-omic signatures of scleroderma disease severity was funded.
-
 March 2022- Our Essential Regression manuscript was published in Patterns.
+
+June 2021-We contributed to Mechanisms of impaired lung development and ciliation in Mannosidase-1-alpha-2 (Man1a2) mutants in Frontiers in Physiology.
 
 October 2020-We published Mining for humoral correlates of HIV control and latent reservoir size in PLoS pathogens.
 
@@ -131,43 +141,35 @@ February 2020-We published Antibody Fc Glycosylation Discriminates Between Laten
 //Function to show Grants information
 function showGrants() {
     var textBox = document.getElementById("output");
-    var grantsData = `October 2022-Jishnu is a Co-I at Systemic Sclerosis Center for Research and Translation which provides machine learning and network systems expertise to investigators working on SSc, SSc-ILD and SSc-PAH.
+    var grantsData = `June 2021-An NIDDK dkNET New Investigator Pilot Program in Bioinformatics grant that we participated in has been funded (Role: co-I, PI: Joglekar).
+    
+October 2022-Jishnu is a Co-I at Systemic Sclerosis Center for Research and Translation which provides machine learning and network systems expertise to investigators working on SSc, SSc-ILD and SSc-PAH.
 
 October 2022-Jishnu is a Co-I on the U01 Grant funded to characterize cell-intrinsic and cell-extrinsic signaling circuits in ocular disorders.
 
-September 2022-Jishnu gave an invited talk at the Banff-CST Joint Transplant and Pathology Summit titled “Machine learning in clinical decision making in transplant biology”.
-
-August 2022-Jishnu gave a talk at International Workshop on Scleroderma 2022 in Boston.
-
-July 2022-Jishnu was invited to give a talk at ISMB 2022 on the topic “A network-based approach to identify expression modules underlying rejection in pediatric liver transplantation”.
-
 July 2022-Scleroderma CDMRO Award was given to Jishnu (role: Co-I).
 
-July 2022-The Philadelphia Enquirer covered our very recent publication on COVID-19.
-
-July 2022-Our work got covered in Pittsburgh's Action 4 News "4 Your Health: Studying COVID-19 antibody patterns".
-
 July 2022-Jishnu becomes a co-Director for the Systems Immunology Core (funded by NIAMS P50) which will perform machine learning and network systems analyses on multi-modal datasets in the context of SSc.
-
-June 2022-Our paper Multi-Omic Admission-Based Prognostic Biomarkers Identified by Machine Learning Algorithms Predict Patient Recovery and 30>Day Survival in Trauma Patients got accepted in Metabolites
-
-June 2022-Our paper High Dimensional Multi-omics Reveals Unique Characteristics of Early Plasma Administration in Polytrauma Patients with TBI got accepted in Annals of Surgery
-
-June 2022-We published Antibodies targeting conserved non-canonical antigens and endemic coronaviruses associated with favorable outcomes in severe COVID-19 in Cell Press.
 
 May 2022-We found out that our NIAID Flu Systems Vaccinology R01 (Role: MPI, other PIs: Alcorn, Singh, Zimmerman) will be funded.
 
 May 2022-We participated in a Pitt-Case Western CFAR application that was funded by NIAID Rustbelt (Role: c-I).
 
-May 2022-We contributed to Autoreactive CD8+ T cells are restrained by an exhaustion-like program that is maintained by LAG3  which got published in the Nature Immunology.
-
-April 2022-Our CIHR grant (Role: co-I, PI: Konvalinka) was funded).
-
-April 2022-We published a manuscript in Cell Reports Medicine demonstrating how integrating bulk RNA-seq data with protein networks can uncover signatures underlying rejection in pediatric liver transplantation.
+April 2022-Our CIHR grant (Role: co-I, PI: Konvalinka) was funded.
 
 March 2022-Our DoD grant (Role: co-I, PIs: Lafyatis and Singh) looking at multi-omic signatures of scleroderma disease severity was funded.
 
-March 2022- Our Essential Regression manuscript was published in Patterns.`;
+September 2021-A NIAID R01 we participated in (Role: co-I, PIs: Rinaldo and Mailliard) looking at COVID-19 vaccine responses in HIV individuals was funded.
+
+September 2021-We received a 5-year NHGRI U01 1U01HG012041-01 (Role: MPI, Other PIs: Singh, Sahni)- Link on NIH Reporter.
+
+August 2021-We received a 5-year NIAID New Innovator DP2 Award 1DP2AI164325-01 (Role: PI)- Link on NIH Reporter.
+
+June 2021-An NIDDK dkNET New Investigator Pilot Program in Bioinformatics grant that we participated in has been funded (Role: co-I, PI: Joglekar).
+
+April 2021-A Department of Defense Idea Development Award grant that we participated in has been funded (Role: co-I, PI: Lafyatis).
+
+January 2020-The Das Systems Immunology Lab is now supported by Center for Systems Immunology Startup Funds!`;
     textBox.value = grantsData;
 }
 // Function to show Talks information
@@ -177,23 +179,17 @@ function showTalks() {
 
 October 2023-Jishnu gave an invited talk at BMES 2023 on, "Significant latent factor interaction discovery and exploration across biological domains".
 
+May 2023-Jishnu gave an invited talk at FASEB Autoimmunity 2023 on , "Multi-dimensional integration of protein interactomes with genomic and molecular data discover distinct RA endotypes".
+
+March 2023-Jishnu gave an invited talk at Cold Spring Harbor Laboratory Network Biology Meeting 2023 on "Uncovering immunomodulatory molecular phenotypes in infectious disease using networks".
+
 August 2022-Jishnu gave a talk at International Workshop on Scleroderma 2022 in Boston.
 
 July 2022-Jishnu was invited to give a talk at ISMB 2022 on the topic “A network-based approach to identify expression modules underlying rejection in pediatric liver transplantation”.
 
-June 2021-An NIDDK dkNET New Investigator Pilot Program in Bioinformatics grant that we participated in has been funded (Role: co-I, PI: Joglekar).
-
-June 2021-We contributed to Mechanisms of impaired lung development and ciliation in Mannosidase-1-alpha-2 (Man1a2) mutants in Frontiers in Physiology.
-
 April 2021-Jishnu gave a talk at the 2021 Cold Spring Harbor Systems Immunology Meeting.
 
-April 2021-A Department of Defense Idea Development Award grant that we participated in has been funded (Role: co-I, PI: Lafyatis).
-
 March 2021-Jishnu gave a talk at the 2021 Cold Spring Harbor Networks Meeting.
-
-January 2020-The Das Systems Immunology Lab is now supported by Center for Systems Immunology Startup Funds!
-
-January 2020-The lab is now open! We look forward to exciting science in the future!`;
     textBox.value = talksData;
 }
 // Function to show 2024 information
