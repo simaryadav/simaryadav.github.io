@@ -138,6 +138,7 @@ March 2020-We contributed to Epigenetic basis for monocyte dysfunction in patien
 February 2020-We published Antibody Fc Glycosylation Discriminates Between Latent and Active Tuberculosis in The Journal of Infectious Diseases.`;
     textBox.value = papersData;
 }
+
 //Function to show Grants information
 function showGrants() {
     var textBox = document.getElementById("output");
@@ -189,7 +190,7 @@ July 2022-Jishnu was invited to give a talk at ISMB 2022 on the topic “A netwo
 
 April 2021-Jishnu gave a talk at the 2021 Cold Spring Harbor Systems Immunology Meeting.
 
-March 2021-Jishnu gave a talk at the 2021 Cold Spring Harbor Networks Meeting.
+March 2021-Jishnu gave a talk at the 2021 Cold Spring Harbor Networks Meeting.`
     textBox.value = talksData;
 }
 // Function to show 2024 information
