@@ -6,13 +6,13 @@ description: Total: 56 published papers
 
 <div class="container">
   <div class="page-section-head">
-    <h1 class="page-title"> Writing </h1>
+    <h1 class="page-title"> Publications </h1>
     <p class="page-description"> Total: 56 published papers </p>
   </div>
 </div>
 
 <div class="explore-tags">
-  <h2>Explore:</h2>
+  <h2>Tags by type</h2>
   <div class="tag-cloud">
     <!-- Keep the old tags -->
     {% for tag in site.tags %}
@@ -33,18 +33,15 @@ description: Total: 56 published papers
           <a href="{{ site.baseurl }}/tags/?tag={{ year }}" class="tag-button">{{ year }}</a>
         {% endunless %}
       {% endfor %}
+      <div class="legends">
+        <p class="leg">* = CO-FIRST AUTHORS </p>
+        <p class="leg">✝ = CO-CORRESPONDANCE AUTHORS</p>
+        <p class="leg"><strong>BOLD</strong> = LAB MEMBERS</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="legends">
-    <p class="leg">* = CO-FIRST AUTHORS </p>
-    <p class="leg">✝ = CO-CORRESPONDANCE AUTHORS</p>
-    <p class="leg"><strong>BOLD</strong> = LAB MEMBERS</p>
-  </div>
-
-</section>
 
 <section class="section">
   <div class="container">

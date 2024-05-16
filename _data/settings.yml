@@ -137,14 +137,16 @@ author_section:
 # Footer Navigation
 footer_menu__settings:
   menu__items:
-    - title: 'Home'
-      url: '/'
-    - title: 'Projects'
-      url: '/projects/'
-    - title: 'Posts'
-      url: '/posts/'
-    - url: '/about/'
-      title: 'About Me'
+    - title: "Home"
+      url: "/"
+    - title: "Posts"
+      url: "/projects/"
+    - title: "Publications"
+      url: "/posts/"
+    - title: "Team"
+      url: "/team/"
+    - title: "Contact us"
+      url: "/Contact-us/"
 
 # Social Links
 social:
