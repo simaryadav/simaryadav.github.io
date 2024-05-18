@@ -10,114 +10,181 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     <p class="page-description">Welcome to our Lab's Team Page: Where Innovation Meets Collaboration!</p>
   </div>
 
-  <!-- Main Grid -->
   <div class="team-grid">
-    <!-- Jishnu Section -->
-    <div class="sub-grid">
-      <h2>Jishnu Das</h2>
-      {% for member in site.data.team %}
-        {% if member.name == 'Dr. Jishnu Das' %}
-          <div class="team-member">
-            <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}">
-            <div class="member-details">
-              <p class="member-name">{{ member.name }}</p>
-              <p class="member-title">{{ member.position }}</p>
-              <p class="member-bio">{{ member.bio }}</p>
-            </div>
-            <div class="member-overlay">
-              <p class="member-lan">{{ member.name }}</p>
-              <p class="member-cha">{{ member.position }}</p>
-            </div>
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
+    {% assign jishnu_seen = false %}
+    {% assign zarifeh_seen = false %}
+    {% assign simar_seen = false %}
 
-    <!-- Zarifeh Section -->
-    <div class="sub-grid">
-      <h2>Zarifeh Heidari Rarani</h2>
-      {% for member in site.data.team %}
-        {% if member.name == 'Zarifeh Heidari Rarani' %}
-          <div class="team-member">
-            <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}">
-            <div class="member-details">
-              <p class="member-name">{{ member.name }}</p>
-              <p class="member-title">{{ member.position }}</p>
-              <p class="member-bio">{{ member.bio }}</p>
-            </div>
-            <div class="member-overlay">
-              <p class="member-lan">{{ member.name }}</p>
-              <p class="member-cha">{{ member.position }}</p>
-            </div>
-          </div>
+    {% for member in site.data.team %}
+      {% if member.is_current == true %}
+        {% if member.name == "Jishnu Das" %}
+          {% if jishnu_seen == false %}
+            <div style="border-top: 2px solid black;"></div>
+            {% assign jishnu_seen = true %}
+          {% endif %}
+        {% elsif member.name == "Zarifeh Heidari Rarani" %}
+          {% if zarifeh_seen == false %}
+            <div style="border-top: 2px solid black;"></div>
+            {% assign zarifeh_seen = true %}
+          {% endif %}
+        {% elsif member.name == "Simar Yadav" %}
+          {% if simar_seen == false %}
+            <div style="border-top: 2px solid black;"></div>
+            {% assign simar_seen = true %}
+          {% endif %}
         {% endif %}
-      {% endfor %}
-    </div>
 
-    <!-- Simar Section -->
-    <div class="sub-grid">
-      <h2>Simar Yadav</h2>
-      {% for member in site.data.team %}
-        {% if member.name == 'Simar Yadav' %}
-          <div class="team-member">
-            <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}">
-            <div class="member-details">
-              <p class="member-name">{{ member.name }}</p>
-              <p class="member-title">{{ member.position }}</p>
-              <p class="member-bio">{{ member.bio }}</p>
-            </div>
-            <div class="member-overlay">
-              <p class="member-lan">{{ member.name }}</p>
-              <p class="member-cha">{{ member.position }}</p>
-            </div>
+        <div class="team-member">
+          <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}">
+          <div class="member-details">
+            <p class="member-name">{{ member.name }}</p>
+            <p class="member-title">{{ member.position }}</p>
+            <p class="member-bio">{{ member.bio }}</p>
           </div>
-        {% endif %}
-      {% endfor %}
-    </div>
+          <div class="member-overlay">
+            <p class="member-lan">{{ member.name }}</p>
+            <p class="member-cha">{{ member.position }}</p>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
   </div>
 </div>
 
-<!-- Other Students Section -->
 <div class="alumni-section">
-  <h2 style="text-align: center;" class="section-heading">Other Students</h2>
-  <div class="alumni-container">
-    <!-- Rotation Students Section -->
-    <div class="alumni-subsection">
-      <h3 class="subsection-heading">Rotation Students</h3>
-      <div class="subsection-content">
-        {% for member in site.data.team %}
-          {% if member.is_current == false and member.is_rotation == true %}
-            <p>{{ member.name }} - {{ member.position }}</p>
-          {% endif %}
-        {% endfor %}
+    <h2 style="text-align: center;" class="section-heading">Alumni</h2>
+    <div class="alumni-container">
+      
+  
+      <!-- Rotation Students Section -->
+      <div class="alumni-subsection">
+        <h3 class="subsection-heading">Rotation Students</h3>
+        <div class="subsection-content">
+          {% for member in site.data.team %}
+            {% if member.is_current == false and member.is_rotation == true %}
+              <p>{{ member.name }} - {{ member.position }}</p>
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
-    </div>
-
-    <!-- Interns Section -->
-    <div class="alumni-subsection">
-      <h3 class="subsection-heading">Interns</h3>
-      <div class="subsection-content">
-        {% for member in site.data.team %}
-          {% if member.is_current == false and member.is_intern == true %}
-            <p>{{ member.name }} - {{ member.position }}</p>
-          {% endif %}
-        {% endfor %}
+  
+      <!-- Interns Section -->
+      <div class="alumni-subsection">
+        <h3 class="subsection-heading">Interns</h3>
+        <div class="subsection-content">
+          {% for member in site.data.team %}
+            {% if member.is_current == false and member.is_intern == true %}
+              <p>{{ member.name }} - {{ member.position }}</p>
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
-    </div>
-
-    <!-- Past Lab Members Section -->
-    <div class="alumni-subsection">
-      <h3 class="subsection-heading">Past Lab Members</h3>
-      <div class="subsection-content">
-        {% for member in site.data.team %}
-          {% if member.is_current == false and member.is_rotation != true and member.is_intern != true %}
-            <p>{{ member.name }} - {{ member.position }}</p>
-          {% endif %}
-        {% endfor %}
+  
+      <!-- Past Lab Members Section -->
+      <div class="alumni-subsection">
+        <h3 class="subsection-heading">Past Lab Members</h3>
+        <div class="subsection-content">
+          {% for member in site.data.team %}
+            {% if member.is_current == false and member.is_rotation != true and member.is_intern != true %}
+              <p>{{ member.name }} - {{ member.position }}</p>
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>
-</div>
+  
 
 {% include section-faq.html %}
 {% include section-subscribe.html %}
+
+
+
+<style>
+ .team-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .team-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px; /* Adjusted gap between grid items */
+  }
+  .team-member {
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for a subtle effect */
+  }
+  .team-member img {
+    width: 200%;
+    height: auto;
+    object-fit: cover;
+    /* Removed transform property */
+  }
+  .alumni-section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.alumni-container {
+    max-width: 100%;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.section-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.alumni-subsection {
+  margin-bottom: 30px;
+}
+
+.subsection-heading {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subsection-content p {
+  margin: 0;
+  font-size: 16px;
+}
+
+  /* Removed hover effect for image */
+  .member-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-sizing: border-box;
+    transition: opacity 0.3s ease; /* Added transition for smooth effect */
+    display: none;
+  }
+  .team-member:hover .member-details {
+    display: block;
+  }
+  
+  .member-name,
+  .member-title,
+  .member-bio {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Adjusted text color */
+  }
+  .member-title {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+</style>
