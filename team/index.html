@@ -9,44 +9,23 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     <h1 class="page-title">Team</h1>
     <p class="page-description">Welcome to our Lab's Team Page: Where Innovation Meets Collaboration!</p>
   </div>
- 
+
   <div class="team-grid">
-    {% assign jishnu_seen = false %}
-    {% assign zarifeh_seen = false %}
-    {% assign simar_seen = false %}
-
     {% for member in site.data.team %}
-      {% if member.is_current == true %}
-        {% if member.name == "Jishnu Das" %}
-          {% if jishnu_seen == false %}
-            <div style="border-top: 2px solid black;"></div>
-            {% assign jishnu_seen = true %}
-          {% endif %}
-        {% elsif member.name == "Zarifeh Heidari Rarani" %}
-          {% if zarifeh_seen == false %}
-            <div style="border-top: 2px solid black;"></div>
-            {% assign zarifeh_seen = true %}
-          {% endif %}
-        {% elsif member.name == "Simar Yadav" %}
-          {% if simar_seen == false %}
-            <div style="border-top: 2px solid black;"></div>
-            {% assign simar_seen = true %}
-          {% endif %}
-        {% endif %}
-
-        <div class="team-member">
-          <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}">
-          <div class="member-details">
-            <p class="member-name">{{ member.name }}</p>
-            <p class="member-title">{{ member.position }}</p>
-            <p class="member-bio">{{ member.bio }}</p>
-          </div>
-          <div class="member-overlay">
-            <p class="member-lan">{{ member.name }}</p>
-            <p class="member-cha">{{ member.position }}</p>
-          </div>
-        </div>
-      {% endif %}
+     {% if member.is_current == true %}
+      <div class="team-member">
+       <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}">
+       <div class="member-details">
+        <p class="member-name">{{ member.name }}</p>
+        <p class="member-title">{{ member.position }}</p>
+        <p class="member-bio">{{ member.bio }}</p>
+       </div>
+       <div class="member-overlay">
+        <p class="member-lan">{{ member.name }}</p>
+        <p class="member-cha">{{ member.position }}</p>
+       </div>
+     </div>
+     {% endif %}
     {% endfor %}
   </div>
 </div>
@@ -107,7 +86,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   }
   .team-grid {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
     gap: 20px; /* Adjusted gap between grid items */
   }
   .team-member {
