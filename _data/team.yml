@@ -220,7 +220,7 @@
     Kiran is an undergraduate student majoring in Computer Science at the Georgia Institute of Technology. She has been working as a student researcher in Dr Das's lab since 2020. Her research involves mining and analyzing data using machine learning algorithms and differential expression analysis. As a researcher in the field of data science, she utilizes programming languages including R, Python, and Java. Her goal is to use critical thinking skills to solve computing problems and acquire skills to conquer the problems of tomorrow.
   photo: /images/kiran.webp
 
-  - name: Yeque(Sissi) Sun
+- name: Yeque(Sissi) Sun
   is_pi: False
   is_current: True
   is_intern : False
@@ -230,7 +230,7 @@
     Sissi completed her master's degree in public health at the University of Columbia. With a strong passion for sequencing data analysis, she values the chance to contribute to a dynamic and diverse work environment. Sissi aims to bring a unique perspective from the field of public health to the field of Bioinformatics. During her leisure hours, she enjoys indulging in manga, and anime, exploring various cuisines, photography, and sightseeing.
   photo: /images/sissi.webp
 
-  - name: Augusta Vincent
+- name: Augusta Vincent
   is_pi: False
   is_current: True
   is_intern : False
