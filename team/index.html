@@ -12,9 +12,9 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
 
   <div class="team-grid">
     {% assign jishnu_seen = false %}
-    {% assign zarifeh_seen = false %}
-    {% assign simar_seen = false %}
-
+    {% assign isha_seen = false %}
+    {% assign alyson_seen = false %}
+ 
     {% for member in site.data.team %}
       {% if member.is_current == true %}
         {% if member.name == "Jishnu Das" %}
@@ -22,13 +22,13 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
             <div style="border-top: 2px solid black;"></div>
             {% assign jishnu_seen = true %}
           {% endif %}
-        {% elsif member.name == "Zarifeh Heidari Rarani" %}
-          {% if zarifeh_seen == false %}
+        {% elsif member.name == "Isha Mehta" %}
+          {% if isha_seen == false %}
             <div style="border-top: 2px solid black;"></div>
             {% assign zarifeh_seen = true %}
           {% endif %}
-        {% elsif member.name == "Simar Yadav" %}
-          {% if simar_seen == false %}
+        {% elsif member.name == "Alyson Wang" %}
+          {% if alyson_seen == false %}
             <div style="border-top: 2px solid black;"></div>
             {% assign simar_seen = true %}
           {% endif %}
