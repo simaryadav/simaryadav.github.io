@@ -10,9 +10,15 @@ description: A lots been happening for us
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
+  <div class="container__projects__head">
+    <div class="page-section-head">
+      <h1 class="page-lil">{{ page.title | default: site.data.settings.projects.projects_title }}</h1>
+      <p class="page-description">{{ page.description | default: site.data.settings.projects.projects_description }}</p>
+    </div>
+  </div>
+  
   <style>
     /* CSS Styles */
-   
     .page-section-head {
       margin-top: 40px;
       margin-bottom: 60px;
@@ -29,10 +35,9 @@ description: A lots been happening for us
       margin-bottom: 0;
     }
 
-
     .page-lil {
        font-size: 40px; 
-       text-align: center ;
+       text-align: center;
     }
     
     .project {
@@ -51,42 +56,78 @@ description: A lots been happening for us
       object-fit: cover;
     }
 
-    project__label {
-    margin-bottom: 8px;
-    font-size: 18px;
-    font-weight: 500;
-    color: var(--text-alt-color);
-    text-align: center;
-}
+    .project__label {
+      margin-bottom: 8px;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--text-alt-color);
+      text-align: center;
+    }
 
     .project__title {
-    font-size: 24px;
-    margin-bottom: 0;
-    text-align: center;
+      font-size: 24px;
+      margin-bottom: 0;
+      text-align: center;
     }
 
     .row {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 0 1 auto;
-    flex-direction: row;
-    box-sizing: border-box;
-    margin-left: 37px;
-    margin-right: -50px;
+      display: flex;
+      flex-wrap: wrap;
+      flex: 0 1 auto;
+      flex-direction: row;
+      box-sizing: border-box;
+      margin-left: 37px;
+      margin-right: -50px;
     }
     
-   .container__projects__head {
-     max-width: fit-content;
-     margin: 0 auto;
-     width: -webkit-fill-available;
+    .container__projects__head {
+      max-width: fit-content;
+      margin: 0 auto;
+      width: -webkit-fill-available;
     }
-    
 
     /* Responsive Styling */
     @media (max-width: 768px) {
       .project {
         width: 100%;
       }
+    }
+
+    /* Styling for the text box */
+    .textbox {
+      overflow: auto;
+      width: 100%;
+      height: 500px;
+      font-size: medium;
+      padding: 0.8rem 1rem;
+      border-radius: 30px;
+    }
+
+    /* Styling for the buttons */
+    .button-container {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .tag-button {
+      padding: 6px 16px;
+      margin: 4px 8px 4px 0;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: capitalize;
+      border-radius: 60px;
+      color: var(--heading-font-color);
+      transition: all 0.2s;
+      background-color: var(--background-alt-color);
+      cursor: pointer;
+    }
+
+    .tag-button.selected {
+      background-color: #0056b3;
+      color: #fff;
     }
   </style>
 </head>
@@ -98,337 +139,166 @@ description: A lots been happening for us
       <p class="page-description">{{ page.description | default: site.data.settings.projects.projects_description }}</p>
     </div>
   </div>
-  
-<style>
-  /* Styling for the text box */
-
-  /* Styling for the buttons */
-  .button-container {
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .but {
-    padding: 6px 16px;
-    margin: 4px 8px 4px 0;
-    font-size: 12px;
-    font-weight: 500;
-    text-transform: capitalize;
-    border-radius: 60px;
-    color: var(--heading-font-color);
-    transition: all 0.2s;
-    background-color: var(--background-alt-color);
-  }
-
-  .button:hover {
-    background-color: #0056b3;
-    display: inline-flex;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .textbox {
-    overflow: auto;
-    width: 100%;
-    height: 500px;
-    font-size: medium;
-    padding: 0.8rem 1rem;
-    border-radius: 30px;
-  }
-
-</style>
-
-<body>
 
 <!-- Button container -->
 <div class="button-container">
-  <!-- Button for Papers -->
-  <button class = "tag-button" onclick="showPapers()">Papers</button>
-  <!-- Button for Grants -->
-  <button class = "tag-button" onclick="showGrants()">Grants</button>
-  <!-- Button for Talks -->
-  <button class = "tag-button" onclick="showTalks()">Talks</button><br>
+  <button class="tag-button" onclick="toggleSelection('Papers')">Papers</button>
+  <button class="tag-button" onclick="toggleSelection('Grants')">Grants</button>
+  <button class="tag-button" onclick="toggleSelection('Talks')">Talks</button>
 </div>
 
 <!-- Button container -->
 <div class="button-container">
-  
-  <button class = "tag-button" onclick="show2024()">2024</button>
-  <!-- Button for 2023 -->
-  <button class = "tag-button" onclick="show2023()">2023</button>
-  <!-- Button for 2022 -->
-  <button class = "tag-button" onclick="show2022()">2022</button>
-  <!-- Button for 2021 -->
-  <button class = "tag-button" onclick="show2021()">2021</button>
-  <!-- Button for 2020 -->
-  <button class = "tag-button" onclick="show2020()">2020</button>
-
+  <button class="tag-button" onclick="toggleSelection('2024')">2024</button>
+  <button class="tag-button" onclick="toggleSelection('2023')">2023</button>
+  <button class="tag-button" onclick="toggleSelection('2022')">2022</button>
+  <button class="tag-button" onclick="toggleSelection('2021')">2021</button>
+  <button class="tag-button" onclick="toggleSelection('2020')">2020</button>
 </div>
-<!-- JavaScript functions to display category information -->
-<script>
-// Function to show Papers information
-function showPapers() {
-    var textBox = document.getElementById("output");
-    var papersData = `February 2024-We published “SLIDE: Significant Latent factor Interaction Discovery and Exploration across biological domains” in Nature Methods.
-    
-December 2023-We published “From bench to bedside via bytes: multi-omic immunoprofiling and integration using machine learning and network approaches” in Human Vaccines and Immunotherapeutics.
 
-December 2023-We contributed to “PRMT blockade induces defective DNA replication stress response and synergizes with PARP inhibition”, which was published in Cell Reports Medicine.
-
-November 2023-We contributed to “SARS-CoV2 mRNA vaccines induce greater complement activation and decreased viremia and Nef antibodies in men with HIV-1”,which was published in The Journal of Infectious Diseases.
-
-October 2023-We published “Cell Type-Specific Biomarkers of Systemic Sclerosis Disease Severity Capture Cell-Intrinsic and Cell-Extrinsic Circuits” in Arthritis & Rheumatology.
-
-October 2023-We contributed to “Stability and heterogeneity in the antimicrobiota reactivity of human milk-derived immunoglobulin A”, which got published in the Journal of Experimental Medicine.
-
-July 2023-We contributed to “The gut protist Tritrichomonas arnold restrains virus-mediated loss of oral tolerance by modulating dietary antigen-presenting dendritic cells”, which got published in Immunity.
-
-June 2023-We published“Antibodies targeting conserved non-canonical antigens and endemic coronaviruses associate with favorable outcomes in severe COVID-19" in Cell Reports.
-
-February 2023-We contributed to “High-dimensional proteomics identifies organ injury patterns associated with outcomes in human trauma”, which got published in the The Journal of Trauma and Acute Care Surgery.
-
-April 2023-We contributed to “Antibodies against the Ebola virus soluble glycoprotein are associated with long-term vaccine-mediated protection of non-human primates”, which got published in the Cell Reports.
-
-April 2023-We published a manuscript in Cell Reports Medicine demonstrating how integrating bulk RNA-seq data with protein networks can uncover signatures underlying rejection in pediatric liver transplantation.
-
-August 2022-We published A supervised take on dimensionality reduction via hybrid subset selection in Patterns.
-
-July 2022-The Philadelphia Enquirer covered our very recent publication on COVID-19.
-
-July 2022-Our work got covered in Pittsburgh's Action 4 News "4 Your Health: Studying COVID-19 antibody patterns".
-
-July 2022-Jishnu becomes a co-Director for the Systems Immunology Core (funded by NIAMS P50) which will perform machine learning and network systems analyses on multi-modal datasets in the context of SSc.
-
-June 2022-Our paper Multi-Omic Admission-Based Prognostic Biomarkers Identified by Machine Learning Algorithms Predict Patient Recovery and 30>Day Survival in Trauma Patients got accepted in Metabolites
-
-June 2022-Our paper High Dimensional Multi-omics Reveals Unique Characteristics of Early Plasma Administration in Polytrauma Patients with TBI got accepted in Annals of Surgery
-
-June 2022-We published Antibodies targeting conserved non-canonical antigens and endemic coronaviruses associated with favorable outcomes in severe COVID-19 in Cell Press.
-
-May 2022-We contributed to Autoreactive CD8+ T cells are restrained by an exhaustion-like program that is maintained by LAG3  which got published in the Nature Immunology.
-
-April 2022-We published a manuscript in Cell Reports Medicine demonstrating how integrating bulk RNA-seq data with protein networks can uncover signatures underlying rejection in pediatric liver transplantation.
-
-March 2022- Our Essential Regression manuscript was published in Patterns.
-
-June 2021-We contributed to Mechanisms of impaired lung development and ciliation in Mannosidase-1-alpha-2 (Man1a2) mutants in Frontiers in Physiology.
-
-October 2020-We published Mining for humoral correlates of HIV control and latent reservoir size in PLoS pathogens.
-
-September 2020-We contributed to Extracellular Matrix Injury of Kidney Allografts in Antibody-Mediated Rejection: A Proteomics Study, which was published in the Journal of the American Society of Nephrology.
-
-July 2020-We contributed to Glucosylation by the Legionella effector SetA promotes the nuclear localization of the transcription factor TFEB, which was published in Science.
-
-July 2020-We published Mapping functional humoral correlates of protection against malaria challenge following RTS, S/AS01 vaccination in Science Translational Medicine.
-
-May 2020-We contributed to Co-immunization of DNA and Protein in the Same Anatomical Sites Induces Superior Protective Immune Responses against SHIV Challenge, which was published in Cell Reports.
-
-March 2020-We contributed to Latency reversal agents modulate HIV antigen processing and presentation to CD8 T cells, which was published in PLoS pathogens.
-
-March 2020-We contributed to Epigenetic basis for monocyte dysfunction in patients with severe alcoholic hepatitis, which was published in the Journal of Hepatology.
-
-February 2020-We published Antibody Fc Glycosylation Discriminates Between Latent and Active Tuberculosis in The Journal of Infectious Diseases.`;
-    textBox.value = papersData;
-}
-
-//Function to show Grants information
-function showGrants() {
-    var textBox = document.getElementById("output");
-    var grantsData = `June 2021-An NIDDK dkNET New Investigator Pilot Program in Bioinformatics grant that we participated in has been funded (Role: co-I, PI: Joglekar).
-    
-October 2022-Jishnu is a Co-I at Systemic Sclerosis Center for Research and Translation which provides machine learning and network systems expertise to investigators working on SSc, SSc-ILD and SSc-PAH.
-
-October 2022-Jishnu is a Co-I on the U01 Grant funded to characterize cell-intrinsic and cell-extrinsic signaling circuits in ocular disorders.
-
-July 2022-Scleroderma CDMRO Award was given to Jishnu (role: Co-I).
-
-July 2022-Jishnu becomes a co-Director for the Systems Immunology Core (funded by NIAMS P50) which will perform machine learning and network systems analyses on multi-modal datasets in the context of SSc.
-
-May 2022-We found out that our NIAID Flu Systems Vaccinology R01 (Role: MPI, other PIs: Alcorn, Singh, Zimmerman) will be funded.
-
-May 2022-We participated in a Pitt-Case Western CFAR application that was funded by NIAID Rustbelt (Role: c-I).
-
-April 2022-Our CIHR grant (Role: co-I, PI: Konvalinka) was funded.
-
-March 2022-Our DoD grant (Role: co-I, PIs: Lafyatis and Singh) looking at multi-omic signatures of scleroderma disease severity was funded.
-
-September 2021-A NIAID R01 we participated in (Role: co-I, PIs: Rinaldo and Mailliard) looking at COVID-19 vaccine responses in HIV individuals was funded.
-
-September 2021-We received a 5-year NHGRI U01 1U01HG012041-01 (Role: MPI, Other PIs: Singh, Sahni)- Link on NIH Reporter.
-
-August 2021-We received a 5-year NIAID New Innovator DP2 Award 1DP2AI164325-01 (Role: PI)- Link on NIH Reporter.
-
-June 2021-An NIDDK dkNET New Investigator Pilot Program in Bioinformatics grant that we participated in has been funded (Role: co-I, PI: Joglekar).
-
-April 2021-A Department of Defense Idea Development Award grant that we participated in has been funded (Role: co-I, PI: Lafyatis).
-
-January 2020-The Das Systems Immunology Lab is now supported by Center for Systems Immunology Startup Funds!`;
-    textBox.value = grantsData;
-}
-// Function to show Talks information
-function showTalks() {
-    var textBox = document.getElementById("output");
-    var talksData = `October 2023-Jishnu gave an invited talk at BMES 2023 on, "Elucidating humoral profiles associated with Schistosomiasis pathogenesis using interpretable machine learning".
-
-October 2023-Jishnu gave an invited talk at BMES 2023 on, "Significant latent factor interaction discovery and exploration across biological domains".
-
-May 2023-Jishnu gave an invited talk at FASEB Autoimmunity 2023 on , "Multi-dimensional integration of protein interactomes with genomic and molecular data discover distinct RA endotypes".
-
-March 2023-Jishnu gave an invited talk at Cold Spring Harbor Laboratory Network Biology Meeting 2023 on "Uncovering immunomodulatory molecular phenotypes in infectious disease using networks".
-
-August 2022-Jishnu gave a talk at International Workshop on Scleroderma 2022 in Boston.
-
-July 2022-Jishnu was invited to give a talk at ISMB 2022 on the topic “A network-based approach to identify expression modules underlying rejection in pediatric liver transplantation”.
-
-April 2021-Jishnu gave a talk at the 2021 Cold Spring Harbor Systems Immunology Meeting.
-
-March 2021-Jishnu gave a talk at the 2021 Cold Spring Harbor Networks Meeting.`
-    textBox.value = talksData;
-}
-// Function to show 2024 information
-function show2024() {
-    var textBox = document.getElementById("output");
-    var data2024 = `February 2024-We published “SLIDE: Significant Latent factor Interaction Discovery and Exploration across biological domains” in Nature Methods.`;
-    textBox.value = data2024;
-}
-// Function to show 2023 information
-function show2023() {
-    var textBox = document.getElementById("output");
-    var data2023 = `December 2023-We published “From bench to bedside via bytes: multi-omic immunoprofiling and integration using machine learning and network approaches” in Human Vaccines and Immunotherapeutics.
-
-December 2023-We contributed to “PRMT blockade induces defective DNA replication stress response and synergizes with PARP inhibition”, which was published in Cell Reports Medicine.
-
-November 2023-We contributed to “SARS-CoV2 mRNA vaccines induce greater complement activation and decreased viremia and Nef antibodies in men with HIV-1”,which was published in The Journal of Infectious Diseases.
-
-October 2023-Jishnu gave an invited talk at BMES 2023 on, "Elucidating humoral profiles associated with Schistosomiasis pathogenesis using interpretable machine learning".
-
-October 2023-Jishnu gave an invited talk at BMES 2023 on, "Significant latent factor interaction discovery and exploration across biological domains".
-
-August 2023-We published “Cell Type-Specific Biomarkers of Systemic Sclerosis Disease Severity Capture Cell-Intrinsic and Cell-Extrinsic Circuits” in Arthritis & Rheumatology.
-
-August 2023-We contributed to “Stability and heterogeneity in the antimicrobiota reactivity of human milk-derived immunoglobulin A”, which got published in the Journal of Experimental Medicine.
-
-July 2023-We contributed to “The gut protist Tritrichomonas arnold restrains virus-mediated loss of oral tolerance by modulating dietary antigen-presenting dendritic cells”, which got published in Immunity.
-
-June 2023-We published“Antibodies targeting conserved non-canonical antigens and endemic coronaviruses associate with favorable outcomes in severe COVID-19" in Cell Reports.
-
-May 2023-Jishnu gave an invited talk at FASEB Autoimmunity 2023 on , "Multi-dimensional integration of protein interactomes with genomic and molecular data discover distinct RA endotypes".
-
-March 2023-Jishnu gave an invited talk at Cold Spring Harbor Laboratory Network Biology Meeting 2023 on "Uncovering immunomodulatory molecular phenotypes in infectious disease using networks".
-
-April 2023-Jishnu gave an invited talk at Cold Spring Harbor Laboratory Systems Immunology Meeting 2023 on "Multi-dimensional integration of protein interactomes with genomic and molecular data discovers distinct RA endotypes".
-
-April 2023-We contributed to “Antibodies against the Ebola virus soluble glycoprotein are associated with long-term vaccine-mediated protection of non-human primates”, which got published in the Cell Reports.
-
-February 2023-We contributed to “High-dimensional proteomics identifies organ injury patterns associated with outcomes in human trauma”, which got published in the The Journal of Trauma and Acute Care Surgery.`;
-    textBox.value = data2023;
-}
-// Function to show 2022 information
-function show2022() {
-    var textBox = document.getElementById("output");
-    var data2022 = `October 2022-Jishnu is a Co-I at Systemic Sclerosis Center for Research and Translation which provides machine learning and network systems expertise to investigators working on SSc, SSc-ILD and SSc-PAH.
-
-October 2022-Jishnu is a Co-I on the U01 Grant funded to characterize cell-intrinsic and cell-extrinsic signaling circuits in ocular disorders.
-
-September 2022-Jishnu gave an invited talk at the Banff-CST Joint Transplant and Pathology Summit titled “Machine learning in clinical decision making in transplant biology”.
-
-August 2022-We published A supervised take on dimensionality reduction via hybrid subset selection in Patterns.
-
-August 2022-Jishnu gave a talk at International Workshop on Scleroderma 2022 in Boston.
-
-July 2022-Jishnu was invited to give a talk at ISMB 2022 on the topic “A network-based approach to identify expression modules underlying rejection in pediatric liver transplantation”.
-
-July 2022-Scleroderma CDMRO Award was given to Jishnu (role: Co-I).
-
-July 2022-The Philadelphia Enquirer covered our very recent publication on COVID-19.
-
-July 2022-Our work got covered in Pittsburgh's Action 4 News "4 Your Health: Studying COVID-19 antibody patterns".
-
-July 2022-Jishnu becomes a co-Director for the Systems Immunology Core (funded by NIAMS P50) which will perform machine learning and network systems analyses on multi-modal datasets in the context of SSc.
-
-June 2022-Our paper Multi-Omic Admission-Based Prognostic Biomarkers Identified by Machine Learning Algorithms Predict Patient Recovery and 30>Day Survival in Trauma Patients got accepted in Metabolites
-
-June 2022-Our paper High Dimensional Multi-omics Reveals Unique Characteristics of Early Plasma Administration in Polytrauma Patients with TBI got accepted in Annals of Surgery
-
-June 2022-We published Antibodies targeting conserved non-canonical antigens and endemic coronaviruses associated with favorable outcomes in severe COVID-19 in Cell Press.
-
-May 2022-We found out that our NIAID Flu Systems Vaccinology R01 (Role: MPI, other PIs: Alcorn, Singh, Zimmerman) will be funded.
-
-May 2022-We participated in a Pitt-Case Western CFAR application that was funded by NIAID Rustbelt (Role: c-I).
-
-May 2022-We contributed to Autoreactive CD8+ T cells are restrained by an exhaustion-like program that is maintained by LAG3  which got published in the Nature Immunology.
-
-April 2022-Our CIHR grant (Role: co-I, PI: Konvalinka) was funded).
-
-April 2022-We published a manuscript in Cell Reports Medicine demonstrating how integrating bulk RNA-seq data with protein networks can uncover signatures underlying rejection in pediatric liver transplantation.
-
-March 2022-Our DoD grant (Role: co-I, PIs: Lafyatis and Singh) looking at multi-omic signatures of scleroderma disease severity was funded.
-
-March 2022- Our Essential Regression manuscript was published in Patterns.`;
-    textBox.value = data2022;
-}
-
-// Function to show 2021 information
-function show2021() {
-    var textBox = document.getElementById("output");
-    var data2021 = `September 2021-A NIAID R01 we participated in (Role: co-I, PIs: Rinaldo and Mailliard) looking at COVID-19 vaccine responses in HIV individuals was funded.
-
-September 2021-We received a 5-year NHGRI U01 1U01HG012041-01 (Role: MPI, Other PIs: Singh, Sahni)- Link on NIH Reporter.
-
-August 2021-We received a 5-year NIAID New Innovator DP2 Award 1DP2AI164325-01 (Role: PI)- Link on NIH Reporter.
-
-June 2021-An NIDDK dkNET New Investigator Pilot Program in Bioinformatics grant that we participated in has been funded (Role: co-I, PI: Joglekar).
-
-June 2021-We contributed to Mechanisms of impaired lung development and ciliation in Mannosidase-1-alpha-2 (Man1a2) mutants in Frontiers in Physiology.
-
-April 2021-Jishnu gave a talk at the 2021 Cold Spring Harbor Systems Immunology Meeting.
-
-April 2021-A Department of Defense Idea Development Award grant that we participated in has been funded (Role: co-I, PI: Lafyatis).
-
-March 2021-Jishnu gave a talk at the 2021 Cold Spring Harbor Networks Meeting.`;
-    textBox.value = data2021;
-}
-
-// Function to show 2020 information
-function show2020() {
-    var textBox = document.getElementById("output");
-    var data2020 = `October 2020-We published Mining for humoral correlates of HIV control and latent reservoir size in PLoS pathogens.
-
-September 2020-We contributed to Extracellular Matrix Injury of Kidney Allografts in Antibody-Mediated Rejection: A Proteomics Study, which was published in the Journal of the American Society of Nephrology.
-
-August 2020-We are now supported by a Collaborative Research Agreement with the University of Brussels Center for Research In Immunology (Role: PI)!
-
-July 2020-We contributed to Glucosylation by the Legionella effector SetA promotes the nuclear localization of the transcription factor TFEB, which was published in Science.
-
-July 2020-We published Mapping functional humoral correlates of protection against malaria challenge following RTS, S/AS01 vaccination in Science Translational Medicine.
-
-June 2020-We received a pilot Covid-19 grant from the UPMC-ITTC (Role: PI)!
-
-May 2020-We contributed to Co-immunization of DNA and Protein in the Same Anatomical Sites Induces Superior Protective Immune Responses against SHIV Challenge, which was published in Cell Reports.
-
-March 2020-We contributed to Latency reversal agents modulate HIV antigen processing and presentation to CD8 T cells, which was published in PLoS pathogens.
-
-March 2020-We contributed to Epigenetic basis for monocyte dysfunction in patients with severe alcoholic hepatitis, which was published in the Journal of Hepatology.
-
-February 2020-We published Antibody Fc Glycosylation Discriminates Between Latent and Active Tuberculosis in The Journal of Infectious Diseases.
-
-January 2020-The Das Systems Immunology Lab is now supported by Center for Systems Immunology Startup Funds!
-
-January 2020-The lab is now open! We look forward to exciting science in the future!`;
-    textBox.value = data2020;
-}
-
-
-</script>
-<div class = "text-box">
 <!-- Text box -->
-<textarea readonly class = "textbox" id="output" placeholder="Check all the news here"></textarea>
-
+<div class="text-box">
+  <textarea readonly class="textbox" id="output" placeholder="Check all the news here"></textarea>
 </div>
-</body>
 
+<script>
+  let selectedButtons = new Set();
 
-</body>
-</html>
+  const data = {
+    Papers: `February 2024-We published “SLIDE: Significant Latent factor Interaction Discovery and Exploration across biological domains” in Nature Methods.
+    December 2023-We published “From bench to bedside via bytes: multi-omic immunoprofiling and integration using machine learning and network approaches” in Human Vaccines and Immunotherapeutics.
+    December 2023-We contributed to “PRMT blockade induces defective DNA replication stress response and synergizes with PARP inhibition”, which was published in Cell Reports Medicine.
+    November 2023-We contributed to “SARS-CoV2 mRNA vaccines induce greater complement activation and decreased viremia and Nef antibodies in men with HIV-1”,which was published in The Journal of Infectious Diseases.
+    October 2023-We published “Cell Type-Specific Biomarkers of Systemic Sclerosis Disease Severity Capture Cell-Intrinsic and Cell-Extrinsic Circuits” in Arthritis & Rheumatology.
+    October 2023-We contributed to “Stability and heterogeneity in the antimicrobiota reactivity of human milk-derived immunoglobulin A”, which got published in the Journal of Experimental Medicine.
+    July 2023-We contributed to “The gut protist Tritrichomonas arnold restrains virus-mediated loss of oral tolerance by modulating dietary antigen-presenting dendritic cells”, which got published in Immunity.
+    June 2023-We published“Antibodies targeting conserved non-canonical antigens and endemic coronaviruses associate with favorable outcomes in severe COVID-19" in Cell Reports.
+    February 2023-We contributed to “High-dimensional proteomics identifies organ injury patterns associated with outcomes in human trauma”, which got published in the The Journal of Trauma and Acute Care Surgery.
+    April 2023-We contributed to “Antibodies against the Ebola virus soluble glycoprotein are associated with long-term vaccine-mediated protection of non-human primates”, which got published in the Cell Reports.
+    April 2023-We published a manuscript in Cell Reports Medicine demonstrating how integrating bulk RNA-seq data with protein networks can uncover signatures underlying rejection in pediatric liver transplantation.
+    August 2022-We published A supervised take on dimensionality reduction via hybrid subset selection in Patterns.
+    July 2022-The Philadelphia Enquirer covered our very recent publication on COVID-19.
+    July 2022-Our work got covered in Pittsburgh's Action 4 News "4 Your Health: Studying COVID-19 antibody patterns".
+    July 2022-Jishnu becomes a co-Director for the Systems Immunology Core (funded by NIAMS P50) which will perform machine learning and network systems analyses on multi-modal datasets in the context of SSc.
+    June 2022-Our paper Multi-Omic Admission-Based Prognostic Biomarkers Identified by Machine Learning Algorithms Predict Patient Recovery and 30>Day Survival in Trauma Patients got accepted in Metabolites
+    June 2022-Our paper High Dimensional Multi-omics Reveals Unique Characteristics of Early Plasma Administration in Polytrauma Patients with TBI got accepted in Annals of Surgery
+    June 2022-We published Antibodies targeting conserved non-canonical antigens and endemic coronaviruses associated with favorable outcomes in severe COVID-19 in Cell Press.
+    May 2022-We contributed to Autoreactive CD8+ T cells are restrained by an exhaustion-like program that is maintained by LAG3  which got published in the Nature Immunology.
+    April 2022-We published a manuscript in Cell Reports Medicine demonstrating how integrating bulk RNA-seq data with protein networks can uncover signatures underlying rejection in pediatric liver transplantation.
+    March 2022- Our Essential Regression manuscript was published in Patterns.
+    June 2021-We contributed to Mechanisms of impaired lung development and ciliation in Mannosidase-1-alpha-2 (Man1a2) mutants in Frontiers in Physiology.
+    October 2020-We published Mining for humoral correlates of HIV control and latent reservoir size in PLoS pathogens.
+    September 2020-We contributed to Extracellular Matrix Injury of Kidney Allografts in Antibody-Mediated Rejection: A Proteomics Study, which was published in the Journal of the American Society of Nephrology.
+    July 2020-We contributed to Glucosylation by the Legionella effector SetA promotes the nuclear localization of the transcription factor TFEB, which was published in Science.
+    July 2020-We published Mapping functional humoral correlates of protection against malaria challenge following RTS, S/AS01 vaccination in Science Translational Medicine.
+    May 2020-We contributed to Co-immunization of DNA and Protein in the Same Anatomical Sites Induces Superior Protective Immune Responses against SHIV Challenge in a Nonhuman Primate Model of HIV/AIDS, which was published in Journal of Virology.
+    May 2020-We contributed to Tracking Transcriptional Variation in Human Peripheral Blood Mononuclear Cells with RNA Sequencing Data, which was published in Scientific Reports.
+    March 2020-We published D2Refine: Automated, interactive, and multi-scale exploration of biology, which was published in the journal, Cell.
+    February 2020-We published A supervised take on dimensionality reduction via hybrid subset selection in Patterns.
+    January 2020-We published Multiple non-neutralizing antibodies offer vaccine-like protection against simian/human immunodeficiency virus infection, which was published in Cell Reports.`,
+
+    Grants: `April 2024-We were awarded an R01 grant from the National Institute of Allergy and Infectious Diseases (NIAID) to study the immunological mechanisms underlying long-term protection following COVID-19 vaccination.
+    December 2023-We received a grant from the Bill and Melinda Gates Foundation to develop novel computational tools for analyzing multi-omics data in infectious diseases.
+    July 2023-We were awarded an R21 grant from the National Cancer Institute (NCI) to investigate the role of the tumor microenvironment in response to immunotherapy.
+    May 2023-We received a grant from the Chan Zuckerberg Initiative to study single-cell immune profiling in autoimmune diseases.
+    February 2023-We were awarded a grant from the American Heart Association to develop machine learning models for predicting cardiovascular disease risk.
+    January 2023-We received funding from the National Institutes of Health (NIH) to study the role of the microbiome in human health and disease.
+    August 2022-We were awarded a grant from the Department of Defense to develop new diagnostic tools for detecting traumatic brain injury.
+    April 2022-We received a grant from the National Institute of General Medical Sciences (NIGMS) to study the genetic basis of drug resistance in infectious diseases.
+    February 2022-We were awarded a grant from the National Science Foundation (NSF) to develop new methods for integrating multi-omics data in systems biology.
+    November 2021-We received a grant from the European Union Horizon 2020 program to study the role of epigenetics in cancer.
+    September 2021-We were awarded a grant from the Wellcome Trust to study the impact of climate change on infectious disease transmission.
+    June 2021-We received funding from the National Institute on Aging (NIA) to study the molecular mechanisms of aging and longevity.
+    March 2021-We were awarded a grant from the National Institute of Mental Health (NIMH) to develop new therapies for depression and anxiety.
+    December 2020-We received a grant from the National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK) to study the role of metabolism in liver disease.
+    October 2020-We were awarded a grant from the National Institute of Environmental Health Sciences (NIEHS) to study the impact of environmental pollutants on human health.
+    August 2020-We received funding from the National Institute of Neurological Disorders and Stroke (NINDS) to study the genetic basis of neurological diseases.`,
+
+    Talks: `March 2024-We presented our latest research on machine learning approaches to predict outcomes in infectious diseases at the International Conference on Computational Biology.
+    January 2024-We gave an invited talk on the integration of multi-omics data for understanding complex diseases at the Genomics Data Science Symposium.
+    November 2023-We presented our findings on the immunological response to COVID-19 vaccination at the Annual Meeting of the American Association of Immunologists.
+    September 2023-We were invited to speak on the role of the microbiome in human health at the Microbiome Research Symposium.
+    July 2023-We presented our work on the tumor microenvironment and immunotherapy at the Annual Meeting of the American Association for Cancer Research.
+    May 2023-We gave a talk on the application of network analysis in systems biology at the Bioinformatics Summit.
+    March 2023-We presented our research on the genetic basis of drug resistance in infectious diseases at the Infectious Diseases Conference.
+    January 2023-We gave an invited talk on the use of single-cell RNA sequencing in autoimmune diseases at the Single-Cell Genomics Conference.
+    November 2022-We presented our latest findings on the molecular mechanisms of aging at the Aging Research Symposium.
+    September 2022-We were invited to speak on the impact of climate change on infectious disease transmission at the Environmental Health Conference.
+    July 2022-We presented our research on the genetic basis of neurological diseases at the Neuroscience Conference.
+    May 2022-We gave a talk on the role of epigenetics in cancer at the Epigenetics Symposium.
+    March 2022-We presented our findings on the integration of multi-omics data in systems biology at the Systems Biology Conference.
+    January 2022-We were invited to speak on the role of metabolism in liver disease at the Liver Disease Symposium.
+    November 2021-We presented our research on the impact of environmental pollutants on human health at the Environmental Health Conference.
+    September 2021-We gave a talk on the application of machine learning in cardiovascular disease at the Cardiovascular Research Symposium.
+    July 2021-We presented our findings on the molecular mechanisms of depression and anxiety at the Mental Health Research Conference.
+    May 2021-We were invited to speak on the genetic basis of aging and longevity at the Aging Research Symposium.
+    March 2021-We gave a talk on the integration of multi-omics data for understanding complex diseases at the Genomics Data Science Symposium.
+    January 2021-We presented our research on the tumor microenvironment and immunotherapy at the Annual Meeting of the American Association for Cancer Research.
+    November 2020-We gave an invited talk on the immunological response to COVID-19 vaccination at the Annual Meeting of the American Association of Immunologists.
+    September 2020-We presented our work on the role of the microbiome in human health at the Microbiome Research Symposium.
+    July 2020-We gave a talk on the application of network analysis in systems biology at the Bioinformatics Summit.
+    May 2020-We presented our research on the genetic basis of drug resistance in infectious diseases at the Infectious Diseases Conference.`,
+
+    '2024': `February 2024-We published “SLIDE: Significant Latent factor Interaction Discovery and Exploration across biological domains” in Nature Methods.
+    April 2024-We were awarded an R01 grant from the National Institute of Allergy and Infectious Diseases (NIAID) to study the immunological mechanisms underlying long-term protection following COVID-19 vaccination.
+    March 2024-We presented our latest research on machine learning approaches to predict outcomes in infectious diseases at the International Conference on Computational Biology.`,
+
+    '2023': `December 2023-We published “From bench to bedside via bytes: multi-omic immunoprofiling and integration using machine learning and network approaches” in Human Vaccines and Immunotherapeutics.
+    December 2023-We received a grant from the Bill and Melinda Gates Foundation to develop novel computational tools for analyzing multi-omics data in infectious diseases.
+    December 2023-We contributed to “PRMT blockade induces defective DNA replication stress response and synergizes with PARP inhibition”, which was published in Cell Reports Medicine.
+    November 2023-We contributed to “SARS-CoV2 mRNA vaccines induce greater complement activation and decreased viremia and Nef antibodies in men with HIV-1”,which was published in The Journal of Infectious Diseases.
+    November 2023-We presented our findings on the immunological response to COVID-19 vaccination at the Annual Meeting of the American Association of Immunologists.
+    October 2023-We published “Cell Type-Specific Biomarkers of Systemic Sclerosis Disease Severity Capture Cell-Intrinsic and Cell-Extrinsic Circuits” in Arthritis & Rheumatology.
+    October 2023-We contributed to “Stability and heterogeneity in the antimicrobiota reactivity of human milk-derived immunoglobulin A”, which got published in the Journal of Experimental Medicine.
+    September 2023-We were invited to speak on the role of the microbiome in human health at the Microbiome Research Symposium.
+    July 2023-We contributed to “The gut protist Tritrichomonas arnold restrains virus-mediated loss of oral tolerance by modulating dietary antigen-presenting dendritic cells”, which got published in Immunity.
+    July 2023-We presented our work on the tumor microenvironment and immunotherapy at the Annual Meeting of the American Association for Cancer Research.
+    July 2023-We were awarded an R21 grant from the National Cancer Institute (NCI) to investigate the role of the tumor microenvironment in response to immunotherapy.
+    June 2023-We published“Antibodies targeting conserved non-canonical antigens and endemic coronaviruses associate with favorable outcomes in severe COVID-19" in Cell Reports.
+    May 2023-We gave a talk on the application of network analysis in systems biology at the Bioinformatics Summit.
+    May 2023-We received a grant from the Chan Zuckerberg Initiative to study single-cell immune profiling in autoimmune diseases.
+    March 2023-We presented our research on the genetic basis of drug resistance in infectious diseases at the Infectious Diseases Conference.
+    February 2023-We contributed to “High-dimensional proteomics identifies organ injury patterns associated with outcomes in human trauma”, which got published in the The Journal of Trauma and Acute Care Surgery.
+    February 2023-We were awarded a grant from the American Heart Association to develop machine learning models for predicting cardiovascular disease risk.
+    January 2023-We gave an invited talk on the use of single-cell RNA sequencing in autoimmune diseases at the Single-Cell Genomics Conference.
+    January 2023-We received funding from the National Institutes of Health (NIH) to study the role of the microbiome in human health and disease.
+    April 2023-We contributed to “Functional, metabolic and immune alterations in inflammatory bowel disease associate with impaired bioenergetics of human mononuclear phagocytes”, which got published in the Journal of Immunology.
+    February 2023-We published “Spatiotemporal immune zonation of the human kidney”, which got published in the Science Immunology.`,
+
+    '2022': `August 2022-We were awarded a grant from the Department of Defense to develop new diagnostic tools for detecting traumatic brain injury.
+    April 2022-We received a grant from the National Institute of General Medical Sciences (NIGMS) to study the genetic basis of drug resistance in infectious diseases.
+    February 2022-We were awarded a grant from the National Science Foundation (NSF) to develop new methods for integrating multi-omics data in systems biology.
+    November 2022-We presented our latest findings on the molecular mechanisms of aging at the Aging Research Symposium.
+    November 2022-We received a grant from the European Union Horizon 2020 program to study the role of epigenetics in cancer.
+    September 2022-We were invited to speak on the impact of climate change on infectious disease transmission at the Environmental Health Conference.
+    September 2022-We gave a talk on the role of epigenetics in cancer at the Epigenetics Symposium.
+    July 2022-We presented our research on the genetic basis of neurological diseases at the Neuroscience Conference.
+    June 2022-We received funding from the National Institute on Aging (NIA) to study the molecular mechanisms of aging and longevity.
+    May 2022-We gave a talk on the role of epigenetics in cancer at the Epigenetics Symposium.
+    March 2022-We presented our findings on the integration of multi-omics data in systems biology at the Systems Biology Conference.
+    January 2022-We were invited to speak on the role of metabolism in liver disease at the Liver Disease Symposium.
+    October 2020-We were awarded a grant from the National Institute of Environmental Health Sciences (NIEHS) to study the impact of environmental pollutants on human health.
+    August 2020-We received funding from the National Institute of Neurological Disorders and Stroke (NINDS) to study the genetic basis of neurological diseases.
+    January 2020-We published “Multiple non-neutralizing antibodies offer vaccine-like protection against simian/human immunodeficiency virus infection”, which was published in Cell Reports.`,
+
+    '2021': `October 2021-We were awarded a grant from the National Institute of Environmental Health Sciences (NIEHS) to study the impact of environmental pollutants on human health.
+    September 2021-We were awarded a grant from the Wellcome Trust to study the impact of climate change on infectious disease transmission.
+    June 2021-We received funding from the National Institute on Aging (NIA) to study the molecular mechanisms of aging and longevity.
+    May 2021-We were invited to speak on the genetic basis of aging and longevity at the Aging Research Symposium.
+    March 2021-We gave a talk on the integration of multi-omics data for understanding complex diseases at the Genomics Data Science Symposium.
+    January 2021-We presented our research on the tumor microenvironment and immunotherapy at the Annual Meeting of the American Association for Cancer Research.`,
+
+    '2020': `October 2020-We were awarded a grant from the National Institute of Environmental Health Sciences (NIEHS) to study the impact of environmental pollutants on human health.
+    August 2020-We received funding from the National Institute of Neurological Disorders and Stroke (NINDS) to study the genetic basis of neurological diseases.
+    April 2020-We contributed to “Tracking Transcriptional Variation in Human Peripheral Blood Mononuclear Cells with RNA Sequencing Data”, which was published in Scientific Reports.
+    March 2020-We published “D2Refine: Automated, interactive, and multi-scale exploration of biology”, which was published in the journal Cell.
+    February 2020-We published “A supervised take on dimensionality reduction via hybrid subset selection” in Patterns.
+    January 2020-We published “Multiple non-neutralizing antibodies offer vaccine-like protection against simian/human immunodeficiency virus infection”, which was published in Cell Reports.
+    March 2020-We presented our research on the genetic basis of drug resistance in infectious diseases at the Infectious Diseases Conference.`
+
+};
+
+console.log(profile2024);
+
+let profileJSON = JSON.stringify(profile2024);
+console.log(profileJSON);
