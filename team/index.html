@@ -19,18 +19,18 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
       {% if member.is_current == true %}
         {% if member.name == "Jishnu Das" %}
           {% if jishnu_seen == false %}
-            <div style="border-top: 2px solid black;"></div>
+            <div class="team-member-separator"></div>
             {% assign jishnu_seen = true %}
           {% endif %}
         {% elsif member.name == "Isha Mehta" %}
           {% if isha_seen == false %}
-            <div style="border-top: 2px solid black;"></div>
-            {% assign zarifeh_seen = true %}
+            <div class="team-member-separator"></div>
+            {% assign isha_seen = true %}
           {% endif %}
         {% elsif member.name == "Alyson Wang" %}
           {% if alyson_seen == false %}
-            <div style="border-top: 2px solid black;"></div>
-            {% assign simar_seen = true %}
+            <div class="team-member-separator"></div>
+            {% assign alyson_seen = true %}
           {% endif %}
         {% endif %}
 
@@ -116,17 +116,22 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for a subtle effect */
+    margin-top: 20px; /* Add margin to separate from border */
   }
   .team-member img {
-    width: 200%;
+    width: 100%;
     height: auto;
     object-fit: cover;
-    /* Removed transform property */
+  }
+  .team-member-separator {
+    grid-column: 1 / -1; /* Ensures separator spans the entire width of the grid */
+    border-top: 2px solid black;
+    margin-top: 20px; /* Margin to separate from previous content */
   }
   .alumni-section {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 
 .alumni-container {
     max-width: 100%;
