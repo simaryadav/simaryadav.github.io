@@ -1,6 +1,6 @@
 ---
 title: Three-dimensional reconstruction of protein networks provides insight into human genetic disease
-description: Wang X*, Wei X*, Thijssen B*,<strong style="text-decoration: underline;">Das J*</strong>, Lipkin S, Yu H
+description: Wang X*, Wei X*, Thijssen B*,<strong clas="underline;">Das J*</strong>, Lipkin S, Yu H
 date: 2012-01-15 15:01:35 +0300
 image: '/images/Three-dimensional.webp'
 tags: [Protein_Networks]
