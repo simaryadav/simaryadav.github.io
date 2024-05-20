@@ -1,6 +1,6 @@
 ---
 title: Predicting cancer prognosis using functional genomics datasets
-description: <strong>Das J*</strong>, Gayvert K*, Yu H
+description: <strong><u>Das J*</u></strong>, Gayvert K*, Yu H
 date: 2014-11-02 15:01:35 +0300
 image: '/images/Predicting-cancer.webp'
 tags: [Gene_Regulatory_Networks]

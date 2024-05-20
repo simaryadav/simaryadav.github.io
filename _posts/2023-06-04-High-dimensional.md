@@ -1,6 +1,6 @@
 ---
 title: High dimensional proteomics identifies organ injury patterns associated with outcomes in human trauma
-description: Li SR, Moheimani H, Herzig B, Kail M, Krishnamoorthi N, Wu J, Abdelhamid S, Scioscia J, <strong>Sung E</strong>, <strong>Rosengart A</strong>, Bonaroti J, Johansson, P, Stensballe J, Neal M, <strong>Das J</strong>, Kar U, Sperry J, Billiar TR
+description: Li SR, Moheimani H, Herzig B, Kail M, Krishnamoorthi N, Wu J, Abdelhamid S, Scioscia J, <strong><u>Sung E</u></strong>, <strong><u>Rosengart A</u></strong>, Bonaroti J, Johansson, P, Stensballe J, Neal M, <strong><u>Das J</u></strong>, Kar U, Sperry J, Billiar TR
 date: 2023-06-04 15:01:35 +0300
 image: '/images/High-dimensional.webp'
 tags: [Protein_Networks]

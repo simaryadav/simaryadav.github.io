@@ -1,6 +1,6 @@
 ---
 title: A Supervised Take on Dimensionality Reduction via Hybrid Subset Selection
-description: <strong>Rahimikollu J</strong>, <strong>Das J✝</strong>
+description: <strong><u>Rahimikollu J</u></strong>, <strong>Das J✝</strong>
 date: 2022-08-12 15:01:35 +0300
 image: '/images/A-Supervised.webp'
 tags: [Gene_Regulatory_Networks,Machine_Learning]

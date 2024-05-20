@@ -1,6 +1,6 @@
 ---
 title: Antibody Fc-glycosylation discriminates latent and active tuberculosis
-description: Lu L*, <strong>Das J*</strong>, Grace P, Fortune S, Restrepo B, Alter G
+description: Lu L*, <strong><u>Das J*</u></strong>, Grace P, Fortune S, Restrepo B, Alter G
 date: 2020-02-20 15:01:35 +0300
 image: '/images/Antibody-Fc.webp'
 tags: [Antibodyomics]

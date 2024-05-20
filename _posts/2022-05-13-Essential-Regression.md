@@ -1,6 +1,6 @@
 ---
 title: Essential Regression- A generalizable framework for inferring causal latent factors from multi-omic datasets
-description:  <strong>Bing X</strong>, Lovelace T, Bunea F, Wegkamp M, Kasturi S.P, Singh H✝, Benos P.V✝, <strong>Das J✝</strong>
+description:  <strong><u>Bing X</u></strong>, Lovelace T, Bunea F, Wegkamp M, Kasturi S.P, Singh H✝, Benos P.V✝, <strong><u>Das J✝</u></strong>
 date: 2022-05-13 15:01:35 +0300
 image: '/images/Essential-Regression.webp'
 tags: [Machine_Learning]

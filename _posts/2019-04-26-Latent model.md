@@ -1,6 +1,6 @@
 ---
 title: Latent model-based clustering for biological discovery
-description: Bin X, Bunea F✝, Royer M, <strong>Das J✝</strong>
+description: Bin X, Bunea F✝, Royer M, <strong><u>Das J✝</u></strong>
 date: 2019-04-26 15:01:35 +0300
 image: '/images/latent-based.jpeg'
 tags: [Machine_Learning]

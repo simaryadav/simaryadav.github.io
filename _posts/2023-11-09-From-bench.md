@@ -1,6 +1,6 @@
 ---
 title: From bench to bedside via bytes- multi-omic immunoprofiling and integration using machine learning and network approaches
-description:  <strong>Xiao H*</strong>, <strong>Rosen A*</strong>, <strong>Chhibbar P*</strong>, Moise L, <strong>Das J✝</strong>
+description:  <strong><u>Xiao H*</u></strong>,<strong><u>Rosen A*</u></strong>, <strong><u>Chhibbar P*</u></strong>, Moise L, <strong><u>Das J✝</u></strong>
 date: 2023-11-09 15:01:35 +0300
 image: '/images/From-bench.webp'
 tags: [Protein_Networks,Machine_Learning]

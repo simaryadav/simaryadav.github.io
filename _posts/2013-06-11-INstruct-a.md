@@ -1,6 +1,6 @@
 ---
 title: INstruct - a database of high-quality 3D structurally resolved protein interactome networks
-description: Meyer M*, <strong>Das J*</strong>, Wang X*, Yu H
+description: Meyer M*, <strong><u>Das J*</u></strong>, Wang X*, Yu H
 date: 2013-06-11 15:01:35 +0300
 image: '/images/INstruct-a.webp'
 tags: [Protein_Networks]

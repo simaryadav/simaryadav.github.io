@@ -1,6 +1,6 @@
 ---
 title: Phosphoproteomics reveals distinct modes of Mec1/ATR signaling during DNA replication
-description: de Oliviera F, Kim D, Cussiol J,<strong> Das J</strong>, Jeong M, Doerfler L, Schmidt K, Yu H, Smolka M
+description: de Oliviera F, Kim D, Cussiol J,<strong><u>Das J</u></strong>, Jeong M, Doerfler L, Schmidt K, Yu H, Smolka M
 date: 2015-11-25 15:01:35 +0300
 image: '/images/Phosphoproteomics-reveals.webp'
 tags: [Gene_Regulatory_Networks]
