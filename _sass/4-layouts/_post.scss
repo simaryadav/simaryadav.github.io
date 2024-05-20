@@ -1,8 +1,10 @@
 .container {
- max-width: fit-content;
- margin: 0 auto;
- width: -webkit-fill-available;
-
+  max-width: fit-content;
+  margin: 0 auto;
+  width: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .page-section-head {
@@ -26,8 +28,6 @@
   transition: transform .3s ease, opacity .3s ease;
 }
 
-
-
 .page-title {
   font-size: 32px;
   margin-bottom: 16px;
@@ -36,7 +36,7 @@
 .page-description {
   font-size: 18px;
   margin-bottom: 0;
-  font-weight : 600;
+  font-weight: 600;
 }
 
 .post-table {
@@ -45,7 +45,6 @@
   margin: auto;
   gap: 30px;
 }
-
 
 .text {
   white-space: nowrap; /* Initially set to nowrap */
@@ -56,7 +55,6 @@
 .text.wrap {
   white-space: normal; /* Apply word wrap */
 }
-
 
 .post {
   border: 1px solid var(--border-color);
@@ -80,13 +78,11 @@
   overflow: hidden;
   background: var(--background-alt-color);
   transition: transform .3s ease;
- 
 }
 
 .underline {
   text-decoration: underline;
 }
-
 
 .post-info {
   padding: 20px;
@@ -109,10 +105,12 @@
 }
 
 .legends {
+  align-self: flex-end;
   text-align: right;
+  margin-top: 20px;
 }
 
-.leg{
+.leg {
   margin: 5px 0;
   font-size: xx-small;
 }
@@ -133,29 +131,30 @@
 
 .clamp {
   display: -webkit-box;
-  -webkit-box-orient: vertical; 
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  -webkit-line-clamp: 3; 
-  }
- 
-.clamp.open { -webkit-line-clamp: initial; }
-
-.explore-tags {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 56px;
-    flex-direction: column;
-    align-content: space-around;
-    align-items: center;
+  -webkit-line-clamp: 3;
 }
 
+.clamp.open {
+  -webkit-line-clamp: initial;
+}
+
+.explore-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+  flex-direction: column;
+  align-content: space-around;
+  align-items: center;
+}
 
 .tag-button:hover {
   background-color: var(--primary-color);
   color: #fff;
 }
 
-.show-more-btn{
+.show-more-btn {
   padding: 6px 8px;
   margin-right: 8px;
   margin-bottom: 8px;
