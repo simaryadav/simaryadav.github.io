@@ -89,7 +89,7 @@ blog:
 #-------------------------------
 # Testimonials Section Settings
 testimonials:
-  enable: true
+  enable: False
   testimonials_intro: Some famous quotes of our lab
   testimonials_title: See what our lab members say...
   testimonials_info: Join us for <b>more</b> famous lab quotes and stories
