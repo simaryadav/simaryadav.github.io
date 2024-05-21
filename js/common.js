@@ -96,14 +96,14 @@ document.addEventListener("DOMContentLoaded", function () {
       perMove: 1,
       gap: 32,
       arrows: false,
-      drag: false,
+      drag: true, // Enable dragging
       pagination: false,
       type: 'loop',
       autoScroll: {
         autoStart: true,
         speed: 0.8,
-        pauseOnHover: false,
-        pauseOnFocus: false
+        pauseOnHover: true, // Pause on hover for better UX
+        pauseOnFocus: true // Pause on focus for better UX
       },
       breakpoints: {
         1024: {
@@ -115,6 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }).mount(window.splide.Extensions);
   }
+  
 
   /* ================================================================
   // Stop Animations During Window Resizing and Switching Theme Modes
