@@ -11,24 +11,33 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   </div>
 
   <div class="team-grid">
+    {% assign jishnu_seen = false %}
     {% assign zarifeh_seen = false %}
     {% assign simar_seen = false %}
     {% assign hanxi_seen = false %}
 
+ 
     {% for member in site.data.team %}
       {% if member.is_current == true %}
-        {% if member.name == "Zarifeh Heidari Rarani" and zarifeh_seen == false %}
-          <div class="team-member-separator"></div>
-          <h2 class="team-title">Postdocs</h2>
-          {% assign zarifeh_seen = true %}
-        {% elsif member.name == "Hanxi Xiao" and hanxi_seen == false %}
-          <div class="team-member-separator"></div>
-          <h2 class="team-title">Grad Students</h2>
-          {% assign hanxi_seen = true %}
-        {% elsif member.name == "Simar Yadav" and simar_seen == false %}
-          <div class="team-member-separator"></div>
-          <h2 class="team-title">Interns And Lab Professionals</h2>
-          {% assign simar_seen = true %}
+        {% if member.name == "Jishnu Das" %}
+        {% elsif member.name == "Zarifeh Heidari Rarani" %}
+          {% if zarifeh_seen == false %}
+            <div class="team-member-separator"></div>
+            <h2 style="text-align: center;line-break: anywhere;">Postdocs</h2><br>
+            {% assign isha_seen = true %}
+          {% endif %}
+          {% elsif member.name == "Hanxi Xiao" %}
+          {% if hanxi_seen == false %}
+            <div class="team-member-separator"></div>
+            <h2 style="text-align: center;line-break: anywhere;">Grad Students</h2><br>
+            {% assign hanxi_seen = true %}
+          {% endif %}
+        {% elsif member.name == "Simar Yadav" %}
+          {% if simar_seen == false %}
+            <div class="team-member-separator"></div>
+            <h2 style="text-align: center;line-break: anywhere;">Interns And Lab Proffesionals</h2>
+            {% assign simar_seen = true %}
+          {% endif %}
         {% endif %}
 
         <div class="team-member">
@@ -49,51 +58,56 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
 </div>
 
 <div class="alumni-section">
-  <h2 style="text-align: center;" class="section-heading">Alumni</h2>
-  <div class="alumni-container">
-    <!-- Rotation Students Section -->
-    <div class="alumni-subsection">
-      <h3 class="subsection-heading">Rotation Students</h3>
-      <div class="subsection-content">
-        {% for member in site.data.team %}
-          {% if member.is_current == false and member.is_rotation == true %}
-            <p>{{ member.name }} - {{ member.position }}</p>
-          {% endif %}
-        {% endfor %}
+    <h2 style="text-align: center;" class="section-heading">Alumni</h2>
+    <div class="alumni-container">
+      
+  
+      <!-- Rotation Students Section -->
+      <div class="alumni-subsection">
+        <h3 class="subsection-heading">Rotation Students</h3>
+        <div class="subsection-content">
+          {% for member in site.data.team %}
+            {% if member.is_current == false and member.is_rotation == true %}
+              <p>{{ member.name }} - {{ member.position }}</p>
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
-    </div>
-
-    <!-- Interns Section -->
-    <div class="alumni-subsection">
-      <h3 class="subsection-heading">Interns</h3>
-      <div class="subsection-content">
-        {% for member in site.data.team %}
-          {% if member.is_current == false and member.is_intern == true %}
-            <p>{{ member.name }} - {{ member.position }}</p>
-          {% endif %}
-        {% endfor %}
+  
+      <!-- Interns Section -->
+      <div class="alumni-subsection">
+        <h3 class="subsection-heading">Interns</h3>
+        <div class="subsection-content">
+          {% for member in site.data.team %}
+            {% if member.is_current == false and member.is_intern == true %}
+              <p>{{ member.name }} - {{ member.position }}</p>
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
-    </div>
-
-    <!-- Past Lab Members Section -->
-    <div class="alumni-subsection">
-      <h3 class="subsection-heading">Past Lab Members</h3>
-      <div class="subsection-content">
-        {% for member in site.data.team %}
-          {% if member.is_current == false and member.is_rotation != true and member.is_intern != true %}
-            <p>{{ member.name }} - {{ member.position }}</p>
-          {% endif %}
-        {% endfor %}
+  
+      <!-- Past Lab Members Section -->
+      <div class="alumni-subsection">
+        <h3 class="subsection-heading">Past Lab Members</h3>
+        <div class="subsection-content">
+          {% for member in site.data.team %}
+            {% if member.is_current == false and member.is_rotation != true and member.is_intern != true %}
+              <p>{{ member.name }} - {{ member.position }}</p>
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>
-</div>
+  
 
 {% include section-faq.html %}
 {% include section-subscribe.html %}
 
+
+
 <style>
-  .team-container {
+ .team-container {
     margin-top: 40px;
     margin-bottom: 40px;
   }
