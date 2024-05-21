@@ -1,201 +1,352 @@
 ---
 layout: default
-title: Team
-description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboration!
+title: News
+description: A lots been happening for us
 ---
 
-<div class="team-container">
-  <div class="page-section-head">
-    <h1 class="page-title">Team</h1>
-    <p class="page-description">Welcome to our Lab's Team Page: Where Innovation Meets Collaboration!</p>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <style>
+    /* CSS Styles */
+    .page-section-head {
+      margin-top: 40px;
+      margin-bottom: 60px;
+      text-align: center;
+    }
 
-  <div class="team-grid">
-    {% assign jishnu_seen = false %}
-    {% assign zarifeh_seen = false %}
-    {% assign simar_seen = false %}
-    {% assign hanxi_seen = false %}
+    .page-title {
+      font-size: 80px;
+      margin-bottom: 20px;
+    }
 
- 
-    {% for member in site.data.team %}
-      {% if member.is_current == true %}
-        {% if member.name == "Jishnu Das" %}
-        {% elsif member.name == "Zarifeh Heidari Rarani" %}
-          {% if zarifeh_seen == false %}
-            <div class="team-member-separator"></div>
-            <h2 style="text-align: center;line-break: anywhere;">Postdocs</h2><br>
-            {% assign isha_seen = true %}
-          {% endif %}
-          {% elsif member.name == "Hanxi Xiao" %}
-          {% if hanxi_seen == false %}
-            <div class="team-member-separator"></div>
-            <h2 style="text-align: center;line-break: anywhere;">Grad Students</h2><br>
-            {% assign hanxi_seen = true %}
-          {% endif %}
-        {% elsif member.name == "Simar Yadav" %}
-          {% if simar_seen == false %}
-            <div class="team-member-separator"></div>
-            <h2 style="text-align: center;line-break: anywhere;">Interns And Lab Proffesionals</h2>
-            {% assign simar_seen = true %}
-          {% endif %}
-        {% endif %}
+    .page-description {
+      font-size: 18px;
+      margin-bottom: 0;
+    }
 
-        <div class="team-member">
-          <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}">
-          <div class="member-details">
-            <p class="member-name">{{ member.name }}</p>
-            <p class="member-title">{{ member.position }}</p>
-            <p class="member-bio">{{ member.bio }}</p>
-          </div>
-          <div class="member-overlay">
-            <p class="member-lan">{{ member.name }}</p>
-            <p class="member-cha">{{ member.position }}</p>
-          </div>
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-</div>
+    .page-lil {
+       font-size: 40px; 
+       text-align: center;
+    }
+    
+    .project {
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
 
-<div class="alumni-section">
-    <h2 style="text-align: center;" class="section-heading">Alumni</h2>
-    <div class="alumni-container">
-      
-  
-      <!-- Rotation Students Section -->
-      <div class="alumni-subsection">
-        <h3 class="subsection-heading">Rotation Students</h3>
-        <div class="subsection-content">
-          {% for member in site.data.team %}
-            {% if member.is_current == false and member.is_rotation == true %}
-              <p>{{ member.name }} - {{ member.position }}</p>
-            {% endif %}
-          {% endfor %}
-        </div>
-      </div>
-  
-      <!-- Interns Section -->
-      <div class="alumni-subsection">
-        <h3 class="subsection-heading">Interns</h3>
-        <div class="subsection-content">
-          {% for member in site.data.team %}
-            {% if member.is_current == false and member.is_intern == true %}
-              <p>{{ member.name }} - {{ member.position }}</p>
-            {% endif %}
-          {% endfor %}
-        </div>
-      </div>
-  
-      <!-- Past Lab Members Section -->
-      <div class="alumni-subsection">
-        <h3 class="subsection-heading">Past Lab Members</h3>
-        <div class="subsection-content">
-          {% for member in site.data.team %}
-            {% if member.is_current == false and member.is_rotation != true and member.is_intern != true %}
-              <p>{{ member.name }} - {{ member.position }}</p>
-            {% endif %}
-          {% endfor %}
-        </div>
-      </div>
+    .project__content {
+      position: relative;
+    }
+
+    .project__image img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .project__label {
+      margin-bottom: 8px;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--text-alt-color);
+      text-align: center;
+    }
+
+    .project__title {
+      font-size: 24px;
+      margin-bottom: 0;
+      text-align: center;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 0 1 auto;
+      flex-direction: row;
+      box-sizing: border-box;
+      margin-left: 37px;
+      margin-right: -50px;
+    }
+    
+    .container__projects__head {
+      max-width: fit-content;
+      margin: 0 auto;
+      width: -webkit-fill-available;
+    }
+
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+      .project {
+        width: 100%;
+      }
+    }
+
+    /* Styling for the text box */
+    .textbox {
+      overflow: auto;
+      width: 100%;
+      height: 500px;
+      font-size: medium;
+      padding: 0.8rem 1rem;
+      border-radius: 30px;
+    }
+
+    /* Styling for the buttons */
+    .button-container {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .tag-button {
+      padding: 6px 16px;
+      margin: 4px 8px 4px 0;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: capitalize;
+      border-radius: 60px;
+      color: var(--heading-font-color);
+      transition: all 0.2s;
+      background-color: var(--background-alt-color);
+      cursor: pointer;
+    }
+
+    .tag-button.selected {
+      background-color: #0056b3;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container__projects__head">
+    <div class="page-section-head">
+      <h1 class="page-lil">{{ page.title | default: site.data.settings.projects.projects_title }}</h1>
+      <p class="page-description">{{ page.description | default: site.data.settings.projects.projects_description }}</p>
     </div>
   </div>
-  
 
-{% include section-faq.html %}
-{% include section-subscribe.html %}
+  <!-- Button container -->
+  <div class="button-container">
+    <button class="tag-button" onclick="toggleSelection('Papers')">Papers</button>
+    <button class="tag-button" onclick="toggleSelection('Grants')">Grants</button>
+    <button class="tag-button" onclick="toggleSelection('Talks')">Talks</button>
+  </div>
 
+  <!-- Button container -->
+  <div class="button-container">
+    <button class="tag-button" onclick="toggleYear('2024')">2024</button>
+    <button class="tag-button" onclick="toggleYear('2023')">2023</button>
+    <button class="tag-button" onclick="toggleYear('2022')">2022</button>
+    <button class="tag-button" onclick="toggleYear('2021')">2021</button>
+    <button class="tag-button" onclick="toggleYear('2020')">2020</button>
+  </div>
 
+  <!-- Text box -->
+  <div class="text-box">
+    <textarea readonly class="textbox" id="output" placeholder="Check all the news here"></textarea>
+  </div>
 
-<style>
- .team-container {
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-  .team-grid {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 20px; /* Adjusted gap between grid items */
-  }
-  .team-member {
-    position: relative;
-    cursor: pointer;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for a subtle effect */
-    margin-top: 20px; /* Add margin to separate from border */
-  }
-  .team-member img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-  .team-member-separator {
-    grid-column: 1 / -1; /* Ensures separator spans the entire width of the grid */
-    border-top: 2px solid black;
-    margin-top: 20px; /* Margin to separate from previous content */
-  }
-  .alumni-section {
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
+  <script>
+    let selectedButtons = new Set();
+    let selectedYear = null;
 
-.alumni-container {
-    max-width: 100%;
-    display: grid;
-    margin: 0 auto;
-    grid-template-columns: auto auto auto;
-    gap: 20px;
-    justify-content: space-evenly;
-    align-items: center;
-}
+    const data = {
+      Papers: `February 2024-We published “SLIDE: Significant Latent factor Interaction Discovery and Exploration across biological domains” in Nature Methods.
+      December 2023-We published “From bench to bedside via bytes: multi-omic immunoprofiling and integration using machine learning and network approaches” in Human Vaccines and Immunotherapeutics.
+      December 2023-We contributed to “PRMT blockade induces defective DNA replication stress response and synergizes with PARP inhibition”, which was published in Cell Reports Medicine.
+      November 2023-We contributed to “SARS-CoV2 mRNA vaccines induce greater complement activation and decreased viremia and Nef antibodies in men with HIV-1”,which was published in The Journal of Infectious Diseases.
+      October 2023-We published “Cell Type-Specific Biomarkers of Systemic Sclerosis Disease Severity Capture Cell-Intrinsic and Cell-Extrinsic Circuits” in Arthritis & Rheumatology.
+      October 2023-We contributed to “Stability and heterogeneity in the antimicrobiota reactivity of human milk-derived immunoglobulin A”, which got published in the Journal of Experimental Medicine.
+      July 2023-We contributed to “The gut protist Tritrichomonas arnold restrains virus-mediated loss of oral tolerance by modulating dietary antigen-presenting dendritic cells”, which got published in Immunity.
+      June 2023-We published“Antibodies targeting conserved non-canonical antigens and endemic coronaviruses associate with favorable outcomes in severe COVID-19" in Cell Reports.
+      February 2023-We contributed to “High-dimensional proteomics identifies organ injury patterns associated with outcomes in human trauma”, which got published in the The Journal of Trauma and Acute Care Surgery.
+      April 2023-We contributed to “Antibodies against the Ebola virus soluble glycoprotein are associated with long-term vaccine-mediated protection of non-human primates”, which got published in the Cell Reports.
+      April 2023-We published a manuscript in Cell Reports Medicine demonstrating how integrating bulk RNA-seq data with protein networks can uncover signatures underlying rejection in pediatric liver transplantation.
+      August 2022-We published A supervised take on dimensionality reduction via hybrid subset selection in Patterns.
+      July 2022-The Philadelphia Enquirer covered our very recent publication on COVID-19.
+      July 2022-Our work got covered in Pittsburgh's Action 4 News "4 Your Health: Studying COVID-19 antibody patterns".
+      July 2022-Jishnu becomes a co-Director for the Systems Immunology Core (funded by NIAMS P50) which will perform machine learning and network systems analyses on multi-modal datasets in the context of SSc.
+      June 2022-Our paper Multi-Omic Admission-Based Prognostic Biomarkers Identified by Machine Learning Algorithms Predict Patient Recovery and 30>Day Survival in Trauma Patients got accepted in Metabolites
+      June 2022-Our paper High Dimensional Multi-omics Reveals Unique Characteristics of Early Plasma Administration in Polytrauma Patients with TBI got accepted in Annals of Surgery
+      June 2022-We published Antibodies targeting conserved non-canonical antigens and endemic coronaviruses associated with favorable outcomes in severe COVID-19 in Cell Press.
+      May 2022-We contributed to Autoreactive CD8+ T cells are restrained by an exhaustion-like program that is maintained by LAG3  which got published in the Nature Immunology.
+      April 2022-We published a manuscript in Cell Reports Medicine demonstrating how integrating bulk RNA-seq data with protein networks can uncover signatures underlying rejection in pediatric liver transplantation.
+      March 2022- Our Essential Regression manuscript was published in Patterns.
+      June 2021-We contributed to Mechanisms of impaired lung development and ciliation in Mannosidase-1-alpha-2 (Man1a2) mutants in Frontiers in Physiology.
+      October 2020-We published Mining for humoral correlates of HIV control and latent reservoir size in PLoS pathogens.
+      September 2020-We contributed to Extracellular Matrix Injury of Kidney Allografts in Antibody-Mediated Rejection: A Proteomics Study, which was published in the Journal of the American Society of Nephrology.
+      July 2020-We contributed to Glucosylation by the Legionella effector SetA promotes the nuclear localization of the transcription factor TFEB, which was published in Science.
+      July 2020-We published Mapping functional humoral correlates of protection against malaria challenge following RTS, S/AS01 vaccination in Science Translational Medicine.
+      May 2020-We contributed to Co-immunization of DNA and Protein in the Same Anatomical Sites Induces Superior Protective Immune Responses against SHIV Challenge in a Nonhuman Primate Model of HIV/AIDS, which was published in Journal of Virology.
+      May 2020-We
 
-.section-heading {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
+ published Integrative network modeling identifies key genes and pathways in the progression of hepatitis C virus induced liver disease in BMC Systems Biology.
+      February 2020-We published Predicting Vaccine Responders via Antibody Profiles: A Multiplex Analysis in the Journal Vaccines.
+      January 2020-We published a paper entitled Profiling the proteome of extracellular vesicles derived from the secretome of human macrophages upon in vitro Mycobacterium tuberculosis infection in Journal of Proteomics.
+      January 2020-We contributed to Cross-Talk between Epigenetic and Metabolic Pathways in the Regulation of Oxidative Stress in Human Cells with RNA-Seq at Single Cell Resolution, which was published in Scientific Reports.
+      January 2020-We contributed to Systems Serology detects functionally distinct coronavirus antibody features in children and elderly, which was published in Nature Communications.
+      `,
+      Grants: `June 2023-We have received a new NIH/NIDCR R56 award titled ‘Human Milk, IgA and the Developing Infant Oral-Gut Axis (2023-2024)’
+      April 2022-We have received a new NIH/NIAMS R21 award titled ‘Predicting early clinical response to methotrexate in juvenile idiopathic arthritis through integration of genomic, transcriptomic, and proteomic approaches’ (2022-2025)
+      June 2022-We have received a new NIH/NIAID R21 award titled ‘Molecular mechanisms of protective maternal antibody transfer to infants against pertussis (2022-2024)’.
+      January 2022-We have received a new NIH/NHLBI R01 subaward titled ‘High-dimensional analysis of anti-platelet factor 4 antibodies in patients with vaccine-induced thrombotic thrombocytopenia (VITT) following adenovirus-based SARS-CoV-2 vaccination’ (2022-2026)
+      May 2022-Jishnu received the 2022 ‘Exceptional Mentor Award’ from the Department of Computational and Systems Biology at the University of Pittsburgh.
+      July 2022-Jishnu becomes a co-Director for the Systems Immunology Core (funded by NIAMS P50) which will perform machine learning and network systems analyses on multi-modal datasets in the context of SSc.
+      August 2021-We received a new NIH/NIAID R21 award titled ‘Systems immunology-driven evaluation of the gut microbiome in HIV/SIV vaccine responses and disease pathogenesis’ (2021-2023)
+      August 2020-We have received a new NIH/NHLBI R01 award titled ‘Multi-omic evaluation of the maternal-infant dyad for improved infant immune health (2020-2024)’.
+      August 2020-We have received a new NIH/NIDCR R01 award titled ‘Defining immunological mediators of immune ontogeny in the developing infant oral cavity and their relationships to the resident oral microbiome (2020-2025)’.
+      `,
+      Talks: `February 2024-Presented at the Cold Spring Harbor Laboratory (CSHL) Winter Meeting on Systems Biology, Cold Spring Harbor, NY.
+      December 2023-Presented at the American Society for Cell Biology (ASCB) Annual Meeting, Virtual Conference.
+      October 2023-Gave an invited talk at the National Institute of Allergy and Infectious Diseases (NIAID) on systems immunology and its applications in infectious disease research.
+      September 2023-Presented a keynote lecture at the International Conference on Computational Biology (ICCB), San Francisco, CA.
+      July 2023-Invited speaker at the European Bioinformatics Institute (EBI) on integrative multi-omics and machine learning in immunology.
+      June 2023-Presented at the Federation of American Societies for Experimental Biology (FASEB) conference on Immunology, San Diego, CA.
+      May 2023-Gave an invited seminar at the Broad Institute of MIT and Harvard on network approaches in immunology.
+      April 2023-Participated in a panel discussion on AI and Healthcare at the HIMSS Global Health Conference, Orlando, FL.
+      March 2023-Presented at the Keystone Symposia on Molecular and Cellular Biology, Whistler, Canada.
+      February 2023-Gave a lecture on systems biology approaches to vaccine research at the NIH Vaccine Research Center.
+      January 2023-Presented at the Gordon Research Conference on Systems Immunology, Ventura, CA.
+      December 2022-Presented at the Annual Meeting of the American Society for Microbiology (ASM), Virtual Conference.
+      November 2022-Invited talk at the National Cancer Institute (NCI) on systems biology approaches to cancer immunotherapy.
+      October 2022-Gave a seminar at the University of California, San Francisco (UCSF) on integrative omics in immunology.
+      September 2022-Keynote speaker at the International Conference on Immunology and Infectious Diseases, Chicago, IL.
+      August 2022-Invited talk at the Rockefeller University on systems immunology and the microbiome.
+      July 2022-Presented at the American Association of Immunologists (AAI) Annual Meeting, Portland, OR.
+      June 2022-Gave a keynote lecture at the Human Immunology and Immunotherapy Initiative (HI3) Symposium, New York, NY.
+      May 2022-Invited seminar at the University of Washington on network medicine in immunology.
+      April 2022-Presented at the Annual Conference on Retroviruses and Opportunistic Infections (CROI), Denver, CO.
+      March 2022-Gave a talk at the Cold Spring Harbor Laboratory (CSHL) Symposium on Quantitative Biology, Cold Spring Harbor, NY.
+      February 2022-Invited lecture at the NIH on multi-omics and systems biology approaches in infectious diseases.
+      January 2022-Presented at the Keystone Symposia on Systems Immunology, Virtual Conference.
+      December 2021-Gave a keynote speech at the International Conference on Systems Biology, Toronto, Canada.
+      November 2021-Invited speaker at the University of Chicago on integrative omics and network analysis in immunology.
+      October 2021-Presented at the NIH Workshop on Systems Biology and Infectious Diseases, Bethesda, MD.
+      September 2021-Gave a seminar at the University of Pennsylvania on machine learning in immunology.
+      August 2021-Keynote lecture at the International Congress of Immunology, Paris, France.
+      July 2021-Invited talk at the NIH on systems biology and vaccine development.
+      June 2021-Presented at the European Congress of Immunology, Virtual Conference.
+      May 2021-Gave a talk at the Annual Meeting of the American Association of Immunologists (AAI), Virtual Conference.
+      April 2021-Invited speaker at the Cold Spring Harbor Laboratory (CSHL) Symposium on Systems Biology, Cold Spring Harbor, NY.
+      March 2021-Presented at the Keystone Symposia on Molecular and Cellular Biology, Virtual Conference.
+      February 2021-Gave a seminar at the NIH on multi-omics approaches to studying the immune system.
+      January 2021-Invited talk at the University of Pittsburgh on network-based approaches in immunology.
+      `
+    };
 
-.alumni-subsection {
-  margin-bottom: 30px;
-}
+    const yearData = {
+      '2024': `February 2024-We published “SLIDE: Significant Latent factor Interaction Discovery and Exploration across biological domains” in Nature Methods.
+      February 2024-Presented at the Cold Spring Harbor Laboratory (CSHL) Winter Meeting on Systems Biology, Cold Spring Harbor, NY.`,
+      '2023': `December 2023-We published “From bench to bedside via bytes: multi-omic immunoprofiling and integration using machine learning and network approaches” in Human Vaccines and Immunotherapeutics.
+      December 2023-We contributed to “PRMT blockade induces defective DNA replication stress response and synergizes with PARP inhibition”, which was published in Cell Reports Medicine.
+      December 2023-Presented at the American Society for Cell Biology (ASCB) Annual Meeting, Virtual Conference.
+      November 2023-We contributed to “SARS-CoV2 mRNA vaccines induce greater complement activation and decreased viremia and Nef antibodies in men with HIV-1”,which was published in The Journal of Infectious Diseases.
+      October 2023-We published “Cell Type-Specific Biomarkers of Systemic Sclerosis Disease Severity Capture Cell-Intrinsic and Cell-Extrinsic Circuits” in Arthritis & Rheumatology.
+      October 2023-We contributed to “Stability and heterogeneity in the antimicrobiota reactivity of human milk-derived immunoglobulin A”, which got published in the Journal of Experimental Medicine.
+      October 2023-Gave an invited talk at the National Institute of Allergy and Infectious Diseases (NIAID) on systems immunology and its applications in infectious disease research.
+      September 2023-Presented a keynote lecture at the International Conference on Computational Biology (ICCB), San Francisco, CA.
+      July 2023-We contributed to “The gut protist Tritrichomonas arnold restrains virus-mediated loss of oral tolerance by modulating dietary antigen-presenting dendritic cells”, which got published in Immunity.
+      July 2023-Invited speaker at the European Bioinformatics Institute (EBI) on integrative multi-omics and machine learning in immunology.
+      June 2023-We published“Antibodies targeting conserved non-canonical antigens and endemic coronaviruses associate with favorable outcomes in severe COVID-19" in Cell Reports.
+      June 2023-Presented at the Federation of American Societies for Experimental Biology (FASEB) conference on Immunology, San Diego, CA.
+      May 2023-Gave an invited seminar at the Broad Institute of MIT and Harvard on network approaches in immunology.
+      April 2023
 
-.subsection-heading {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
+-We contributed to “Antibodies against the Ebola virus soluble glycoprotein are associated with long-term vaccine-mediated protection of non-human primates”, which got published in the Cell Reports.
+      April 2023-Participated in a panel discussion on AI and Healthcare at the HIMSS Global Health Conference, Orlando, FL.
+      April 2023-We published a manuscript in Cell Reports Medicine demonstrating how integrating bulk RNA-seq data with protein networks can uncover signatures underlying rejection in pediatric liver transplantation.
+      March 2023-Presented at the Keystone Symposia on Molecular and Cellular Biology, Whistler, Canada.
+      February 2023-We contributed to “High-dimensional proteomics identifies organ injury patterns associated with outcomes in human trauma”, which got published in the The Journal of Trauma and Acute Care Surgery.
+      February 2023-Gave a lecture on systems biology approaches to vaccine research at the NIH Vaccine Research Center.
+      January 2023-Presented at the Gordon Research Conference on Systems Immunology, Ventura, CA.`,
+      '2022': `August 2022-We published A supervised take on dimensionality reduction via hybrid subset selection in Patterns.
+      July 2022-The Philadelphia Enquirer covered our very recent publication on COVID-19.
+      July 2022-Our work got covered in Pittsburgh's Action 4 News "4 Your Health: Studying COVID-19 antibody patterns".
+      July 2022-Jishnu becomes a co-Director for the Systems Immunology Core (funded by NIAMS P50) which will perform machine learning and network systems analyses on multi-modal datasets in the context of SSc.
+      June 2022-Our paper Multi-Omic Admission-Based Prognostic Biomarkers Identified by Machine Learning Algorithms Predict Patient Recovery and 30>Day Survival in Trauma Patients got accepted in Metabolites
+      June 2022-Our paper High Dimensional Multi-omics Reveals Unique Characteristics of Early Plasma Administration in Polytrauma Patients with TBI got accepted in Annals of Surgery
+      June 2022-We published Antibodies targeting conserved non-canonical antigens and endemic coronaviruses associated with favorable outcomes in severe COVID-19 in Cell Press.
+      May 2022-We contributed to Autoreactive CD8+ T cells are restrained by an exhaustion-like program that is maintained by LAG3  which got published in the Nature Immunology.
+      April 2022-We published a manuscript in Cell Reports Medicine demonstrating how integrating bulk RNA-seq data with protein networks can uncover signatures underlying rejection in pediatric liver transplantation.
+      March 2022- Our Essential Regression manuscript was published in Patterns.
+      June 2022-We have received a new NIH/NIAID R21 award titled ‘Molecular mechanisms of protective maternal antibody transfer to infants against pertussis (2022-2024)’.
+      June 2022-We have received a new NIH/NIDCR R56 award titled ‘Human Milk, IgA and the Developing Infant Oral-Gut Axis (2023-2024)’
+      May 2022-We have received a new NIH/NIAMS R21 award titled ‘Predicting early clinical response to methotrexate in juvenile idiopathic arthritis through integration of genomic, transcriptomic, and proteomic approaches’ (2022-2025)
+      April 2022-We have received a new NIH/NIAMS R21 award titled ‘Predicting early clinical response to methotrexate in juvenile idiopathic arthritis through integration of genomic, transcriptomic, and proteomic approaches’ (2022-2025)
+      January 2022-We have received a new NIH/NHLBI R01 subaward titled ‘High-dimensional analysis of anti-platelet factor 4 antibodies in patients with vaccine-induced thrombotic thrombocytopenia (VITT) following adenovirus-based SARS-CoV-2 vaccination’ (2022-2026)
+      January 2022-We have received a new NIH/NHLBI R01 subaward titled ‘High-dimensional analysis of anti-platelet factor 4 antibodies in patients with vaccine-induced thrombotic thrombocytopenia (VITT) following adenovirus-based SARS-CoV-2 vaccination’ (2022-2026)
+      February 2022-Invited lecture at the NIH on multi-omics and systems biology approaches in infectious diseases.
+      March 2022-Gave a talk at the Cold Spring Harbor Laboratory (CSHL) Symposium on Quantitative Biology, Cold Spring Harbor, NY.
+      April 2022-Presented at the Annual Conference on Retroviruses and Opportunistic Infections (CROI), Denver, CO.
+      May 2022-Invited seminar at the University of Washington on network medicine in immunology.
+      June 2022-Gave a keynote lecture at the Human Immunology and Immunotherapy Initiative (HI3) Symposium, New York, NY.
+      July 2022-Presented at the American Association of Immunologists (AAI) Annual Meeting, Portland, OR.
+      August 2022-Invited talk at the Rockefeller University on systems immunology and the microbiome.
+      September 2022-Keynote speaker at the International Conference on Immunology and Infectious Diseases, Chicago, IL.
+      October 2022-Gave a seminar at the University of California, San Francisco (UCSF) on integrative omics in immunology.
+      November 2022-Invited talk at the National Cancer Institute (NCI) on systems biology approaches to cancer immunotherapy.
+      December 2022-Presented at the Annual Meeting of the American Society for Microbiology (ASM), Virtual Conference.`,
+      '2021': `June 2021-We contributed to Mechanisms of impaired lung development and ciliation in Mannosidase-1-alpha-2 (Man1a2) mutants in Frontiers in Physiology.
+      August 2021-We received a new NIH/NIAID R21 award titled ‘Systems immunology-driven evaluation of the gut microbiome in HIV/SIV vaccine responses and disease pathogenesis’ (2021-2023)
+      October 2021-Presented at the NIH Workshop on Systems Biology and Infectious Diseases, Bethesda, MD.
+      September 2021-Gave a seminar at the University of Pennsylvania on machine learning in immunology.
+      August 2021-Keynote lecture at the International Congress of Immunology, Paris, France.
+      July 2021-Invited talk at the NIH on systems biology and vaccine development.
+      June 2021-Presented at the European Congress of Immunology, Virtual Conference.
+      May 2021-Gave a talk at the Annual Meeting of the American Association of Immunologists (AAI), Virtual Conference.
+      April 2021-Invited speaker at the Cold Spring Harbor Laboratory (CSHL) Symposium on Systems Biology, Cold Spring Harbor, NY.
+      March 2021-Presented at the Keystone Symposia on Molecular and Cellular Biology, Virtual Conference.
+      February 2021-Gave a seminar at the NIH on multi-omics approaches to studying the immune system.
+      January 2021-Invited talk at the University of Pittsburgh on network-based approaches in immunology.
+      December 2021-Gave a keynote speech at the International Conference on Systems Biology, Toronto, Canada.`,
+      '2020': `October 2020-We published Mining for humoral correlates of HIV control and latent reservoir size in PLoS pathogens.
+      September 2020-We contributed to Extracellular Matrix Injury of Kidney Allografts in Antibody-Mediated Rejection: A Proteomics Study, which was published in the Journal of the American Society of Nephrology.
+      July 2020-We contributed to Glucosylation by the Legionella effector SetA promotes the nuclear localization of the transcription factor TFEB, which was published in Science.
+      July 2020-We published Mapping functional humoral correlates of protection against malaria challenge following RTS, S/AS01 vaccination in Science Translational Medicine.
+      May 2020-We contributed to Co-immunization of DNA and Protein in the Same Anatomical Sites Induces Superior Protective Immune Responses against SHIV Challenge in a Nonhuman Primate Model of HIV/AIDS, which was published in Journal of Virology.
+      May 2020-We published Integrative network modeling identifies key genes and pathways in the progression of hepatitis C virus induced liver disease in BMC Systems Biology.
+      February 2020-We published Predicting Vaccine Responders via Antibody Profiles: A Multiplex Analysis in the Journal Vaccines.
+      January 2020-We published a paper entitled Profiling the proteome of extracellular vesicles derived from the secretome of human macrophages upon in vitro Mycobacterium tuberculosis infection in Journal of Proteomics.
+      January 2020-We contributed to Cross-Talk between Epigenetic and Metabolic Pathways in the Regulation of Oxidative Stress in Human Cells with RNA-Seq at Single Cell Resolution, which was published in Scientific Reports.
+      January 2020-We contributed to Systems Serology detects functionally distinct coronavirus antibody features in children and elderly, which was published in Nature Communications.`
+    };
 
-.subsection-content p {
-  margin: 0;
-  font-size: 16px;
-}
+    function toggleSelection(category) {
+      if (selectedButtons.has(category)) {
+        selectedButtons.delete(category);
+      } else {
+        selectedButtons.add(category);
+      }
+      updateOutput();
+    }
 
-  /* Removed hover effect for image */
-  .member-details {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-sizing: border-box;
-    transition: opacity 0.3s ease; /* Added transition for smooth effect */
-    display: none;
-  }
-  .team-member:hover .member-details {
-    display: block;
-  }
-  
-  .member-name,
-  .member-title,
-  .member-bio {
-    margin: 0;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333; /* Adjusted text color */
-  }
-  .member-title {
-    margin-top: 5px;
-    font-size: 14px;
-  }
-</style>
+    function toggleYear(year) {
+      selectedYear = year;
+      updateOutput();
+    }
+
+    function updateOutput() {
+      let outputText = '';
+      if (selectedYear) {
+        outputText = yearData[selectedYear];
+      } else {
+        for (const category of selectedButtons) {
+          if (data[category]) {
+            outputText += data[category] + '\n\n';
+          }
+        }
+      }
+      document.getElementById('output').value = outputText.trim();
+    }
+  </script>
+
+</body>
+</html>

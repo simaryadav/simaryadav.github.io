@@ -11,24 +11,33 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   </div>
 
   <div class="team-grid">
+    {% assign jishnu_seen = false %}
     {% assign zarifeh_seen = false %}
     {% assign simar_seen = false %}
     {% assign hanxi_seen = false %}
 
+ 
     {% for member in site.data.team %}
       {% if member.is_current == true %}
-        {% if member.name == "Zarifeh Heidari Rarani" and zarifeh_seen == false %}
-          <div class="team-member-separator"></div>
-          <h2 class="team-title">Postdocs</h2>
-          {% assign zarifeh_seen = true %}
-        {% elsif member.name == "Hanxi Xiao" and hanxi_seen == false %}
-          <div class="team-member-separator"></div>
-          <h2 class="team-title">Grad Students</h2>
-          {% assign hanxi_seen = true %}
-        {% elsif member.name == "Simar Yadav" and simar_seen == false %}
-          <div class="team-member-separator"></div>
-          <h2 class="team-title">Interns And Lab Professionals</h2>
-          {% assign simar_seen = true %}
+        {% if member.name == "Jishnu Das" %}
+        {% elsif member.name == "Zarifeh Heidari Rarani" %}
+          {% if zarifeh_seen == false %}
+            <div class="team-member-separator"></div>
+            <h2 style="text-align: center;line-break: anywhere;">Postdocs</h2><br>
+            {% assign isha_seen = true %}
+          {% endif %}
+          {% elsif member.name == "Hanxi Xiao" %}
+          {% if hanxi_seen == false %}
+            <div class="team-member-separator"></div>
+            <h2 style="text-align: center;line-break: anywhere;">Grad Students</h2><br>
+            {% assign hanxi_seen = true %}
+          {% endif %}
+        {% elsif member.name == "Simar Yadav" %}
+          {% if simar_seen == false %}
+            <div class="team-member-separator"></div>
+            <h2 style="text-align: center;line-break: anywhere;">Interns And Lab Proffesionals</h2>
+            {% assign simar_seen = true %}
+          {% endif %}
         {% endif %}
 
         <div class="team-member">
@@ -49,131 +58,95 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
 </div>
 
 <div class="alumni-section">
-  <h2 style="text-align: center;" class="section-heading">Alumni</h2>
-  <div class="alumni-container">
-    <!-- Rotation Students Section -->
-    <div class="alumni-subsection">
-      <h3 class="subsection-heading">Rotation Students</h3>
-      <div class="subsection-content">
-        {% for member in site.data.team %}
-          {% if member.is_current == false and member.is_rotation == true %}
-            <p>{{ member.name }} - {{ member.position }}</p>
-          {% endif %}
-        {% endfor %}
+    <h2 style="text-align: center;" class="section-heading">Alumni</h2>
+    <div class="alumni-container">
+      
+  
+      <!-- Rotation Students Section -->
+      <div class="alumni-subsection">
+        <h3 class="subsection-heading">Rotation Students</h3>
+        <div class="subsection-content">
+          {% for member in site.data.team %}
+            {% if member.is_current == false and member.is_rotation == true %}
+              <p>{{ member.name }} - {{ member.position }}</p>
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
-    </div>
-
-    <!-- Interns Section -->
-    <div class="alumni-subsection">
-      <h3 class="subsection-heading">Interns</h3>
-      <div class="subsection-content">
-        {% for member in site.data.team %}
-          {% if member.is_current == false and member.is_intern == true %}
-            <p>{{ member.name }} - {{ member.position }}</p>
-          {% endif %}
-        {% endfor %}
+  
+      <!-- Interns Section -->
+      <div class="alumni-subsection">
+        <h3 class="subsection-heading">Interns</h3>
+        <div class="subsection-content">
+          {% for member in site.data.team %}
+            {% if member.is_current == false and member.is_intern == true %}
+              <p>{{ member.name }} - {{ member.position }}</p>
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
-    </div>
-
-    <!-- Past Lab Members Section -->
-    <div class="alumni-subsection">
-      <h3 class="subsection-heading">Past Lab Members</h3>
-      <div class="subsection-content">
-        {% for member in site.data.team %}
-          {% if member.is_current == false and member.is_rotation != true and member.is_intern != true %}
-            <p>{{ member.name }} - {{ member.position }}</p>
-          {% endif %}
-        {% endfor %}
+  
+      <!-- Past Lab Members Section -->
+      <div class="alumni-subsection">
+        <h3 class="subsection-heading">Past Lab Members</h3>
+        <div class="subsection-content">
+          {% for member in site.data.team %}
+            {% if member.is_current == false and member.is_rotation != true and member.is_intern != true %}
+              <p>{{ member.name }} - {{ member.position }}</p>
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>
-</div>
+  
 
 {% include section-faq.html %}
 {% include section-subscribe.html %}
 
+
+
 <style>
-.team-container {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Four columns */
-  gap: 20px; /* Adjusted gap between grid items */
-}
-
-.team-member {
-  position: relative;
-  cursor: pointer;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for a subtle effect */
-  margin-top: 20px; /* Add margin to separate from border */
-}
-
-.team-member img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.team-member-separator {
-  grid-column: 1 / -1; /* Ensures separator spans the entire width of the grid */
-  border-top: 2px solid black;
-  margin-top: 20px; /* Margin to separate from previous content */
-}
-
-.team-title {
-  grid-column: 1 / -1;
-  text-align: center;
-  margin: 10px 0; /* Margin to add space above and below the title */
-}
-
-.member-details {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.9);
-  box-sizing: border-box;
-  transition: opacity 0.3s ease; /* Added transition for smooth effect */
-  display: none;
-}
-
-.team-member:hover .member-details {
-  display: block;
-}
-
-.member-name,
-.member-title,
-.member-bio {
-  margin: 0;
-  font-size: 18px;
-  font-weight: bold;
-  color: #333; /* Adjusted text color */
-}
-
-.member-title {
-  margin-top: 5px;
-  font-size: 14px;
-}
-
-.alumni-section {
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
+ .team-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .team-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px; /* Adjusted gap between grid items */
+  }
+  .team-member {
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for a subtle effect */
+    margin-top: 20px; /* Add margin to separate from border */
+  }
+  .team-member img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .team-member-separator {
+    grid-column: 1 / -1; /* Ensures separator spans the entire width of the grid */
+    border-top: 2px solid black;
+    margin-top: 20px; /* Margin to separate from previous content */
+  }
+  .alumni-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 
 .alumni-container {
-  max-width: 100%;
-  display: grid;
-  margin: 0 auto;
-  grid-template-columns: repeat(3, 1fr); /* Three columns */
-  gap: 20px;
-  justify-content: space-evenly;
-  align-items: center;
+    max-width: 100%;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .section-heading {
@@ -196,4 +169,33 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   margin: 0;
   font-size: 16px;
 }
+
+  /* Removed hover effect for image */
+  .member-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-sizing: border-box;
+    transition: opacity 0.3s ease; /* Added transition for smooth effect */
+    display: none;
+  }
+  .team-member:hover .member-details {
+    display: block;
+  }
+  
+  .member-name,
+  .member-title,
+  .member-bio {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Adjusted text color */
+  }
+  .member-title {
+    margin-top: 5px;
+    font-size: 14px;
+  }
 </style>
