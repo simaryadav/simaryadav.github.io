@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ============================ */
   if (testimonialsSlider) {
     new Splide(testimonialsSlider, {
-      perPage: 4,
+      perPage: 3,
       perMove: 1,
       gap: 32,
       arrows: false,
@@ -115,7 +115,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }).mount(window.splide.Extensions);
   }
-  
 
   /* ================================================================
   // Stop Animations During Window Resizing and Switching Theme Modes
@@ -153,6 +152,25 @@ document.addEventListener("DOMContentLoaded", function () {
   var lazyLoadInstance = new LazyLoad({
     elements_selector: ".lazy"
   })
+
+
+  /* =======================
+  // Zoom Image
+  ======================= */
+  const lightense = document.querySelector(".page__content img, .post__content img, .project-content img, .gallery__image img"),
+    imageLink = document.querySelectorAll(".page__content a img, .post__content a img, .project-content a img, .gallery__image a img");
+
+  if (imageLink) {
+    for (var i = 0; i < imageLink.length; i++) imageLink[i].parentNode.classList.add("image-link");
+    for (var i = 0; i < imageLink.length; i++) imageLink[i].classList.add("no-lightense");
+  }
+
+  if (lightense) {
+    Lightense(".page__content img:not(.no-lightense), .post__content img:not(.no-lightense), .project-content img:not(.no-lightense), .gallery__image img:not(.no-lightense)", {
+      padding: 60,
+      offset: 30
+    });
+  }
 
   /* =================================
   // Accordion
