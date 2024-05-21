@@ -10,7 +10,7 @@
   github: https://github.com/jishnu-lab
   twitter: https://twitter.com/jishnu1729
   bio: >
-    Jishnu completed an undergrad degree in Bioengineering at the Indian Institute of Technology Kanpur followed by graduate studies in Computational Biology at Cornell University. After a short postdoc at the Ragon Institute of MGH, MIT & Harvard/MIT, Jishnu started his Systems Immunology lab. His most important role is that of a “translator" of jargon across disciplines (comp bio, basic and translational clinical immunology); this helps bridge the interdisciplinary expertise in the lab. He is also a cheerleader for all projects in the lab.
+    Jishnu completed an undergrad degree in Bioengineering at the Indian Institute of Technology Kanpur followed by graduate studies in Computational Biology at Cornell University. After a short postdoc at the Ragon Institute of MGH, MIT & Harvard/MIT, Jishnu started his Systems Immunology lab. His most important role is that of a “translator" of jargon across disciplines (comp bio, basic and translational clinical immunology); this helps bridge the interdisciplinary expertise in the lab. 
 
   photo: /images/jishnu.webp
 
@@ -64,7 +64,7 @@
   is_rotation : False
   position: PhD Student | Integrative Systems Biology (ISB)
   bio: >
-    Prabal completed his B.Tech in computer science and engineering from SRM Institute of Science and Technology in 2019. His interests are in Protein-Protein Interactions, Host-Viral interactions, complex networks, machine learning, and deep learning. Prabal is always eager to discuss science and brainstorm ideas. Out of work, you can find him passionately discussing politics, hanging out with his friends, or reading voraciously and consuming a whole lot of content.
+    Prabal completed his B.Tech in computer science and engineering from SRM Institute of Science and Technology in 2019. His interests are in Protein-Protein Interactions, Host-Viral interactions, complex networks, machine learning, and deep learning. Prabal is always eager to discuss science and brainstorm ideas. Out of work, you can find him passionately discussing politics, reading voraciously and consuming a whole lot of content.
   photo: /images/prabal.webp
 
 
@@ -156,7 +156,7 @@
   position: PhD Student | CMU-Pitt Program in Computational Biology (CPCB)
   github: https://github.com/vladimirsouza
   bio: >
-    Jane is a student researcher pursuing a degree in Computational & Applied Mathematics & Statistics, Mathematical Biology Track from William & Mary. She is interested in the intersection between data science and biology, specifically using machine and deep learning methods to explore biological problems such as protein-protein interactions. She is also interested in using deep learning and neural networks to explore global education data and satellite imagery.
+    Jane is a student researcher pursuing a degree in Computational & Applied Mathematics & Statistics from William & Mary. She is interested in the intersection between data science and biology, specifically using machine and deep learning methods to explore biological problems such as protein-protein interactions. She is also interested in using deep learning and neural networks to explore global education data and satellite imagery.
   photo: /images/jane.webp
 
 - name: Tracy Tabib
@@ -197,7 +197,7 @@
   is_rotation : False
   position: Masters Student | Computational Biology
   bio: >
-    Shloka is a second-year Master's student at Carnegie Mellon University, passionately exploring the convergence of computer science and biology in the realm of computational biology. Eager to leverage her skills in analyzing biological data to enhance healthcare outcomes, she immerses herself in research and learning. Outside academia, she finds solace in reading, stays active with kickboxing, and indulges in her love for singing and dancing to Bollywood songs
+    Shloka is a second-year Master's student at Carnegie Mellon University, passionately exploring the convergence of computer science and biology in the realm of computational biology. Eager to leverage her skills in analyzing biological data to enhance healthcare outcomes. Outside academia, she finds solace in reading, stays active with kickboxing, and indulges in her love for singing and dancing to Bollywood songs
   photo: /images/shloka.webp
 
 - name: Akash Kishore
