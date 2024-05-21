@@ -96,14 +96,14 @@ document.addEventListener("DOMContentLoaded", function () {
       perMove: 1,
       gap: 32,
       arrows: false,
-      drag: true, // Enable dragging
+      drag: false,
       pagination: false,
       type: 'loop',
       autoScroll: {
         autoStart: true,
         speed: 0.8,
-        pauseOnHover: true, // Pause on hover for better UX
-        pauseOnFocus: true // Pause on focus for better UX
+        pauseOnHover: false,
+        pauseOnFocus: false
       },
       breakpoints: {
         1024: {
