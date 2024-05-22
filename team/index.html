@@ -40,8 +40,8 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
             <p class="member-bio">{{ member.bio }}</p>
           </div>
           <div class="member-overlay">
-            <p class="member-name">{{ member.name }}</p>
-            <p class="member-title">{{ member.position }}</p>
+            <p class="member-nam">{{ member.name }}</p>
+            <p class="member-titl">{{ member.position }}</p>
           </div>
         </div>
       {% endif %}
@@ -149,12 +149,25 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   display: block;
 }
 
+.member-nam{
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.member-titl{
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
 .member-name,
 .member-title,
 .member-bio {
   margin: 0;
   font-size: 18px;
-  font-weight: bold; /* Adjusted text color */
+  font-weight: bold;
+  color: #333; /* Adjusted text color */
 }
 
 .member-title {
