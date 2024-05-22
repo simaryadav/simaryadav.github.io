@@ -23,12 +23,12 @@ description: A lot's been happening for us
         }
 
         .page-description {
-            font-size: 18px;
+            font-size: 31px;
             margin-bottom: 0;
         }
 
         .page-lil {
-            font-size: 40px;
+            font-size: 62px;
             text-align: center;
         }
 
@@ -93,6 +93,8 @@ description: A lot's been happening for us
             font-size: medium;
             padding: 0.8rem 1rem;
             border-radius: 30px;
+            border: 1px solid #ccc;
+            white-space: pre-wrap;
         }
 
         /* Styling for the buttons */
@@ -134,6 +136,16 @@ description: A lot's been happening for us
         .talks-date {
             color: #0000FF; /* Blue color for talks */
         }
+
+        /* Styling for the textarea content */
+        .textbox-content span {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .textbox-content {
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
@@ -169,6 +181,7 @@ description: A lot's been happening for us
 <script>
     let selectedCategories = new Set();
     let selectedYear = null;
+
 
     const data = {
         Papers: `
@@ -296,51 +309,45 @@ description: A lot's been happening for us
         `
     };
 
+    
     function toggleSelection(category) {
-        const button = document.querySelector(`button[onclick="toggleSelection('${category}')"]`);
         if (selectedCategories.has(category)) {
             selectedCategories.delete(category);
-            button.classList.remove('selected');
         } else {
             selectedCategories.add(category);
-            button.classList.add('selected');
         }
         updateOutput();
     }
 
     function toggleYear(year) {
-        const button = document.querySelector(`button[onclick="toggleYear('${year}')"]`);
         if (selectedYear === year) {
             selectedYear = null;
-            button.classList.remove('selected');
         } else {
-            if (selectedYear) {
-                document.querySelector(`button[onclick="toggleYear('${selectedYear}')"]`).classList.remove('selected');
-            }
             selectedYear = year;
-            button.classList.add('selected');
         }
         updateOutput();
     }
 
     function updateOutput() {
-        let output = "";
-        if (selectedCategories.size === 0 && !selectedYear) {
-            document.getElementById('output').value = output;
-            return;
-        }
+        let outputElement = document.getElementById('output');
+        let content = '';
 
         selectedCategories.forEach(category => {
-            if (data[category]) {
-                const categoryData = data[category].split('\n').filter(line => {
-                    if (!selectedYear) return true;
-                    return line.includes(selectedYear);
-                }).join('\n');
-                output += categoryData;
-            }
+            let categoryData = data[category];
+            let filteredData = filterDataByYear(categoryData, selectedYear);
+            content += filteredData;
         });
 
-        document.getElementById('output').value = output;
+        outputElement.value = content.trim();
+    }
+
+    function filterDataByYear(categoryData, year) {
+        if (!year) {
+            return categoryData;
+        }
+        
+        let regex = new RegExp(`<span class="[^"]*-date">[^<]*${year}[^<]*</span>[^<]*-[^<]*[^<]*`, 'g');
+        return categoryData.match(regex)?.join('\n') || '';
     }
 </script>
 
