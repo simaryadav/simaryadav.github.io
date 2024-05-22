@@ -464,32 +464,44 @@ description: A lots been happening for us
       January 2020-We contributed to Systems Serology detects functionally distinct coronavirus antibody features in children and elderly, which was published in Nature Communications.`
     };
 
+    
     function toggleSelection(category) {
-      if (selectedButtons.has(category)) {
-        selectedButtons.delete(category);
+      const button = document.querySelector(`button[onclick="toggleSelection('${category}')"]`);
+      if (selectedCategories.has(category)) {
+        selectedCategories.delete(category);
+        button.classList.remove('selected');
       } else {
-        selectedButtons.add(category);
+        selectedCategories.add(category);
+        button.classList.add('selected');
       }
       updateOutput();
     }
 
     function toggleYear(year) {
-      selectedYear = year;
+      const buttons = document.querySelectorAll('.button-container:nth-child(2) .tag-button');
+      buttons.forEach(button => button.classList.remove('selected'));
+      if (selectedYear === year) {
+        selectedYear = null;
+      } else {
+        selectedYear = year;
+        const selectedButton = document.querySelector(`button[onclick="toggleYear('${year}')"]`);
+        selectedButton.classList.add('selected');
+      }
       updateOutput();
     }
 
     function updateOutput() {
       let outputText = '';
+      selectedCategories.forEach(category => {
+        outputText += data[category] || '';
+      });
+
       if (selectedYear) {
-        outputText = yearData[selectedYear];
-      } else {
-        for (const category of selectedButtons) {
-          if (data[category]) {
-            outputText += data[category] + '\n\n';
-          }
-        }
+        const yearPattern = new RegExp(selectedYear, 'gi');
+        outputText = outputText.split('\n').filter(line => yearPattern.test(line)).join('\n');
       }
-      document.getElementById('output').value = outputText.trim();
+
+      document.getElementById('output').value = outputText;
     }
   </script>
 
