@@ -1,285 +1,260 @@
 ---
 layout: default
 title: News
-description: A lots been happening for us
+description: A lot's been happening for us
 ---
-<!<html lang="en">
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
     <style>
-      /* CSS Styles */
-      .page-section-head {
-        margin-top: 40px;
-        margin-bottom: 60px;
-        text-align: center;
-      }
-  
-      .page-title {
-        font-size: 80px;
-        margin-bottom: 20px;
-      }
-  
-      .page-description {
-        font-size: 18px;
-        margin-bottom: 0;
-      }
-  
-      .page-lil {
-         font-size: 40px; 
-         text-align: center;
-      }
-      
-      .project {
-        border-radius: 8px;
-        overflow: hidden;
-        margin-bottom: 40px;
-      }
-  
-      .project__content {
-        position: relative;
-      }
-  
-      .project__image img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-      }
-  
-      .project__label {
-        margin-bottom: 8px;
-        font-size: 18px;
-        font-weight: 500;
-        color: var(--text-alt-color);
-        text-align: center;
-      }
-  
-      .project__title {
-        font-size: 24px;
-        margin-bottom: 0;
-        text-align: center;
-      }
-  
-      .row {
-        display: flex;
-        flex-wrap: wrap;
-        flex: 0 1 auto;
-        flex-direction: row;
-        box-sizing: border-box;
-        margin-left: 37px;
-        margin-right: -50px;
-      }
-      
-      .container__projects__head {
-        max-width: fit-content;
-        margin: 0 auto;
-        width: -webkit-fill-available;
-      }
-  
-      /* Responsive Styling */
-      @media (max-width: 768px) {
-        .project {
-          width: 100%;
+        /* CSS Styles */
+        .page-section-head {
+            margin-top: 40px;
+            margin-bottom: 60px;
+            text-align: center;
         }
-      }
-  
-      /* Styling for the text box */
-      .textbox {
-        overflow: auto;
-        width: 100%;
-        height: 500px;
-        font-size: medium;
-        padding: 0.8rem 1rem;
-        border-radius: 30px;
-      }
-  
-      /* Styling for the buttons */
-      .button-container {
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-  
-      .tag-button {
-        padding: 6px 16px;
-        margin: 4px 8px 4px 0;
-        font-size: 12px;
-        font-weight: 500;
-        text-transform: capitalize;
-        border-radius: 60px;
-        color: var(--heading-font-color);
-        transition: all 0.2s;
-        background-color: var(--background-alt-color);
-        cursor: pointer;
-      }
-  
-      .tag-button.selected {
-        background-color: #0056b3;
-        color: #fff;
-      }
-  
-      /* Coloring dates for different categories */
-      .papers-date {
-        color: #FF4500;
-      }
-  
-      .grants-date {
-        color: #008000;
-      }
-  
-      .talks-date {
-        color: #0000FF;
-      }
+
+        .page-title {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+
+        .page-description {
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+
+        .page-lil {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .project {
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .project__content {
+            position: relative;
+        }
+
+        .project__image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .project__label {
+            margin-bottom: 8px;
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--text-alt-color);
+            text-align: center;
+        }
+
+        .project__title {
+            font-size: 24px;
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 0 1 auto;
+            flex-direction: row;
+            box-sizing: border-box;
+            margin-left: 37px;
+            margin-right: -50px;
+        }
+
+        .container__projects__head {
+            max-width: fit-content;
+            margin: 0 auto;
+            width: -webkit-fill-available;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .project {
+                width: 100%;
+            }
+        }
+
+        /* Styling for the text box */
+        .textbox {
+            overflow: auto;
+            width: 100%;
+            height: 500px;
+            font-size: medium;
+            padding: 0.8rem 1rem;
+            border-radius: 30px;
+        }
+
+        /* Styling for the buttons */
+        .button-container {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tag-button {
+            padding: 6px 16px;
+            margin: 4px 8px 4px 0;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: capitalize;
+            border-radius: 60px;
+            color: var(--heading-font-color);
+            transition: all 0.2s;
+            background-color: var(--background-alt-color);
+            cursor: pointer;
+        }
+
+        .tag-button.selected {
+            background-color: #0056b3;
+            color: #fff;
+        }
+
+        /* Coloring dates for different categories */
+        .papers-date {
+            color: #FF4500; /* Orange color for papers */
+        }
+
+        .grants-date {
+            color: #008000; /* Green color for grants */
+        }
+
+        .talks-date {
+            color: #0000FF; /* Blue color for talks */
+        }
     </style>
-  </head>
-  <body>
-  
-    <div class="container__projects__head">
-      <div class="page-section-head">
+</head>
+<body>
+
+<div class="container__projects__head">
+    <div class="page-section-head">
         <h1 class="page-lil">{{ page.title | default: site.data.settings.projects.projects_title }}</h1>
         <p class="page-description">{{ page.description | default: site.data.settings.projects.projects_description }}</p>
-      </div>
     </div>
-  
-    <!-- Button container -->
-    <div class="button-container">
-      <button class="tag-button" onclick="toggleSelection('Papers')">Papers</button>
-      <button class="tag-button" onclick="toggleSelection('Grants')">Grants</button>
-      <button class="tag-button" onclick="toggleSelection('Talks')">Talks</button>
-    </div>
-  
-    <!-- Button container -->
-    <div class="button-container">
-      <button class="tag-button" onclick="toggleYear('2024')">2024</button>
-      <button class="tag-button" onclick="toggleYear('2023')">2023</button>
-      <button class="tag-button" onclick="toggleYear('2022')">2022</button>
-      <button class="tag-button" onclick="toggleYear('2021')">2021</button>
-      <button class="tag-button" onclick="toggleYear('2020')">2020</button>
-    </div>
-  
-    <!-- Text box -->
-    <div class="text-box">
-      <textarea readonly class="textbox" id="output" placeholder="Check all the news here"></textarea>
-    </div>
-  
-    <script>
-      let selectedCategories = new Set();
-      let selectedYear = null;
-  
-      const data = {
+</div>
+
+<!-- Button container -->
+<div class="button-container">
+    <button class="tag-button" onclick="toggleSelection('Papers')">Papers</button>
+    <button class="tag-button" onclick="toggleSelection('Grants')">Grants</button>
+    <button class="tag-button" onclick="toggleSelection('Talks')">Talks</button>
+</div>
+
+<!-- Button container -->
+<div class="button-container">
+    <button class="tag-button" onclick="toggleYear('2024')">2024</button>
+    <button class="tag-button" onclick="toggleYear('2023')">2023</button>
+    <button class="tag-button" onclick="toggleYear('2022')">2022</button>
+    <button class="tag-button" onclick="toggleYear('2021')">2021</button>
+    <button class="tag-button" onclick="toggleYear('2020')">2020</button>
+</div>
+
+<!-- Text box -->
+<div class="text-box">
+    <textarea readonly class="textbox" id="output" placeholder="Check all the news here"></textarea>
+</div>
+
+<script>
+    let selectedCategories = new Set();
+    let selectedYear = null;
+
+    const data = {
         Papers: `
-        <span class="papers-date">February 2024</span> - We published “SLIDE: Significant Latent factor Interaction Discovery and Exploration across biological domains” in Nature Methods.
-        
-        <span class="papers-date">December 2023</span> - We published “From bench to bedside via bytes: multi-omic immunoprofiling and integration using machine learning and network approaches” in Human Vaccines and Immunotherapeutics.
-        
-        <span class="papers-date">December 2023</span> - We contributed to “PRMT blockade induces defective DNA replication stress response and synergizes with PARP inhibition”, which was published in Cell Reports Medicine.
-        
-        <span class="papers-date">November 2023</span> - We contributed to “SARS-CoV2 mRNA vaccines induce greater complement activation and decreased viremia and Nef antibodies in men with HIV-1”,which was published in The Journal of Infectious Diseases.
-        
-        <span class="papers-date">October 2023</span> - We published “Cell Type-Specific Biomarkers of Systemic Sclerosis Disease Severity Capture Cell-Intrinsic and Cell-Extrinsic Circuits” in Arthritis & Rheumatology.
-        
-        <span class="papers-date">October 2023</span> - We contributed to “Stability and heterogeneity in the antimicrobiota reactivity of human milk-derived immunoglobulin A”, which got published in the Journal of Experimental Medicine.
-        
-        <span class="papers-date">July 2023</span> - We contributed to “The gut protist Tritrichomonas arnold restrains virus-mediated loss of oral tolerance by modulating dietary antigen-presenting dendritic cells”, which got published in Immunity.
-        
-        <span class="papers-date">June 2023</span> - We published “Antibodies targeting conserved non-canonical antigens and endemic coronaviruses associate with favorable outcomes in severe COVID-19" in Cell Reports.
-        
-        <span class="papers-date">February 2023</span> - We contributed to “High-dimensional proteomics identifies organ injury patterns associated with outcomes in human trauma”, which got published in the The Journal of Trauma and Acute Care Surgery.
-        
-        <span class="papers-date">April 2023</span> - We contributed to “Antibodies against the Ebola virus soluble glycoprotein are associated with long-term vaccine-mediated protection of non-human primates”, which got published in the Cell Reports.
-        
-        <span class="papers-date">April 2023</span> - We published a manuscript in Cell Reports Medicine demonstrating how integrating bulk RNA-seq data with protein networks can uncover signatures underlying rejection in pediatric liver transplantation.
-        
-        <span class="papers-date">August 2022</span> - We published A supervised take on dimensionality reduction via hybrid subset selection in Patterns.
-        
-        <span class="papers-date">July 2022</span> - The Philadelphia Enquirer covered our very recent publication on COVID-19.
-        
-        <span class="papers-date">July 2022</span> - Our work got covered in Pittsburgh's Action 4 News "4 Your Health: Studying COVID-19 antibody patterns".
-        
-        <span class="papers-date">July 2022</span> - Jishnu becomes a co-Director for the Systems Immunology Core (funded by NIAMS P50) which will perform machine learning and network systems analyses on multi-modal datasets in the context of SSc.
-        
-        <span class="papers-date">June 2022</span> - Our paper Multi-Omic Admission-Based Prognostic Biomarkers Identified by Machine Learning Algorithms Predict Patient Recovery and 30 Day Survival in Trauma Patients got accepted in Metabolites.
-        
-        <span class="papers-date">June 2022</span> - Our paper High Dimensional Multi-omics Reveals Unique Characteristics of Early Plasma Administration in Polytrauma Patients with TBI got accepted in Annals of Surgery.
-        
-        <span class="papers-date">June 2022</span> - We published Antibodies targeting conserved non-canonical antigens and endemic coronaviruses associated with favorable outcomes in severe COVID-19 in Cell Press.
-        
-        <span class="papers-date">May 2022</span> - We contributed to Autoreactive CD8+ T cells are restrained by an exhaustion-like program that is maintained by LAG3 which got published in the Nature Immunology.
-        
-        <span class="papers-date">April 2022</span> - We published a manuscript in Cell Reports Medicine demonstrating how integrating bulk RNA-seq data with protein networks can uncover signatures underlying rejection in
+        February 2024 - We published “SLIDE: Significant Latent factor Interaction Discovery and Exploration across biological domains” in Nature Methods.
+        December 2023 - We published “From bench to bedside via bytes: multi-omic immunoprofiling and integration using machine learning and network approaches” in Human Vaccines and Immunotherapeutics.
+        December 2023 - We contributed to “PRMT blockade induces defective DNA replication stress response and synergizes with PARP inhibition”, which was published in Cell Reports Medicine.
+        November 2023 - We contributed to “SARS-CoV2 mRNA vaccines induce greater complement activation and decreased viremia and Nef antibodies in men with HIV-1”,which was published in The Journal of Infectious Diseases.
+        October 2023 - We published “Cell Type-Specific Biomarkers of Systemic Sclerosis Disease Severity Capture Cell-Intrinsic and Cell-Extrinsic Circuits” in Arthritis & Rheumatology.
+        October 2023 - We contributed to “Stability and heterogeneity in the antimicrobiota reactivity of human milk-derived immunoglobulin A”, which got published in the Journal of Experimental Medicine.
+        July 2023 - We contributed to “The gut protist Tritrichomonas arnold restrains virus-mediated loss of oral tolerance by modulating dietary antigen-presenting dendritic cells”, which got published in Immunity.
+        June 2023 - We published “Antibodies targeting conserved non-canonical antigens and endemic coronaviruses associate with favorable outcomes in severe COVID-19" in Cell Reports.
+        February 2023 - We contributed to “High-dimensional proteomics identifies organ injury patterns associated with outcomes in human trauma”, which got published in the The Journal of Trauma and Acute Care Surgery.
+        April 2023 - We contributed to “Antibodies against the Ebola virus soluble glycoprotein are associated with long-term vaccine-mediated protection of non-human primates”, which got published in the Cell Reports.
+        April 2023 - We published a manuscript in Cell Reports Medicine demonstrating how integrating bulk RNA-seq data with protein networks can uncover signatures underlying rejection in pediatric liver transplantation.
+        August 2022 - We published A supervised take on dimensionality reduction via hybrid subset selection in Patterns.
+        July 2022 - The Philadelphia Enquirer covered our very recent publication on COVID-19.
+        July 2022 - Our work got covered in Pittsburgh's Action 4 News "4 Your Health: Studying COVID-19 antibody patterns".
+        July 2022 - Jishnu becomes a co-Director for the Systems Immunology Core (funded by NIAMS P50) which will perform machine learning and network systems analyses on multi-modal datasets in the context of SSc.
+        June 2022 - Our paper Multi-Omic Admission-Based Prognostic Biomarkers Identified by Machine Learning Algorithms Predict Patient Recovery and 30 Day Survival in Trauma Patients got accepted in Metabolites.
+        June 2022 - Our paper High Dimensional Multi-omics Reveals Unique Characteristics of Early Plasma Administration in Polytrauma Patients with TBI got accepted in Annals of Surgery.
+        June 2022 - We published Antibodies targeting conserved non-canonical antigens and endemic coronaviruses associated with favorable outcomes in severe COVID-19 in Cell Press.
+        May 2022 - We contributed to Autoreactive CD8+ T cells are restrained by an exhaustion-like program that is maintained by LAG3 which got published in the Nature Immunology.
+        April 2022 - We published a manuscript in Cell Reports Medicine demonstrating how integrating bulk RNA-seq data with protein networks can uncover signatures underlying rejection in pediatric liver transplantation.
         `,
         Grants: `
-        <span class="grants-date">August 2022</span> - Our first RO1 on understanding antibody responses to diverse antigens in COVID-19 patients got funded! Excited to collaborate with Matt and Amy on this project.
-        
-        <span class="grants-date">July 2022</span> - We received funding from a COVID supplement to study antibody responses in COVID-19 patients using high-throughput serology assays and computational modeling.
-        
-        <span class="grants-date">June 2022</span> - Excited to be part of a new collaboration with researchers at Penn on a newly funded U19 grant to study the immune responses in severe trauma patients.
-        
-        <span class="grants-date">May 2022</span> - Grateful for the funding support from the Chan Zuckerberg Initiative to develop new computational tools for analyzing single-cell multi-omic data.
+        August 2022 - Our first RO1 on understanding antibody responses to diverse antigens in COVID-19 patients got funded! Excited to collaborate with Matt and Amy on this project.
+        July 2022 - We received funding from a COVID supplement to study antibody responses in COVID-19 patients using high-throughput serology assays and computational modeling.
+        June 2022 - Excited to be part of a new collaboration with researchers at Penn on a newly funded U19 grant to study the immune responses in severe trauma patients.
+        May 2022 - Grateful for the funding support from the Chan Zuckerberg Initiative to develop new computational tools for analyzing single-cell multi-omic data.
         `,
         Talks: `
-        <span class="talks-date">February 2024</span> - I will be giving a talk at the International Conference on Computational Biology about our recent work on SLIDE.
-        
-        <span class="talks-date">October 2023</span> - I gave a keynote presentation at the Annual Meeting of the American Society for Human Genetics.
-        
-        <span class="talks-date">July 2023</span> - Presented our recent findings on antibody responses to COVID-19 at the Gordon Research Conference on Immunology.
-        
-        <span class="talks-date">May 2023</span> - Gave an invited talk at the European Congress of Immunology about our work on computational methods for multi-omic data integration.
-        
-        <span class="talks-date">April 2023</span> - Had the pleasure of speaking at the National Institutes of Health seminar series on systems immunology.
+        February 2024 - I will be giving a talk at the International Conference on Computational Biology about our recent work on SLIDE.
+        October 2023 - I gave a keynote presentation at the Annual Meeting of the American Society for Human Genetics.
+        July 2023 - Presented our recent findings on antibody responses to COVID-19 at the Gordon Research Conference on Immunology.
+        May 2023 - Gave an invited talk at the European Congress of Immunology about our work on computational methods for multi-omic data integration.
+        April 2023 - Had the pleasure of speaking at the National Institutes of Health seminar series on systems immunology.
         `
-      };
-  
-      function toggleSelection(category) {
+    };
+
+    function toggleSelection(category) {
         const button = document.querySelector(`button[onclick="toggleSelection('${category}')"]`);
         if (selectedCategories.has(category)) {
-          selectedCategories.delete(category);
-          button.classList.remove('selected');
+            selectedCategories.delete(category);
+            button.classList.remove('selected');
         } else {
-          selectedCategories.add(category);
-          button.classList.add('selected');
+            selectedCategories.add(category);
+            button.classList.add('selected');
         }
         updateOutput();
-      }
-  
-      function toggleYear(year) {
+    }
+
+    function toggleYear(year) {
         const button = document.querySelector(`button[onclick="toggleYear('${year}')"]`);
         if (selectedYear === year) {
-          selectedYear = null;
-          button.classList.remove('selected');
+            selectedYear = null;
+            button.classList.remove('selected');
         } else {
-          if (selectedYear) {
-            document.querySelector(`button[onclick="toggleYear('${selectedYear}')"]`).classList.remove('selected');
-          }
-          selectedYear = year;
-          button.classList.add('selected');
+            if (selectedYear) {
+                document.querySelector(`button[onclick="toggleYear('${selectedYear}')"]`).classList.remove('selected');
+            }
+            selectedYear = year;
+            button.classList.add('selected');
         }
         updateOutput();
-      }
-  
-      function updateOutput() {
+    }
+
+    function updateOutput() {
         let output = "";
         if (selectedCategories.size === 0 && !selectedYear) {
-          document.getElementById('output').value = output;
-          return;
+            document.getElementById('output').value = output;
+            return;
         }
-  
+
         selectedCategories.forEach(category => {
-          if (data[category]) {
-            const categoryData = data[category].split('\n').filter(line => {
-              if (!selectedYear) return true;
-              return line.includes(selectedYear);
-            }).join('\n');
-            output += categoryData;
-          }
+            if (data[category]) {
+                const categoryData = data[category].split('\n').filter(line => {
+                    if (!selectedYear) return true;
+                    return line.includes(selectedYear);
+                }).join('\n');
+                output += categoryData;
+            }
         });
-  
+
         document.getElementById('output').value = output;
-      }
-    </script>
-  
-  </body>
-  </html>
+    }
+</script>
+
+</body>
+</html>
