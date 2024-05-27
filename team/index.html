@@ -112,11 +112,12 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for a subtle effect */
   margin-top: 20px; /* Add margin to separate from border */
+  height: 400px; /* Set a fixed height for uniform size */
 }
 
 .team-member img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -134,10 +135,10 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
 
 .member-details {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
-  max-height: 200px; /* Set a maximum height for the overlay */
+  height: 100%; /* Make the overlay cover the entire image */
   overflow-y: auto; /* Enable vertical scrolling */
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.9);
