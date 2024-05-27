@@ -111,9 +111,8 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for a subtle effect */
-  margin-top: 20px; /* Add margin to separate from border */
   width: 100%; /* Ensure uniform width */
-  height: 350px; /* Ensure uniform height */
+  height: 400px; /* Increased height for bigger images */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -122,7 +121,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
 .image-container {
   position: relative;
   width: 100%;
-  height: 80%; /* Adjust to make the image bigger */
+  height: 85%; /* Adjusted to make the image bigger */
 }
 
 .image-container img {
@@ -167,6 +166,12 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
 .member-title {
   margin-top: 5px;
   font-size: 14px;
+}
+
+.team-member-separator {
+  grid-column: 1 / -1; /* Ensures separator spans the entire width of the grid */
+  border-top: 2px solid ;
+  margin-top: 20px; /* Margin to separate from previous content */
 }
 
 .alumni-section {
