@@ -28,7 +28,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
           {% assign hanxi_seen = true %}
         {% elsif member.name == "Simar Yadav" and simar_seen == false %}
           <div class="team-member-separator"></div>
-          <h2 class="team-title">Interns And Lab Professionals</h2>
+          <h2 class="team-title">Undergraduates and Masters Students</h2>
           {% assign simar_seen = true %}
         {% endif %}
 
@@ -120,7 +120,6 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   object-fit: cover;
 }
 
-
 .team-member-separator {
   grid-column: 1 / -1; /* Ensures separator spans the entire width of the grid */
   border-top: 2px solid black;
@@ -138,6 +137,8 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   bottom: 0;
   left: 0;
   width: 100%;
+  max-height: 200px; /* Set a maximum height for the overlay */
+  overflow-y: auto; /* Enable vertical scrolling */
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.9);
   box-sizing: border-box;
@@ -149,13 +150,13 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   display: block;
 }
 
-.member-nam{
+.member-nam {
   margin: 0;
   font-size: 18px;
   font-weight: bold;
 }
 
-.member-titl{
+.member-titl {
   margin: 0;
   font-size: 18px;
   font-weight: bold;
