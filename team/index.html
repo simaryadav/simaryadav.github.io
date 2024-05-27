@@ -35,13 +35,11 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
         <div class="team-member">
           <img src="{{ member.photo | prepend: site.baseurl }}" alt="{{ member.name }}">
           <div class="member-details">
-            <p class="member-name">{{ member.name }}</p>
-            <p class="member-title">{{ member.position }}</p>
             <p class="member-bio">{{ member.bio }}</p>
           </div>
-          <div class="member-overlay">
-            <p class="member-nam">{{ member.name }}</p>
-            <p class="member-titl">{{ member.position }}</p>
+          <div class="member-footer">
+            <p class="member-name">{{ member.name }}</p>
+            <p class="member-title">{{ member.position }}</p>
           </div>
         </div>
       {% endif %}
@@ -113,11 +111,14 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for a subtle effect */
   margin-top: 20px; /* Add margin to separate from border */
   height: 400px; /* Set a fixed height for uniform size */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure footer stays at bottom */
 }
 
 .team-member img {
   width: 100%;
-  height: 100%;
+  height: 70%; /* Adjust height to allow space for footer */
   object-fit: cover;
 }
 
@@ -134,38 +135,31 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
 }
 
 .member-details {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; /* Make the overlay cover the entire image */
-  overflow-y: auto; /* Enable vertical scrolling */
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.9);
   box-sizing: border-box;
   transition: opacity 0.3s ease; /* Added transition for smooth effect */
   display: none;
+  height: 100%; /* Make the overlay cover the entire image */
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .team-member:hover .member-details {
   display: block;
+  position: absolute; /* Position overlay absolutely */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-.member-nam {
-  margin: 0;
-  font-size: 18px;
-  font-weight: bold;
+.member-footer {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  text-align: center;
 }
 
-.member-titl {
-  margin: 0;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.member-name,
-.member-title,
-.member-bio {
+.member-name {
   margin: 0;
   font-size: 18px;
   font-weight: bold;
