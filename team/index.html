@@ -110,21 +110,17 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for a subtle effect */
   margin-top: 20px; /* Add margin to separate from border */
-  height: 400px; /* Set a fixed height for uniform size */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Ensure footer stays at bottom */
 }
 
 .team-member img {
   width: 100%;
-  height: 70%; /* Adjust height to allow space for footer */
+  height: auto;
   object-fit: cover;
 }
 
 .team-member-separator {
   grid-column: 1 / -1; /* Ensures separator spans the entire width of the grid */
-  border-top: 2px solid black;
+  border-top: 2px solid ;
   margin-top: 20px; /* Margin to separate from previous content */
 }
 
@@ -135,31 +131,31 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
 }
 
 .member-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.9);
   box-sizing: border-box;
   transition: opacity 0.3s ease; /* Added transition for smooth effect */
   display: none;
-  height: 100%; /* Make the overlay cover the entire image */
   overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .team-member:hover .member-details {
   display: block;
-  position: absolute; /* Position overlay absolutely */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 
 .member-footer {
-  background-color: rgba(255, 255, 255, 0.9);
   padding: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
   text-align: center;
 }
 
-.member-name {
+.member-name,
+.member-title {
   margin: 0;
   font-size: 18px;
   font-weight: bold;
