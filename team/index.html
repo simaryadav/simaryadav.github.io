@@ -110,17 +110,22 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for a subtle effect */
   margin-top: 20px; /* Add margin to separate from border */
+  width: 100%; /* Ensure uniform width */
+  height: 300px; /* Ensure uniform height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .team-member img {
   width: 100%;
-  height: auto;
+  height: 200px; /* Fixed height for images */
   object-fit: cover;
 }
 
 .team-member-separator {
   grid-column: 1 / -1; /* Ensures separator spans the entire width of the grid */
-  border-top: 2px solid ;
+  border-top: 2px solid black;
   margin-top: 20px; /* Margin to separate from previous content */
 }
 
@@ -142,6 +147,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   transition: opacity 0.3s ease; /* Added transition for smooth effect */
   display: none;
   overflow-y: auto; /* Enable vertical scrolling */
+  color: black; /* Ensure text color is always black */
 }
 
 .team-member:hover .member-details {
