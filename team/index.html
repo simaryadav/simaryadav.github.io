@@ -19,16 +19,16 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     {% for member in site.data.team %}
       {% if member.is_current == true %}
         {% if member.name == "Zarifeh Heidari Rarani" and zarifeh_seen == false %}
-          <div class="team-member-separator"></div>
+          <div class="team-member-separator"></div><br>
           <h2 class="team-title">Postdocs</h2>
           {% assign zarifeh_seen = true %}
         {% elsif member.name == "Hanxi Xiao" and hanxi_seen == false %}
           <div class="team-member-separator"></div>
-          <h2 class="team-title">Grad Students</h2>
+          <h2 class="team-title">Grad Students</h2><br>
           {% assign hanxi_seen = true %}
         {% elsif member.name == "Simar Yadav" and simar_seen == false %}
           <div class="team-member-separator"></div>
-          <h2 class="team-title">Undergraduates and Masters Students</h2>
+          <h2 class="team-title">Undergraduates and Masters Students</h2><br>
           {% assign simar_seen = true %}
         {% endif %}
 
