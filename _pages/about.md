@@ -28,16 +28,15 @@ permalink: /Contact-us/
 }
 
 .contact-info {
- display: flex;
- flex-wrap: wrap;
- flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .contact-info-item {
   width: 100%;
   align-content: center;
   text-align: center;
-  
 }
 
 .contact-info-item h2 {
@@ -51,27 +50,32 @@ permalink: /Contact-us/
 }
 
 .page__info {
-  display : none;
+  display: none;
 }
 
 .google-map {
-     padding-bottom: 50%;
-     position: relative;
+  margin-top: 20px;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
 }
 
 .google-map iframe {
-     height: 100%;
-     width: 100%;
-     left: 0;
-     top: 0;
-     position: absolute;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
-  
 .gallery img {
   max-width: 100%;
   height: auto;
 }
+
+
 </style>
 
 <div class="container">
@@ -89,6 +93,7 @@ permalink: /Contact-us/
       Phone: 412-624-5530</p>
     </div>
   </div>
+
   <div class="button-container">
     <a class="tag-button" href="https://scholar.google.com/citations?user=61wI3HMAAAAJ&hl=en" target="_blank">Google Scholar</a>
     <a class="tag-button" href="https://www.researchgate.net/profile/Jishnu-Das-2" target="_blank">ResearchGate</a>
@@ -96,6 +101,9 @@ permalink: /Contact-us/
     <a class="tag-button" href="https://twitter.com/jishnu1729" target="_blank">Twitter</a>
   </div>
 
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.9222785433276!2d-79.94718492394952!3d40.454857153317924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f34f6212ade3%3A0x18f7f9a7b1d0f338!2sThe%20Assembly!5e0!3m2!1sen!2sus!4v1714092409211!5m2!1sen!2sus" width="1000" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+  <div class="google-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.9222785433276!2d-79.94718492394952!3d40.454857153317924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f34f6212ade3%3A0x18f7f9a7b1d0f338!2sThe%20Assembly!5e0!3m2!1sen!2sus!4v1714092409211!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
 </div>
+
+
