@@ -8,6 +8,7 @@ permalink: /Contact-us/
 <style>
 .container {
   max-width: fit-content;
+  width:100%;
   margin: 0 auto;
 }
 
@@ -21,6 +22,7 @@ permalink: /Contact-us/
 .page-title {
   font-size: 80px;
   margin-bottom: 16px;
+  width: 1500px;s
 }
 
 .page-description {
@@ -61,13 +63,12 @@ permalink: /Contact-us/
   height: 100%;
   border: 0;
 }
+
 .nine{
   width:100%;
   height:100%;
   max-width:100%;
-  padding:20px
-
-
+  margin-top:20px
 }
 .gallery img {
   max-width: 100%;
