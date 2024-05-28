@@ -19,16 +19,16 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     {% for member in site.data.team %}
       {% if member.is_current == true %}
         {% if member.name == "Zarifeh Heidari Rarani" and zarifeh_seen == false %}
-          <div class="team-member-separator"></div><br>
+          <div class="team-member-separator"></div>
           <h2 class="team-title">Postdocs</h2>
           {% assign zarifeh_seen = true %}
         {% elsif member.name == "Hanxi Xiao" and hanxi_seen == false %}
           <div class="team-member-separator"></div>
-          <h2 class="team-title">Grad Students</h2><br>
+          <h2 class="team-title">Grad Students</h2>
           {% assign hanxi_seen = true %}
         {% elsif member.name == "Simar Yadav" and simar_seen == false %}
           <div class="team-member-separator"></div>
-          <h2 class="team-title">Undergraduates and Masters Students</h2><br>
+          <h2 class="team-title">Undergraduates and Masters Students</h2>
           {% assign simar_seen = true %}
         {% endif %}
 
@@ -112,7 +112,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow for a subtle effect */
   width: 100%; /* Ensure uniform width */
-  height: 400px; /* Increased height for bigger images */
+  height: 420px; /* Increased height for bigger images */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -170,8 +170,8 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
 
 .team-member-separator {
   grid-column: 1 / -1; /* Ensures separator spans the entire width of the grid */
-  border-top: 2px solid ;
-  margin-top: 20px; /* Margin to separate from previous content */
+  border-top: 2px solid black;
+  margin: 20px 0; /* Margin to separate from previous content and next heading */
 }
 
 .alumni-section {
