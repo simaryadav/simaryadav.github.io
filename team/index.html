@@ -15,12 +15,12 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
     {% assign simar_seen = false %}
     {% assign hanxi_seen = false %}
 
-    <h2 class="team-title">Professor Incharge</h2>
+    <h2 class="team-title">PI</h2>
     {% for member in site.data.team %}
       {% if member.is_current == true %}
         {% if member.name == "Zarifeh Heidari Rarani" and zarifeh_seen == false %}
           <div class="team-member-separator"></div>
-          <h2 class="team-title">Postdocs</h2>
+          <h2 class="team-title">Postdocs and Research Scientists</h2>
           {% assign zarifeh_seen = true %}
         {% elsif member.name == "Hanxi Xiao" and hanxi_seen == false %}
           <div class="team-member-separator"></div>
