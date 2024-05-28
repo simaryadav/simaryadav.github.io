@@ -50,20 +50,24 @@ permalink: /Contact-us/
 }
 
 .page__info {
-  display : none;
+  display: none;
 }
 
 .google-map {
-  padding-bottom: 50%;
+  margin-top: 20px;
   position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
 }
 
 .google-map iframe {
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .gallery img {
@@ -72,15 +76,15 @@ permalink: /Contact-us/
 }
 
 .buttons {
-  margin-top: 20px;
+  margin-top: 30px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
 
 .button {
-  margin: 10px;
-  padding: 10px 20px;
+  padding: 12px 20px;
   font-size: 16px;
   color: white;
   background-color: #007bff;
@@ -89,10 +93,15 @@ permalink: /Contact-us/
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  transition: background-color 0.3s ease;
 }
 
 .button:hover {
   background-color: #0056b3;
+}
+
+.button:active {
+  background-color: #004494;
 }
 </style>
 
@@ -113,7 +122,7 @@ permalink: /Contact-us/
   </div>
 
   <div class="google-map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.9222785433276!2d-79.94718492394952!3d40.454857153317924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f34f6212ade3%3A0x18f7f9a7b1d0f338!2sThe%20Assembly!5e0!3m2!1sen!2sus!4v1714092409211!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.9222785433276!2d-79.94718492394952!3d40.454857153317924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f34f6212ade3%3A0x18f7f9a7b1d0f338!2sThe%20Assembly!5e0!3m2!1sen!2sus!4v1714092409211!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 
   <div class="buttons">
