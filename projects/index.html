@@ -11,21 +11,6 @@ description: A lot's been happening for us
     <title>{{ page.title }}</title>
     <style>
         /* CSS Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        .container__projects__head {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-    
         .page-section-head {
             margin-top: 40px;
             margin-bottom: 60px;
@@ -80,9 +65,17 @@ description: A lot's been happening for us
         .row {
             display: flex;
             flex-wrap: wrap;
+            flex: 0 1 auto;
             flex-direction: row;
+            box-sizing: border-box;
             margin-left: 37px;
             margin-right: -50px;
+        }
+
+        .container__projects__head {
+            max-width: fit-content;
+            margin: 0 auto;
+            width: -webkit-fill-available;
         }
 
         /* Responsive Styling */
@@ -98,35 +91,30 @@ description: A lot's been happening for us
             width: 100%;
             height: 500px;
             font-size: medium;
-            padding: 1rem;
-            border-radius: 10px;
-            border: 1px solid #ccc;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            resize: none;
+            padding: 0.8rem 1rem;
+            border-radius: 30px;
         }
 
         /* Styling for the buttons */
         .button-container {
             margin-bottom: 20px;
             display: flex;
-            flex-wrap: wrap;
+            align-items: center;
             justify-content: center;
+            flex-wrap: wrap;
         }
 
         .tag-button {
-            padding: 10px 20px;
-            margin: 5px;
-            font-size: 18px;
+            padding: 6px 16px;
+            margin: 4px 8px 4px 0;
+            font-size: 20px;
             font-weight: 500;
             text-transform: capitalize;
-            border-radius: 20px;
+            border-radius: 60px;
             color: var(--heading-font-color);
             transition: all 0.2s;
-            background-color: #e0e0e0;
+            background-color: var(--background-alt-color);
             cursor: pointer;
-            border: none;
-            outline: none;
         }
 
         .tag-button.selected {
@@ -228,77 +216,133 @@ description: A lot's been happening for us
 
         October 2020 - We published Mining for humoral correlates of HIV control and latent reservoir size in PLoS pathogens
 
-        September 2020 - We contributed to Extracellular Matrix Injury of Kidney Allografts in Antibody-Mediated Rejection: A Proteomics Study, which was published in Frontiers in Immunology
+        September 2020 - We contributed to Extracellular Matrix Injury of Kidney Allografts in Antibody-Mediated Rejection: A Proteomics Study, which was published in the Journal of the American Society of Nephrology
+       
+        July 2020 - We contributed to Glucosylation by the Legionella effector SetA promotes the nuclear localization of the transcription factor TFEB, which was published in Iscience
+       
+        July 2020 - We published Mapping functional humoral correlates of protection against malaria challenge following RTS, S/AS01 vaccination in Science Translational Medicine
+
+        May 2020 - We contributed to Co-immunization of DNA and Protein in the Same Anatomical Sites Induces Superior Protective Immune Responses against SHIV Challenge, which was published in Cell Reports
+
+        March 2020 - We contributed to Latency reversal agents modulate HIV antigen processing and presentation to CD8 T cells, which was published in PLoS pathogens
+        
+        March 2020 - We contributed to Epigenetic basis for monocyte dysfunction in patients with severe alcoholic hepatitis, which was published in the Journal of Hepatology
+        
+        February 2020 - We published Antibody Fc Glycosylation Discriminates Between Latent and Active Tuberculosis in The Journal of Infectious Diseases
+        
+        January 2020 - The Das Systems Immunology Lab is now supported by Center for Systems Immunology Startup Funds!
+        
+        January 2020 - The lab is now open! We look forward to exciting science in the future!
         `,
         Grants: `
-        February 2024 - R01 grant from the National Institute of Allergy and Infectious Diseases for studying "Immune Response Dynamics in Viral Infections".
+        October 2022 -Jishnu is a Co-I at Systemic Sclerosis Center for Research and Translation which provides machine learning and network systems expertise to investigators working on SSc, SSc-ILD and SSc-PAH. 
         
-        December 2023 - R21 grant from the National Institute of Health for "Novel Biomarker Discovery in Autoimmune Diseases".
+        October 2022 -Jishnu is a Co-I on the U01 Grant funded to characterize cell-intrinsic and cell-extrinsic signaling circuits in ocular disorders. 
+       
+        August 2022 - Our first RO1 on understanding antibody responses to diverse antigens in COVID-19 patients got funded! Excited to collaborate with Matt and Amy on this project.
         
-        November 2023 - U01 grant from the National Institute of Health for "Multi-Omic Analysis of Cancer Immunotherapy Response".
+        July 2022 - Scleroderma CDMRO Award was given to Jishnu (role: Co-I)
         
-        August 2023 - P50 grant from the National Institute of Arthritis and Musculoskeletal and Skin Diseases for "Systemic Sclerosis Core Center".
+        July 2022 - Jishnu becomes a co-Director for the Systems Immunology Core (funded by NIAMS P50) which will perform machine learning and network systems analyses on multi-modal datasets in the context of SSc.
         
-        July 2023 - R01 grant from the National Institute of General Medical Sciences for "Machine Learning Approaches in Trauma Patient Recovery".
+        May 2022 - We found out that our NIAID Flu Systems Vaccinology R01 (Role: MPI, other PIs: Alcorn, Singh, Zimmerman) will be funded.
+       
+        May 2022 - We participated in a Pitt-Case Western CFAR application that was funded by NIAID Rustbelt (Role: co-I)
+
+        April 2022 - Our CIHR grant (Role: co-I, PI: Konvalinka) was funded.
+       
+        March 2022 - Our DoD grant (Role: co-I, PIs: Lafyatis and Singh) looking at multi-omic signatures of scleroderma disease severity was funded.
+
+        September 2021 - A NIAID R01 we participated in (Role: co-I, PIs: Rinaldo and Mailliard) looking at COVID-19 vaccine responses in HIV individuals was funded.
+
+        September 2021 - We received a 5-year NHGRI U01 1U01HG012041-01 (Role: MPI, Other PIs: Singh, Sahni).
+
+        August 2021 - We received a 5-year NIAID New Innovator DP2 Award 1DP2AI164325-01 (Role: PI).
+
+        June 2021 - An NIDDK dkNET New Investigator Pilot Program in Bioinformatics grant that we participated in has been funded (Role: co-I, PI: Joglekar).
+
+        April 2021 - A Department of Defense Idea Development Award grant that we participated in has been funded (Role: co-I, PI: Lafyatis).
+
+        August 2020 - We are now supported by a Collaborative Research Agreement with the University of Brussels Center for Research In Immunology (Role: PI)!
         
-        June 2023 - U19 grant from the National Institute of Allergy and Infectious Diseases for "Collaborative Influenza Vaccine Innovation Centers".
-        
-        April 2023 - DP2 grant from the National Institute of Health for "High-Risk, High-Reward Research Program".
-        
-        February 2023 - P01 grant from the National Institute of Health for "Immune System Regulation in Inflammatory Diseases".
+        June 2020 - We received a pilot Covid-19 grant from the UPMC-ITTC (Role: PI)!
+
+        May 2020 - We received a PACER (Pittsburgh Autoimmunity Center for Excellence in Research) grant (Role: PI)!
+
+        January 2020 - The lab is now open! We look forward to exciting science in the future!
         `,
         Talks: `
-        February 2024 - Keynote speech at the International Conference on Systems Biology about "Integrative Multi-Omic Approaches in Immunology".
+        October 2023 - Jishnu gave an invited talk at BMES 2023 on, "Elucidating humoral profiles associated with Schistosomiasis pathogenesis using interpretable machine learning".
         
-        December 2023 - Invited lecture at the American Society for Microbiology on "Recent Advances in Virology Research".
+        October 2023 - Jishnu gave an invited talk at BMES 2023 on, "Significant latent factor interaction discovery and exploration across biological domains".
         
-        November 2023 - Panel discussion at the Global Health Summit on "The Role of Machine Learning in Pandemic Preparedness".
+        May 2023 - Jishnu gave an invited talk at FASEB Autoimmunity 2023 on , "Multi-dimensional integration of protein interactomes with genomic and molecular data discover distinct RA endotypes".
         
-        August 2023 - Guest speaker at the Computational Biology Symposium on "Novel Algorithms for Protein-Protein Interaction Networks".
+        April 2023 - Jishnu gave an invited talk at Cold Spring Harbor Laboratory Systems Immunology Meeting 2023 on "Multi-dimensional integration of protein interactomes with genomic and molecular data discovers distinct RA endotypes".
         
-        July 2023 - Featured presentation at the Immunology Research Forum on "Insights into Autoimmune Disease Mechanisms".
+        April 2023 - Jishnu gave an invited talk at Cold Spring Harbor Laboratory Systems Immunology Meeting 2023 on "Multi-dimensional integration of protein interactomes with genomic and molecular data discovers distinct RA endotypes".
+
+        September 2022 - Jishnu gave an invited talk at the Banff-CST Joint Transplant and Pathology Summit titled “Machine learning in clinical decision making in transplant biology”
         
-        June 2023 - Invited speaker at the Precision Medicine Conference on "Personalized Medicine and Biomarker Discovery".
-        
-        April 2023 - Keynote address at the Bioinformatics and Genomics Conference on "Next-Generation Sequencing and Data Integration".
-        
-        February 2023 - Talk at the Molecular Medicine Tri-Conference on "Translational Bioinformatics in Cancer Research".
+        August 2022 - Jishnu gave a talk at International Workshop on Scleroderma 2022 in Boston.
+
+        July 2022 - Jishnu was invited to give a talk at ISMB 2022 on the topic “A network-based approach to identify expression modules underlying rejection in pediatric liver transplantation”
+
+        April 2021 - Jishnu gave a talk at the 2021 Cold Spring Harbor Systems Immunology Meeting
+
+        March 2021 - Jishnu gave a talk at the 2021 Cold Spring Harbor Networks Meeting
+
+        January 2020 - The lab is now open! We look forward to exciting science in the future!
         `
     };
 
     function toggleSelection(category) {
+        const button = document.querySelector(`button[onclick="toggleSelection('${category}')"]`);
         if (selectedCategories.has(category)) {
             selectedCategories.delete(category);
+            button.classList.remove('selected');
         } else {
             selectedCategories.add(category);
+            button.classList.add('selected');
         }
         updateOutput();
     }
 
     function toggleYear(year) {
+        const button = document.querySelector(`button[onclick="toggleYear('${year}')"]`);
         if (selectedYear === year) {
             selectedYear = null;
+            button.classList.remove('selected');
         } else {
+            if (selectedYear) {
+                document.querySelector(`button[onclick="toggleYear('${selectedYear}')"]`).classList.remove('selected');
+            }
             selectedYear = year;
+            button.classList.add('selected');
         }
         updateOutput();
     }
 
     function updateOutput() {
-        let outputText = '';
+        let output = "";
+        if (selectedCategories.size === 0 && !selectedYear) {
+            document.getElementById('output').value = output;
+            return;
+        }
+
         selectedCategories.forEach(category => {
             if (data[category]) {
-                outputText += data[category] + '\n';
+                const categoryData = data[category].split('\n').filter(line => {
+                    if (!selectedYear) return true;
+                    return line.includes(selectedYear);
+                }).join('\n');
+                output += categoryData;
             }
         });
 
-        if (selectedYear) {
-            const yearRegex = new RegExp(`(${selectedYear})`, 'g');
-            outputText = outputText.split('\n').filter(line => yearRegex.test(line)).join('\n');
-        }
-
-        document.getElementById('output').value = outputText.trim();
+        document.getElementById('output').value = output;
     }
 </script>
+
 </body>
 </html>
