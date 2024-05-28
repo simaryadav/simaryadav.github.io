@@ -51,41 +51,75 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
 
 <div class="alumni-section">
   <h2 style="text-align: center;" class="section-heading">Alumni</h2>
+  
   <div class="alumni-container">
     <!-- Rotation Students Section -->
     <div class="alumni-subsection">
       <h3 class="subsection-heading">Rotation Students</h3>
-      <div class="subsection-content">
-        {% for member in site.data.team %}
-          {% if member.is_current == false and member.is_rotation == true %}
-            <p>{{ member.name }} - {{ member.position }}</p>
-          {% endif %}
-        {% endfor %}
-      </div>
+      <table class="alumni-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Position</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for member in site.data.team %}
+            {% if member.is_current == false and member.is_rotation == true %}
+              <tr>
+                <td>{{ member.name }}</td>
+                <td>{{ member.position }}</td>
+              </tr>
+            {% endif %}
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
 
     <!-- Interns Section -->
     <div class="alumni-subsection">
       <h3 class="subsection-heading">Interns</h3>
-      <div class="subsection-content">
-        {% for member in site.data.team %}
-          {% if member.is_current == false and member.is_intern == true %}
-            <p>{{ member.name }} - {{ member.position }}</p>
-          {% endif %}
-        {% endfor %}
-      </div>
+      <table class="alumni-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Position</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for member in site.data.team %}
+            {% if member.is_current == false and member.is_intern == true %}
+              <tr>
+                <td>{{ member.name }}</td>
+                <td>{{ member.position }}</td>
+              </tr>
+            {% endif %}
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
 
     <!-- Past Lab Members Section -->
     <div class="alumni-subsection">
       <h3 class="subsection-heading">Past Lab Members</h3>
-      <div class="subsection-content">
-        {% for member in site.data.team %}
-          {% if member.is_current == false and member.is_rotation != true and member.is_intern != true %}
-            <p>{{ member.name }} - {{ member.position }}</p>
-          {% endif %}
-        {% endfor %}
-      </div>
+      <table class="alumni-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Position</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for member in site.data.team %}
+            {% if member.is_current == false and member.is_rotation != true and member.is_intern != true %}
+              <tr>
+                <td>{{ member.name }}</td>
+                <td>{{ member.position }}</td>
+              </tr>
+            {% endif %}
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
@@ -181,12 +215,27 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
 
 .alumni-container {
   max-width: 100%;
-  display: grid;
   margin: 0 auto;
-  grid-template-columns: repeat(3, 1fr); /* Three columns */
-  gap: 20px;
-  justify-content: space-evenly;
-  align-items: center;
+}
+
+.alumni-subsection {
+  margin-bottom: 30px;
+}
+
+.alumni-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.alumni-table th, .alumni-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.alumni-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
 }
 
 .section-heading {
@@ -195,18 +244,9 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   margin-bottom: 20px;
 }
 
-.alumni-subsection {
-  margin-bottom: 30px;
-}
-
 .subsection-heading {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
-}
-
-.subsection-content p {
-  margin: 0;
-  font-size: 16px;
 }
 </style>
