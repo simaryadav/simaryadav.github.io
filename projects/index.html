@@ -143,7 +143,6 @@ description: A lot's been happening for us
             font-style: normal;
         }
 
-
         /* Coloring dates for different categories */
         .papers-date {
             text-decoration: underline;
@@ -213,8 +212,11 @@ description: A lot's been happening for us
         <li class="news-item papers-date">July 2022 - The Philadelphia Enquirer covered our very recent publication on COVID-19.</li>
         <li class="news-item papers-date">July 2022 - Our work got covered in Pittsburgh's Action 4 News ***_4 Your Health: Studying COVID-19 antibody patterns_***.</li>
         <li class="news-item papers-date">July 2022 - Jishnu becomes a co-Director for the Systems Immunology Core (funded by NIAMS P50) which will perform machine learning and network systems analyses on multi-modal datasets in the context of SSc.</li>
-        <li class="news-item papers-date">June 2022 - Our paper ***_Multi-Omic Admission-Based Prognostic Biomarkers Identified by Machine Learning Algorithms Predict Patient Recovery and 30 Day Survival in Trauma Patients_*** got accepted in Metabolites.</li>
-        <li class="news-item papers-date">June 2022 - Our paper ***_High Dimensional Multi-omics Reveals Unique Signatures of Inflammatory Perturbations Following Trauma_*** got accepted in the Journal of Trauma and Acute Care Surgery.</li>
+        <li class="news-item papers-date">June 2022 - Our paper ***_Multi-Omic Admission-Based Prognostic Biomarkers Identified by Machine Learning Algorithms Predict Patient Recovery and 30-Day Mortality Following Hospitalization with COVID-19_*** got published in Immunity.</li>
+        <li class="news-item papers-date">June 2022 - Our pre-print ***_Machine Learning Reveals Sex-Specific Biomarkers and Population Health Trends for Multi-Omic Characterization of COVID-19_*** got published in the Journal of Immunology.</li>
+        <li class="news-item papers-date">March 2022 - Our paper ***_Generalizability of machine learning-based predictions of COVID-19 outcomes_*** got accepted in Nature Communications.</li>
+        <li class="news-item papers-date">January 2022 - Our paper ***_Systems approaches and algorithms for accurate detection of SARS-CoV-2 infection and COVID-19 diagnosis using high-dimensional cytometry_*** got published in the journal Cell Systems.</li>
+        <li class="news-item papers-date">January 2022 - Our paper ***_Generalizability of machine learning-based predictions of COVID-19 outcomes_*** got accepted in Nature Communications.</li>
         <li class="news-item grants-date">January 2022 - We got a U19 award from NIAID to study sex-specific effects in vaccine-induced immune responses.</li>
         <li class="news-item talks-date">March 2023 - We presented at the Immunology Conference on recent findings in machine learning applications in immunology.</li>
         <li class="news-item talks-date">October 2022 - We presented at the International Conference on Computational Biology discussing novel multi-omics integration techniques.</li>
@@ -261,11 +263,8 @@ description: A lot's been happening for us
         });
 
         buttons.forEach(button => {
-            if (selectedTags.has(button.textContent) || selectedYears.has(button.textContent)) {
-                button.classList.add('selected');
-            } else {
-                button.classList.remove('selected');
-            }
+            const isSelected = selectedTags.has(button.textContent) || selectedYears.has(button.textContent);
+            button.classList.toggle('selected', isSelected);
         });
     }
 
