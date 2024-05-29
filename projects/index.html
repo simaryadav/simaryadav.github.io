@@ -125,6 +125,25 @@ description: A lot's been happening for us
             color: #fff;
         }
 
+        /* CSS to style text within quotes as bold and italic */
+        .news-item:before {
+            content: open-quote;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .news-item:after {
+            content: close-quote;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .news-item::first-letter {
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
         /* Coloring dates for different categories */
         .papers-date {
             text-decoration: underline;
