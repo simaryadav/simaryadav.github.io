@@ -101,7 +101,7 @@ permalink: /Contact-us/
     <a class="tag-button" href="https://twitter.com/jishnu1729" target="_blank">Twitter</a>
   </div>
 
-  <iframe class = "nine" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.9222785433276!2d-79.94718492394952!3d40.454857153317924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f34f6212ade3%3A0x18f7f9a7b1d0f338!2sThe%20Assembly!5e0!3m2!1sen!2sus!4v1714092409211!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe class = "nine" style="width: 100%; height: 600px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.9222785433276!2d-79.94718492394952!3d40.454857153317924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f34f6212ade3%3A0x18f7f9a7b1d0f338!2sThe%20Assembly!5e0!3m2!1sen!2sus!4v1714092409211!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 
 
