@@ -59,8 +59,8 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
       <table class="alumni-table">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Position</th>
+            <th style="width: 50%;">Name</th>
+            <th style="width: 50%;">Position</th>
           </tr>
         </thead>
         <tbody>
@@ -82,8 +82,8 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
       <table class="alumni-table">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Position</th>
+            <th style="width: 50%;">Name</th>
+            <th style="width: 50%;">Position</th>
           </tr>
         </thead>
         <tbody>
@@ -105,8 +105,8 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
       <table class="alumni-table">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Position</th>
+            <th style="width: 50%;">Name</th>
+            <th style="width: 50%;">Position</th>
           </tr>
         </thead>
         <tbody>
@@ -204,7 +204,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
 
 .team-member-separator {
   grid-column: 1 / -1; /* Ensures separator spans the entire width of the grid */
-  border-top: 2px solid ;
+  border-top: 2px solid;
   margin: 20px 0; /* Margin to separate from previous content and next heading */
 }
 
@@ -225,26 +225,24 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
 .alumni-table {
   width: 100%;
   border-collapse: collapse;
+  margin-bottom: 20px;
+  table-layout: fixed; /* Ensure table columns have fixed width */
 }
 
 .alumni-table th, .alumni-table td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
-}
-
-.alumni-table th {
-  background-color: #333; /* Darker background for header */
-  color: #fff; /* White text for header */
-  font-weight: bold;
+  --heading-font-color:black; /* Ensure text color is black */
 }
 
 .alumni-table tr:nth-child(even) {
   background-color: #f2f2f2; /* Light gray background for even rows */
 }
 
-.alumni-table tr:hover {
-  background-color: #ddd; /* Darker gray for hover effect */
+.alumni-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
 }
 
 .section-heading {
