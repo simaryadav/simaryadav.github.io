@@ -13,8 +13,8 @@ menu_settings:
   menu_items:
     - title: "Home"
       url: "/"
-    - title: "Posts"
-      url: "/projects/"
+    - title: "News"
+      url: "/news/"
     - title: "Publications"
       url: "/posts/"
     - title: "Team"
@@ -139,8 +139,8 @@ footer_menu__settings:
   menu__items:
     - title: "Home"
       url: "/"
-    - title: "Posts"
-      url: "/projects/"
+    - title: "News"
+      url: "/news/"
     - title: "Publications"
       url: "/posts/"
     - title: "Team"

@@ -25,9 +25,9 @@ collections:
   posts:
     output: true
     permalink: /posts/:slug
-  projects:
+  news:
     output: true
-    permalink: /project/:slug
+    permalink: /news/:slug
   team:
     output: true
     permalink: /team/:slug
@@ -51,9 +51,9 @@ defaults:
       layout: "post"
   - scope:
       path: ""
-      type: "projects"
+      type: "news"
     values:
-      layout: "project"
+      layout: "news"
   - scope:
       path: ""
       type: "team"

@@ -1,4 +1,4 @@
-{% for post in site.projects %}
+{% for post in site.news %}
   {% if post.featured == true %}
     {% assign is-featured = true %}
   {% endif %}
@@ -31,7 +31,7 @@
 
             <div class="splide__track animate">
               <div class="splide__list">
-                {% assign sorted = site.projects | sort: 'date' | reverse %}
+                {% assign sorted = site.news | sort: 'date' | reverse %}
                 {% for project in sorted %}
                 {% if project.featured == true %}
                 <article class="project col-4 col-d-6 col-t-12 splide__slide">
