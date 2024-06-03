@@ -25,9 +25,9 @@ collections:
   posts:
     output: true
     permalink: /posts/:slug
-  news:
+  projects:
     output: true
-    permalink: /news/:slug
+    permalink: /project/:slug
   team:
     output: true
     permalink: /team/:slug
@@ -63,4 +63,3 @@ defaults:
 sass:
   sass_dir: _sass
   style: compressed
-   

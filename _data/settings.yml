@@ -13,7 +13,7 @@ menu_settings:
   menu_items:
     - title: "Home"
       url: "/"
-    - title: "News"
+    - title: "Posts"
       url: "/projects/"
     - title: "Publications"
       url: "/posts/"
@@ -133,13 +133,13 @@ author_section:
 
 #-------------------------------
 # Footer Settings
-  
+
 # Footer Navigation
 footer_menu__settings:
   menu__items:
     - title: "Home"
       url: "/"
-    - title: "News"
+    - title: "Posts"
       url: "/projects/"
     - title: "Publications"
       url: "/posts/"
