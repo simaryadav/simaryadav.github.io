@@ -51,9 +51,9 @@ defaults:
       layout: "post"
   - scope:
       path: ""
-      type: "news"
+      type: "projects"
     values:
-      layout: "news"
+      layout: "projects"
   - scope:
       path: ""
       type: "team"
