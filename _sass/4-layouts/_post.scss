@@ -134,25 +134,10 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   -webkit-line-clamp: 3;
-  position: relative;
 }
 
 .clamp.open {
   -webkit-line-clamp: initial;
-}
-
-.clamp::before {
-  content: "...";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: white; /* Adjust as needed */
-  padding: 0 5px;
-  display: none;
-}
-
-.clamp.open::before {
-  display: block;
 }
 
 .explore-tags {
