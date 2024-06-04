@@ -66,7 +66,7 @@ description: Total: 56 published papers
                 {% if post.description | size > 200 %}
                   <button class="show-more-btn" onclick="showMore('id_{{ forloop.index }}', this)">Show more</button> <!-- Pass unique ID and button -->
                 {% endif %}     
-              <p><strong>{{ post.published }}</strong></p>
+              <p><strong><i>{{ post.published }}</i></strong></p>
               <div class="post-meta">
                 {% if post.tags %}
                   <div class="post-tags">
