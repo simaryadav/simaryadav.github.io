@@ -15,7 +15,7 @@
 }
 
 .post-image img {
-  position: inherit;
+  position: absolute;
   width: 100%;
   height: 100%;
   top: 50%;
@@ -61,6 +61,7 @@
   border-radius: 8px;
   overflow: hidden;
   transition: all 0.3s ease;
+  height: -webkit-fill-available;
 }
 
 .post:hover {
