@@ -3,6 +3,7 @@ layout: default
 title: Tags
 permalink: /tags/
 ---
+
 {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign tag_words = site_tags | split:',' | sort %}
 <!-- begin tags -->
@@ -79,8 +80,13 @@ permalink: /tags/
             {% endif %}
             <div class="post-info">
               <h2 class="post-title">{{ post.title }}</h2>
-              <p class="post-description">{{ post.description }}</p>
-            
+              <div id="id_{{ forloop.index }}" class="clamp"> <!-- Update ID to be unique -->
+                <p class="post-description">{{ post.description }}</p>
+              </div>
+              {% if post.description | size > 200 %}
+                <button class="show-more-btn" onclick="showMore('id_{{ forloop.index }}', this)">Show more</button> <!-- Pass unique ID and button -->
+              {% endif %}
+              <p><strong><i>{{ post.published }}</i></strong></p>            
               <div class="post-meta">
                 {% if post.tags %}
                   <div class="post-tags">
@@ -135,7 +141,12 @@ permalink: /tags/
             {% endif %}
             <div class="post-info">
               <h2 class="post-title">{{ post.title }}</h2>
-              <p class="post-description">{{ post.description }}</p>
+              <div id="id_{{ forloop.index }}" class="clamp"> <!-- Update ID to be unique -->
+                <p class="post-description">{{ post.description }}</p>
+              </div>
+              {% if post.description | size > 200 %}
+                <button class="show-more-btn" onclick="showMore('id_{{ forloop.index }}', this)">Show more</button> <!-- Pass unique ID and button -->
+              {% endif %}              
               <p><strong>{{ post.published }}</strong></p>
               <div class="post-meta">
                 {% if post.tags %}
@@ -191,7 +202,12 @@ permalink: /tags/
             {% endif %}
             <div class="post-info">
               <h2 class="post-title">{{ post.title }}</h2>
-              <p class="post-description">{{ post.description }}</p>
+              <div id="id_{{ forloop.index }}" class="clamp"> <!-- Update ID to be unique -->
+                <p class="post-description">{{ post.description }}</p>
+              </div>
+              {% if post.description | size > 200 %}
+                <button class="show-more-btn" onclick="showMore('id_{{ forloop.index }}', this)">Show more</button> <!-- Pass unique ID and button -->
+              {% endif %}              
               <p><strong>{{ post.published }}</strong></p>
               <div class="post-meta">
                 {% if post.tags %}
@@ -250,7 +266,12 @@ permalink: /tags/
             {% endif %}
             <div class="post-info">
               <h2 class="post-title">{{ post.title }}</h2>
-              <p class="post-description">{{ post.description }}</p>
+              <div id="id_{{ forloop.index }}" class="clamp"> <!-- Update ID to be unique -->
+                <p class="post-description">{{ post.description }}</p>
+              </div>
+              {% if post.description | size > 200 %}
+                <button class="show-more-btn" onclick="showMore('id_{{ forloop.index }}', this)">Show more</button> <!-- Pass unique ID and button -->
+              {% endif %}              
               <p><strong>{{ post.published }}</strong></p>
               <div class="post-meta">
                 {% if post.tags %}
@@ -306,7 +327,12 @@ permalink: /tags/
             {% endif %}
             <div class="post-info">
               <h2 class="post-title">{{ post.title }}</h2>
-              <p class="post-description">{{ post.description }}</p>
+              <div id="id_{{ forloop.index }}" class="clamp"> <!-- Update ID to be unique -->
+                <p class="post-description">{{ post.description }}</p>
+              </div>
+              {% if post.description | size > 200 %}
+                <button class="show-more-btn" onclick="showMore('id_{{ forloop.index }}', this)">Show more</button> <!-- Pass unique ID and button -->
+              {% endif %}              
               <p><strong>{{ post.published }}</strong></p>
               <div class="post-meta">
                 {% if post.tags %}
@@ -362,7 +388,12 @@ permalink: /tags/
             {% endif %}
             <div class="post-info">
               <h2 class="post-title">{{ post.title }}</h2>
-              <p class="post-description">{{ post.description }}</p>
+              <div id="id_{{ forloop.index }}" class="clamp"> <!-- Update ID to be unique -->
+                <p class="post-description">{{ post.description }}</p>
+              </div>
+              {% if post.description | size > 200 %}
+                <button class="show-more-btn" onclick="showMore('id_{{ forloop.index }}', this)">Show more</button> <!-- Pass unique ID and button -->
+              {% endif %}              
               <p><strong>{{ post.published }}</strong></p>
               <div class="post-meta">
                 {% if post.tags %}
@@ -418,7 +449,12 @@ permalink: /tags/
             {% endif %}
             <div class="post-info">
               <h2 class="post-title">{{ post.title }}</h2>
-              <p class="post-description">{{ post.description }}</p>
+              <div id="id_{{ forloop.index }}" class="clamp"> <!-- Update ID to be unique -->
+                <p class="post-description">{{ post.description }}</p>
+              </div>
+              {% if post.description | size > 200 %}
+                <button class="show-more-btn" onclick="showMore('id_{{ forloop.index }}', this)">Show more</button> <!-- Pass unique ID and button -->
+              {% endif %}              
               <p><strong>{{ post.published }}</strong></p>
               <div class="post-meta">
                 {% if post.tags %}
@@ -474,7 +510,12 @@ permalink: /tags/
             {% endif %}
             <div class="post-info">
               <h2 class="post-title">{{ post.title }}</h2>
-              <p class="post-description">{{ post.description }}</p>
+              <div id="id_{{ forloop.index }}" class="clamp"> <!-- Update ID to be unique -->
+                <p class="post-description">{{ post.description }}</p>
+              </div>
+              {% if post.description | size > 200 %}
+                <button class="show-more-btn" onclick="showMore('id_{{ forloop.index }}', this)">Show more</button> <!-- Pass unique ID and button -->
+              {% endif %}              
               <p><strong>{{ post.published }}</strong></p>
               <div class="post-meta">
                 {% if post.tags %}
@@ -530,7 +571,12 @@ permalink: /tags/
             {% endif %}
             <div class="post-info">
               <h2 class="post-title">{{ post.title }}</h2>
-              <p class="post-description">{{ post.description }}</p>
+              <div id="id_{{ forloop.index }}" class="clamp"> <!-- Update ID to be unique -->
+                <p class="post-description">{{ post.description }}</p>
+              </div>
+              {% if post.description | size > 200 %}
+                <button class="show-more-btn" onclick="showMore('id_{{ forloop.index }}', this)">Show more</button> <!-- Pass unique ID and button -->
+              {% endif %}              
               <p><strong>{{ post.published }}</strong></p>
               <div class="post-meta">
                 {% if post.tags %}
@@ -586,7 +632,12 @@ permalink: /tags/
             {% endif %}
             <div class="post-info">
               <h2 class="post-title">{{ post.title }}</h2>
-              <p class="post-description">{{ post.description }}</p>
+              <div id="id_{{ forloop.index }}" class="clamp"> <!-- Update ID to be unique -->
+                <p class="post-description">{{ post.description }}</p>
+              </div>
+              {% if post.description | size > 200 %}
+                <button class="show-more-btn" onclick="showMore('id_{{ forloop.index }}', this)">Show more</button> <!-- Pass unique ID and button -->
+              {% endif %}
               <p><strong>{{ post.published }}</strong></p>
               <div class="post-meta">
                 {% if post.tags %}
@@ -642,7 +693,12 @@ permalink: /tags/
             {% endif %}
             <div class="post-info">
               <h2 class="post-title">{{ post.title }}</h2>
-              <p class="post-description">{{ post.description }}</p>
+              <div id="id_{{ forloop.index }}" class="clamp"> <!-- Update ID to be unique -->
+                <p class="post-description">{{ post.description }}</p>
+              </div>
+              {% if post.description | size > 200 %}
+                <button class="show-more-btn" onclick="showMore('id_{{ forloop.index }}', this)">Show more</button> <!-- Pass unique ID and button -->
+              {% endif %}
               <p><strong>{{ post.published }}</strong></p>
               <div class="post-meta">
                 {% if post.tags %}
@@ -699,7 +755,12 @@ permalink: /tags/
             {% endif %}
             <div class="post-info">
               <h2 class="post-title">{{ post.title }}</h2>
-              <p class="post-description">{{ post.description }}</p>
+              <div id="id_{{ forloop.index }}" class="clamp"> <!-- Update ID to be unique -->
+                <p class="post-description">{{ post.description }}</p>
+              </div>
+              {% if post.description | size > 200 %}
+                <button class="show-more-btn" onclick="showMore('id_{{ forloop.index }}', this)">Show more</button> <!-- Pass unique ID and button -->
+              {% endif %}              
               <p><strong>{{ post.published }}</strong></p>
               <div class="post-meta">
                 {% if post.tags %}
@@ -755,7 +816,12 @@ permalink: /tags/
             {% endif %}
             <div class="post-info">
               <h2 class="post-title">{{ post.title }}</h2>
-              <p class="post-description">{{ post.description }}</p>
+              <div id="id_{{ forloop.index }}" class="clamp"> <!-- Update ID to be unique -->
+                <p class="post-description">{{ post.description }}</p>
+              </div>
+              {% if post.description | size > 200 %}
+                <button class="show-more-btn" onclick="showMore('id_{{ forloop.index }}', this)">Show more</button> <!-- Pass unique ID and button -->
+              {% endif %}              
               <p><strong>{{ post.published }}</strong></p>
               <div class="post-meta">
                 {% if post.tags %}
@@ -794,3 +860,21 @@ permalink: /tags/
 </script>
 
 
+<script>
+  const article = document.querySelector("#id_1");
+  const button = document.querySelector("button");
+  
+  function showMore(articleId, button) {
+    const article = document.querySelector("#" + articleId);
+    if (article.classList.contains("open")) {
+      // read less
+      article.classList.remove("open");
+      button.innerHTML = "Show more";
+    } else {
+      // read more
+      article.classList.add("open");
+      button.innerHTML = "Show less";
+    }
+  }
+  </script>
+  
