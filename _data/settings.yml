@@ -25,7 +25,7 @@ menu_settings:
 
 # Call to action button
 cta_button:
-  enable: true
+  enable: False
   cta_button_link: '/contact/'
   cta_button_text: Get in touch
 
