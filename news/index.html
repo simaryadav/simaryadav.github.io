@@ -252,65 +252,83 @@ description: A lot's been happening for us
        <li class="news-item talks-date">October 2022 - Jishnu gave an invited talk at "BMES 2022" on, "A network-based approach to identify expression modules underlying rejection in pediatric liver transplantation"</li>
        <li class="news-item talks-date">September 2022 - Jishnu gave an invited talk at the "Banff-CST Joint Transplant and Pathology Summit" titled "Machine learning in clinical decision making in transplant biology"</li>
        <li class="news-item talks-date">August 2022 - Jishnu gave a talk at "International Workshop on Scleroderma 2022" in Boston.</li>
-       <li class="news-item talks-date">July 2022 - Jishnu was invited to give a talk at "ISMB 2022" on the topic "A network-based approach to identify expression modules underlying rejection in pediatric liver transplantation"</li>
+       <li class="news-item talks-date">July 2022 - Jishnu gave an invited talk at "ISMB 2022" on the topic "A network-based approach to identify expression modules underlying rejection in pediatric liver transplantation"</li>
        <li class="news-item talks-date">April 2021 - Jishnu gave a talk at the "2021 Cold Spring Harbor Systems Immunology Meeting" on "CausER – a general approach to uncover latent causal factors from multi-omic datasets"</li>
        <li class="news-item talks-date">March 2021 - Jishnu gave a talk at the "2021 Cold Spring Harbor Networks Meeting" on "Network-based multi-omic integration unveils novel molecular programs underlying T follicular helper cell differentiation in immunological disorders"</li>
        <li class="news-item talks-date">January 2021 - Jishnu gave an invited talk at the "University of Iowa College of Medicine Seminar Series 2021" on "Using machine learning and network systems approaches to uncover molecular phenotypes underlying pathophysiology of immune disorders"</li>
        <li class="news-item talks-date">January 2020 - The lab is now open! We look forward to exciting science in the future!</li>
        `
    };
-   function toggleSelection(category) {
-       const button = document.querySelector(`.tag-button[onclick="toggleSelection('${category}')"]`);
-       if (selectedCategories.has(category)) {
-           selectedCategories.delete(category);
-           button.classList.remove('selected');
-       } else {
-           selectedCategories.add(category);
-           button.classList.add('selected');
-       }
-       filterContent();
-   }
-   function toggleYear(year) {
-       const buttons = document.querySelectorAll('.tag-button[onclick^="toggleYear"]');
-       if (selectedYear === year) {
-           selectedYear = null;
-           buttons.forEach(button => button.classList.remove('selected'));
-       } else {
-           selectedYear = year;
-           buttons.forEach(button => {
-               if (button.getAttribute('onclick').includes(year)) {
-                   button.classList.add('selected');
-               } else {
-                   button.classList.remove('selected');
-               }
-           });
-       }
-       filterContent();
-   }
-   function filterContent() {
-       let filteredContent = '';
-       selectedCategories.forEach(category => {
-           filteredContent += data[category];
-       });
-       const parser = new DOMParser();
-       const doc = parser.parseFromString(`<ul>${filteredContent}</ul>`, 'text/html');
-       const listItems = doc.querySelectorAll('li');
-       listItems.forEach(item => {
-           const itemText = item.textContent;
-           const itemDate = new Date(itemText.match(/\b(January|February|March|April|May|June|July|August|September|October|November|December) \d{4}\b/)[0]);
-           if (selectedYear && itemDate.getFullYear() !== parseInt(selectedYear, 10)) {
-               item.style.display = 'none';
-           } else {
-               item.style.display = '';
-           }
-           const quoteRegex = /"(.*?)"/g;
-           item.innerHTML = item.innerHTML.replace(quoteRegex, '"<span class="bold-italic">$1</span>"');
-           const parenthesisRegex = /\((.*?)\)/g;
-           item.innerHTML = item.innerHTML.replace(parenthesisRegex, '(<span class="italic">$1</span>)');
-       });
-       const filteredList = Array.from(listItems).map(item => item.outerHTML).join('');
-       document.getElementById('output').innerHTML = filteredList || '<li class="news-item">Check out the news here</li>';
-   }
+   
+function toggleSelection(category) {
+    const button = document.querySelector(`.tag-button[onclick="toggleSelection('${category}')"]`);
+    if (selectedCategories.has(category)) {
+        selectedCategories.delete(category);
+        button.classList.remove('selected');
+    } else {
+        selectedCategories.add(category);
+        button.classList.add('selected');
+    }
+    filterContent();
+}
+
+function toggleYear(year) {
+    const buttons = document.querySelectorAll('.tag-button[onclick^="toggleYear"]');
+    if (selectedYear === year) {
+        selectedYear = null;
+        buttons.forEach(button => button.classList.remove('selected'));
+    } else {
+        selectedYear = year;
+        buttons.forEach(button => {
+            if (button.getAttribute('onclick').includes(year)) {
+                button.classList.add('selected');
+            } else {
+                button.classList.remove('selected');
+            }
+        });
+    }
+    filterContent();
+}
+
+function filterContent() {
+    let filteredContent = '';
+
+    if (selectedCategories.size === 0 && !selectedYear) {
+        // Show all data if no category or year is selected
+        for (const category in data) {
+            filteredContent += data[category];
+        }
+    } else {
+        selectedCategories.forEach(category => {
+            filteredContent += data[category];
+        });
+    }
+
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(`<ul>${filteredContent}</ul>`, 'text/html');
+    const listItems = doc.querySelectorAll('li');
+    listItems.forEach(item => {
+        const itemText = item.textContent;
+        const itemDateMatch = itemText.match(/\b(January|February|March|April|May|June|July|August|September|October|November|December) \d{4}\b/);
+        if (itemDateMatch) {
+            const itemDate = new Date(itemDateMatch[0]);
+            if (selectedYear && itemDate.getFullYear() !== parseInt(selectedYear, 10)) {
+                item.style.display = 'none';
+            } else {
+                item.style.display = '';
+            }
+        }
+        const quoteRegex = /"(.*?)"/g;
+        item.innerHTML = item.innerHTML.replace(quoteRegex, '"<span class="bold-italic">$1</span>"');
+        const parenthesisRegex = /\((.*?)\)/g;
+        item.innerHTML = item.innerHTML.replace(parenthesisRegex, '(<span class="italic">$1</span>)');
+    });
+    const filteredList = Array.from(listItems).map(item => item.outerHTML).join('');
+    document.getElementById('output').innerHTML = filteredList || '<li class="news-item">Check out the news here</li>';
+}
+
+// Call filterContent initially to show all data by default
+filterContent();
 </script>
 </body>
 </html>
