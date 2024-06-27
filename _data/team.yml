@@ -180,6 +180,16 @@
     Ally received her degrees in Chemistry and Computer Science from Wellesley College and is co-advised by Nate Lord. Outside the lab, she enjoys figure skating, playing video games, and baking.
   photo: /images/alyson.webp
 
+- name: Aaron Francis 
+  is_pi: False
+  is_current: True
+  is_intern : False
+  is_rotation : False
+  position: PhD Student | CMU-Pitt Program in Computational Biology (CPCB)
+  bio: >
+    I am interested in applying systems approaches to uncover mechanisms underlying immune regulation.
+  photo: /images/Aaron_Francis.png
+
 - name: Simar Yadav
   is_pi: False
   is_current: True
