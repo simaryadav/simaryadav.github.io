@@ -97,7 +97,6 @@ permalink: /Contact-us/
 
   <div class="button-container">
     <a class="tag-button" href="https://scholar.google.com/citations?user=61wI3HMAAAAJ&hl=en" target="_blank">Google Scholar</a>
-    <a class="tag-button" href="https://www.researchgate.net/profile/Jishnu-Das-2" target="_blank">ResearchGate</a>
     <a class="tag-button" href="https://github.com/jishnu-lab" target="_blank">GitHub</a>
     <a class="tag-button" href="https://twitter.com/jishnu1729" target="_blank">Twitter</a>
   </div>
