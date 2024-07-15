@@ -7,4 +7,5 @@ tags: [Gene_Regulatory_Networks]
 href : 'https://journals.sagepub.com/doi/10.4137/CIN.S14064'
 published: Cancer Informatics 2014
 year : 2014
+featured:
 ---

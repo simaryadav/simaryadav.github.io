@@ -1,9 +1,9 @@
-{% for post in site.projects %}
+{% for post in site.posts %}
   {% if post.featured == true %}
     {% assign is-featured = true %}
   {% endif %}
 {% endfor %}
-
+ 
 {% if is-featured == true and site.data.settings.featured.enable == true %}
 <!-- begin featured section -->
 <section class="section featured-section">
@@ -31,13 +31,13 @@
 
             <div class="splide__track animate">
               <div class="splide__list">
-                {% assign sorted = site.projects | sort: 'date' | reverse %}
-                {% for project in sorted %}
-                {% if project.featured == true %}
+                {% assign sorted = site.posts | sort: 'date' | reverse %}
+                {% for post in sorted %}
+                {% if post.featured == true %}
                 <article class="project col-4 col-d-6 col-t-12 splide__slide">
                   <div class="project__content">
                     <a href="{{ project.url | relative_url }}" class="project__image">
-                      {% if project.image and project.video_embed %}
+                      {% if post.image and post.video_embed %}
                       <div class="video-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                           <polygon points="40,30 70,50 40,70"></polygon>
@@ -47,11 +47,11 @@
                       <img class="lazy" data-src="{{ project.image | relative_url }}" alt="{{ project.title }}">
                     </a>
                     <div class="project__info">
-                      {% if project.label %}
-                      <div class="project__label">{{ project.label }}</div>
+                      {% if post.label %}
+                      <div class="project__label">{{ post.label }}</div>
                       {% endif %}
-                      {% if project.title %}
-                      <h3 class="project__title"><a class="project__link" href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+                      {% if post.title %}
+                      <h3 class="project__title"><a class="project__link" href="{{ project.url | relative_url }}">{{ post.title }}</a></h3>
                       {% endif %}
                     </div>
                   </div>

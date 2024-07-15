@@ -7,4 +7,5 @@ tags: [Gene_Regulatory_Networks,Machine_Learning]
 href : 'https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-015-1465-9'
 published: BMC Genomics 2015
 year : 2015
+featured: 
 ---

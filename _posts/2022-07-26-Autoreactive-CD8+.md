@@ -7,4 +7,5 @@ tags: [Gene_Regulatory_Networks,Protein_Networks]
 href : 'https://www.nature.com/articles/s41590-022-01210-5'
 published: Nature Immunology 2022
 year : 2022
+featured:
 ---

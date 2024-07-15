@@ -7,4 +7,5 @@ tags: [Protein_Networks]
 href : 'https://journals.lww.com/jtrauma/fulltext/2023/06000/high_dimensional_proteomics_identifies_organ.9.aspx'
 published: Journal of Trauma and Acute Care Surgery 2023
 year : 2023 
+featured:
 ---

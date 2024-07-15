@@ -7,4 +7,5 @@ tags: [Gene_Regulatory_Networks]
 href : 'https://aacrjournals.org/cancerres/article/83/1/59/711846/Landscape-of-MicroRNA-Regulatory-Network'
 published: Cancer Research 2023
 year : 2023
+featured:
 ---

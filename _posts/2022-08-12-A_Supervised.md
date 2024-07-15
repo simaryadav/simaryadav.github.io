@@ -7,4 +7,5 @@ tags: [Gene_Regulatory_Networks,Machine_Learning]
 href : 'https://www.sciencedirect.com/science/article/pii/S266638992200174X?via%3Dihub'
 published: Patterns 2022
 year : 2022
+featured: true
 ---

@@ -7,4 +7,5 @@ tags: [Protein_Networks,Antibodyomics]
 href : 'https://journals.lww.com/jasn/fulltext/2020/11000/extracellular_matrix_injury_of_kidney_allografts.21.aspx'
 published: The Journal Of American Society of Nephrology 2020
 year : 2020
+featured:
 ---

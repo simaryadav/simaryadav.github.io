@@ -7,4 +7,5 @@ tags: [Antibodyomics]
 href : 'https://rupress.org/jem/article/220/8/e20220839/214243/Stability-and-heterogeneity-in-the-antimicrobiota'
 published: Journal of Experimental Medicine 2023
 year : 2023
+featured:
 ---

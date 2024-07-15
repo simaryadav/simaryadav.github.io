@@ -7,4 +7,5 @@ tags: [Gene_Regulatory_Networks]
 href : 'https://www.cell.com/molecular-cell/fulltext/S1097-2765(15)00092-1?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS1097276515000921%3Fshowall%3Dtrue'
 published: Molecular Cell 2015
 year : 2015
+featured:
 ---

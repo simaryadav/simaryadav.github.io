@@ -7,4 +7,5 @@ tags:
 href : 'https://pubmed.ncbi.nlm.nih.gov/32145259/'
 published: Journal of Hepatology 2020
 year : 2020
+featured:
 ---

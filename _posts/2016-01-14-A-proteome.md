@@ -7,4 +7,5 @@ tags: [Protein_Networks,Gene_Regulatory_Networks]
 href : 'https://www.cell.com/cell/fulltext/S0092-8674(15)01556-1?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0092867415015561%3Fshowall%3Dtrue'
 published: Cell 2016
 year : 2016
+featured:
 ---
