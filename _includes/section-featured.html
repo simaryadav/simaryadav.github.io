@@ -2,6 +2,10 @@
 
 {% if featured_posts.size > 0 and site.data.settings.featured.enable == true %}
 <!-- begin featured section -->
+<style>
+  /* CSS Styles */
+
+</style>
 
 <section class="section blog animate">
   <div class="container">
@@ -12,7 +16,7 @@
         <span class="section__intro">{{ site.data.settings.featured.featured_intro }}</span>
         {% endif %}
         {% if site.data.settings.featured.featured_title %}
-        <span class="author_section_title">{{ site.data.settings.featured.featured_title }}</span>
+        <span class="section__title">{{ site.data.settings.featured.featured_title }}</span>
         {% endif %}
       </div>
     </div>
