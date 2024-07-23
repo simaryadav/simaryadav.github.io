@@ -75,6 +75,7 @@ hero_logo_image:
 # Slider Featured Settings
 featured:
   enable: true
+  featured_intro: Top Pick's
   featured_title: Selected Work
 
 
