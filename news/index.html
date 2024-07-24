@@ -169,10 +169,18 @@ description: A lot's been happening for us
         <li class="news-item">Check out the news here</li>
     </ul>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
 <script>
     let selectedCategories = new Set();
     let selectedYear = null;
-    const data = {{ site.data.news_data | jsonify }};
+    let data = {};
+
+    async function fetchData() {
+        const response = await fetch('{{ site.baseurl }}/_data/news_data.yml');
+        const text = await response.text();
+        data = jsyaml.load(text);
+        filterContent();
+    }
 
     function toggleSelection(category) {
         const button = document.querySelector(`.tag-button[onclick="toggleSelection('${category}')"]`);
@@ -208,7 +216,6 @@ description: A lot's been happening for us
         let filteredContent = '';
 
         if (selectedCategories.size === 0 && !selectedYear) {
-            // Show all data if no category or year is selected
             for (const category in data) {
                 filteredContent += formatCategory(data[category]);
             }
@@ -238,7 +245,6 @@ description: A lot's been happening for us
             item.innerHTML = item.innerHTML.replace(parenthesisRegex, '(<span class="italic">$1</span>)');
         });
         const filteredList = Array.from(listItems).map(item => item.outerHTML).join('');
-        document.getElementById('output').
         document.getElementById('output').innerHTML = filteredList || '<li class="news-item">Check out the news here</li>';
     }
 
@@ -249,8 +255,8 @@ description: A lot's been happening for us
             </li>`).join('');
     }
 
-    // Call filterContent initially to show all data by default
-    filterContent();
+    // Fetch the data and call filterContent initially to show all data by default
+    fetchData();
 </script>
 </body>
 </html>
