@@ -4,7 +4,59 @@
 <!-- begin featured section -->
 <style>
   /* CSS Styles */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
 
+  .slider-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .slider-container label {
+    margin-right: 10px;
+    font-weight: bold;
+  }
+
+  .slider-container input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #ddd;
+    outline: none;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    border-radius: 5px;
+  }
+
+  .slider-container input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  .slider-container input[type="range"]::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  .article {
+    flex: 1 1 30%; /* Adjust this value to change the size of the articles */
+    margin: 10px;
+  }
 </style>
 
 <section class="section blog animate">
@@ -21,14 +73,29 @@
       </div>
     </div>
 
+    <div class="slider-container">
+      <label for="slider">Adjust size:</label>
+      <input type="range" id="slider" name="slider" min="10" max="100" value="30" oninput="adjustSize(this.value)">
+    </div>
+
     <div class="row">
-    {% assign sorted_featured_posts = featured_posts | sort: 'date' | reverse %}
-    {% for post in sorted_featured_posts limit:6 %}
-        {% include article.html %}
-    {% endfor %}
+      {% assign sorted_featured_posts = featured_posts | sort: 'date' | reverse %}
+      {% for post in sorted_featured_posts limit:6 %}
+        <div class="article">
+          {% include article.html %}
+        </div>
+      {% endfor %}
     </div>
 
   </div>
 </section>
 <!-- end featured section -->
 {% endif %}
+
+<script>
+  function adjustSize(value) {
+    document.querySelectorAll('.article').forEach(article => {
+      article.style.flex = `1 1 ${value}%`;
+    });
+  }
+</script>
