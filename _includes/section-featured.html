@@ -4,28 +4,106 @@
 <!-- begin featured section -->
 <style>
   /* CSS Styles */
+  .featured-container {
+    padding: 20px;
+    background-color: #121212; /* Adjust to match the dark background */
+  }
 
+  .featured-section__info {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .featured-section__title {
+    color: #fff;
+  }
+
+  .featured-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .featured-article {
+    flex: 1 1 calc(33.333% - 20px); /* 3 articles per row with margin */
+    box-sizing: border-box;
+    margin: 10px;
+    background: #1e1e1e;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    text-align: center;
+  }
+
+  .featured-article:hover {
+    transform: scale(1.05);
+  }
+
+  .featured-article__inner {
+    padding: 20px;
+  }
+
+  .featured-article__image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .featured-article__category {
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .featured-article__title {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .featured-article__description {
+    color: #ddd;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .featured-article__image img {
+    width: 100%;
+    border-bottom: 1px solid #444;
+  }
 </style>
 
 <section class="section blog animate">
-  <div class="container">
+  <div class="featured-container">
 
-    <div class="section__info section__info__center">
+    <div class="featured-section__info">
       <div class="section__head">
         {% if site.data.settings.featured.featured_intro %}
         <span class="section__intro">{{ site.data.settings.featured.featured_intro }}</span>
         {% endif %}
         {% if site.data.settings.featured.featured_title %}
-        <h2 class="section__title">{{ site.data.settings.featured.featured_title }}</h2>
+        <h2 class="featured-section__title">{{ site.data.settings.featured.featured_title }}</h2>
         {% endif %}
       </div>
     </div>
 
-    <div class="row">
-    {% assign sorted_featured_posts = featured_posts | sort: 'date' | reverse %}
-    {% for post in sorted_featured_posts limit:6 %}
-        {% include article.html %}
-    {% endfor %}
+    <div class="featured-row">
+      {% assign sorted_featured_posts = featured_posts | sort: 'date' | reverse %}
+      {% for post in sorted_featured_posts limit:6 %}
+      <div class="featured-article">
+        <div class="featured-article__inner">
+          {% if post.image %}
+          <a href="{{ post.href }}" class="featured-article__image">
+            <img src="{{ post.image }}" alt="{{ post.title }}">
+          </a>
+          {% endif %}
+          <div class="featured-article__category">{{ post.category }}</div>
+          <h3 class="featured-article__title"><a href="{{ post.href }}">{{ post.title }}</a></h3>
+          <div class="featured-article__description">{{ post.excerpt }}</div>
+        </div>
+      </div>
+      {% endfor %}
     </div>
 
   </div>
