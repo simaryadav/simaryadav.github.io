@@ -4,59 +4,70 @@
 <!-- begin featured section -->
 <style>
   /* CSS Styles */
+  .container {
+    padding: 20px;
+    background-color: #121212; /* Adjust to match the dark background */
+  }
+
+  .section__info {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .section__title {
+    color: #fff;
+  }
+
   .row {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
-  }
-
-  .slider-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-
-  .slider-container label {
-    margin-right: 10px;
-    font-weight: bold;
-  }
-
-  .slider-container input[type="range"] {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 8px;
-    background: #ddd;
-    outline: none;
-    opacity: 0.8;
-    transition: opacity 0.2s;
-    border-radius: 5px;
-  }
-
-  .slider-container input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    background: #4CAF50;
-    cursor: pointer;
-    border-radius: 50%;
-  }
-
-  .slider-container input[type="range"]::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    background: #4CAF50;
-    cursor: pointer;
-    border-radius: 50%;
   }
 
   .article {
-    flex: 1 1 30%; /* Adjust this value to change the size of the articles */
+    flex: 1 1 calc(33.333% - 20px); /* 3 articles per row with margin */
+    box-sizing: border-box;
     margin: 10px;
+    background: #1e1e1e;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    text-align: center;
   }
+
+  .article:hover {
+    transform: scale(1.05);
+  }
+
+  .article__inner {
+    padding: 20px;
+  }
+
+  .article__image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .article__category {
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .article__title {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .article__description {
+    color: #ddd;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
 </style>
 
 <section class="section blog animate">
@@ -73,17 +84,21 @@
       </div>
     </div>
 
-    <div class="slider-container">
-      <label for="slider">Adjust size:</label>
-      <input type="range" id="slider" name="slider" min="10" max="100" value="30" oninput="adjustSize(this.value)">
-    </div>
-
     <div class="row">
       {% assign sorted_featured_posts = featured_posts | sort: 'date' | reverse %}
       {% for post in sorted_featured_posts limit:6 %}
-        <div class="article">
-          {% include article.html %}
+      <div class="article">
+        <div class="article__inner">
+          {% if post.image %}
+          <a href="{{ post.href }}" class="article__image">
+            <img src="{{ post.image }}" alt="{{ post.title }}">
+          </a>
+          {% endif %}
+          <div class="article__category">{{ post.category }}</div>
+          <h3 class="article__title"><a href="{{ post.href }}">{{ post.title }}</a></h3>
+          <div class="article__description">{{ post.excerpt }}</div>
         </div>
+      </div>
       {% endfor %}
     </div>
 
@@ -91,11 +106,3 @@
 </section>
 <!-- end featured section -->
 {% endif %}
-
-<script>
-  function adjustSize(value) {
-    document.querySelectorAll('.article').forEach(article => {
-      article.style.flex = `1 1 ${value}%`;
-    });
-  }
-</script>
