@@ -200,6 +200,16 @@
     Yijia graduated from Rutgers University-New Brunswick with a degree in Plant Biology. After his undergraduate studies, he moved to Columbia University for the MA Biotechnology program. His master's thesis, mentored by Dr. Alex Tsankov, focused on copy number variation and its impact on the tumor microenvironment by utilizing NGS datasets and computational methods. He is now a PhD student in the ISB program, co-mentored by Dr. Amanda Poholek. He is interested in using spatial technology to answer questions in immunology. In his free time, he enjoys playing tennis and the Yu-Gi-Oh! Trading Card Game for fun.
   photo: /images/Yijia_Chen.jpg
 
+- name: Akanksha Sachan 
+  is_pi: False
+  is_current: True
+  is_intern : False
+  is_rotation : False
+  position: PhD Student | CMU-Pitt Program in Computational Biology (CPCB)
+  bio: >
+    Can tolerate spicy food
+  photo: /images/akanksha-sachan.jpg
+
 - name: Simar Yadav
   is_pi: False
   is_current: True

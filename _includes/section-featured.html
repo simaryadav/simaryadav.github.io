@@ -4,48 +4,12 @@
 <!-- begin featured section -->
 <style>
   /* CSS Styles */
-  .container {
-    padding: 20px;
-  }
-
-  .section__info {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
   .row {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
-  }
-
-  .article {
-    flex: 1 1 calc(33.333% - 20px); /* 3 articles per row with margin */
-    box-sizing: border-box;
-    margin: 10px;
-    background: #1e1e1e;
-    color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.2s;
-  }
-
-  .article:hover {
-    transform: scale(1.05);
-  }
-
-  .article__inner {
-    padding: 20px;
-  }
-
-  .article__image {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  .article__title {
-    margin-top: 10px;
+    margin-bottom: 20px;
   }
 
   .slider-container {
@@ -89,24 +53,9 @@
     border-radius: 50%;
   }
 
-  .load-more-container {
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  .load-more-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-
-  .load-more-button:hover {
-    background-color: #45a049;
+  .article {
+    flex: 1 1 30%; /* Adjust this value to change the size of the articles */
+    margin: 10px;
   }
 </style>
 
@@ -126,49 +75,16 @@
 
     <div class="slider-container">
       <label for="slider">Adjust size:</label>
-      <input type="range" id="slider" name="slider" min="10" max="100" value="33" oninput="adjustSize(this.value)">
+      <input type="range" id="slider" name="slider" min="10" max="100" value="30" oninput="adjustSize(this.value)">
     </div>
 
-    <div class="row" id="featured-posts">
+    <div class="row">
       {% assign sorted_featured_posts = featured_posts | sort: 'date' | reverse %}
       {% for post in sorted_featured_posts limit:6 %}
         <div class="article">
-          <div class="article__inner">
-            <div class="article__head">
-              {% if post.image %}
-              <a href="{{ post.href }}" class="article__image">
-                {% if post.image and post.video_embed %}
-                <div class="video-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                    <polygon points="40,30 70,50 40,70"></polygon>
-                  </svg>
-                </div>
-                {% endif %}
-                <img class="lazy" data-src="{{site.baseurl}}{{post.image}}" alt="{{post.title}}">
-              </a>
-              {% endif %}
-            </div>
-            <div class="article__content">
-              <div class="article__meta">
-                {% if post.tags.size >= 1 %}
-                <div class="article__tags">
-                {% for tag in post.tags %}
-                       <a href="{{ site.baseurl }}/tags/?tag={{ tag | cgi_escape }}" class="tag-button">{{ tag }}</a>
-                {% endfor %}
-                </div>
-                {% endif %}
-              </div>
-              <h2 class="article__title">
-                <a href="{{ post.href }}">{{ post.title }}</a>
-              </h2>
-            </div>
-          </div>
+          {% include article.html %}
         </div>
       {% endfor %}
-    </div>
-
-    <div class="load-more-container">
-      <button class="load-more-button" onclick="loadMorePosts()">Load More</button>
     </div>
 
   </div>
@@ -177,55 +93,9 @@
 {% endif %}
 
 <script>
-  const posts = {{ sorted_featured_posts | jsonify }};
-  let loadedPosts = 6;
-
   function adjustSize(value) {
     document.querySelectorAll('.article').forEach(article => {
-      article.style.flex = `1 1 calc(${value}% - 20px)`;
+      article.style.flex = `1 1 ${value}%`;
     });
-  }
-
-  function loadMorePosts() {
-    const container = document.getElementById('featured-posts');
-    let newPosts = '';
-    for (let i = loadedPosts; i < loadedPosts + 3 && i < posts.length; i++) {
-      newPosts += `
-        <div class="article">
-          <div class="article__inner">
-            <div class="article__head">
-              ${posts[i].image ? `
-              <a href="${posts[i].href}" class="article__image">
-                ${posts[i].image && posts[i].video_embed ? `
-                <div class="video-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                    <polygon points="40,30 70,50 40,70"></polygon>
-                  </svg>
-                </div>` : ''}
-                <img class="lazy" data-src="{{site.baseurl}}${posts[i].image}" alt="${posts[i].title}">
-              </a>` : ''}
-            </div>
-            <div class="article__content">
-              <div class="article__meta">
-                ${posts[i].tags.length >= 1 ? `
-                <div class="article__tags">
-                ${posts[i].tags.map(tag => `
-                  <a href="{{ site.baseurl }}/tags/?tag=${tag | cgi_escape}" class="tag-button">${tag}</a>
-                `).join('')}
-                </div>` : ''}
-              </div>
-              <h2 class="article__title">
-                <a href="${posts[i].href}">${posts[i].title}</a>
-              </h2>
-            </div>
-          </div>
-        </div>
-      `;
-    }
-    container.insertAdjacentHTML('beforeend', newPosts);
-    loadedPosts += 3;
-    if (loadedPosts >= posts.length) {
-      document.querySelector('.load-more-button').style.display = 'none';
-    }
   }
 </script>
