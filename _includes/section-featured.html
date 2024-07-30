@@ -34,7 +34,7 @@
 
     <div class="row">
     {% assign sorted_featured_posts = featured_posts | sort: 'date' | reverse %}
-    {% for post in sorted_featured_posts limit:6 %}
+    {% for post in sorted_featured_posts limit:3 %}
         {% include article.html %}
     {% endfor %}
     </div>
