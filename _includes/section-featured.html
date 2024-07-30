@@ -68,6 +68,15 @@
     .splide__track {
       overflow: visible;
     }
+
+    .splide__list {
+      margin: 0;
+      padding: 0;
+    }
+
+    .splide__slide {
+      padding: 0 8px; /* Adjusted padding to reduce spacing */
+    }
   </style>
 </head>
 <body>
@@ -120,7 +129,7 @@
       var splide = new Splide(testimonialsSlider, {
         perPage: 3,
         perMove: 1,
-        gap: 32,
+        gap: 16, // Adjusted gap to reduce spacing
         arrows: false,
         drag: false,
         pagination: false,
@@ -133,10 +142,12 @@
         },
         breakpoints: {
           1024: {
-            perPage: 2
+            perPage: 2,
+            gap: 12 // Adjusted gap for smaller screens
           },
           768: {
-            perPage: 1
+            perPage: 1,
+            gap: 8 // Adjusted gap for smaller screens
           }
         }
       }).mount(window.splide.Extensions);
