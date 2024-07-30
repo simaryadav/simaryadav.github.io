@@ -2,6 +2,12 @@
 
 {% if featured_posts.size > 0 and site.data.settings.featured.enable == true %}
 <!-- begin featured section -->
+<!-- splide css cdn -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/
+@splidejs/splide@4.0.7/dist/css/splide.min.css">
+<!-- custom css -->
+I
+<link rel="stylesheet" type="text/css" href="css/style.css"> </head>
 <style>
   /* CSS Styles */
 
@@ -29,12 +35,25 @@
       </div>
     </div>
 
-    <div class="row">
-    {% assign sorted_featured_posts = featured_posts | sort: 'date' | reverse %}
-    {% for post in sorted_featured_posts limit:3 %}
-        {% include article.html %}
-    {% endfor %}
+
+
+
+  <div class="splide">
+    <div class="splide_track">
+     <div class="splide___list">
+      <div class="splide___slide">
+      <div class="row">
+        {% assign sorted_featured_posts = featured_posts | sort: 'date' | reverse %}
+        {% for post in sorted_featured_posts limit:3 %}
+            {% include article.html %}
+        {% endfor %}
+        </div>
     </div>
+  </div>
+  </div>
+  </div>
+
+   
 
   </div>
 </section>
@@ -42,3 +61,29 @@
 {% endif %}
 
 
+
+<!-- splide js cdn -->
+<script
+src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/
+splide.min.js"></script>
+<script type="text/javascript">
+var splide = new Splide( '.splide', {
+perPage: 3,
+gap : '2rem',
+breakpoints: {
+640: {
+perPage: 2,
+gap : '.7rem',
+height : '6rem',
+},
+480: {
+perPage: 1,
+gap
+: '.7rem',
+height: '6rem',
+},
+},
+});
+splide.mount();
+
+</script>
