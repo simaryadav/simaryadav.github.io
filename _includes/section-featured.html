@@ -2,12 +2,9 @@
 
 {% if featured_posts.size > 0 and site.data.settings.featured.enable == true %}
 <!-- begin featured section -->
-<!-- splide css cdn -->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/css/splide.min.css">
-<!-- custom css -->
-<link rel="stylesheet" type="text/css" href="css/style.css">
 <style>
   /* CSS Styles */
+
 </style>
 
 <section class="section blog animate">
@@ -22,29 +19,24 @@
         <h2 class="section__title">{{ site.data.settings.featured.featured_title }}</h2>
         {% endif %}
         <div class="splide__arrows slider-controls">
-          <button class="splide__arrow splide__arrow--prev prev">
+          <button class="splide__arrow--prev prev">
             <i class="fa-solid fa-chevron-left"></i>
           </button>
-          <button class="splide__arrow splide__arrow--next next">
+          <button class="splide__arrow--next next">
             <i class="fa-solid fa-chevron-right"></i>
           </button>
         </div>
       </div>
     </div>
 
-    <div class="splide">
-      <div class="splide__track">
-        <ul class="splide__list">
-          {% assign sorted_featured_posts = featured_posts | sort: 'date' | reverse %}
-          {% for post in sorted_featured_posts limit:3 %}
-          <li class="splide__slide">
-            <div class="row">
-              {% include article.html %}
-            </div>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
+    
+
+
+    <div class="row">
+    {% assign sorted_featured_posts = featured_posts | sort: 'date' | reverse %}
+    {% for post in sorted_featured_posts limit:3 %}
+        {% include article.html %}
+    {% endfor %}
     </div>
 
   </div>
@@ -52,26 +44,4 @@
 <!-- end featured section -->
 {% endif %}
 
-<!-- splide js cdn -->
-<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js"></script>
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var localSplide = new Splide('.splide', {
-    perPage: 3,
-    gap: '2rem',
-    breakpoints: {
-      640: {
-        perPage: 2,
-        gap: '.7rem',
-        height: '6rem',
-      },
-      480: {
-        perPage: 1,
-        gap: '.7rem',
-        height: '6rem',
-      },
-    },
-  });
-  localSplide.mount();
-});
-</script>
+
