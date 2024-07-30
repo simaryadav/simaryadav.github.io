@@ -1,6 +1,6 @@
 ---
 title: Determining asthma endotypes and outcomes- Complementing existing clinical practice with modern machine learning
-description: Anuradha Ray*, Sally E Wenzel* , <strong><u>Das J*</u></strong>
+description: Ray A*, Wenzel S* , <strong><u>Das J*</u></strong>
 date: 2022-11-10 15:01:35 +0300
 image: '/images/determining-asthma.jpeg'
 tags: [Machine_Learning]
