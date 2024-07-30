@@ -1,6 +1,6 @@
 ---
 title: Stability and heterogeneity in the antimicrobiota reactivity of human milk-derived immunoglobulin A
-description:  Johnson-Hence C, Gopalakrishna K, Bodkin D, Coffey K, Burr A, <strong><u>Rahman S</u></strong>, Rai A, Abbott D, Sosa Y, Tometich J,<strong><u>Das J</u></strong>, Hand T
+description:  Johnson-Hence C, Gopalakrishna K, Bodkin D, Coffey K, Burr A, <strong><u>Rahman S</u></strong>, Rai A, Abbott D, Sosa Y, Tometich J, <strong><u>Das J</u></strong>, Hand T
 date: 2023-07-18 15:01:35 +0300
 image: '/images/stability-and.png'
 tags: [Antibodyomics]
