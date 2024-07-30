@@ -127,7 +127,7 @@
     var testimonialsSlider = document.querySelector('.splide.featured__slider__inner');
     if (testimonialsSlider) {
       var splide = new Splide(testimonialsSlider, {
-        perPage: 3,
+        perPage: 5,
         perMove: 1,
         gap: 16, // Adjusted gap to reduce spacing
         arrows: false,
@@ -142,12 +142,12 @@
         },
         breakpoints: {
           1024: {
-            perPage: 4,
-            gap: 6 // Adjusted gap for smaller screens
+            perPage: 5,
+            gap: 2 // Adjusted gap for smaller screens
           },
           768: {
             perPage: 3,
-            gap: 4 // Adjusted gap for smaller screens
+            gap: 2 // Adjusted gap for smaller screens
           }
         }
       }).mount(window.splide.Extensions);
