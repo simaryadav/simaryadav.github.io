@@ -19,7 +19,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 32px;
+      margin-bottom: 16px; /* Reduced spacing */
     }
 
     .featured__title {
@@ -62,7 +62,7 @@
     }
 
     .featured__slider__inner {
-      margin-bottom: -32px;
+      margin-bottom: -16px; /* Reduced spacing */
     }
 
     .splide__track {
@@ -127,9 +127,9 @@
     var testimonialsSlider = document.querySelector('.splide.featured__slider__inner');
     if (testimonialsSlider) {
       var splide = new Splide(testimonialsSlider, {
-        perPage: 5,
+        perPage: 3,
         perMove: 1,
-        gap: 0, // Adjusted gap to reduce spacing
+        gap: 16, // Adjusted gap to reduce spacing
         arrows: false,
         drag: false,
         pagination: false,
