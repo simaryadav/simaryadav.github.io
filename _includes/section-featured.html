@@ -12,8 +12,14 @@
   .custom-splide .splide__slide {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    /* Add more custom styles as needed */
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .custom-splide .splide__slide .article-container {
+    flex: 1 1 30%;
+    margin: 10px;
+    box-sizing: border-box;
   }
 
   .custom-splide .splide__arrows button {
@@ -22,17 +28,14 @@
     border: none;
     padding: 10px;
     cursor: pointer;
-    /* Add more custom styles as needed */
   }
 
   .custom-splide .splide__pagination {
     margin-top: 10px;
-    /* Add more custom styles as needed */
   }
 
   .custom-splide .splide__pagination__page.is-active {
     background-color: #333;
-    /* Add more custom styles as needed */
   }
 </style>
 
@@ -55,14 +58,14 @@
         <div class="splide__track">
           <ul class="splide__list">
             {% assign sorted_featured_posts = featured_posts | sort: 'date' | reverse %}
-            {% for post in sorted_featured_posts limit:6 %}
-              {% if forloop.index0 == 0 or forloop.index0 == 3 %}
+            {% for post in sorted_featured_posts %}
+              {% if forloop.index0 == 0 or forloop.index0 == 3 or forloop.index0 == 6 %}
                 <li class="splide__slide">
               {% endif %}
               <div class="article-container">
                 {% include article.html %}
               </div>
-              {% if forloop.index0 == 2 or forloop.index0 == 5 %}
+              {% if forloop.index0 == 2 or forloop.index0 == 5 or forloop.last %}
                 </li>
               {% endif %}
             {% endfor %}
