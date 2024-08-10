@@ -3,8 +3,37 @@
 {% if featured_posts.size > 0 and site.data.settings.featured.enable == true %}
 <!-- begin featured section -->
 <style>
-  /* CSS Styles */
+  /* Custom CSS for the exclusive slider */
 
+  .custom-splide .splide__track {
+    overflow: hidden;
+  }
+
+  .custom-splide .splide__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Add more custom styles as needed */
+  }
+
+  .custom-splide .splide__arrows button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    /* Add more custom styles as needed */
+  }
+
+  .custom-splide .splide__pagination {
+    margin-top: 10px;
+    /* Add more custom styles as needed */
+  }
+
+  .custom-splide .splide__pagination__page.is-active {
+    background-color: #333;
+    /* Add more custom styles as needed */
+  }
 </style>
 
 <section class="section blog animate">
@@ -18,30 +47,47 @@
         {% if site.data.settings.featured.featured_title %}
         <h2 class="section__title">{{ site.data.settings.featured.featured_title }}</h2>
         {% endif %}
-        <div class="splide__arrows slider-controls">
-          <button class="splide__arrow--prev prev">
+        <div class="custom-splide__arrows slider-controls">
+          <button class="custom-splide__arrow--prev prev">
             <i class="fa-solid fa-chevron-left"></i>
           </button>
-          <button class="splide__arrow--next next">
+          <button class="custom-splide__arrow--next next">
             <i class="fa-solid fa-chevron-right"></i>
           </button>
         </div>
       </div>
     </div>
 
-    
-
-
     <div class="row">
-    {% assign sorted_featured_posts = featured_posts | sort: 'date' | reverse %}
-    {% for post in sorted_featured_posts limit:3 %}
-        {% include article.html %}
-    {% endfor %}
+      <div id="custom-splide" class="splide custom-splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            {% assign sorted_featured_posts = featured_posts | sort: 'date' | reverse %}
+            {% for post in sorted_featured_posts limit:3 %}
+            <li class="splide__slide">
+              {% include article.html %}
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
     </div>
 
   </div>
 </section>
 <!-- end featured section -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var splide = new Splide('#custom-splide', {
+      type   : 'loop',
+      perPage: 3,
+      autoplay: true,
+      interval: 3000,
+      arrows: true,
+      pagination: true,
+      // Add more options as needed
+    }).mount();
+  });
+</script>
 {% endif %}
-
-
