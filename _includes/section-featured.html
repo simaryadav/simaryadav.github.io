@@ -63,7 +63,7 @@
         <div class="splide__track">
           <ul class="splide__list">
             {% assign sorted_featured_posts = featured_posts | sort: 'date' | reverse %}
-            {% for post in sorted_featured_posts limit:3 %}
+            {% for post in sorted_featured_posts limit:6 %}
             <li class="splide__slide">
               {% include article.html %}
             </li>
@@ -81,12 +81,12 @@
   document.addEventListener('DOMContentLoaded', function () {
     var splide = new Splide('#custom-splide', {
       type   : 'loop',
-      perPage: 3,
+      perPage: 3,  // Display three articles at once
+      perMove: 1,  // Move one slide per transition
       autoplay: true,
       interval: 3000,
       arrows: true,
       pagination: true,
-      // Add more options as needed
     }).mount();
   });
 </script>
