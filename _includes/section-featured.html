@@ -11,7 +11,7 @@
 
   .custom-splide .splide__slide {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     /* Add more custom styles as needed */
   }
@@ -47,14 +47,6 @@
         {% if site.data.settings.featured.featured_title %}
         <h2 class="section__title">{{ site.data.settings.featured.featured_title }}</h2>
         {% endif %}
-        <div class="custom-splide__arrows slider-controls">
-          <button class="custom-splide__arrow--prev prev">
-            <i class="fa-solid fa-chevron-left"></i>
-          </button>
-          <button class="custom-splide__arrow--next next">
-            <i class="fa-solid fa-chevron-right"></i>
-          </button>
-        </div>
       </div>
     </div>
 
@@ -64,9 +56,15 @@
           <ul class="splide__list">
             {% assign sorted_featured_posts = featured_posts | sort: 'date' | reverse %}
             {% for post in sorted_featured_posts limit:6 %}
-            <li class="splide__slide">
-              {% include article.html %}
-            </li>
+              {% if forloop.index0 == 0 or forloop.index0 == 3 %}
+                <li class="splide__slide">
+              {% endif %}
+              <div class="article-container">
+                {% include article.html %}
+              </div>
+              {% if forloop.index0 == 2 or forloop.index0 == 5 %}
+                </li>
+              {% endif %}
             {% endfor %}
           </ul>
         </div>
@@ -81,11 +79,11 @@
   document.addEventListener('DOMContentLoaded', function () {
     var splide = new Splide('#custom-splide', {
       type   : 'loop',
-      perPage: 3,  // Display three articles at once
-      perMove: 3,  // Move three slides per transition
+      perPage: 1,  // Display one set of three articles at once
+      perMove: 1,  // Move one set per transition
       autoplay: true,
       interval: 3000,
-      arrows: true,
+      arrows: false,  // Disable arrows
       pagination: true,
     }).mount();
   });
