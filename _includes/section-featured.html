@@ -59,15 +59,11 @@
           <ul class="splide__list">
             {% assign sorted_featured_posts = featured_posts | sort: 'date' | reverse %}
             {% for post in sorted_featured_posts %}
-              {% if forloop.index0 == 0 or forloop.index0 == 3 or forloop.index0 == 6 %}
-                <li class="splide__slide">
-              {% endif %}
-              <div class="article-container">
-                {% include article.html %}
-              </div>
-              {% if forloop.index0 == 2 or forloop.index0 == 5 or forloop.last %}
-                </li>
-              {% endif %}
+              <li class="splide__slide">
+                <div class="article-container">
+                  {% include article.html %}
+                </div>
+              </li>
             {% endfor %}
           </ul>
         </div>
@@ -82,12 +78,20 @@
   document.addEventListener('DOMContentLoaded', function () {
     var splide = new Splide('#custom-splide', {
       type   : 'loop',
-      perPage: 1,  // Display one set of three articles at once
-      perMove: 1,  // Move one set per transition
+      perPage: 3,  // Display three articles at once
+      perMove: 1,  // Move one article per transition
       autoplay: true,
       interval: 3000,
       arrows: false,  // Disable arrows
       pagination: true,
+      breakpoints: {
+        768: {
+          perPage: 1,  // On smaller screens, show 1 article per slide
+        },
+        1024: {
+          perPage: 2,  // On medium screens, show 2 articles per slide
+        },
+      },
     }).mount();
   });
 </script>
