@@ -67,11 +67,6 @@
             {% endfor %}
           </ul>
         </div>
-        <!-- Navigation Arrows -->
-        <div class="splide__arrows">
-          <button class="splide__arrow splide__arrow--prev">Prev</button>
-          <button class="splide__arrow splide__arrow--next">Next</button>
-        </div>
       </div>
     </div>
 
@@ -84,9 +79,12 @@
     var splide = new Splide('#custom-splide', {
       type   : 'loop',
       perPage: 3,  // Display three articles at once
-      perMove: 1,  // Move one set per transition
-      arrows: true,  // Enable arrows
-      pagination: false, // Disable pagination dots
+      perMove: 1,  // Move one article per transition
+      autoplay: true,
+      interval: 3000,
+      arrows: false,  // Disable arrows
+      pagination: true,
+      
     }).mount();
   });
 </script>
