@@ -28,10 +28,10 @@
       width: calc(100% / 3 - 20px);
     }
 
-    /* Custom arrow styles */
+    /* Neutral arrow styles */
     .swiper-button-prev, .swiper-button-next {
-      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-      color: #fff; /* White arrow color */
+      background-color: rgba(128, 128, 128, 0.5); /* Neutral gray, semi-transparent */
+      color: #333; /* Dark gray arrow color */
       width: 44px;
       height: 44px;
       border-radius: 50%;
@@ -40,10 +40,11 @@
       justify-content: center;
       cursor: pointer;
       z-index: 10;
+      border: 1px solid rgba(128, 128, 128, 0.5); /* Slight border for visibility */
     }
 
     .swiper-button-prev:hover, .swiper-button-next:hover {
-      background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+      background-color: rgba(128, 128, 128, 0.7); /* Slightly darker on hover */
     }
 
     .swiper-button-prev:after, .swiper-button-next:after {
