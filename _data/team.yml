@@ -210,6 +210,16 @@
     Can tolerate spicy food
   photo: /images/akanksha-sachan.jpg
 
+- name: Akash Kishore
+  is_pi: False
+  is_current: True
+  is_intern : False
+  is_rotation : False
+  position: PhD Student | CMU-Pitt Program in Computational Biology (CPCB)
+  bio: >
+    Akash is interested in utilizing computational approaches for problems in biology no matter how big or small. Purveyor of random stories as a trivia buff, and always up for a game of tennis :)
+  photo: /images/akash.webp
+
 - name: Simar Yadav
   is_pi: False
   is_current: True
@@ -229,16 +239,6 @@
   bio: >
     Shloka is a second-year Master's student at Carnegie Mellon University, passionately exploring the convergence of computer science and biology in the realm of computational biology. Eager to leverage her skills in analyzing biological data to enhance healthcare outcomes. Outside academia, she finds solace in reading, stays active with kickboxing, and indulges in her love for singing and dancing to Bollywood songs
   photo: /images/shloka.webp
-
-- name: Akash Kishore
-  is_pi: False
-  is_current: True
-  is_intern : False
-  is_rotation : False
-  position: Masters Student | Computational Biology
-  bio: >
-    Akash is currently a master's student in Automated Science at CMU. He's interested in utilizing computational approaches for problems in biology no matter how big or small. Purveyor of random stories as a trivia buff, and always up for a game of tennis :)
-  photo: /images/akash.webp
 
 - name: Kiran Nazarali
   is_pi: False
