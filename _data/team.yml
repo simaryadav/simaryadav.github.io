@@ -65,7 +65,6 @@
     Swapnil is a Computational biologist enthusiast with a keen interest in the field of genomics. Before joining the CPCB program, he completed his B.Tech. in chemical engineering from IIT Bombay, India. He likes to travel a lot and is always up for outdoor sports :). In addition to that, he loves to read crime fiction novels, paint, and swim.
   photo: /images/swapnil.webp
 
-
 - name: Prabal Chhibbar 
   is_pi: False
   is_current: True
@@ -75,7 +74,6 @@
   bio: >
     Prabal completed his B.Tech in computer science and engineering from SRM Institute of Science and Technology in 2019. His interests are in Protein-Protein Interactions, Host-Viral interactions, complex networks, machine learning, and deep learning. Prabal is always eager to discuss science and brainstorm ideas. Out of work, you can find him passionately discussing politics, reading voraciously and consuming a whole lot of content.
   photo: /images/prabal.webp
-
 
 - name: Trirupa Chakraborty
   is_pi: False
