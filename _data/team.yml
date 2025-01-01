@@ -14,7 +14,6 @@
 
   photo: /images/jishnu.webp
 
-
 - name: Zarifeh Heidari Rarani
   is_pi: False
   is_current: True
@@ -34,6 +33,16 @@
   bio: >
    Passion to study the broader perspective to answer biological questions as opposed to the traditional reductionist approach is what brought Isha to Computational-Immunology Core. 'Wordle' and 'Quordle' are her daily dose of Dopamine.
   photo: /images/isha.webp
+
+- name: Mary Dorothy Cundiff
+  is_pi: False
+  is_current: True
+  is_intern : False
+  is_rotation : False
+  position: Postdoctoral Associate
+  bio: >
+   Mary is a postdoc with backgrounds in systems neurobiology, biochemistry, and general biology. She received her bachelor’s in biology from Centre College, her masters’s in chemistry from Villanova, and her doctorate in biological sciences from Carnegie Mellon University. She is passionate about learning new things, expanding her computational skills to develop streamlined analyses, and disseminating what she’s learned to anyone who will listen. Mary loves reading, crafting, and going on outdoor adventures with her dog, Daisy.
+  photo: /images/Mary_Cundiff.jpeg
 
 - name: Hanxi Xiao
   is_pi: False
@@ -219,6 +228,16 @@
   bio: >
     Akash is interested in utilizing computational approaches for problems in biology no matter how big or small. Purveyor of random stories as a trivia buff, and always up for a game of tennis :)
   photo: /images/akash.webp
+
+  - name: Koushul Ramjattun
+  is_pi: False
+  is_current: True
+  is_intern : False
+  is_rotation : False
+  position: PhD Student | Integrative Systems Biology (ISB)
+  bio: >
+    Koushul is a PhD student developing new spatial sequencing technologies for multi-omic single cell perturbation on fresh tissues. 
+  photo: /images/Koushul_Ramjattun.jpeg
 
 - name: Simar Yadav
   is_pi: False
