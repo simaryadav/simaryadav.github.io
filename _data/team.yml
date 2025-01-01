@@ -287,6 +287,15 @@
     Data analyst, M.S. in Cognitive Psychology
   photo: /images/augusta.webp
 
+- name: Aniket Samit Naik
+  is_pi: False
+  is_current: True
+  is_intern : False
+  is_rotation : False
+  position: Junior Bioinformatician 
+  bio: >
+    "Aniket completed his MS in Quantitative Biology and Bioinformatics from CMU during which he gained experience in developing image analysis pipelines. In his free time, he enjoys playing soccer and reading."
+  photo: /images/Aniket_Naik.jpg
 
 - name: Syed A. Rahman
   is_pi: False
