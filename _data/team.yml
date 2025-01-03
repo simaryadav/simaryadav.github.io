@@ -249,7 +249,7 @@
 
 - name: Shloka Shukla
   is_pi: False
-  is_current: True
+  is_current: False
   is_intern : False
   is_rotation : False
   position: Masters Student | Computational Biology
