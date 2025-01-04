@@ -269,7 +269,7 @@
 
 - name: Yeque(Sissi) Sun
   is_pi: False
-  is_current: True
+  is_current: False
   is_intern : False
   is_rotation : False
   position: Core Data Analyst(CIG CORE)
