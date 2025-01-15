@@ -2,8 +2,8 @@
 # Site Settings
 title: "Jishnu's Systems Immunology Lab"
 description: The lab
-logo: "/images/monitor-computer-svgrepo-com.svg" # You can add own logo. For example "/images/logo.svg".
-logo_dark: "/images/monitor-tv-svgrepo-com.svg"
+logo: "/images/monitor-tv-svgrepo-com.svg" # You can add own logo. For example "/images/logo.svg".
+logo_dark: "/images/monitor-computer-svgrepo-com.svg"
 color_scheme: auto # You can choose three modes auto, light, and dark. By default, the auto mode is set, which means the user can choose the light or dark mode themself.
 
 
@@ -75,7 +75,7 @@ hero_logo_image:
 # Slider Featured Settings
 featured:
   enable: true
-  featured_intro: Top Pick's
+  featured_intro: Top Picks
   featured_title: Selected Work
 
 
