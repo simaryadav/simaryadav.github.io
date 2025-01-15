@@ -50,25 +50,25 @@ hero_logos:
 
 hero_logo_image:
   - alt: "AI Logo"
-    image: "/images/ai-svgrepo-com.svg"
+    image: "/images/ai-ai-svgrepo-com.svg"
 
-  - alt: "immune Logo"
-    image: "/images/imm-svgrepo-com.svg"
+  - alt: "cell Logo"
+    image: "/images/cell-svgrepo-com.svg"
 
-  - alt: "DL Logo"
-    image: "/images/deep-learning-svgrepo-com.svg"
+  - alt: "brain Logo"
+    image: "/images/brain-brainstorm-creative-svgrepo-com.svg"
 
-  - alt: "coffee Logo"
-    image: "/images/coffee-cup-tea-svgrepo-com.svg"
+  - alt: "system Logo"
+    image: "/images/cells-biology-svgrepo-com.svg"
 
-  - alt: "robot Logo"
-    image: "/images/robot-ai-svgrepo-com.svg"
+  - alt: "cells Logo"
+    image: "/images/cells-biology-svgrepo-com (1).svg"
 
-  - alt: "DNA Logo"
-    image: "/images/dna-svgrepo-com.svg"
+  - alt: "chip Logo"
+    image: "/images/chip-ai-svgrepo-com.svg"
 
-  - alt: "immune defense Logo"
-    image: "/images/immune-system-immunity-defense-svgrepo-com.svg"
+  - alt: "test tube Logo"
+    image: "/images/test-tube-svgrepo-com.svg"
 
 
 #-------------------------------
