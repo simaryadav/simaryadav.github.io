@@ -6,65 +6,61 @@ permalink: /Contact-us/
 ---
 
 <style>
-/* Base Styles */
+/* Base (Desktop) Styles */
 .container {
-  max-width: 1200px; /* Ensures a max width for large screens */
+  max-width: 1200px; /* Maintain desktop width */
   width: 100%;
   margin: 0 auto;
-  padding: 0 16px; /* Padding for smaller screens */
 }
 
 .page-section-head {
   margin-top: 40px;
   margin-bottom: 60px;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
   border-bottom: 1px solid var(--border-color);
-  text-align: center; /* Align center for smaller screens */
 }
 
 .page-title {
-  font-size: 64px; /* Adjust font size for better responsiveness */
+  font-size: 80px; /* Large size for desktop */
   margin-bottom: 16px;
-  width: 100%; /* Allow title to adjust naturally */
-  text-align: center; /* Center-align the title */
-  word-wrap: break-word; /* Prevent text overflow */
+  width: 100%; /* Ensure the title stretches fully */
+  text-align: left; /* Left align for desktop */
 }
 
 .page-description {
   font-size: 18px;
-  text-align: center; /* Center-align description */
+  text-align: left; /* Keep left alignment for desktop */
 }
 
 .contact-info {
   display: flex;
-  flex-wrap: wrap; /* Enable wrapping for smaller screens */
-  flex-direction: column; /* Column layout by default */
-  align-items: center; /* Center items */
+  flex-wrap: nowrap; /* No wrapping for desktop */
+  flex-direction: row; /* Horizontal layout */
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .contact-info-item {
-  width: 100%; /* Full width for smaller screens */
-  text-align: center; /* Center align */
-  margin-bottom: 20px;
+  width: 30%; /* Allocate width for each item */
+  text-align: left;
 }
 
 .contact-info-item h2 {
   margin-bottom: 10px;
-  font-size: 24px; /* Adjust font size for smaller screens */
+  font-size: 24px; /* Desktop-specific font size */
 }
 
 .gallery {
   margin-top: 40px;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap; /* Enable wrapping for smaller screens */
-  gap: 16px; /* Add space between images */
+  justify-content: space-around; /* Spread items evenly */
+  gap: 20px;
 }
 
 .gallery img {
-  max-width: 100%;
+  max-width: 300px; /* Set fixed width for desktop */
   height: auto;
-  object-fit: cover; /* Maintain image aspect ratio */
+  object-fit: cover;
 }
 
 .page__info {
@@ -87,12 +83,11 @@ permalink: /Contact-us/
   max-width: 100%;
 }
 
-/* Responsive Styles */
-
-/* Tablet View */
+/* Tablet Styles */
 @media (max-width: 1024px) {
   .page-title {
-    font-size: 48px; /* Smaller font size for tablets */
+    font-size: 64px; /* Slightly smaller for tablets */
+    text-align: center; /* Center-align title */
   }
 
   .page-section-head {
@@ -100,38 +95,71 @@ permalink: /Contact-us/
     padding-bottom: 20px;
   }
 
-  .contact-info-item h2 {
-    font-size: 20px; /* Slightly smaller text */
-  }
-
-  .gallery {
-    gap: 12px; /* Reduce spacing */
-  }
-}
-
-/* Mobile View */
-@media (max-width: 768px) {
-  .page-title {
-    font-size: 36px; /* Adjust font size for mobile */
-  }
-
-  .page-description {
-    font-size: 16px; /* Slightly smaller font for mobile */
-  }
-
   .contact-info {
-    align-items: flex-start; /* Adjust alignment for smaller screens */
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center-align items */
   }
 
   .contact-info-item {
-    margin-bottom: 12px;
+    width: 45%; /* Allocate more space per item */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .contact-info-item h2 {
+    font-size: 20px; /* Adjust heading size */
+  }
+
+  .gallery {
+    gap: 16px; /* Reduce space between items */
   }
 
   .gallery img {
-    width: 100%; /* Make images full-width on mobile */
+    max-width: 100%; /* Use full width */
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 36px; /* Smaller size for mobile */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .page-description {
+    font-size: 16px;
+    text-align: center; /* Center-align for mobile */
+  }
+
+  .contact-info {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+  }
+
+  .contact-info-item {
+    width: 100%; /* Full width for mobile */
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .contact-info-item h2 {
+    font-size: 18px;
+  }
+
+  .gallery {
+    flex-direction: column; /* Stack images vertically */
+    align-items: center;
+    gap: 12px;
+  }
+
+  .gallery img {
+    width: 100%; /* Full width on mobile */
+    height: auto;
   }
 }
 </style>
+
 
 <div class="container">
   <div class="page-section-head">
