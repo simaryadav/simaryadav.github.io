@@ -6,49 +6,65 @@ permalink: /Contact-us/
 ---
 
 <style>
+/* Base Styles */
 .container {
-  max-width: fit-content;
-  width:100%;
+  max-width: 1200px; /* Ensures a max width for large screens */
+  width: 100%;
   margin: 0 auto;
+  padding: 0 16px; /* Padding for smaller screens */
 }
 
 .page-section-head {
   margin-top: 40px;
   margin-bottom: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
   border-bottom: 1px solid var(--border-color);
+  text-align: center; /* Align center for smaller screens */
 }
 
 .page-title {
-  font-size: 80px;
+  font-size: 64px; /* Adjust font size for better responsiveness */
   margin-bottom: 16px;
-  width: 1500px;s
+  width: 100%; /* Allow title to adjust naturally */
+  text-align: center; /* Center-align the title */
+  word-wrap: break-word; /* Prevent text overflow */
 }
 
 .page-description {
   font-size: 18px;
+  text-align: center; /* Center-align description */
 }
 
 .contact-info {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  flex-wrap: wrap; /* Enable wrapping for smaller screens */
+  flex-direction: column; /* Column layout by default */
+  align-items: center; /* Center items */
 }
 
 .contact-info-item {
-  width: 100%;
-  align-content: center;
-  text-align: center;
+  width: 100%; /* Full width for smaller screens */
+  text-align: center; /* Center align */
+  margin-bottom: 20px;
 }
 
 .contact-info-item h2 {
   margin-bottom: 10px;
+  font-size: 24px; /* Adjust font size for smaller screens */
 }
 
 .gallery {
   margin-top: 40px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; /* Enable wrapping for smaller screens */
+  gap: 16px; /* Add space between images */
+}
+
+.gallery img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover; /* Maintain image aspect ratio */
 }
 
 .page__info {
@@ -64,18 +80,57 @@ permalink: /Contact-us/
   border: 0;
 }
 
-.nine{
-  width:100%;
-  height:100%;
-  max-width:100%;
-  margin-top:20px
-}
-.gallery img {
-  max-width: 100%;
+.nine {
+  width: 100%;
   height: auto;
+  margin-top: 20px;
+  max-width: 100%;
 }
 
+/* Responsive Styles */
 
+/* Tablet View */
+@media (max-width: 1024px) {
+  .page-title {
+    font-size: 48px; /* Smaller font size for tablets */
+  }
+
+  .page-section-head {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+  }
+
+  .contact-info-item h2 {
+    font-size: 20px; /* Slightly smaller text */
+  }
+
+  .gallery {
+    gap: 12px; /* Reduce spacing */
+  }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 36px; /* Adjust font size for mobile */
+  }
+
+  .page-description {
+    font-size: 16px; /* Slightly smaller font for mobile */
+  }
+
+  .contact-info {
+    align-items: flex-start; /* Adjust alignment for smaller screens */
+  }
+
+  .contact-info-item {
+    margin-bottom: 12px;
+  }
+
+  .gallery img {
+    width: 100%; /* Make images full-width on mobile */
+  }
+}
 </style>
 
 <div class="container">
