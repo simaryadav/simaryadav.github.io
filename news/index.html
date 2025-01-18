@@ -102,6 +102,28 @@ description: A lot's been happening for us
         background-color: #0056b3;
         color: #fff;
     }
+    /* CSS to style text within quotes as bold and italic */
+    .bold-italic {
+        font-weight: bold;
+        font-style: italic;
+    }
+    /* CSS to style text within parentheses as italic */
+    .italic {
+        font-style: italic;
+    }
+    /* Coloring dates for different categories */
+    .papers-date {
+        text-decoration: underline;
+        text-decoration-color: #FF4500; /* Orange color for papers */
+    }
+    .grants-date {
+        text-decoration: underline;
+        text-decoration-color: #008000; /* Green color for grants */
+    }
+    .talks-date {
+        text-decoration: underline;
+        text-decoration-color: #0000FF; /* Blue color for talks */
+    }
     /* Responsive Styling */
     @media (max-width: 1024px) {
         /* Tablet adjustments */
@@ -142,7 +164,8 @@ description: A lot's been happening for us
             gap: 12px;
         }
     }
- </style> 
+ </style>
+ 
 </head>
 <body>
 <div class="container__projects__head">
