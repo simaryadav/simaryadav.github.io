@@ -10,60 +10,117 @@
 
   <style>
     /* Swiper custom styles */
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
+.swiper {
+  width: 100%;
+  height: 100%;
+}
 
-    .swiper-slide {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Ensures items wrap properly on smaller screens */
+}
 
-    .swiper-slide .article-container {
-      flex: 1;
-      margin: 10px;
-      box-sizing: border-box;
-      width: calc(100% / 3 - 20px);
-    }
+.swiper-slide .article-container {
+  flex: 1;
+  margin: 10px;
+  box-sizing: border-box;
+  width: calc(100% / 3 - 20px); /* Default: 3 items per row */
+}
 
-    /* Neutral arrow styles */
-    .swiper-button-prev, .swiper-button-next {
-      background-color: rgba(128, 128, 128, 0.5); /* Neutral gray, semi-transparent */
-      color: #333; /* Dark gray arrow color */
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 10;
-      border: 1px solid rgba(128, 128, 128, 0.5); /* Slight border for visibility */
-    }
+/* Neutral arrow styles */
+.swiper-button-prev, .swiper-button-next {
+  background-color: rgba(128, 128, 128, 0.5); /* Neutral gray, semi-transparent */
+  color: #333; /* Dark gray arrow color */
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  border: 1px solid rgba(128, 128, 128, 0.5); /* Slight border for visibility */
+}
 
-    .swiper-button-prev:hover, .swiper-button-next:hover {
-      background-color: rgba(128, 128, 128, 0.7); /* Slightly darker on hover */
-    }
+.swiper-button-prev:hover, .swiper-button-next:hover {
+  background-color: rgba(128, 128, 128, 0.7); /* Slightly darker on hover */
+}
 
-    .swiper-button-prev:after, .swiper-button-next:after {
-      font-size: 18px;
-      font-weight: bold;
-    }
+.swiper-button-prev:after, .swiper-button-next:after {
+  font-size: 18px;
+  font-weight: bold;
+}
 
-    .swiper-button-prev {
-      left: 10px; /* Adjust positioning */
-    }
+.swiper-button-prev {
+  left: 10px; /* Adjust positioning */
+}
 
-    .swiper-button-next {
-      right: 10px; /* Adjust positioning */
-    }
+.swiper-button-next {
+  right: 10px; /* Adjust positioning */
+}
 
-    /* Ensure arrows are immune to theme color changes */
-    .swiper-button-prev, .swiper-button-next {
-      mix-blend-mode: normal; /* Prevent blending with background colors */
-    }
+/* Ensure arrows are immune to theme color changes */
+.swiper-button-prev, .swiper-button-next {
+  mix-blend-mode: normal; /* Prevent blending with background colors */
+}
+
+/* Responsive Design */
+
+/* For tablets (width <= 1024px) */
+@media (max-width: 1024px) {
+  .swiper-slide .article-container {
+    width: calc(100% / 2 - 20px); /* Show 2 items per row */
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    width: 36px; /* Reduce arrow size */
+    height: 36px;
+  }
+
+  .swiper-button-prev:after, .swiper-button-next:after {
+    font-size: 16px; /* Slightly smaller font */
+  }
+}
+
+/* For mobile devices (width <= 768px) */
+@media (max-width: 768px) {
+  .swiper-slide .article-container {
+    width: calc(100% - 20px); /* Show 1 item per row */
+  }
+
+  .swiper {
+    height: auto; /* Adjust height for mobile */
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    width: 30px; /* Further reduce arrow size */
+    height: 30px;
+  }
+
+  .swiper-button-prev:after, .swiper-button-next:after {
+    font-size: 14px;
+  }
+}
+
+/* Extra small devices (width <= 480px) */
+@media (max-width: 480px) {
+  .swiper-slide .article-container {
+    width: 100%; /* Full width for smaller devices */
+    margin: 5px 0; /* Adjust margins */
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    width: 24px; /* Smaller arrows for tiny screens */
+    height: 24px;
+  }
+
+  .swiper-button-prev:after, .swiper-button-next:after {
+    font-size: 12px;
+  }
+}
+
   </style>
 </head>
 <body>
