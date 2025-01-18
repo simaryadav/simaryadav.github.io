@@ -6,10 +6,9 @@ permalink: /Contact-us/
 ---
 
 <style>
-/* Base (Desktop) Styles */
 .container {
-  max-width: 1200px; /* Maintain desktop width */
-  width: 100%;
+  max-width: fit-content;
+  width:100%;
   margin: 0 auto;
 }
 
@@ -21,46 +20,35 @@ permalink: /Contact-us/
 }
 
 .page-title {
-  font-size: 80px; /* Large size for desktop */
+  font-size: 80px;
   margin-bottom: 16px;
-  width: 100%; /* Ensure the title stretches fully */
-  text-align: left; /* Left align for desktop */
+  width: 1500px;s
 }
 
 .page-description {
   font-size: 18px;
-  text-align: left; /* Keep left alignment for desktop */
 }
 
 .contact-info {
   display: flex;
-  flex-wrap: nowrap; /* No wrapping for desktop */
-  flex-direction: row; /* Horizontal layout */
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .contact-info-item {
-  width: 30%; /* Allocate width for each item */
-  text-align: left;
+  width: 100%;
+  align-content: center;
+  text-align: center;
 }
 
 .contact-info-item h2 {
   margin-bottom: 10px;
-  font-size: 24px; /* Desktop-specific font size */
 }
 
 .gallery {
   margin-top: 40px;
   display: flex;
-  justify-content: space-around; /* Spread items evenly */
-  gap: 20px;
-}
-
-.gallery img {
-  max-width: 300px; /* Set fixed width for desktop */
-  height: auto;
-  object-fit: cover;
+  justify-content: center;
 }
 
 .page__info {
@@ -76,18 +64,22 @@ permalink: /Contact-us/
   border: 0;
 }
 
-.nine {
-  width: 100%;
-  height: auto;
-  margin-top: 20px;
-  max-width: 100%;
+.nine{
+  width:100%;
+  height:100%;
+  max-width:100%;
+  margin-top:20px
 }
+.gallery img {
+  max-width: 100%;
+  height: auto;
+}
+/* Responsive Styles */
 
-/* Tablet Styles */
+/* Tablet View */
 @media (max-width: 1024px) {
   .page-title {
-    font-size: 64px; /* Slightly smaller for tablets */
-    text-align: center; /* Center-align title */
+    font-size: 48px; /* Smaller font size for tablets */
   }
 
   .page-section-head {
@@ -95,71 +87,38 @@ permalink: /Contact-us/
     padding-bottom: 20px;
   }
 
-  .contact-info {
-    flex-wrap: wrap; /* Allow items to wrap */
-    justify-content: center; /* Center-align items */
-  }
-
-  .contact-info-item {
-    width: 45%; /* Allocate more space per item */
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
   .contact-info-item h2 {
-    font-size: 20px; /* Adjust heading size */
+    font-size: 20px; /* Slightly smaller text */
   }
 
   .gallery {
-    gap: 16px; /* Reduce space between items */
-  }
-
-  .gallery img {
-    max-width: 100%; /* Use full width */
+    gap: 12px; /* Reduce spacing */
   }
 }
 
-/* Mobile Styles */
+/* Mobile View */
 @media (max-width: 768px) {
   .page-title {
-    font-size: 36px; /* Smaller size for mobile */
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 36px; /* Adjust font size for mobile */
   }
 
   .page-description {
-    font-size: 16px;
-    text-align: center; /* Center-align for mobile */
+    font-size: 16px; /* Slightly smaller font for mobile */
   }
 
   .contact-info {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center;
+    align-items: flex-start; /* Adjust alignment for smaller screens */
   }
 
   .contact-info-item {
-    width: 100%; /* Full width for mobile */
-    text-align: center;
-    margin-bottom: 16px;
-  }
-
-  .contact-info-item h2 {
-    font-size: 18px;
-  }
-
-  .gallery {
-    flex-direction: column; /* Stack images vertically */
-    align-items: center;
-    gap: 12px;
+    margin-bottom: 12px;
   }
 
   .gallery img {
-    width: 100%; /* Full width on mobile */
-    height: auto;
+    width: 100%; /* Make images full-width on mobile */
   }
 }
 </style>
-
 
 <div class="container">
   <div class="page-section-head">
