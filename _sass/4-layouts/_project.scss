@@ -1,5 +1,4 @@
-
-
+/* General Page Styling */
 .page-section-head {
   margin-top: 40px;
   margin-bottom: 60px;
@@ -7,7 +6,7 @@
 }
 
 .page-title {
-  font-size: 80px;
+  font-size: 32px; /* Default for desktop */
   margin-bottom: 16px;
 }
 
@@ -17,7 +16,7 @@
 }
 
 /* Project Section Styling */
-.section.projects {
+.section.news {
   padding-bottom: 60px;
 }
 
@@ -39,14 +38,13 @@
 
 .project__label {
   margin-bottom: 8px;
-  font-size: 18px;
+  font-size: 18px; /* Default font size */
   font-weight: 500;
   color: var(--text-alt-color);
-  text-align: center;
 }
 
 .project__title {
-  font-size: 24px;
+  font-size: 24px; /* Default for desktop */
   margin-bottom: 0;
 }
 
@@ -76,4 +74,68 @@
 
 .year-content.active {
   display: block;
+}
+
+/* Responsive Styles */
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .page-title {
+    font-size: 28px; /* Slightly smaller title for tablets */
+  }
+
+  .page-description {
+    font-size: 16px; /* Reduce description font size */
+  }
+
+  .project {
+    margin-bottom: 30px; /* Reduce spacing */
+  }
+
+  .project__label {
+    font-size: 16px; /* Smaller font size */
+  }
+
+  .project__title {
+    font-size: 20px; /* Adjust title size */
+  }
+
+  .year-button {
+    padding: 8px 16px; /* Adjust button padding */
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 24px; /* Smaller title for mobile */
+    margin-bottom: 12px;
+  }
+
+  .page-description {
+    font-size: 14px; /* Adjust description font size */
+    margin-bottom: 8px;
+  }
+
+  .project {
+    margin-bottom: 20px; /* Reduce spacing for projects */
+  }
+
+  .project__label {
+    font-size: 14px; /* Smaller label font size */
+  }
+
+  .project__title {
+    font-size: 18px; /* Reduce title size */
+  }
+
+  .year-button {
+    padding: 6px 12px; /* Smaller button padding */
+    font-size: 14px; /* Adjust button font size */
+  }
+
+  .year-content {
+    padding: 8px; /* Reduce padding */
+    margin-top: 8px; /* Adjust margin */
+  }
 }
