@@ -254,4 +254,61 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   margin-bottom: 10px;
   text-align: center;
 }
+@media only screen and (max-width: 1024px) { /* Tablets */
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+  }
+
+  .team-member {
+    height: 350px; /* Adjust height for smaller screens */
+  }
+
+  .team-member-separator {
+    margin: 15px 0; /* Adjust margin for compact spacing */
+  }
+
+  .member-name,
+  .member-title {
+    font-size: 16px; /* Slightly smaller text */
+  }
+
+  .section-heading {
+    font-size: 22px; /* Adjusted section heading size */
+  }
+
+  .subsection-heading {
+    font-size: 18px; /* Adjusted subsection heading size */
+  }
+}
+
+@media only screen and (max-width: 768px) { /* Mobile */
+  .team-grid {
+    grid-template-columns: 1fr; /* One column for mobile devices */
+  }
+
+  .team-member {
+    height: 300px; /* Further reduced height for mobile */
+  }
+
+  .member-footer {
+    padding: 8px; /* Adjust padding */
+  }
+
+  .member-name,
+  .member-title {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  .alumni-table th, .alumni-table td {
+    font-size: 12px; /* Smaller font size for table */
+  }
+
+  .section-heading {
+    font-size: 20px; /* Adjusted for mobile */
+  }
+
+  .subsection-heading {
+    font-size: 16px; /* Adjusted for mobile */
+  }
+}
 </style>
