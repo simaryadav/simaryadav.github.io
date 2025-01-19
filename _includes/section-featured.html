@@ -192,7 +192,7 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     var swiper = new Swiper('.swiper', {
-      slidesPerView: 3,
+      slidesPerView: 3, // Default for larger screens
       spaceBetween: 30,
       loop: true,
       navigation: {
@@ -200,22 +200,23 @@
         prevEl: '.swiper-button-prev',
       },
       breakpoints: {
-        640: {
-          slidesPerView: 1,
+        480: {
+          slidesPerView: 1, // For extra small screens
           spaceBetween: 10,
         },
         768: {
-          slidesPerView: 2,
+          slidesPerView: 1, // For mobile devices
           spaceBetween: 20,
         },
         1024: {
-          slidesPerView: 3,
+          slidesPerView: 2, // For tablets
           spaceBetween: 30,
         },
       },
     });
   });
 </script>
+
 
 </body>
 </html>
