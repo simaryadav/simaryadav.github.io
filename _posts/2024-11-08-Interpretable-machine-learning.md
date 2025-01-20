@@ -7,5 +7,5 @@ tags: [Machine_Learning]
 href : 'https://insight.jci.org/articles/view/180239'
 published: The Journal of Clinical Investigation Insight 2024
 year : 2024
-featured:
+featured: true
 ---
