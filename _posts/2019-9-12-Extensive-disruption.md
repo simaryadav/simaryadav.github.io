@@ -7,5 +7,5 @@ tags: [Protein_Networks]
 href : 'https://www.nature.com/articles/s41467-019-11959-3'
 published: Nature Communications 2019
 year : 2019
-featured: true
+featured: 
 ---

@@ -7,5 +7,5 @@ tags: [Gene_Regulatory_Networks]
 href : 'https://www.nature.com/articles/s41598-019-44136-z'
 published: Scientific Reports 2019
 year : 2019
-featured: true
+featured: 
 ---
