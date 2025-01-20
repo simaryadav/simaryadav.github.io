@@ -28,7 +28,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
           {% assign hanxi_seen = true %}
         {% elsif member.name == "Simar Yadav" and simar_seen == false %}
           <div class="team-member-separator"></div>
-          <h2 class="team-title">Undergraduates and Masters Students</h2>
+          <h2 class="team-title">Other Lab Members</h2>
           {% assign simar_seen = true %}
         {% endif %}
 
@@ -170,7 +170,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 10px;
+  padding: 32px;
   background-color: rgba(255, 255, 255, 0.9);
   box-sizing: border-box;
   transition: opacity 0.3s ease; /* Added transition for smooth effect */
@@ -260,7 +260,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   }
 
   .team-member {
-    height: 350px; /* Adjust height for smaller screens */
+    height: 90%; /* Adjust height for smaller screens */
   }
 
   .team-member-separator {
@@ -287,7 +287,7 @@ description: Welcome to our Lab's Team Page: Where Innovation Meets Collaboratio
   }
 
   .team-member {
-    height: 300px; /* Further reduced height for mobile */
+    height: 90%; /* Further reduced height for mobile */
   }
 
   .member-footer {

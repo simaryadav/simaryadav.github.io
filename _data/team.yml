@@ -325,13 +325,6 @@
   is_rotation : False
   position: CIG core member(2022-23)- Now Technician at the University of Pittsburgh Single Cell core
 
-- name: Akanksha Sachan
-  is_pi: False
-  is_current: False
-  is_intern : False
-  position: CPCB (2022)
-  is_rotation : True
-
 - name: Carlos Cosme Jr
   is_pi: False
   is_current: False
