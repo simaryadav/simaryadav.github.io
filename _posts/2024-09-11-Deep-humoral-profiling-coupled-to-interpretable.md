@@ -7,5 +7,5 @@ tags: [Antibodyomics,Machine_Learning]
 href : 'https://www.science.org/doi/10.1126/scitranslmed.adk7832'
 published: Science Translational Medicine 2024
 year : 2024
-featured: 
+featured: true
 ---
